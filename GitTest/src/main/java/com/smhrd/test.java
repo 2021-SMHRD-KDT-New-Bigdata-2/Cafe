@@ -10,6 +10,7 @@ public class test {
 		System.out.println("Add Code!");
 		System.out.println("add code!");
 		System.out.println("정준희");
+		System.out.println("임소현");
 	}
 
 }
