@@ -6,7 +6,7 @@ public class test {
 		
 		System.out.println("Github Push Test!");
 		System.out.println("Add Code!");
-		
+		System.out.println("Add Code!");
 	}
 
 }
