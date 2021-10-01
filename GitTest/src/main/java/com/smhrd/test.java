@@ -10,6 +10,7 @@ public class test {
 		System.out.println("Add Code!");
 		System.out.println("add code!");
 		System.out.println("Á¤ÁØÈñ");
+		System.out.println("¾ÓÂ¡");
 	}
 
 }
