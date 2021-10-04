@@ -51,7 +51,7 @@ service varchar2(10) not null,
 reVisit varchar2(10) not null,
 picture varchar2(10) not null,
 notGood varchar2(10) not null,
-constraint cafeDetail_pk primary key(businessNumber)
+constraint evaluation_pk primary key(businessNumber)
 );
 
 select * from evaluation;
