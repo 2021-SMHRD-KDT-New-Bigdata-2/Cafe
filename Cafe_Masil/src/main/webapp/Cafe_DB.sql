@@ -35,7 +35,7 @@ cafeAddress varchar2(10) not null,
 cafeHours date not null,
 locationLati varchar2(10) not null,
 locationLongi varchar2(10) not null,
-constraint cafeDetail_pk primary key(businessnumber)
+constraint cafeDetail_pk primary key(businessNumber)
 );
 
 select * from cafeDetail;
@@ -51,7 +51,7 @@ service varchar2(10) not null,
 reVisit varchar2(10) not null,
 picture varchar2(10) not null,
 notGood varchar2(10) not null,
-constraint cafeDetail_pk primary key(businessnumber)
+constraint cafeDetail_pk primary key(businessNumber)
 );
 
 select * from evaluation;
@@ -65,7 +65,7 @@ beanSell varchar(10) not null,
 allTime varchar2(10) not null,
 smokingArea varchar2(10) not null,
 loasting varchar2(10) not null,
-constraint cafeKeyword_pk primary key(businessnumber)
+constraint cafeKeyword_pk primary key(businessNumber)
 );
 
 select * from cafeKeyword;
