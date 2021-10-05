@@ -29,7 +29,7 @@ public class LoginService extends HttpServlet {
 			HttpSession session123 = request.getSession();
 			session123.setAttribute("nickname", vo);
 			
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("joinSuccess.jsp");
 			
 		}
 		
