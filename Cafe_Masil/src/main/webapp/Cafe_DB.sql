@@ -1,4 +1,5 @@
 drop table joinInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
+/* 회원가입 테이블 */
 create table joinInfo(
 num number,
 id varchar2(10) not null,
@@ -21,6 +22,7 @@ select * from joinInfo;
 /* ----------------구분선 ------------------ */
 drop table cafeRequest; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
+/* 가맹등록 테이블 */
 create table cafeRequest(
 num number,
 bossName varchar2(10) not null,
@@ -40,8 +42,9 @@ start with 1
 select * from cafeRequest;
 
 /* ----------------구분선 ------------------ */
-drop table cafeDetail;
+drop table cafeDetail; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
+/* 카페 상세정보 테이블 */
 create table cafeDetail(
 num number,
 cafeName varchar2(10) not null,
@@ -55,13 +58,21 @@ cafeHours date not null,
 locationLati varchar2(10) not null,
 locationLongi varchar2(10) not null,
 constraint cafeDetail_pk primary key(businessNumber)
-constraint cafeDetail_fk foreign key(businessNumber, cafeName, cafeTel, cafeAddress)
 );
+
+/*정렬 시퀀스*/
+Create sequence cafeDetail_num
+increment by 1
+start with 1
 
 select * from cafeDetail;
 
+/* ----------------구분선 ------------------ */
+drop table evaluation; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
+/* 사용자 평가 테이블 */
 create table evaluation(
+num number,
 id varchar2(10) not null,
 cafeName varchar2(10) not null,
 businessNumber varchar2(10) not null,
@@ -73,13 +84,23 @@ service varchar2(10) not null,
 reVisit varchar2(10) not null,
 picture varchar2(10) not null,
 notGood varchar2(10) not null,
-constraint evaluation_pk primary key(id)
-constraint evaluation_fk foreign key(businessNumber, cafeName, id)
+constraint evaluation_fk foreign key(businessNumber) /* id를 pk로 설정해버리면 평생 사용자가 한 카페에 리뷰를 한번만 쓸수있게되서 다음에는 리뷰를 쓸 수가 없어서 지움 */  
+references cafeRequest(businessNumber) /* cafeRequest의 사업자번호 참조 */
 );
+
+/*정렬 시퀀스*/
+Create sequence cafeDetail_num
+increment by 1
+start with 1
 
 select * from evaluation;
 
+/* ----------------구분선 ------------------ */
+drop table cafeKeyword; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
+
+/*키워드 테이블*/
 create table cafeKeyword(
+num number,
 cafeName varchar2(10) not null,
 businessNumber varchar2(10) not null,
 wifi varchar2(10) not null,
@@ -88,8 +109,34 @@ beanSell varchar(10) not null,
 allTime varchar2(10) not null,
 smokingArea varchar2(10) not null,
 loasting varchar2(10) not null,
-constraint cafeKeyword_pk primary key(businessNumber)
-constraint cafeKeyword_fk foreign key(businessNumber, cafeName)
+constraint cafekeyword_fk foreign key(businessNumber) /* 이 테이블에서는 사업자번호를 외래키 설정 */ 
+references caferequest(businessNumber) /* caferequest에 저장된 사업자번호 참조 */
 );
 
+/*정렬 시퀀스*/
+Create sequence cafeKeyword_num
+increment by 1
+start with 1
+
 select * from cafeKeyword;
+
+/* ----------------구분선 ------------------ */
+/* drop table subscription 혹시 모를 삭제에 대비해서 생성 */ 
+
+/* 구독,스탬프 테이블 */
+create table subscription(
+num number,
+cafeName varchar2(10) not null,
+businessNumber varchar2(10) not null,
+subs number not null,
+stamp number not null,
+constraint subscription_fk foreign key(businessNumber)
+references caferequest(businessNumber)
+)
+
+/*정렬 시퀀스*/
+Create sequence subscription_num
+increment by 1
+start with 1
+
+select * from subscription;
