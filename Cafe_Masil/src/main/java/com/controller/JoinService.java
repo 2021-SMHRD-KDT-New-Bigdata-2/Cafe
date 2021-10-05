@@ -23,7 +23,7 @@ public class JoinService extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String nickname = request.getParameter("nickname");
 		String tel = request.getParameter("tel");
-		String bestmenu = request.getParameter("bestmenu");
+		String bestMenu = request.getParameter("bestMenu");
 		String qna = request.getParameter("qna");
 		String answer = request.getParameter("answer");
 		
@@ -32,12 +32,12 @@ public class JoinService extends HttpServlet {
 		System.out.println("pw: " + pw);
 		System.out.println("tel: " + nickname);
 		System.out.println("address: " + tel);
-		System.out.println("address: " + bestmenu);
-		System.out.println("address: " + qna);
-		System.out.println("address: " + answer);
+		System.out.println("bestMenu: " + bestMenu);
+		System.out.println("qna: " + qna);
+		System.out.println("answer: " + answer);
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.join(id, pw, nickname, tel, bestmenu, qna, answer);
+		int cnt = dao.join(id, pw, nickname, tel, bestMenu, qna, answer);
 		
 		if (cnt>0) {
 			request.setAttribute("nickname", nickname);

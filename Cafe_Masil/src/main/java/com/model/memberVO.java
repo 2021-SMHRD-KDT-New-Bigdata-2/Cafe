@@ -6,18 +6,18 @@ public class memberVO {
 	private String pw;
 	private String nickname;
 	private String tel;
-	private String bestmenu;
+	private String bestMenu;
 	private String qna;
 	private String answer;
 	
 	
-	public memberVO(String id, String pw, String nickname, String tel, String bestmenu, String qna, String answer) {
+	public memberVO(String id, String pw, String nickname, String tel, String bestMenu, String qna, String answer) {
 		super();
 		this.id = id;
 		this.pw = pw;
 		this.nickname = nickname;
 		this.tel = tel;
-		this.bestmenu = bestmenu;
+		this.bestMenu = bestMenu;
 		this.qna = qna;
 		this.answer = answer;
 	}
@@ -50,8 +50,8 @@ public class memberVO {
 	}
 
 
-	public String getBestmenu() {
-		return bestmenu;
+	public String getBestMenu() {
+		return bestMenu;
 	}
 
 

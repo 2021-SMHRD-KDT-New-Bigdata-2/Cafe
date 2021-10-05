@@ -15,7 +15,7 @@
 			<li><input name="pw" type="password" placeholder="PW를 입력하세요"></li>
 			<li><input name="nickname" type="text" placeholder="닉네임을 입력하세요"></li>
 			<li><input name="tel" type="text" placeholder="휴대폰번호를 입력하세요"></li>
-			<li><input name="bestmenu" type="text" placeholder="선호메뉴를 입력하세요"></li>
+			<li><input name="bestMenu" type="text" placeholder="선호메뉴를 입력하세요"></li>
 			<li>
 				질문: <select name="qna">
 					<option>가장 기억에 남는 카페는 어디입니까?</option>

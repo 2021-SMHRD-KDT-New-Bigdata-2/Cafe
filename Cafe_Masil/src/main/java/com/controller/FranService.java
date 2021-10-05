@@ -17,15 +17,15 @@ public class FranService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String bossname = request.getParameter("bossname");
-		String businessnumber = request.getParameter("businessNumber");
-		String bosstel = request.getParameter("bosstel");
-		String cafename = request.getParameter("cafeName");
-		String cafeaddress = request.getParameter("cafeaddress");
-		String cafetel = request.getParameter("cafetel");
+		String bossName = request.getParameter("bossName");
+		String businessNumber = request.getParameter("businessNumber");
+		String bossTel = request.getParameter("bossTel");
+		String cafeName = request.getParameter("cafeName");
+		String cafeAddress = request.getParameter("cafeAddress");
+		String cafeTel = request.getParameter("cafeTel");
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.caferequest(bossname, businessnumber, bosstel, cafename, cafeaddress, cafetel);
+		int cnt = dao.caferequest(bossName, businessNumber, bossTel, cafeName, cafeAddress, cafeTel);
 		
 		if (cnt>0) {
 			System.out.println("가맹 등록 신청 완료!");
