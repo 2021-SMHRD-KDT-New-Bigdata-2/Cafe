@@ -27,6 +27,8 @@ public class memberDAO {
 			String password= "hr";
 			// 2. 데이터베이스 연결 객체(Connection) 생성
 			conn = DriverManager.getConnection(url,user,password);
+		}catch(ClassNotFoundException e) {
+			e.printStackTrace();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
