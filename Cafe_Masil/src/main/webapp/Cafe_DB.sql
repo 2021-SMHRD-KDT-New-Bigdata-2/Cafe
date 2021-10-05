@@ -1,4 +1,6 @@
+drop table joinInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 create table joinInfo(
+num number,
 id varchar2(10) not null,
 pw varchar2(10) not null,
 nickname varchar2(10) not null,
@@ -9,9 +11,18 @@ answer varchar2(10) not null,
 constraint joinInfo_pk primary key(id)
 );
 
+/*정렬 시퀀스*/
+Create sequence joinInfo_num
+increment by 1
+start with 1
+
 select * from joinInfo;
 
+/* ----------------구분선 ------------------ */
+drop table cafeRequest; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
+
 create table cafeRequest(
+num number,
 bossName varchar2(10) not null,
 businessNumber varchar2(10) not null,
 bossTel varchar2(10) not null,
@@ -21,10 +32,18 @@ cafeTel varchar2(10) not null,
 constraint cafeRequest_pk primary key(BusinessNumber)
 );
 
+/*정렬 시퀀스*/
+Create sequence cafeRequest_num
+increment by 1
+start with 1
+
 select * from cafeRequest;
 
+/* ----------------구분선 ------------------ */
+drop table cafeDetail;
 
 create table cafeDetail(
+num number,
 cafeName varchar2(10) not null,
 businessNumber varchar2(10) not null,
 cafeTel varchar2(10) not null,
@@ -40,6 +59,7 @@ constraint cafeDetail_fk foreign key(businessNumber, cafeName, cafeTel, cafeAddr
 );
 
 select * from cafeDetail;
+
 
 create table evaluation(
 id varchar2(10) not null,
