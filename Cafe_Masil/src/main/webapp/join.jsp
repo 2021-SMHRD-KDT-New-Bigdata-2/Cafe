@@ -19,7 +19,9 @@
 			<li>
 				질문: <select name="qna">
 					<option>가장 기억에 남는 카페는 어디입니까?</option>
-					<option></option>
+					<option>태어난 곳은 어디입니까?</option>
+					<option>가장 좋아하는 색깔은 무엇입니까?</option>
+					<option>가장 좋아하는 동물은 무엇입니까?</option>
 				</select>
 			</li>
 			<li>답: <input name="answer" type="text" placeholder="답을 입력하세요"></li>
