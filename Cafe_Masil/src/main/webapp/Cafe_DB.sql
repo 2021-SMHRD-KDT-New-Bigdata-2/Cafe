@@ -1,4 +1,3 @@
-drop table joinInfo;
 
 create table joinInfo(
 id varchar2(10) not null,
