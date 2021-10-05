@@ -1,11 +1,11 @@
-create table joinInfo (
+create table joinInfo(
 id varchar2(10) not null,
 pw varchar2(10) not null,
 nickname varchar2(10) not null,
 tel varchar2(20) not null,
 bestMenu varchar2(20) not null,
 qna varchar2(100) not null,
-answer varcahr2(10) not null,
+answer varchar2(10) not null,
 constraint joinInfo_pk primary key(id)
 );
 
