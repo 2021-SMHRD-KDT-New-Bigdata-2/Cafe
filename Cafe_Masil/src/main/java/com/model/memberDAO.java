@@ -56,7 +56,7 @@ public class memberDAO {
 	}
 	
 	// 회원가입 기능
-	public int join(String id, String pw, String nickname, String tel, String bestmenu, String qna, String answer ) {
+	public int join(String id, String pw, String nickname, String tel, String bestMenu, String qna, String answer ) {
 		
 		try {
 			getConnection();
@@ -67,7 +67,7 @@ public class memberDAO {
 			psmt.setString(2,pw);
 			psmt.setString(3,nickname);
 			psmt.setString(4,tel);
-			psmt.setString(5,bestmenu);
+			psmt.setString(5,bestMenu);
 			psmt.setString(6,qna);
 			psmt.setString(7,answer);
 			
@@ -112,19 +112,19 @@ public class memberDAO {
 	}
 	
 	// 가맹등록 기능
-	public int caferequest(String bossname, String businessnumber, String bosstel, String cafename, String cafeaddress, String cafetel) {
+	public int caferequest(String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress, String cafeTel) {
 		
 		try {
 			getConnection();
 			String sql = "insert into cafeRequest values(?,?,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,bossname);
-			psmt.setString(2,businessnumber);
-			psmt.setString(3,bosstel);
-			psmt.setString(4,cafename);
-			psmt.setString(5,cafeaddress);
-			psmt.setString(6,cafetel);
+			psmt.setString(1,bossName);
+			psmt.setString(2,businessNumber);
+			psmt.setString(3,bossTel);
+			psmt.setString(4,cafeName);
+			psmt.setString(5,cafeAddress);
+			psmt.setString(6,cafeTel);
 			
 			cnt = psmt.executeUpdate();
 		}catch(Exception e) {
