@@ -1,7 +1,8 @@
 package com.model;
 
 public class memberVO {
-
+	
+	private int num;
 	private String id;
 	private String pw;
 	private String nickname;
@@ -11,8 +12,9 @@ public class memberVO {
 	private String answer;
 	
 	
-	public memberVO(String id, String pw, String nickname, String tel, String bestMenu, String qna, String answer) {
+	public memberVO(int num, String id, String pw, String nickname, String tel, String bestMenu, String qna, String answer) {
 		super();
+		this.num = num;
 		this.id = id;
 		this.pw = pw;
 		this.nickname = nickname;
@@ -28,7 +30,10 @@ public class memberVO {
 		this.id = id;
 		this.nickname = nickname;
 	}
-
+	
+	public int getNum() {
+		return num;
+	}
 
 	public String getId() {
 		return id;

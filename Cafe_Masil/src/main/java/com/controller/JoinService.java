@@ -32,8 +32,8 @@ public class JoinService extends HttpServlet {
 		System.out.println("회원가입성공!");
 		System.out.println("email:" + id);
 		System.out.println("pw: " + pw);
-		System.out.println("tel: " + nickname);
-		System.out.println("address: " + tel);
+		System.out.println("nickname: " + nickname);
+		System.out.println("tel: " + tel);
 		System.out.println("bestMenu: " + bestMenu);
 		System.out.println("qna: " + qna);
 		System.out.println("answer: " + answer);
@@ -43,9 +43,10 @@ public class JoinService extends HttpServlet {
 		
 		if (cnt>0) {
 			request.setAttribute("nickname", nickname);
-		}else {
 			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
 			rd.forward(request, response);
+		}else {
+			System.out.println("실행2");
 		}
 		
 		

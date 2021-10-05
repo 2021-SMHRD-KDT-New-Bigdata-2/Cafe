@@ -60,7 +60,7 @@ public class memberDAO {
 		
 		try {
 			getConnection();
-			String sql = "insert into joinInfo values (?,?,?,?,?,?,?)";
+			String sql = "insert into joinInfo values (joinInfo_num.nextval,?,?,?,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,id);
@@ -116,7 +116,7 @@ public class memberDAO {
 		
 		try {
 			getConnection();
-			String sql = "insert into cafeRequest values(?,?,?,?,?,?)";
+			String sql = "insert into cafeRequest values(cafeRequest_num.nextval,?,?,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,bossName);
