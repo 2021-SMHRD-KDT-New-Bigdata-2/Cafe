@@ -15,7 +15,7 @@ select * from joinInfo;
 
 create table cafeRequest(
 bossName varchar2(10) not null,
-businessNumber varchar2(10),
+businessNumber varchar2(10) not null,
 bossTel varchar2(10) not null,
 cafeName varchar2(10) not null,
 cafeAddress varchar2(10) not null,
@@ -27,8 +27,8 @@ select * from cafeRequest;
 
 
 create table cafeDetail(
-cafeName varchar2(10),
-businessNumber varchar2(10),
+cafeName varchar2(10) not null,
+businessNumber varchar2(10) not null,
 cafeTel varchar2(10) not null,
 ameIndex varchar2(10) not null,
 tableNum varchar2(10) not null,
@@ -38,29 +38,32 @@ cafeHours date not null,
 locationLati varchar2(10) not null,
 locationLongi varchar2(10) not null,
 constraint cafeDetail_pk primary key(businessNumber)
+constraint cafeDetail_fk foreign key(businessNumber, cafeName, cafeTel, cafeAddress)
 );
 
 select * from cafeDetail;
 
 create table evaluation(
-cafeName varchar2(10),
-businessNumber varchar2(10),
+id varchar2(10) not null,
+cafeName varchar2(10) not null,
+businessNumber varchar2(10) not null,
 clean varchar2(10) not null,
 area varchar2(10) not null,
 flavor varchar2(10) not null, 
-dessert varchar2(10) null,
+dessert varchar2(10) not null,
 service varchar2(10) not null,
 reVisit varchar2(10) not null,
 picture varchar2(10) not null,
 notGood varchar2(10) not null,
-constraint evaluation_pk primary key(businessNumber)
+constraint evaluation_pk primary key(id)
+constraint evaluation_fk foreign key(businessNumber, cafeName, id)
 );
 
 select * from evaluation;
 
 create table cafeKeyword(
-cafeName varchar2(10),
-businessNumber varchar2(10),
+cafeName varchar2(10) not null,
+businessNumber varchar2(10) not null,
 wifi varchar2(10) not null,
 groupSeat varchar2(10) not null,
 beanSell varchar(10) not null,
@@ -68,6 +71,7 @@ allTime varchar2(10) not null,
 smokingArea varchar2(10) not null,
 loasting varchar2(10) not null,
 constraint cafeKeyword_pk primary key(businessNumber)
+constraint cafeKeyword_fk foreign key(businessNumber, cafeName)
 );
 
 select * from cafeKeyword;
