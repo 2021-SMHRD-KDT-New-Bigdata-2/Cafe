@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-
-=======
 drop table joinInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
+
 create table joinInfo(
 num number,
 id varchar2(10) not null,
