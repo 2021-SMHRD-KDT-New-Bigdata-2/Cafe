@@ -29,7 +29,7 @@ public class FranService extends HttpServlet {
 		
 		if (cnt>0) {
 			System.out.println("가맹 등록 신청 완료!");
-			response.sendRedirect("main.jsp");
+			response.sendRedirect("main.html");
 		}
 		
 				
