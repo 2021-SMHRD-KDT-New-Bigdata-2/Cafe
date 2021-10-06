@@ -29,7 +29,7 @@ public class LoginService extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", vo);
 			
-			response.sendRedirect("main.html");
+			response.sendRedirect("main.jsp");
 			
 		}
 		

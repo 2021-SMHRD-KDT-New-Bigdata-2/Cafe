@@ -226,6 +226,7 @@ h5 {
 .box-logo {
     display: block;
     padding: 20px;
+    display: flex;
 }
 
 .box-primary-nav-trigger {
@@ -308,6 +309,7 @@ h5 {
 .box-primary-nav-trigger {
     width: 100px;
     padding-left: 1em;
+    z-index: 3;
     background-color: transparent;
     height: 30px;
     line-height: 30px;

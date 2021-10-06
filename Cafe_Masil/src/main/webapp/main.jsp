@@ -1,7 +1,11 @@
+<%@page import="com.model.memberVO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +35,7 @@
 <body>
 
     <!-- Preloader -->
-    <div id="preloader">
+    <div id="preloade\r">
         <div class="pre-container">
             <div class="spinner">
                 <div class="double-bounce1"></div>
@@ -44,11 +48,11 @@
     <div class="container-fluid">
         <!-- box header -->
         <header class="box-header">
-            <div class="box-logo" style="position:absolute; top:0; left:0; z-index:10;" >
-                <a href="main.html"><img src="img/cafemasillogo2.jpg" width="300" alt="Logo"></a>
+            <div class="box-logo">
+                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="300" alt="Logo"></a>
             </div>
             <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0"  style="position:absolute; top:40px; left:93%; z-index:1;">
+            <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
             <!-- box-primary-nav-trigger -->
@@ -56,17 +60,17 @@
         <!-- end box header -->
 
         <!-- nav -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label"> Choose me! </li>
+       <%if(vo==null) {%>
+    	<nav>
+     	    <ul class="box-primary-nav">
+     	        <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.html">í™ˆ</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="login.jsp">ë¡œê·¸ì¸</a>
-                <li><a href="join.jsp">íšŒì›ê°€ìž…</a></li>
-                <li><a href="fran.jsp">ê°€ë§¹ë“±ë¡</a></li>
-                
-                <li><a href="update.jsp">íšŒì›ì •ë³´ìˆ˜ì •</a></li>
-                <li><a href="keywordMenu.html">ì „ì²´ ì¹´íŽ˜</a></li>
+				<li><a href="main.jsp">È¨</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="login.jsp">·Î±×ÀÎ</a>
+                <li><a href="join.jsp">È¸¿ø°¡ÀÔ</a></li>
+                <li><a href="fran.jsp">°¡¸Íµî·Ï</a></li>
+                <li><a href="keywordMenu.html">ÀüÃ¼ Ä«Æä</a></li>
+                <li><a href="">Ä«Æä°Ë»ö</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -76,6 +80,28 @@
                 <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
             </ul>
         </nav>
+        <%}else{%>
+        <nav>
+     	    <ul class="box-primary-nav">
+     	        <li class="box-label"> Choose me! </li>
+
+				<li><a href="main.jsp">È¨</a> <i class="ion-ios-circle-filled color"></i></li>
+				<li><a href="LogoutService">·Î±×¾Æ¿ô</a></li>
+                <li><a href="fran.jsp">°¡¸Íµî·Ï</a></li>
+                <li><a href="update.jsp">È¸¿øÁ¤º¸¼öÁ¤</a></li>
+                <li><a href="keywordMenu.html">ÀüÃ¼ Ä«Æä</a></li>
+                <li><a href="">Ä«Æä°Ë»ö</a></li>
+                <li><a href="">¸¶ÀÌÆäÀÌÁö</a></li>
+                
+                <li class="box-label">Follow me!</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <%}%>
         <!-- end nav -->
 
         <!-- box-intro -->
@@ -88,7 +114,7 @@
                         <b>Cafe,Masil</b>
                     </span>
 		        </h1>
-                <h4>ì¹´íŽ˜ ë§ˆì‹¤, ë™ë„¤ë¥¼ ë‹´ë‹¤</h4>
+                <h4>Ä«Æä ¸¶½Ç, µ¿³×¸¦ ´ã´Ù</h4>
             </div>
 
             <div class="mouse">

@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,6 +23,8 @@ public class updateService extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		memberVO vo = (memberVO)session.getAttribute("member");
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
 		
 		String id = vo.getId();
 		String pw = request.getParameter("pw");
@@ -31,9 +35,19 @@ public class updateService extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.update(pw, tel, nickname, bestmenu, answer,id);
+		PrintWriter out = response.getWriter();
 		if (cnt>0) {
 			System.out.println("회원정보수정 성공!");
-			response.sendRedirect("main.html");
+			out.print("<script>"
+					 + "alert('회원정보수정 성공!');"
+					 + "location.href='main.jsp';"
+					 + "</script>");
+		}else {
+			System.out.println("회원정보수정 실패!");
+			out.print("<script>"
+					 + "alert('회원정보수정 실패!');"
+					 + "location.href='update.jsp';"
+					 + "</script>");
 		}
 		
 	}

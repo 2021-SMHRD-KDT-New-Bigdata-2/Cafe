@@ -34,7 +34,7 @@
 				<td><%=nickname %></td>
 			</tr>
 		</table>
-		<a href="main.html"><input type="button" value="메인페이지로"></a> </nav>
+		<a href="main.jsp"><input type="button" value="메인페이지로"></a> </nav>
 	</div>
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
