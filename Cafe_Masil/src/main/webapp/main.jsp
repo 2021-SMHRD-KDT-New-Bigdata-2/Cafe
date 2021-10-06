@@ -35,7 +35,7 @@
 <body>
 
     <!-- Preloader -->
-    <div id="preloade\r">
+    <div id="preloader">
         <div class="pre-container">
             <div class="spinner">
                 <div class="double-bounce1"></div>
