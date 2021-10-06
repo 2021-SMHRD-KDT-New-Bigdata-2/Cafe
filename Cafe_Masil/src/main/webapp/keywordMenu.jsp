@@ -68,7 +68,7 @@
                 <li><a href="login.jsp">로그인</a>
                 <li><a href="join.jsp">회원가입</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
-                <li><a href="keywordMenu.html">전체 카페</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="">카페검색</a></li>
                 
                 <li class="box-label">Follow me!</li>
@@ -88,7 +88,7 @@
 				<li><a href="LogoutService">로그아웃</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="update.jsp">회원정보수정</a></li>
-                <li><a href="keywordMenu.html">전체 카페</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="">카페검색</a></li>
                 <li><a href="">마이페이지</a></li>
                 
