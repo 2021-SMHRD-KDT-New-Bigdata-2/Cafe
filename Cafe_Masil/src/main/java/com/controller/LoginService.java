@@ -26,18 +26,10 @@ public class LoginService extends HttpServlet {
 		memberVO vo = dao.login(id,pw);
 		
 		if (vo!=null) {
-<<<<<<< HEAD
-			HttpSession session123 = request.getSession();
-			session123.setAttribute("nickname", vo);
-			
-			response.sendRedirect("joinSuccess.jsp");
-=======
 			HttpSession session = request.getSession();
 			session.setAttribute("member", vo);
 			
 			response.sendRedirect("main.jsp");
-			
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 		}
 		
 	}
