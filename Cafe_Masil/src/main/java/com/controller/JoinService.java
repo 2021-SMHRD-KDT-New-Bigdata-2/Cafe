@@ -42,7 +42,7 @@ public class JoinService extends HttpServlet {
 		int cnt = dao.join(id, pw, nickname, tel, bestMenu, qna, answer);
 		
 		if (cnt>0) {
-			request.setAttribute("nickname", nickname);
+			request.setAttribute("member", nickname);
 			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
 			rd.forward(request, response);
 		}else {

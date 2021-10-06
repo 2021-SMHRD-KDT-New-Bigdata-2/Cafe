@@ -17,7 +17,7 @@
 </style>
 
 <body style="text-align: center;">
-	<% String nickname = (String)request.getAttribute("nickname"); %>
+	<% String nickname = (String)request.getAttribute("member"); %>
 	<!-- Wrapper -->
 	<div id="wrapper">
 		<!-- Menu -->

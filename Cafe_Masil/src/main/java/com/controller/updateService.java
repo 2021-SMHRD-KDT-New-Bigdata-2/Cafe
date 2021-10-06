@@ -12,32 +12,28 @@ import com.model.memberDAO;
 import com.model.memberVO;
 
 
-@WebServlet("/LoginService")
-public class LoginService extends HttpServlet {
+@WebServlet("/updateService")
+public class updateService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String id = request.getParameter("id");
+		HttpSession session = request.getSession();
+		memberVO vo = (memberVO)session.getAttribute("member");
+		
+		String id = vo.getId();
 		String pw = request.getParameter("pw");
+		String nickname = request.getParameter("nickname");
+		String tel = request.getParameter("tel");
+		String bestmenu = request.getParameter("bestmenu");
+		String answer = request.getParameter("answer");
 		
 		memberDAO dao = new memberDAO();
-		memberVO vo = dao.login(id,pw);
-		
-		if (vo!=null) {
-<<<<<<< HEAD
-			HttpSession session123 = request.getSession();
-			session123.setAttribute("nickname", vo);
-			
-			response.sendRedirect("joinSuccess.jsp");
-=======
-			HttpSession session = request.getSession();
-			session.setAttribute("member", vo);
-			
+		int cnt = dao.update(pw, tel, nickname, bestmenu, answer,id);
+		if (cnt>0) {
+			System.out.println("회원정보수정 성공!");
 			response.sendRedirect("main.html");
-			
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 		}
 		
 	}

@@ -1,12 +1,11 @@
 drop table joinInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
 /* 회원가입 테이블 */
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 create table joinInfo(
 num number,
 id varchar2(10) not null,
 pw varchar2(10) not null,
-nickname varchar2(10) not null,f
+nickname varchar2(10) not null,
 tel varchar2(20) not null,
 bestMenu varchar2(20) not null,
 qna varchar2(100) not null,

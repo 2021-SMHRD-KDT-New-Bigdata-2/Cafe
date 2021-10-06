@@ -24,6 +24,18 @@ public class memberVO {
 		this.answer = answer;
 	}
 
+	
+
+	public memberVO(String pw, String nickname, String tel, String bestMenu, String answer) {
+		super();
+		this.pw = pw;
+		this.nickname = nickname;
+		this.tel = tel;
+		this.bestMenu = bestMenu;
+		this.answer = answer;
+	}
+
+
 
 	public memberVO(String id, String nickname) {
 		super();
