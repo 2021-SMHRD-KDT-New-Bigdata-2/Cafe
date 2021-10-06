@@ -24,9 +24,9 @@ public class memberDAO {
 			// 1. JDBC 드라이버 동적 로딩
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 						
-			String url = "jdbc:oracle:thin:@localhost:1521:xe";
-			String user = "hr";
-			String password= "hr";
+			String url = "jdbc:oracle:thin:@project-db-stu.ddns.net:1524:xe";
+			String user = "campus_k4_1006";
+			String password= "smhrd4";
 			// 2. 데이터베이스 연결 객체(Connection) 생성
 			conn = DriverManager.getConnection(url,user,password);
 		}catch(ClassNotFoundException e) {

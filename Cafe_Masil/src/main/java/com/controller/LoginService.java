@@ -35,7 +35,7 @@ public class LoginService extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("member", vo);
 			
-			response.sendRedirect("main.html");
+			response.sendRedirect("main.jsp");
 			
 >>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 		}

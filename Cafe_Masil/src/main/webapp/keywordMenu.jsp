@@ -1,7 +1,11 @@
+<%@page import="com.model.memberVO"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -45,7 +49,7 @@
         <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.html"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -55,15 +59,17 @@
         <!-- end box-header -->
 
          <!-- nav -->
-        <nav>
-            <ul class="box-primary-nav">
-                <li class="box-label"> Choose me! </li>
+        <%if(vo==null) {%>
+    	<nav>
+     	    <ul class="box-primary-nav">
+     	        <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.html">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="login.jsp">로그인</a>
                 <li><a href="join.jsp">회원가입</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
-                <li><a href="keywordMenu.html">전체 카페</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
+                <li><a href="">카페검색</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -73,6 +79,28 @@
                 <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
             </ul>
         </nav>
+        <%}else{%>
+        <nav>
+     	    <ul class="box-primary-nav">
+     	        <li class="box-label"> Choose me! </li>
+
+				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+				<li><a href="LogoutService">로그아웃</a></li>
+                <li><a href="fran.jsp">가맹등록</a></li>
+                <li><a href="update.jsp">회원정보수정</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
+                <li><a href="">카페검색</a></li>
+                <li><a href="">마이페이지</a></li>
+                
+                <li class="box-label">Follow me!</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <%}%>
         <!-- end nav -->
     </div>
 
