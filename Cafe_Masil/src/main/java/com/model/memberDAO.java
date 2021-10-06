@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import oracle.net.aso.e;
+
 public class memberDAO {
 	
 	int cnt = 0;
@@ -134,6 +136,30 @@ public class memberDAO {
 		}
 		return cnt;
 	}
+	
+	public int update(String pw,String tel,String nickname,String bestmenu,String answer,String id) {
+		
+		try {
+			getConnection();
+			String sql = "update joinInfo set pw=?,tel=?,nickname=?,bestmenu=?,answer=? where id=?";
+			psmt = conn.prepareStatement(sql);
+			
+			psmt.setString(1,pw);
+			psmt.setString(2,tel);
+			psmt.setString(3,nickname);
+			psmt.setString(4,bestmenu);
+			psmt.setString(5,answer);
+			psmt.setString(6,id);
+			cnt = psmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cnt;
+	}
+	
 	
 	
 }
