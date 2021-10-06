@@ -106,7 +106,7 @@
 
     <!-- top bar -->
     <div class="top-bar">
-        <h1>전체 메뉴</h1>
+        <h1>전체 카페</h1>
     </div>
     <!-- end top bar -->
 
