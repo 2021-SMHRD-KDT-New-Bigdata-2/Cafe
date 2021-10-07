@@ -8,7 +8,7 @@
 
 <head>
 	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-	<% ArrayList<cafeVO> info_list =  (cafeVO)session.getAttribute("cafe_info"); %>
+	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("cafe_info"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">

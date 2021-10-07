@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -14,13 +15,16 @@ import com.model.cafeVO;
 import com.model.memberDAO;
 
 
-@WebServlet("/KstudyService")
+@WebServlet("/KwifiService")
 public class KwifiService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/plain");
 		String wifi = request.getParameter("theme");
+		PrintWriter out = response.getWriter();
+		out.print("hello" + wifi);
 		
 		System.out.println("wifi: " + wifi);
 		if(wifi.equals("1")) {

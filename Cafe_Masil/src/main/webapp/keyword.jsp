@@ -64,7 +64,7 @@
     			var wifi = $('#wifi').val();
     			$.ajax( {
     				type:'POST',
-    				data: {theme:wifi},
+    				data: {theme:1},
     				url: 'kwifiService',
     				success: function(res) {
     					
