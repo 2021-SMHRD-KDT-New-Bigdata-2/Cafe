@@ -175,13 +175,15 @@ public class memberDAO {
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
+				System.out.println("¼¿·¿Æ® ½ÇÇà");
 				int num = rs.getInt("num");
 				String cafeName = rs.getString("cafeName");
 				String cafeAddress = rs.getString("cafeAddress");
 				String cafeTel = rs.getString("cafeTel");
-				
+					
 				cafeVO vo = new cafeVO(num, cafeName, cafeAddress, cafeTel);
 				cafe_list.add(vo);
+				System.out.println("¼¿·¿Æ® ¿¡µå Á¾·á");
 			}
 			
 		}catch(Exception e) {

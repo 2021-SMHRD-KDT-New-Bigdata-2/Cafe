@@ -16,6 +16,8 @@ import com.model.cafeVO;
 import com.model.memberDAO;
 
 
+
+
 @WebServlet("/searchmapService")
 public class searchmapService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -23,17 +25,17 @@ public class searchmapService extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		String cafename = request.getParameter("cafename");
+		String cafename = request.getParameter("searchword");
 		
 		System.out.println("검색할 카페명: " + cafename);
 		
 		memberDAO dao = new memberDAO();
 		ArrayList<cafeVO> cafe_list = dao.search(cafename);
 		
-		PrintWriter out = response.getWriter();
 		if (cafe_list!=null) {
+			System.out.println("리스트 낫널 실행");
 			HttpSession session = request.getSession();
-			session.setAttribute("cafe_list", session);
+			session.setAttribute("cafe_list", cafe_list);
 			response.sendRedirect("searchmap.jsp");
 			
 			
