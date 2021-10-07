@@ -1,3 +1,5 @@
+<%@page import="com.model.cafeVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.model.memberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -41,12 +43,14 @@
                 type="post",
                 data: {"theme" : "wifi"}, 넘겨줄 데이터가 없을 때는 생략 가능
                 success : function(res){
-                   
-                    
-                    
+                	alert("성공")
+                   console.log(res);                    
                     // 지도만드는 함수
-                    mapmake(data)
+                    //mapmake(data)
                     
+                },
+                error : function(){
+                	alert("실패")
                 }
             })
         }

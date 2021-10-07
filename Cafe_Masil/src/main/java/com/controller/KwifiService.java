@@ -20,18 +20,22 @@ public class KwifiService extends HttpServlet {
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String wifi = request.getParameter("wifi");
+		String wifi = request.getParameter("theme");
 		
 		System.out.println("wifi: " + wifi);
-		
-		memberDAO dao = new memberDAO();
-		ArrayList<cafeVO> wifi_list =  dao.wifi(wifi);
-		
-		if (wifi_list!=null) {
+		if(wifi.equals("1")) {
+			memberDAO dao = new memberDAO();
+			ArrayList<cafeVO> wifi_list =  dao.wifi(wifi);
 			System.out.println("리스트 낫널 실행");
 			HttpSession session = request.getSession();
 			session.setAttribute("wifi_list", wifi_list);
+		}else {
+			//실행이 안될때 로직
+			System.out.println("리스트 낫널 실패!");
 		}
+		
+		
+		
 		
 		
 	}

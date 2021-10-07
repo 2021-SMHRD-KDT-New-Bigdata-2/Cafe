@@ -208,37 +208,38 @@ public class memberDAO {
 	public ArrayList<cafeVO> wifi(String wifi) {
 		ArrayList<cafeVO> wifi_list = new ArrayList<cafeVO>();
 		try {
-			getConnection();
-			String sql = "select * from cafeInfo where wifi=?";
-
-			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,wifi);
-			rs = psmt.executeQuery();
 			
-			while(rs.next()) {
-				System.out.println("wifi여부 실행");
-				int num = rs.getInt("num");
-				String businessNumber = rs.getString("businessNumber");
-				String bossName = rs.getString("bossName");
-				String bossTel = rs.getString("bossTel");
-				String cafeName = rs.getString("cafeName");
-				String cafeAddress = rs.getString("cafeAddress");
-				String cafeTel = rs.getString("cafeTel");
-				String ameIndex = rs.getString("ameIndex");
-				float lat = rs.getFloat("lat");
-				float lng = rs.getFloat("lng");
-				String cafeHours = rs.getString("cafeHours");
-				String bestMenu = rs.getString("bestMenu");
-				String tableNum = rs.getString("tableNum");
-				String groupseat = rs.getString("groupseat");
-				String beansell = rs.getString("beansell");
-				String alltime = rs.getString("alltime");
-				String smokingArea = rs.getString("smokingArea");
-				String roasting = rs.getString("roasting");
+				getConnection();
+				String sql = "select * from cafeInfo where wifi=?";
 				
-				cafeVO vo = new cafeVO(num,businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, groupseat, beansell, alltime, smokingArea, roasting);
-				wifi_list.add(vo);
-				System.out.println("wifi여부 실행 종료");
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1,wifi);
+				rs = psmt.executeQuery();
+				
+				while(rs.next()) {
+					System.out.println("wifi여부 실행");
+					int num = rs.getInt("num");
+					String businessNumber = rs.getString("businessNumber");
+					String bossName = rs.getString("bossName");
+					String bossTel = rs.getString("bossTel");
+					String cafeName = rs.getString("cafeName");
+					String cafeAddress = rs.getString("cafeAddress");
+					String cafeTel = rs.getString("cafeTel");
+					String ameIndex = rs.getString("ameIndex");
+					float lat = rs.getFloat("lat");
+					float lng = rs.getFloat("lng");
+					String cafeHours = rs.getString("cafeHours");
+					String bestMenu = rs.getString("bestMenu");
+					String tableNum = rs.getString("tableNum");
+					String groupseat = rs.getString("groupseat");
+					String beansell = rs.getString("beansell");
+					String alltime = rs.getString("alltime");
+					String smokingArea = rs.getString("smokingArea");
+					String roasting = rs.getString("roasting");
+					
+					cafeVO vo = new cafeVO(num,businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, groupseat, beansell, alltime, smokingArea, roasting);
+					wifi_list.add(vo);
+					System.out.println("wifi여부 실행 종료");
 			}
 		}catch(Exception e) {
 			e.printStackTrace();
