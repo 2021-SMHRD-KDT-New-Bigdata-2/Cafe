@@ -115,20 +115,33 @@ public class memberDAO {
 	}
 	
 	// 가맹등록 기능
-	public int caferequest(String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress, String cafeTel) {
+	public int cafeInfo(String businessNumber,String bossName, String bossTel, String cafeName, String cafeAddress, String cafeTel) {
 		
 		try {
 			getConnection();
-			String sql = "insert into cafeRequest values(cafeRequest_num.nextval,?,?,?,?,?,?)";
+			String sql = "insert into cafeInfo values(cafeInfo_num.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,bossName);
-			psmt.setString(2,businessNumber);
+			psmt.setString(1,businessNumber);
+			psmt.setString(2,bossName);
 			psmt.setString(3,bossTel);
 			psmt.setString(4,cafeName);
 			psmt.setString(5,cafeAddress);
 			psmt.setString(6,cafeTel);
+			psmt.setString(7,null);
+			psmt.setString(8,null);
+			psmt.setString(9,null);
+			psmt.setString(10,null);
+			psmt.setString(11,null);
+			psmt.setString(12,null);
+			psmt.setString(13,null);
+			psmt.setString(14,null);
+			psmt.setString(15,null);
+			psmt.setString(16,null);
+			psmt.setString(17,null);
+			psmt.setString(18,null);
 			
+		
 			cnt = psmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -168,7 +181,7 @@ public class memberDAO {
 		ArrayList<cafeVO> cafe_list = new ArrayList<cafeVO>();
 		try {
 			getConnection();
-			String sql = "select * from cafeRequest where cafeName=?";
+			String sql = "select * from cafeInfo where cafeName=?";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,cafename);

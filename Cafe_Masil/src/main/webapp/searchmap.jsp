@@ -22,7 +22,7 @@
 		cafe_list = dao.search(cafe_list.get(0).getCafeName());
 		}%>
 	<ul class="">
-		<li><h5>searchmap</h5></li> <!-- cafeRequest table -->
+		<li><h5>searchmap</h5></li> <!-- cafeInfo table -->
 		<form action="searchmapService" method="post">
 			<li>
 			<input name="searchword" type="text" placeholder="카페명을 검색하세요">

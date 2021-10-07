@@ -8,7 +8,8 @@ nickname varchar2(10) not null,
 tel varchar2(20) not null,
 bestMenu varchar2(20) not null,
 qna varchar2(100) not null,
-answer varchar2(10) not null,
+answer 
+varchar2(10) not null,
 constraint joinInfo_pk primary key(id)
 );
 
@@ -20,26 +21,38 @@ start with 1
 select * from joinInfo;
 
 /* ----------------구분선 ------------------ */
-drop table cafeRequest; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
+drop table cafeInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
 /* 가맹등록 테이블 */
-create table cafeRequest(
+create table cafeInfo(
 num number,
+businessNumber varchar2(20) not null,
 bossName varchar2(10) not null,
-businessNumber varchar2(10) not null,
 bossTel varchar2(10) not null,
 cafeName varchar2(10) not null,
 cafeAddress varchar2(10) not null,
 cafeTel varchar2(10) not null,
-constraint cafeRequest_pk primary key(BusinessNumber)
+ameIndex varchar2(10),
+lat float,
+lng float,
+cafeHours varchar2(10),
+bestMenu varchar2(10), 
+tableNum varchar2(10),
+wifi varchar2(10),
+groupseat varchar2(10),
+beansell varchar2(10),
+alltime varchar2(10),
+smokingArea varchar2(10),
+roasting varchar2(10),
+constraint cafeInfo_pk primary key(BusinessNumber)
 );
 
-/*정렬 시퀀스*/
-Create sequence cafeRequest_num
+/* 정렬 시퀀스 */
+Create sequence cafeInfo_num
 increment by 1
 start with 1
 
-select * from cafeRequest;
+select * from cafeInfo;
 
 /* ----------------구분선 ------------------ */
 drop table cafeDetail; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
