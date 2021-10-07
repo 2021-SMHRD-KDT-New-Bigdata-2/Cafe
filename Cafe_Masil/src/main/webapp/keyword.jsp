@@ -39,7 +39,7 @@
                 // 기능이 작동하는 공간
                 // URL
                 // 넘겨줄 데이터(필요한 경우)
-                url:"KstudyService",
+                url:"KwifiService",
                 type="post",
                 data: {"theme" : "wifi"}, 넘겨줄 데이터가 없을 때는 생략 가능
                 success : function(res){
@@ -54,8 +54,32 @@
                 }
             })
         }
+        
     </script>
-
+    	
+    	
+    <script>
+    	$(document).ready(function() {
+    		$('#bttwifi').click(function() {
+    			var wifi = $('#wifi').val();
+    			$.ajax( {
+    				type:'POST',
+    				data: {theme:1},
+    				url: 'kwifiService',
+    				success: function(res) {
+    					
+    				}
+    			})
+    		})
+    	});
+    </script>
+	
+	<form>
+		wifi <input type="text" id="wifi">
+		<input type="button" value="wifi" id="bttwifi"> 
+		<br>
+		<span id="result1"></span>
+	</form>
 
 
 </body>

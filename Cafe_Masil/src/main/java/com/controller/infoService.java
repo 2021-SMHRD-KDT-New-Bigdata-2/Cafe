@@ -1,8 +1,6 @@
-/*
 package com.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -15,36 +13,24 @@ import javax.servlet.http.HttpSession;
 import com.model.cafeVO;
 import com.model.memberDAO;
 
+@WebServlet("/infoService")
+public class infoService extends HttpServlet {
 
-@WebServlet("/KwifiService")
-public class KwifiService extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-
-	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.setContentType("text/plain");
-		String wifi = request.getParameter("theme");
-		PrintWriter out = response.getWriter();
-		out.print("hello" + wifi);
 		
-		System.out.println("wifi: " + wifi);
-		if(wifi.equals("1")) {
-			memberDAO dao = new memberDAO();
-			ArrayList<cafeVO> wifi_list =  dao.wifi(wifi);
+		String businessNumber = request.getParameter("businessNumber");
+		memberDAO dao = new memberDAO();
+		ArrayList<cafeVO> info_list =  dao.detailInfo(businessNumber);
+		if (info_list!=null) {
 			System.out.println("리스트 낫널 실행");
 			HttpSession session = request.getSession();
-			session.setAttribute("wifi_list", wifi_list);
-		}else {
-			//실행이 안될때 로직
-			System.out.println("리스트 낫널 실패!");
+			session.setAttribute("info_list", info_list);
+			response.sendRedirect("detailInfo.jsp");
+			
+			
 		}
-		
-		
-		
 		
 		
 	}
 
 }
-
-*/

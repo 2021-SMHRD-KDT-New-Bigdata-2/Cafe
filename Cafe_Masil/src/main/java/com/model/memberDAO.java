@@ -117,7 +117,7 @@ public class memberDAO {
 		
 		try {
 			getConnection();
-			String sql = "insert into cafeInfo values(cafeInfo_num.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into cafeInfo values(cafeInfo_num.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,businessNumber);
@@ -138,8 +138,15 @@ public class memberDAO {
 			psmt.setString(16,null);
 			psmt.setString(17,null);
 			psmt.setString(18,null);
+			psmt.setString(19,null);
+			psmt.setString(20,null);
+			psmt.setString(21,null);
+			psmt.setString(22,null);
+			psmt.setString(23,null);
+			psmt.setString(24,null);
+			psmt.setString(25,null);
+			psmt.setString(26,null);
 			
-		
 			cnt = psmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -174,7 +181,6 @@ public class memberDAO {
 	}
 	
 	// 가맹 카페 찾기 기능
-	
 	public ArrayList<cafeVO> search(String cafename) {
 		ArrayList<cafeVO> cafe_list = new ArrayList<cafeVO>();
 		try {
@@ -205,6 +211,7 @@ public class memberDAO {
 		return cafe_list;
 	}
 	
+	/* 키워드 ajax 써서 하기
 	public ArrayList<cafeVO> wifi(String wifi) {
 		ArrayList<cafeVO> wifi_list = new ArrayList<cafeVO>();
 		try {
@@ -233,9 +240,11 @@ public class memberDAO {
 					String tableNum = rs.getString("tableNum");
 					String groupseat = rs.getString("groupseat");
 					String beansell = rs.getString("beansell");
-					String alltime = rs.getString("alltime");
+					String companion = rs.getString("companion");
 					String smokingArea = rs.getString("smokingArea");
 					String roasting = rs.getString("roasting");
+					String subsidy = rs.getString("subsidy");
+					String 
 					
 					cafeVO vo = new cafeVO(num,businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, groupseat, beansell, alltime, smokingArea, roasting);
 					wifi_list.add(vo);
@@ -248,5 +257,50 @@ public class memberDAO {
 		}
 		return wifi_list;
 	}
+ */
+	public ArrayList<cafeVO> detailInfo(String businessNumber) {
+		ArrayList<cafeVO> info_list = new ArrayList<cafeVO>();
+		try {
+			getConnection();
+			String sql = "select cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestmenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1,image2,image3,image4,image5,image6 from cafeInfo where businessNumber=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,businessNumber);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				String cafeName = rs.getString("cafeName");
+				String cafeAddress = rs.getString("cafeAddress");
+				String cafeTel = rs.getString("cafeTel");
+				String ameIndex = rs.getString("ameIndex");
+				String cafeHours = rs.getString("cafeHours");
+				String bestMenu = rs.getString("bestMenu");
+				String tableNum = rs.getString("tableNum");
+				String wifi = rs.getString("wifi");
+				String groupseat = rs.getString("groupseat");
+				String beansell = rs.getString("beansell");
+				String companion = rs.getString("companion");
+				String smokingArea = rs.getString("smokingArea");
+				String roasting = rs.getString("roasting");
+				String subsidy = rs.getString("subsidy");
+				String board = rs.getString("board");
+				String image1 = rs.getString("image1");
+				String image2 = rs.getString("image2");
+				String image3 = rs.getString("image3");
+				String image4 = rs.getString("image4");
+				String image5 = rs.getString("image5");
+				String image6 = rs.getString("image6");
+				
+						
+				
+				cafeVO vo = new cafeVO(businessNumber,cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1, image2, image3, image4, image5, image6);
+				info_list.add(vo);	
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return info_list;
+	}
+	
 	
 }
