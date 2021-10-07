@@ -27,7 +27,7 @@ public class cafeVO {
 	
 	public cafeVO(int num, String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress,
 			String cafeTel, String ameIndex, float lat, float lng, String cafeHours, String bestmenu, String tableNum,
-			String wifi, String groupseat, String beansell, String alltime, String smokingArea, String roasting) {
+			String groupseat, String beansell, String alltime, String smokingArea, String roasting) {
 		this.num = num;
 		this.bossName = bossName;
 		this.businessNumber = businessNumber;
@@ -41,7 +41,6 @@ public class cafeVO {
 		this.cafeHours = cafeHours;
 		this.bestmenu = bestmenu;
 		this.tableNum = tableNum;
-		this.wifi = wifi;
 		this.groupseat = groupseat;
 		this.beansell = beansell;
 		this.alltime = alltime;

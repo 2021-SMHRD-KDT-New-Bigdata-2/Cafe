@@ -1,3 +1,4 @@
+<%@page import="com.model.memberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -23,7 +24,12 @@
     6. API 나에게 맞게 수정
 
         */
-
+	<% request.setCharacterEncoding("euc-kr"); 
+		memberDAO dao = new memberDAO();
+		//ArrayList<cafeVO> cafe_list = new ArrayList<>();
+		ArrayList<cafeVO> wifi_list = (ArrayList) session.getAttribute("wifi_list");
+		
+	%>
         function data() {
             $.ajax( {
                 // 서버에게 데이터를 비동기로 요청하는 부분
@@ -35,7 +41,7 @@
                 type="post",
                 data: {"theme" : "wifi"}, 넘겨줄 데이터가 없을 때는 생략 가능
                 success : function(res){
-                    let data = <% vo = res%>
+                   
                     
                     
                     // 지도만드는 함수
