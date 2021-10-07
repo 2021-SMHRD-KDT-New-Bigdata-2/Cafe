@@ -267,7 +267,6 @@ public class memberDAO {
 			psmt.setString(1,businessNumber);
 			rs = psmt.executeQuery();
 			while(rs.next()) {
-				int num = rs.getInt("num");
 				String cafeName = rs.getString("cafeName");
 				String cafeAddress = rs.getString("cafeAddress");
 				String cafeTel = rs.getString("cafeTel");
@@ -292,7 +291,7 @@ public class memberDAO {
 				
 						
 				
-				cafeVO vo = new cafeVO(num, businessNumber,cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1, image2, image3, image4, image5, image6);
+				cafeVO vo = new cafeVO(businessNumber,cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1, image2, image3, image4, image5, image6);
 				info_list.add(vo);	
 			}
 		}catch(Exception e){

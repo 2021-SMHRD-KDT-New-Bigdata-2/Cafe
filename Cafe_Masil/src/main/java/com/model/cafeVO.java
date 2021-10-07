@@ -105,10 +105,10 @@ public class cafeVO {
 	}
 	
 	public cafeVO(String businessNumber, String cafeName, String cafeAddress, String cafeTel, String ameIndex, String cafeHours,
-			String bestmenu, String tableNum, String wifi, String groupseat, String beansell, String companion, 
-			String smokingArea, String roasting ) {
-		this.businessNumber = businessNumber;
+			String bestmenu, String tableNum, String wifi, String groupseat, String beansell, String companion, String smokingArea, 
+			String roasting, String subsidy, String board, String image1, String image2, String image3, String image4, String image5, String image6 ) {
 		this.cafeName = cafeName;
+		this.businessNumber = businessNumber;
 		this.cafeAddress = cafeAddress;
 		this.cafeTel = cafeTel;
 		this.ameIndex = ameIndex;
@@ -120,6 +120,14 @@ public class cafeVO {
 		this.companion = companion;
 		this.smokingArea = smokingArea;
 		this.roasting = roasting;
+		this.subsidy = subsidy;
+		this.board = board;
+		this.image1 = image1;
+		this.image2 = image2;
+		this.image3 = image3;
+		this.image4 = image4;
+		this.image5 = image5;
+		this.image6 = image6;
 	}
 
 
