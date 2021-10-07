@@ -64,6 +64,24 @@ public class cafeVO {
 		this.cafeAddress = cafeAddress;
 		this.cafeTel = cafeTel;
 	}
+	
+	public cafeVO(String businessNumber, String cafeName, String cafeAddress, String cafeTel, String ameIndex, String cafeHours,
+			String bestmenu, String tableNum, String wifi, String groupseat, String beansell, String alltime, 
+			String smokingArea, String roasting ) {
+		this.businessNumber = businessNumber;
+		this.cafeName = cafeName;
+		this.cafeAddress = cafeAddress;
+		this.cafeTel = cafeTel;
+		this.ameIndex = ameIndex;
+		this.cafeHours = cafeHours;
+		this.bestmenu = bestmenu;
+		this.tableNum = tableNum;
+		this.groupseat = groupseat;
+		this.beansell = beansell;
+		this.alltime = alltime;
+		this.smokingArea = smokingArea;
+		this.roasting = roasting;
+	}
 
 
 	public String getBossName() {

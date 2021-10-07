@@ -49,7 +49,7 @@
         <!-- box header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="300" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/02.jpg" width="300" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">

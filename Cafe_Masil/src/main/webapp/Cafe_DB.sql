@@ -23,7 +23,7 @@ select * from joinInfo;
 /* ----------------구분선 ------------------ */
 drop table cafeInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
-/* 가맹등록 테이블 */
+/* 카페정보 테이블 */
 create table cafeInfo(
 num number,
 businessNumber varchar2(20) not null,
