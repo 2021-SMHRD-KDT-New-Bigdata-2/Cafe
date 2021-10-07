@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
 
 import oracle.net.aso.e;
 
@@ -137,6 +138,7 @@ public class memberDAO {
 		return cnt;
 	}
 	
+	// 회원정보수정 기능
 	public int update(String pw,String tel,String nickname,String bestmenu,String answer,String id) {
 		
 		try {
@@ -160,6 +162,34 @@ public class memberDAO {
 		return cnt;
 	}
 	
+	// 가맹 카페 찾기 기능
 	
+	public ArrayList<cafeVO> search(String cafename) {
+		ArrayList<cafeVO> cafe_list = new ArrayList<cafeVO>();
+		try {
+			getConnection();
+			String sql = "select * from cafeRequest where cafeName=?";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,cafename);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				int num = rs.getInt("num");
+				String cafeName = rs.getString("cafeName");
+				String cafeAddress = rs.getString("cafeAddress");
+				String cafeTel = rs.getString("cafeTel");
+				
+				cafeVO vo = new cafeVO(num, cafeName, cafeAddress, cafeTel);
+				cafe_list.add(vo);
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cafe_list;
+	}
 	
 }
