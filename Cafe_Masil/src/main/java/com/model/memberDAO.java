@@ -249,4 +249,37 @@ public class memberDAO {
 		return wifi_list;
 	}
 	
+	public ArrayList<cafeVO> detailInfo(String businessNumber) {
+		ArrayList<cafeVO> info_list = new ArrayList<cafeVO>();
+		try {
+			getConnection();
+			String sql = "select cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestmenu, tableNum, wifi, groupseat, beansell, alltime, smokingArea, roasting from cafeInfo where businessNumber=?";
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,businessNumber);
+			rs = psmt.executeQuery();
+			while(rs.next()) {
+				String cafeName = rs.getString("cafeName");
+				String cafeAddress = rs.getString("cafeAddress");
+				String cafeTel = rs.getString("cafeTel");
+				String ameIndex = rs.getString("ameIndex");
+				String cafeHours = rs.getString("cafeHours");
+				String bestMenu = rs.getString("bestMenu");
+				String tableNum = rs.getString("tableNum");
+				String wifi = rs.getString("wifi");
+				String groupseat = rs.getString("groupseat");
+				String beansell = rs.getString("beansell");
+				String alltime = rs.getString("alltime");
+				String smokingArea = rs.getString("smokingArea");
+				String roasting = rs.getString("roasting");
+				cafeVO vo = new cafeVO(businessNumber, cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, wifi, groupseat, beansell, alltime, smokingArea, roasting);
+				info_list.add(vo);	
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return info_list;
+	}
+	
 }
