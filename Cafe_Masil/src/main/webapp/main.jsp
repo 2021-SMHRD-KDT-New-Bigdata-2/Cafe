@@ -92,7 +92,7 @@
                 <li><a href="update.jsp">회원정보수정</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="">마이페이지</a></li>
+                <li><a href="keyword.jsp">마이페이지</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
