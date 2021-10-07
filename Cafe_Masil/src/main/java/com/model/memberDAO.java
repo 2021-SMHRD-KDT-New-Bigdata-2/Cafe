@@ -6,8 +6,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
-import oracle.net.aso.e;
-
 public class memberDAO {
 	
 	int cnt = 0;
@@ -115,20 +113,33 @@ public class memberDAO {
 	}
 	
 	// 가맹등록 기능
-	public int caferequest(String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress, String cafeTel) {
+	public int cafeInfo(String businessNumber,String bossName, String bossTel, String cafeName, String cafeAddress, String cafeTel) {
 		
 		try {
 			getConnection();
-			String sql = "insert into cafeRequest values(cafeRequest_num.nextval,?,?,?,?,?,?)";
+			String sql = "insert into cafeInfo values(cafeInfo_num.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,bossName);
-			psmt.setString(2,businessNumber);
+			psmt.setString(1,businessNumber);
+			psmt.setString(2,bossName);
 			psmt.setString(3,bossTel);
 			psmt.setString(4,cafeName);
 			psmt.setString(5,cafeAddress);
 			psmt.setString(6,cafeTel);
+			psmt.setString(7,null);
+			psmt.setString(8,null);
+			psmt.setString(9,null);
+			psmt.setString(10,null);
+			psmt.setString(11,null);
+			psmt.setString(12,null);
+			psmt.setString(13,null);
+			psmt.setString(14,null);
+			psmt.setString(15,null);
+			psmt.setString(16,null);
+			psmt.setString(17,null);
+			psmt.setString(18,null);
 			
+		
 			cnt = psmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -168,20 +179,22 @@ public class memberDAO {
 		ArrayList<cafeVO> cafe_list = new ArrayList<cafeVO>();
 		try {
 			getConnection();
-			String sql = "select * from cafeRequest where cafeName=?";
+			String sql = "select * from cafeInfo where cafeName=?";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,cafename);
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
+				System.out.println("셀렛트 실행");
 				int num = rs.getInt("num");
 				String cafeName = rs.getString("cafeName");
 				String cafeAddress = rs.getString("cafeAddress");
 				String cafeTel = rs.getString("cafeTel");
-				
+					
 				cafeVO vo = new cafeVO(num, cafeName, cafeAddress, cafeTel);
 				cafe_list.add(vo);
+				System.out.println("셀렛트 에드 종료");
 			}
 			
 		}catch(Exception e) {
@@ -190,6 +203,50 @@ public class memberDAO {
 			close();
 		}
 		return cafe_list;
+	}
+	
+	public ArrayList<cafeVO> wifi(String wifi) {
+		ArrayList<cafeVO> wifi_list = new ArrayList<cafeVO>();
+		try {
+			
+				getConnection();
+				String sql = "select * from cafeInfo where wifi=?";
+				
+				psmt = conn.prepareStatement(sql);
+				psmt.setString(1,wifi);
+				rs = psmt.executeQuery();
+				
+				while(rs.next()) {
+					System.out.println("wifi여부 실행");
+					int num = rs.getInt("num");
+					String businessNumber = rs.getString("businessNumber");
+					String bossName = rs.getString("bossName");
+					String bossTel = rs.getString("bossTel");
+					String cafeName = rs.getString("cafeName");
+					String cafeAddress = rs.getString("cafeAddress");
+					String cafeTel = rs.getString("cafeTel");
+					String ameIndex = rs.getString("ameIndex");
+					float lat = rs.getFloat("lat");
+					float lng = rs.getFloat("lng");
+					String cafeHours = rs.getString("cafeHours");
+					String bestMenu = rs.getString("bestMenu");
+					String tableNum = rs.getString("tableNum");
+					String groupseat = rs.getString("groupseat");
+					String beansell = rs.getString("beansell");
+					String alltime = rs.getString("alltime");
+					String smokingArea = rs.getString("smokingArea");
+					String roasting = rs.getString("roasting");
+					
+					cafeVO vo = new cafeVO(num,businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, groupseat, beansell, alltime, smokingArea, roasting);
+					wifi_list.add(vo);
+					System.out.println("wifi여부 실행 종료");
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return wifi_list;
 	}
 	
 }

@@ -55,6 +55,7 @@
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
+            
             <!-- box-primary-nav-trigger -->
         </header>
         <!-- end box header -->
@@ -70,7 +71,7 @@
                 <li><a href="join.jsp">회원가입</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
-                <li><a href="">카페검색</a></li>
+                <li><a href="searchmap.jsp">카페검색</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -90,8 +91,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="update.jsp">회원정보수정</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
-                <li><a href="">카페검색</a></li>
-                <li><a href="">마이페이지</a></li>
+                <li><a href="searchmap.jsp">카페검색</a></li>
+                <li><a href="keyword.jsp">마이페이지</a></li>
                 
                 <li class="box-label">Follow me!</li>
 

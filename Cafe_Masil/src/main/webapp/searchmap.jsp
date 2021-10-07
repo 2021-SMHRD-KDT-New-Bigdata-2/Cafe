@@ -12,42 +12,47 @@
 <body>
 	<% request.setCharacterEncoding("euc-kr"); 
 		memberDAO dao = new memberDAO();
-		ArrayList<cafeVO> cafe_list = new ArrayList<>();
-		cafeVO vo = (cafeVO)session.getAttribute("cafe_list");
+		//ArrayList<cafeVO> cafe_list = new ArrayList<>();
+		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
+		
 	%>
-	
 	<%
 	 if(cafe_list!=null) {
-		cafe_list = dao.search(vo.getCafeName());
+		 System.out.println("메인페이지 데이터 넘어옴");
+		cafe_list = dao.search(cafe_list.get(0).getCafeName());
 		}%>
 	<ul class="">
-		<li><h5>searchmap</h5></li> <!-- cafeRequest table -->
+		<li><h5>searchmap</h5></li> <!-- cafeInfo table -->
 		<form action="searchmapService" method="post">
 			<li>
-			<input name="cafename" type="text" placeholder="카페명을 검색하세요">
+			<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 			<button type="submit">검색</button>
 			</li>
 		</form>
 	</ul>
 	<p></p>
 	<ul class="actions">
-	<% if (vo!=null) { %>
-		<li><%=vo.getCafeName() %></li>
-		<li><%=vo.getCafeAddress() %></li>
-		<li><%=vo.getCafeTel() %></li>
+	<% if (cafe_list!=null) { %>
+		<li><%=cafe_list.get(0).getCafeName() %></li>
+		<li><%=cafe_list.get(0).getCafeTel() %></li>
+		<li><%=cafe_list.get(0).getCafeAddress() %></li>
 	</ul>
 	<% } %>
 	<p style="margin-top:-12px">
+	
     <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
-	</p>
+    <br> <br> <br> <br>
+    
+    <b># 스터디</b> <b># 감성</b> <b># 저렴이</b>
+ 	</p>
 <div id="map" style="width:100%;height:350px;"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8a648729d59a9d93e069596f3bdc70c9"></script>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a0848145c218c41d87cceb06f093d635"></script>
 <script>
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-        level: 10 // 지도의 확대 레벨 
+        level: 3 // 지도의 확대 레벨 
     }; 
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다

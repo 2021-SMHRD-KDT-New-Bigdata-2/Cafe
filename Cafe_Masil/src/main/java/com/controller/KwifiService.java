@@ -1,10 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,30 +14,29 @@ import com.model.cafeVO;
 import com.model.memberDAO;
 
 
-
-
-@WebServlet("/searchmapService")
-public class searchmapService extends HttpServlet {
+@WebServlet("/KstudyService")
+public class KwifiService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		String cafename = request.getParameter("searchword");
+		String wifi = request.getParameter("theme");
 		
-		System.out.println("검색할 카페명: " + cafename);
-		
-		memberDAO dao = new memberDAO();
-		ArrayList<cafeVO> cafe_list = dao.search(cafename);
-		
-		if (cafe_list!=null) {
+		System.out.println("wifi: " + wifi);
+		if(wifi.equals("1")) {
+			memberDAO dao = new memberDAO();
+			ArrayList<cafeVO> wifi_list =  dao.wifi(wifi);
 			System.out.println("리스트 낫널 실행");
 			HttpSession session = request.getSession();
-			session.setAttribute("cafe_list", cafe_list);
-			response.sendRedirect("searchmap.jsp");
-			
-			
+			session.setAttribute("wifi_list", wifi_list);
+		}else {
+			//실행이 안될때 로직
+			System.out.println("리스트 낫널 실패!");
 		}
+		
+		
+		
+		
 		
 	}
 
