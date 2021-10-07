@@ -8,8 +8,7 @@ nickname varchar2(10) not null,
 tel varchar2(20) not null,
 bestMenu varchar2(20) not null,
 qna varchar2(100) not null,
-answer 
-varchar2(10) not null,
+answer varchar2(10) not null,
 constraint joinInfo_pk primary key(id)
 );
 
@@ -41,9 +40,17 @@ tableNum varchar2(10),
 wifi varchar2(10),
 groupseat varchar2(10),
 beansell varchar2(10),
-alltime varchar2(10),
+companion varchar2(10),
 smokingArea varchar2(10),
 roasting varchar2(10),
+subsidy varchar2(10),
+board varchar2(50),
+image1 varchar2(50),
+image2 varchar2(50),
+image3 varchar2(50),
+image4 varchar2(50),
+image5 varchar2(50),
+image6 varchar2(50),
 constraint cafeInfo_pk primary key(BusinessNumber)
 );
 
@@ -119,9 +126,9 @@ businessNumber varchar2(10) not null,
 wifi varchar2(10) not null,
 groupSeat varchar2(10) not null,
 beanSell varchar(10) not null,
-allTime varchar2(10) not null,
+companion varchar2(10) not null,
 smokingArea varchar2(10) not null,
-loasting varchar2(10) not null,
+roasting varchar2(10) not null,
 constraint cafekeyword_fk foreign key(businessNumber) /* 이 테이블에서는 사업자번호를 외래키 설정 */ 
 references caferequest(businessNumber) /* caferequest에 저장된 사업자번호 참조 */
 );

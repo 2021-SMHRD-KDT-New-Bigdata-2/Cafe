@@ -1,3 +1,4 @@
+/*
 package com.controller;
 
 import java.io.IOException;
@@ -45,3 +46,5 @@ public class KwifiService extends HttpServlet {
 	}
 
 }
+
+*/
