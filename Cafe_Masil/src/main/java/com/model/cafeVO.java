@@ -29,76 +29,14 @@ public class cafeVO {
 	private String image4;
 	private String image5;
 	private String image6;
+
 	
-
-	public cafeVO(int num, String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress,
-			String cafeTel, String ameIndex, String cafeHours, String bestmenu, String tableNum,
-			String wifi, String groupseat, String beansell, String companion, String smokingArea, String roasting,
-			String subsidy, String board, String image1, String image2, String image3, String image4) {
-		this.num = num;
-		this.bossName = bossName;
-		this.businessNumber = businessNumber;
-		this.bossTel = bossTel;
-		this.cafeName = cafeName;
-		this.cafeAddress = cafeAddress;
-		this.cafeTel = cafeTel;
-		this.ameIndex = ameIndex;
-		this.lat = lat;
-		this.lng = lng;
-		this.cafeHours = cafeHours;
-		this.bestmenu = bestmenu;
-		this.tableNum = tableNum;
-		this.wifi = wifi;
-		this.groupseat = groupseat;
-		this.beansell = beansell;
-		this.companion = companion;
-		this.smokingArea = smokingArea;
-		this.roasting = roasting;
-		this.subsidy = subsidy;
-		this.board = board;
-		this.image1 = image1;
-		this.image2 = image2;
-		this.image3 = image3;
-		this.image4 = image4;
-		this.image5 = image5;
-		this.image6 = image6;
-	}
-
-	public cafeVO(int num, String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress,
-			String cafeTel, String ameIndex, float lat, float lng, String cafeHours, String bestmenu, String tableNum,
-			String groupseat, String beansell, String companion, String smokingArea, String roasting) {
-		this.num = num;
-		this.bossName = bossName;
-		this.businessNumber = businessNumber;
-		this.bossTel = bossTel;
-		this.cafeName = cafeName;
-		this.cafeAddress = cafeAddress;
-		this.cafeTel = cafeTel;
-		this.ameIndex = ameIndex;
-		this.lat = lat;
-		this.lng = lng;
-		this.cafeHours = cafeHours;
-		this.bestmenu = bestmenu;
-		this.tableNum = tableNum;
-		this.groupseat = groupseat;
-		this.beansell = beansell;
-		this.companion = companion;
-		this.smokingArea = smokingArea;
-		this.roasting = roasting;
-	}
 
 	public cafeVO(String bossName, String businessNumber, String bossTel, String cafeName, String cafeAddress,
 			String cafeTel) {
 		this.bossName = bossName;
 		this.businessNumber = businessNumber;
 		this.bossTel = bossTel;
-		this.cafeName = cafeName;
-		this.cafeAddress = cafeAddress;
-		this.cafeTel = cafeTel;
-	}
-
-	public cafeVO(int num, String cafeName, String cafeAddress, String cafeTel) {
-		this.num = num;
 		this.cafeName = cafeName;
 		this.cafeAddress = cafeAddress;
 		this.cafeTel = cafeTel;
@@ -129,7 +67,55 @@ public class cafeVO {
 		this.image5 = image5;
 		this.image6 = image6;
 	}
+	
+	
 
+	// search ±â´É
+	public cafeVO(int num, String businessNumber, String bossName, String bossTel, String cafeName, String cafeAddress,
+			String cafeTel, String ameIndex, float lat, float lng, String cafeHours, String bestmenu, String tableNum,
+			String wifi, String groupseat, String beansell, String companion, String smokingArea, String roasting,
+			String subsidy, String board, String image1, String image2, String image3, String image4, String image5,
+			String image6) {
+		super();
+		this.num = num;
+		this.bossName = bossName;
+		this.businessNumber = businessNumber;
+		this.bossTel = bossTel;
+		this.cafeName = cafeName;
+		this.cafeAddress = cafeAddress;
+		this.cafeTel = cafeTel;
+		this.ameIndex = ameIndex;
+		this.lat = lat;
+		this.lng = lng;
+		this.cafeHours = cafeHours;
+		this.bestmenu = bestmenu;
+		this.tableNum = tableNum;
+		this.wifi = wifi;
+		this.groupseat = groupseat;
+		this.beansell = beansell;
+		this.companion = companion;
+		this.smokingArea = smokingArea;
+		this.roasting = roasting;
+		this.subsidy = subsidy;
+		this.board = board;
+		this.image1 = image1;
+		this.image2 = image2;
+		this.image3 = image3;
+		this.image4 = image4;
+		this.image5 = image5;
+		this.image6 = image6;
+	}
+
+	@Override
+	public String toString() {
+		return "cafeVO [num=" + num + ", bossName=" + bossName + ", businessNumber=" + businessNumber + ", bossTel="
+				+ bossTel + ", cafeName=" + cafeName + ", cafeAddress=" + cafeAddress + ", cafeTel=" + cafeTel
+				+ ", ameIndex=" + ameIndex + ", lat=" + lat + ", lng=" + lng + ", cafeHours=" + cafeHours
+				+ ", bestmenu=" + bestmenu + ", tableNum=" + tableNum + ", wifi=" + wifi + ", groupseat=" + groupseat
+				+ ", beansell=" + beansell + ", companion=" + companion + ", smokingArea=" + smokingArea + ", roasting="
+				+ roasting + ", subsidy=" + subsidy + ", board=" + board + ", image1=" + image1 + ", image2=" + image2
+				+ ", image3=" + image3 + ", image4=" + image4 + ", image5=" + image5 + ", image6=" + image6 + "]";
+	}
 
 	public String getBossName() {
 		return bossName;

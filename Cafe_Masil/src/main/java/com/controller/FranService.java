@@ -17,6 +17,8 @@ public class FranService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+		request.setCharacterEncoding("euc-kr");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		String bossName = request.getParameter("bossName");
 		String bossTel = request.getParameter("bossTel");
