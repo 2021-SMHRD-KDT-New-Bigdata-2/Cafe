@@ -16,11 +16,7 @@
 		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
 		
 	%>
-	<%
-	 if(cafe_list!=null) {
-		 System.out.println("메인페이지 데이터 넘어옴");
-		cafe_list = dao.search(cafe_list.get(0).getCafeName());
-		}%>
+
 	<ul class="">
 		<li><h5>searchmap</h5></li> <!-- cafeInfo table -->
 		<form action="searchmapService" method="post">
@@ -34,8 +30,24 @@
 	<ul class="actions">
 	<% if (cafe_list!=null) { %>
 		<li><%=cafe_list.get(0).getCafeName() %></li>
-		<li><%=cafe_list.get(0).getCafeTel() %></li>
 		<li><%=cafe_list.get(0).getCafeAddress() %></li>
+		<li><%=cafe_list.get(0).getCafeTel() %></li>
+		<li><%=cafe_list.get(0).getAmeIndex() %></li>
+		<li><%=cafe_list.get(0).getLat() %></li>
+		<li><%=cafe_list.get(0).getLng() %></li>
+		<li><%=cafe_list.get(0).getCafeHours() %></li>
+		<li><%=cafe_list.get(0).getBestmenu() %></li>
+		<li><%=cafe_list.get(0).getTableNum() %></li>
+		<li><%=cafe_list.get(0).getWifi() %></li>
+		<li><%=cafe_list.get(0).getGroupseat() %></li>
+		<li><%=cafe_list.get(0).getBeansell() %></li>
+		<li><%=cafe_list.get(0).getCompanion() %></li>
+		<li><%=cafe_list.get(0).getSmokingArea() %></li>
+		<li><%=cafe_list.get(0).getRoasting() %></li>
+		<li><%=cafe_list.get(0).getSubsidy() %></li>
+		<li><%=cafe_list.get(0).getBoard() %></li>
+		<li><%=cafe_list.get(0).getImage1() %></li>
+		<li><%=cafe_list.get(0).getImage2() %></li>
 	</ul>
 	<% } %>
 	<p style="margin-top:-12px">
@@ -49,22 +61,25 @@
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a0848145c218c41d87cceb06f093d635"></script>
 <script>
+
+
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
-        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+        center: new kakao.maps.LatLng(123,12), // 지도의 중심좌표
         level: 3 // 지도의 확대 레벨 
     }; 
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
+<% if (cafe_list!=null) {%>
 // HTML5의 geolocation으로 사용할 수 있는지 확인합니다 
 if (navigator.geolocation) {
     
     // GeoLocation을 이용해서 접속 위치를 얻어옵니다
     navigator.geolocation.getCurrentPosition(function(position) {
         
-        var lat = position.coords.latitude, // 위도
-            lon = position.coords.longitude; // 경도
+        var lat = <%=cafe_list.get(0).getLat() %>, // 위도
+            lon = <%=cafe_list.get(0).getLng() %>; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
             message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
@@ -74,13 +89,27 @@ if (navigator.geolocation) {
             
       });
     
-} else { // HTML5의 GeoLocation을 사용할 수 없을때 마커 표시 위치와 인포윈도우 내용을 설정합니다
-    
-    var locPosition = new kakao.maps.LatLng(33.450701, 126.570667),    
-        message = 'geolocation을 사용할수 없어요..'
-        
-    displayMarker(locPosition, message);
 }
+
+<%}else{%>
+if (navigator.geolocation) {
+    //초기지도 센터값
+    // GeoLocation을 이용해서 접속 위치를 얻어옵니다
+    navigator.geolocation.getCurrentPosition(function(position) {
+        
+        var lat = position.coords.latitude, // 위도
+            lon = position.coords.longitude; // 경도
+        
+        var locPosition = new kakao.maps.LatLng(35.1764544, 126.912556), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+            message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+        
+        // 마커와 인포윈도우를 표시합니다
+        displayMarker(locPosition, message);
+            
+      });
+    
+}
+<%}%>
 
 // 지도에 마커와 인포윈도우를 표시하는 함수입니다
 function displayMarker(locPosition, message) {

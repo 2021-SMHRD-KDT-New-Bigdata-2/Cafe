@@ -18,6 +18,8 @@ public class infoService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
+		request.setCharacterEncoding("euc-kr");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		memberDAO dao = new memberDAO();
 		ArrayList<cafeVO> info_list =  dao.detailInfo(businessNumber);

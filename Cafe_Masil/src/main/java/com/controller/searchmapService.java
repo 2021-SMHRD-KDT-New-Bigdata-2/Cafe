@@ -24,6 +24,8 @@ public class searchmapService extends HttpServlet {
 
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		request.setCharacterEncoding("euc-kr");
 
 		String cafename = request.getParameter("searchword");
 		
