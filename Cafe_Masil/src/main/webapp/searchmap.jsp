@@ -24,6 +24,56 @@
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
+    <style>
+    .liston1 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}	
+    .liston2 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}	
+    .liston3 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}	
+    .liston4 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}	
+    .liston5 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}	
+    .liston6 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}	
+	</style>
 </head>
 <body>   
         <!-- box-header -->
@@ -96,13 +146,40 @@
 		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
 		
 	%>
-
-	<ul class="">
+	<div class="container main-container">
+        <div class="col-md-5">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+     			   </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+	<ul class="" align = "center">
 		<form action="searchmapService" method="post">
-			<li>
 			<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 			<button type="submit">검색</button>
-			</li>
 		</form>
 	</ul>
 	<p></p>
@@ -130,13 +207,11 @@
 	</ul>
 	<% } %>
 	<p style="margin-top:-12px">
-	
-    <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
     <br> <br> <br> <br>
     
-    <b># 스터디</b> <b># 감성</b> <b># 저렴이</b>
  	</p>
 <div id="map" style="width:100%;height:350px;"></div>
+	
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a0848145c218c41d87cceb06f093d635"></script>
 <script>
@@ -216,7 +291,60 @@ function displayMarker(locPosition, message) {
 }    
 </script>
 	
-
+<div class="container main-container" align = "center">
+        <div class="col-md-12">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                    	<div class="liston1">
+                    	<img src="http://placehold.it/400×700" alt="logo">
+        			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                    	<div class="liston2">
+                    	<img src="http://placehold.it/400×700" alt="logo">
+        			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="liston3">
+                    	<img src="http://placehold.it/400×700" alt="logo">
+        			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="liston4">
+                    	<img src="http://placehold.it/400×700" alt="logo">
+        			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="liston5">
+                    	<img src="http://placehold.it/400×700" alt="logo">
+        			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="liston6">
+                    	<img src="http://placehold.it/400×700" alt="logo">
+        			    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- footer -->
     <footer>
