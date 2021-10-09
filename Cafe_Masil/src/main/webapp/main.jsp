@@ -49,7 +49,7 @@
         <!-- box header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/logo_masil.jpg" img scr= "" width="300" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/logo_masil.jpg" img scr= "" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -67,7 +67,7 @@
      	        <li class="box-label"> Choose me! </li>
 
 				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.html">로그인</a>
+                <li><a href="login.jsp">로그인</a>
                 <li><a href="join.jsp">회원가입</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
