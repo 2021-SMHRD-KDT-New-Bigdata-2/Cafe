@@ -1,24 +1,21 @@
 <%@page import="com.model.memberVO"%>
-<%@page import="com.model.cafeVO"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>   
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Box personal portfolio Template</title>
-    <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
@@ -49,10 +46,10 @@
     <!-- end Preloader -->
 
     <div class="container-fluid">
-       <!-- box-header -->
+        <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.png" width="80" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="100" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -61,7 +58,7 @@
             <!-- box-primary-nav-trigger -->
         </header>
         <!-- end box-header -->
-        
+
         <!-- nav -->
        <%if(vo==null) {%>
     	<nav>
@@ -106,66 +103,66 @@
         </nav>
         <%}%>
         <!-- end nav -->
+
     </div>
-    
-    <!-- top-bar -->
+
+    <!-- top bar -->
     <div class="top-bar">
-        <h1>상세보기</h1>
+        <h1>고객지원</h1>
+        <p><span>회원정보수정</span> / <span>1:1문의</span> / <span>공지사항</span></p>
     </div>
-    <!-- end top-bar -->
-    
+    <!-- end top bar -->
+
     <!-- main-container -->
     <div class="container main-container">
-        <div class="col-md-12">
-            <img src=<%=info_list.get(0).getImage1() %> alt="" class="img-responsive" />
-            <div class="h-30"></div>
+        <div class="col-md-6">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                        <a href="update.jsp" class="btn btn-box">회원정보수정</a>
+                    </div> 
+                    <div class="col-md-4">
+                        <a href="#" class="btn btn-box">1:1 문의</a>
+                    </div> 
+                    <div class="col-md-4">
+                        <a href="#" class="btn btn-box">공지사항</a>
+                    </div> 
+                </div>
+            </form>
         </div>
 
-        <div class="col-md-12">
-            <h3 class="text-uppercase"><%=info_list.get(0).getCafeName()%></h3>
-            <h5><%=info_list.get(0).getCafeAddress()%></h5>
-            <div class="h-30"></div>
-        </div>
 
-        <div class="col-md-9">
-            <p> 인더스트리는 ~ </p>
 
-            <p> 블라블라~ </p>
-        </div>
-
-        <div class="col-md-3">
-            <ul class="cat-ul">
-                <li><i class="ion-ios-circle-filled"></i> 전화번호 : <%=info_list.get(0).getCafeTel()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 아메지수 : <%=info_list.get(0).getAmeIndex()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 운영시간 : <%=info_list.get(0).getCafeHours()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 추천메뉴 : <%=info_list.get(0).getBestmenu()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 테이블개수 : <%=info_list.get(0).getTableNum()%></li>
-            </ul>
-            <div class="h-10"></div>
-            <h4>Share</h4>
-            <ul class="social-ul">
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
-            </ul>
-        </div>
     </div>
     <!-- end main-container -->
-
 
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+            contact <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">This Is A Tage//Plz must change me!!!</a>
         </div>
     </footer>
     <!-- end footer -->
-    
+
     <!-- back to top -->
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
-
 
 
 

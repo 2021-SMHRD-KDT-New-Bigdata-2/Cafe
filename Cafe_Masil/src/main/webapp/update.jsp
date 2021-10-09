@@ -1,59 +1,199 @@
 <%@page import="com.model.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>   
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-	<head>
-		<title>Forty by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		
-	</head>
-	<style>
-	
-	</style>
-	<body style="text-align: center;">
-	<%
-		memberVO vo = (memberVO)session.getAttribute("member");
-		 
-	%>
-		<!-- Wrapper -->
-		
-			<div id="wrapper">
-				<!-- Menu -->
-					<nav id="Update">	
-						<ul class="actions vertical">
-						<form action="updateService" method="post">
-							<li><h5>회원정보수정</h5></li>
-								<li>아이디: <%=vo.getId() %> </li>
-								<%--1. 현재 로그인 한 사람의 EMAIL를 아래에  li태그 안에 출력하시오.--%>
-								<%--2. 입력한 정보를 UpdateCon으로 전송하시오.--%>
-								
-								<li><input name="pw" type="password" placeholder="PW를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-								<li><input name="nickname" type="text" placeholder="nickname을 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-								<li><input name="tel" type="text" placeholder="tel을 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-								<li><input name="bestmenu" type="text" placeholder="bestmenu를 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-								<li><input name="answer" type="text" placeholder="answer을 입력하세요" style="width: 500px; margin: 0 auto;"></li>
-								<li><input type="submit" value="Update" class="button fit" style="width: 500px; margin: 0 auto;"></li>
-						</form>
-						</ul>
-					</nav>			
-			</div>
-		<!-- Scripts -->
-			
-		
-		
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-	</body>
-</html>
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Box personal portfolio Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
+
+    <!-- main css -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- modernizr -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="pre-container">
+            <div class="spinner">
+                <div class="double-bounce1"></div>
+                <div class="double-bounce2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- end Preloader -->
+
+    <div class="container-fluid">
+        <!-- box-header -->
+        <header class="box-header">
+            <div class="box-logo">
+                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="100" alt="Logo"></a>
+            </div>
+            <!-- box-nav -->
+            <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+            </a>
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box-header -->
+
+        <!-- nav -->
+       <%if(vo==null) {%>
+    	<nav>
+     	    <ul class="box-primary-nav">
+     	        <li class="box-label"> Choose me! </li>
+
+				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="login.jsp">로그인</a>
+                <li><a href="join.jsp">회원가입</a></li>
+                <li><a href="fran.jsp">가맹등록</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
+                <li><a href="searchmap.jsp">카페검색</a></li>
+                
+                <li class="box-label">Follow me!</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <%}else{%>
+        <nav>
+     	    <ul class="box-primary-nav">
+     	        <li class="box-label"> Choose me! </li>
+
+				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+				<li><a href="LogoutService">로그아웃</a></li>
+                <li><a href="fran.jsp">가맹등록</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
+                <li><a href="searchmap.jsp">카페검색</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
+                <li><a href="MyCafe.jsp">MyCafe</a></li>
+                
+                <li class="box-label">Follow me!</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <%}%>
+        <!-- end nav -->
+
+    </div>
+
+    <!-- top bar -->
+    <div class="top-bar">
+        <h1>회원정보수정</h1>
+    </div>
+    <!-- end top bar -->
+
+    <!-- main-container -->
+    <div class="container main-container">
+        <div class="col-md-6">
+            <form action="FranService" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <span>아이디:<%=vo.getId() %></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="pw" type="text" name="password">
+                            <span>바꿀 비밀번호를 입력하세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="nickname" type="text" name="nickname">
+                            <span>바꿀 닉네임을 입력하세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="tel" type="text" name="tel">
+                            <span>바꿀 전화번호를 입력하세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="bestmenu" type="text" name="bestmenu">
+                            <span>바꿀 선호메뉴를 입력하세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="answer" type="text" name="qna">
+                            <span>바꿀 개인정보 답변을 입력하세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-12">
+                        <input type="submit" value="회원정보 수정" class="btn btn-box">
+                    </div> 
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+    <!-- end main-container -->
+
+    <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+            contact <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">This Is A Tage//Plz must change me!!!</a>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <!-- back to top -->
+    <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
+    <!-- end back to top -->
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery-2.1.1.js"></script>
+    <!--  plugins -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/animated-headline.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+
+
+    <!--  custom script -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

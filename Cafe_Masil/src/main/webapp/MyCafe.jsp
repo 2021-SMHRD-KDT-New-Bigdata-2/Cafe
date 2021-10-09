@@ -1,19 +1,14 @@
 <%@page import="com.model.memberVO"%>
-<%@page import="com.model.cafeVO"%>
-<%@page import="java.util.ArrayList"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>   
+    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Box personal portfolio Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -26,44 +21,22 @@
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
-
-<body>
-
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="pre-container">
-            <div class="spinner">
-                <div class="double-bounce1"></div>
-                <div class="double-bounce2"></div>
-            </div>
-        </div>
-    </div>
-    <!-- end Preloader -->
-
-    <div class="container-fluid">
-       <!-- box-header -->
+<body>   
+        <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.png" width="80" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
             </div>
-            <!-- box-nav -->
+                        <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
-            <!-- box-primary-nav-trigger -->
         </header>
         <!-- end box-header -->
-        
+
         <!-- nav -->
-       <%if(vo==null) {%>
+<%if(vo==null) {%>
     	<nav>
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
@@ -106,52 +79,14 @@
         </nav>
         <%}%>
         <!-- end nav -->
+
+
+     <!-- Top bar -->
+     <div class="top-bar">
+        <h1>MY CAFE</h1>
+        <p><a href="#">Home</a> / About me</p>
     </div>
-    
-    <!-- top-bar -->
-    <div class="top-bar">
-        <h1>상세보기</h1>
-    </div>
-    <!-- end top-bar -->
-    
-    <!-- main-container -->
-    <div class="container main-container">
-        <div class="col-md-12">
-            <img src=<%=info_list.get(0).getImage1() %> alt="" class="img-responsive" />
-            <div class="h-30"></div>
-        </div>
-
-        <div class="col-md-12">
-            <h3 class="text-uppercase"><%=info_list.get(0).getCafeName()%></h3>
-            <h5><%=info_list.get(0).getCafeAddress()%></h5>
-            <div class="h-30"></div>
-        </div>
-
-        <div class="col-md-9">
-            <p> 인더스트리는 ~ </p>
-
-            <p> 블라블라~ </p>
-        </div>
-
-        <div class="col-md-3">
-            <ul class="cat-ul">
-                <li><i class="ion-ios-circle-filled"></i> 전화번호 : <%=info_list.get(0).getCafeTel()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 아메지수 : <%=info_list.get(0).getAmeIndex()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 운영시간 : <%=info_list.get(0).getCafeHours()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 추천메뉴 : <%=info_list.get(0).getBestmenu()%></li>
-                <li><i class="ion-ios-circle-filled"></i> 테이블개수 : <%=info_list.get(0).getTableNum()%></li>
-            </ul>
-            <div class="h-10"></div>
-            <h4>Share</h4>
-            <ul class="social-ul">
-                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
-                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
-            </ul>
-        </div>
-    </div>
-    <!-- end main-container -->
+    <!-- end Top bar -->
 
 
     <!-- footer -->
@@ -161,13 +96,10 @@
         </div>
     </footer>
     <!-- end footer -->
-    
+
     <!-- back to top -->
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
-
-
-
 
     <!-- jQuery -->
     <script src="js/jquery-2.1.1.js"></script>
@@ -180,7 +112,5 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
-
 </body>
-
 </html>

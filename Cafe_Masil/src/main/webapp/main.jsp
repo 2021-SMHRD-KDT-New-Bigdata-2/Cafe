@@ -49,7 +49,7 @@
         <!-- box header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/logo_masil.jpg" img scr= "" width="80" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" img scr= "" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -89,10 +89,10 @@
 				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
 				<li><a href="LogoutService">로그아웃</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
-                <li><a href="update.jsp">회원정보수정</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="">마이페이지</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
+                <li><a href="MyCafe.jsp">MyCafe</a></li>
                 
                 <li class="box-label">Follow me!</li>
 

@@ -65,12 +65,12 @@
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
-                <li><a href="contact.jsp">로그인</a>
-                <li><a href="join.jsp">회원가입</a></li>
-                <li><a href="fran.jsp">가맹등록</a></li>
-                <li><a href="keywordMenu.jsp">전체 카페</a></li>
-                <li><a href="searchmap.jsp">카페검색</a></li>
+				<li><a href="main.jsp">Ȩ</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="login.jsp">�α���</a>
+                <li><a href="join.jsp">ȸ������</a></li>
+                <li><a href="fran.jsp">���͵��</a></li>
+                <li><a href="keywordMenu.jsp">��ü ī��</a></li>
+                <li><a href="searchmap.jsp">ī��˻�</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -85,13 +85,13 @@
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
-				<li><a href="LogoutService">로그아웃</a></li>
-                <li><a href="fran.jsp">가맹등록</a></li>
-                <li><a href="update.jsp">회원정보수정</a></li>
-                <li><a href="keywordMenu.jsp">전체 카페</a></li>
-                <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="">마이페이지</a></li>
+				<li><a href="main.jsp">Ȩ</a> <i class="ion-ios-circle-filled color"></i></li>
+				<li><a href="LogoutService">�α׾ƿ�</a></li>
+                <li><a href="fran.jsp">���͵��</a></li>
+                <li><a href="keywordMenu.jsp">��ü ī��</a></li>
+                <li><a href="searchmap.jsp">ī��˻�</a></li>
+                <li><a href="gogacJiwon.jsp">��������</a></li>
+                <li><a href="MyCafe.jsp">MyCafe</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -108,7 +108,7 @@
 
     <!-- top bar -->
     <div class="top-bar">
-        <h1>로그인</h1>
+        <h1>�α���</h1>
     </div>
     <!-- end top bar -->
 
@@ -120,13 +120,13 @@
                     <div class="col-md-7">
                         <div class="input-contact">
                             <input name="id" type="text" name="name">
-                            <span>ID를 입력하세요</span>
+                            <span>ID�� �Է��ϼ���</span>
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="input-contact">
                             <input name="pw" type="text" name="password">
-                            <span>비밀번호를 입력하세요</span>
+                            <span>��й�ȣ�� �Է��ϼ���</span>
                         </div>        
                     </div>
                     <div class="col-md-12">
@@ -142,7 +142,7 @@
                     <div class="col-md-12">
                     </div>                         
                     <div class="col-md-12">
-                        <input type="submit" value="로그인" class="btn btn-box">
+                        <input type="submit" value="�α���" class="btn btn-box">
                     </div> 
                     
                 </div>
