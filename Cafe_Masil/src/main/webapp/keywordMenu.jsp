@@ -134,7 +134,7 @@
                 <div class="no-padding portfolio_container clearfix">
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6  fashion logo">
-                        <a href="infoService?businessNumber=k" class="portfolio_item">
+                        <a href="infoService?businessNumber=2" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
