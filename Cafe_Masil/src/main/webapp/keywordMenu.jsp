@@ -58,12 +58,12 @@
         </header>
         <!-- end box-header -->
 
-         <!-- nav -->
+        <!-- nav -->
         <%if(vo==null) {%>
     	<nav>
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
-
+     	        
 				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="login.jsp">로그인</a>
                 <li><a href="join.jsp">회원가입</a></li>

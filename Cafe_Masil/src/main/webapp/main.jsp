@@ -49,7 +49,7 @@
         <!-- box header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/logo_masil.jpg" img scr= "" width="300" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/logo_masil.jpg" img scr= "" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -114,7 +114,7 @@
                         <b>&nbsp;Wherever</b>
                         <b>Cafe,Masil</b>
                     </span>
-		        </h1>
+              	</h1>
                 <h4>카페 마실, 동네를 담다</h4>
             </div>
 
