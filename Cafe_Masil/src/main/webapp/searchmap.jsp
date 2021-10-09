@@ -24,6 +24,34 @@
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
+    <style>
+    .liston1> img {
+    float: left;
+}
+    .liston1 {
+    border: 1px solid black;
+    margin: 0 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px 20px 20px 20px;
+	}
+	
+	.liston1::after {
+	content:"";
+	display:block;
+	clear:both;
+	}
+	
+	.liston1 img {
+		width:25%;
+		box-sizing:border-box;
+		background-color:green;
+		
+	}
+	
+	</style>
 </head>
 <body>   
         <!-- box-header -->
@@ -96,47 +124,46 @@
 		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
 		
 	%>
-
-	<ul class="">
+	<div class="container main-container">
+        <div class="col-md-5">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+     			   </div>
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+	<ul class="" align = "center">
 		<form action="searchmapService" method="post">
-			<li>
 			<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 			<button type="submit">검색</button>
-			</li>
 		</form>
 	</ul>
-	<p></p>
-	<ul class="actions">
-	<% if (cafe_list!=null) { %>
-		<li><%=cafe_list.get(0).getCafeName() %></li>
-		<li><%=cafe_list.get(0).getCafeAddress() %></li>
-		<li><%=cafe_list.get(0).getCafeTel() %></li>
-		<li><%=cafe_list.get(0).getAmeIndex() %></li>
-		<li><%=cafe_list.get(0).getLat() %></li>
-		<li><%=cafe_list.get(0).getLng() %></li>
-		<li><%=cafe_list.get(0).getCafeHours() %></li>
-		<li><%=cafe_list.get(0).getBestmenu() %></li>
-		<li><%=cafe_list.get(0).getTableNum() %></li>
-		<li><%=cafe_list.get(0).getWifi() %></li>
-		<li><%=cafe_list.get(0).getGroupseat() %></li>
-		<li><%=cafe_list.get(0).getBeansell() %></li>
-		<li><%=cafe_list.get(0).getCompanion() %></li>
-		<li><%=cafe_list.get(0).getSmokingArea() %></li>
-		<li><%=cafe_list.get(0).getRoasting() %></li>
-		<li><%=cafe_list.get(0).getSubsidy() %></li>
-		<li><%=cafe_list.get(0).getBoard() %></li>
-		<li><%=cafe_list.get(0).getImage1() %></li>
-		<li><%=cafe_list.get(0).getImage2() %></li>
-	</ul>
-	<% } %>
-	<p style="margin-top:-12px">
-	
-    <b>Chrome 브라우저는 https 환경에서만 geolocation을 지원합니다.</b> 참고해주세요.
-    <br> <br> <br> <br>
-    
-    <b># 스터디</b> <b># 감성</b> <b># 저렴이</b>
+	<br><br><br><br>
  	</p>
-<div id="map" style="width:100%;height:350px;"></div>
+<center><div id="map" style="width:70%;height:350px;"></div></center>
+	
 
 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a0848145c218c41d87cceb06f093d635"></script>
 <script>
@@ -145,7 +172,7 @@
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(123,12), // 지도의 중심좌표
-        level: 3 // 지도의 확대 레벨 
+        level: 4 // 지도의 확대 레벨 
     }; 
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
@@ -214,9 +241,76 @@ function displayMarker(locPosition, message) {
     map.setCenter(locPosition);      
 }    
 </script>
-	
-
-
+<%if(cafe_list!=null) {%>
+<div class="container main-container" align = "center">
+        <div class="col-md-12">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                    	<div class="liston1">
+                    		<img src="https://www.jeongdong.or.kr/static/portal/img/HKPU_04_04_pic1.jpg" alt="logo" style="width:25%;">
+        			    	 <p><%=cafe_list.get(0).getCafeName() %> </p>
+        			  	  <p>주소 : <%=cafe_list.get(0).getCafeAddress() %> </p>
+        			  	  <p>번호 : <%=cafe_list.get(0).getCafeTel() %> </p>
+        			  	  <p><a href = "infoService?businessNumber=2">상세보기</a> </p>
+        			    </div>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>
+   <%}else{ %>
+<div class="container main-container" align = "center">
+        <div class="col-md-12">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+    </div>
+    <%} %>
     <!-- footer -->
     <footer>
         <div class="container-fluid">
