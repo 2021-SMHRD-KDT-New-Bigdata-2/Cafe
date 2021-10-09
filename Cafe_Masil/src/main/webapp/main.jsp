@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
+   <% memberVO vo = (memberVO)session.getAttribute("member"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -47,14 +47,41 @@
 
     <div class="container-fluid">
         <!-- box header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" img scr= "" width="80" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
+        <!-- navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapse" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <!-- navbar 버튼-->
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" herf="#">#로고삽입#</a> <!-- 카페 왼쪽 상단-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-collapse-1">
+          <!-- 네비게이션 바에 회원로그인-->
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">로그인<span class="sr-only"></span></a></li>
+            <li><a href="#">회원가입</a></li>
+            <li class="dropdown">
+              <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="검색">
+            </div>
+            <button type="submit" class="btn btn-default">GO!</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+            
             
             <!-- box-primary-nav-trigger -->
         </header>
@@ -62,11 +89,11 @@
 
         <!-- nav -->
        <%if(vo==null) {%>
-    	<nav>
-     	    <ul class="box-primary-nav">
-     	        <li class="box-label"> Choose me! </li>
+       <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+            <li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="login.jsp">로그인</a>
                 <li><a href="join.jsp">회원가입</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
@@ -83,11 +110,11 @@
         </nav>
         <%}else{%>
         <nav>
-     	    <ul class="box-primary-nav">
-     	        <li class="box-label"> Choose me! </li>
+            <ul class="box-primary-nav">
+                <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
-				<li><a href="LogoutService">로그아웃</a></li>
+            <li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+            <li><a href="LogoutService">로그아웃</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
@@ -114,7 +141,11 @@
                         <b>&nbsp;Wherever</b>
                         <b>Cafe,Masil</b>
                     </span>
+<<<<<<< HEAD
               	</h1>
+=======
+              </h1>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
                 <h4>카페 마실, 동네를 담다</h4>
             </div>
 
