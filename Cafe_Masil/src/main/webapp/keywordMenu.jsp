@@ -120,8 +120,8 @@
                     <nav class="categories text-center">
                         <ul class="portfolio_filter">
                             <li><a href="" class="active" data-filter="*">All</a></li>
-                            <li><a href="" data-filter=".photography">Photography</a></li>
-                            <li><a href="" data-filter=".logo">Logo</a></li>
+                            <li><a href="" data-filter=".clean">clean</a></li>
+                            <li><a href="" data-filter=".area">area</a></li>
                             <li><a href="" data-filter=".graphics">Graphics</a></li>
                             <li><a href="" data-filter=".ads">Advertising</a></li>
                             <li><a href="" data-filter=".fashion">Fashion</a></li>
@@ -133,14 +133,14 @@
                 <!-- portfolio_container -->
                 <div class="no-padding portfolio_container clearfix">
                     <!-- single work -->
-                    <div class="col-md-4 col-sm-6  fashion logo">
+                    <div class="col-md-4 col-sm-6  fashion area">
                         <a href="infoService?businessNumber=2" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>Mockups in seconds</span>
-                                        <em>Fashion / Logo</em>
+                                        <em>Fashion / area</em>
                                     </div>
                                 </div>
                             </div>
@@ -165,14 +165,14 @@
                     <!-- end single work -->
 
                     <!-- single work -->
-                    <div class="col-md-4 col-sm-12 photography">
+                    <div class="col-md-4 col-sm-12 clean">
                         <a href="single-project.html" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>Photorealistic smartwatch</span>
-                                        <em>Photography</em>
+                                        <em></em>
                                     </div>
                                 </div>
                             </div>
@@ -213,14 +213,14 @@
                     <!-- end single work -->
 
                     <!-- single work -->
-                    <div class="col-md-4 col-sm-12 photography">
+                    <div class="col-md-4 col-sm-12 clean">
                         <a href="single-project.html" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>Photorealistic smartwatch</span>
-                                        <em>Photography</em>
+                                        <em>clean</em>
                                     </div>
                                 </div>
                             </div>
