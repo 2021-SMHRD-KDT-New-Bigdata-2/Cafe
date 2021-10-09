@@ -160,33 +160,7 @@
 			<button type="submit">°Ë»ö</button>
 		</form>
 	</ul>
-	<p></p>
-	<ul class="actions">
-	<% if (cafe_list!=null) { %>
-		<li><%=cafe_list.get(0).getCafeName() %></li>
-		<li><%=cafe_list.get(0).getCafeAddress() %></li>
-		<li><%=cafe_list.get(0).getCafeTel() %></li>
-		<li><%=cafe_list.get(0).getAmeIndex() %></li>
-		<li><%=cafe_list.get(0).getLat() %></li>
-		<li><%=cafe_list.get(0).getLng() %></li>
-		<li><%=cafe_list.get(0).getCafeHours() %></li>
-		<li><%=cafe_list.get(0).getBestmenu() %></li>
-		<li><%=cafe_list.get(0).getTableNum() %></li>
-		<li><%=cafe_list.get(0).getWifi() %></li>
-		<li><%=cafe_list.get(0).getGroupseat() %></li>
-		<li><%=cafe_list.get(0).getBeansell() %></li>
-		<li><%=cafe_list.get(0).getCompanion() %></li>
-		<li><%=cafe_list.get(0).getSmokingArea() %></li>
-		<li><%=cafe_list.get(0).getRoasting() %></li>
-		<li><%=cafe_list.get(0).getSubsidy() %></li>
-		<li><%=cafe_list.get(0).getBoard() %></li>
-		<li><%=cafe_list.get(0).getImage1() %></li>
-		<li><%=cafe_list.get(0).getImage2() %></li>
-	</ul>
-	<% } %>
-	<p style="margin-top:-12px">
-    <br> <br> <br> <br>
-    
+	<br><br><br><br>
  	</p>
 <center><div id="map" style="width:70%;height:350px;"></div></center>
 	
