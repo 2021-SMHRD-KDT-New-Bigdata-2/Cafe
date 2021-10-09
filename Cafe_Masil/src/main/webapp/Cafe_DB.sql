@@ -99,22 +99,22 @@ drop sequence evaluation_num
 select * from evaluation;
 
 /* ----------------구분선 ------------------ */
-/* drop table subscription 혹시 모를 삭제에 대비해서 생성 */ 
+drop table subscribe /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
 /* 구독,스탬프 테이블 */
-create table subscription(
+create table subscribe(
 num number,
-cafeName varchar2(10) not null,
+id varchar2(10) not null,
 businessNumber varchar2(10) not null,
-subs number not null,
-stamp number not null,
-constraint subscription_fk foreign key(businessNumber)
-references caferequest(businessNumber)
-)
+evalDate date not null
+);
 
 /*정렬 시퀀스*/
-Create sequence subscription_num
+Create sequence subscribe_num
 increment by 1
 start with 1
 
-select * from subscription;
+/*필요할 때 쓰는 정렬 시퀀스 삭제*/
+drop sequence subscribe_num
+
+select * from subscribe;
