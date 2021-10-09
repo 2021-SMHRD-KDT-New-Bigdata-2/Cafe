@@ -59,7 +59,7 @@ Create sequence cafeInfo_num
 increment by 1
 start with 1
 
-/*필요할 때 쓰는 정렬 시퀀스*/
+/*필요할 때 쓰는 정렬 시퀀스 삭제*/
 drop sequence cafeInfo_num
 
 /* 더미 데이터 insert */
@@ -68,83 +68,34 @@ insert into cafeInfo values(cafeInfo_num.nextval,'2','김oo','010-123-4567','인더
 select * from cafeInfo;
 
 /* ----------------구분선 ------------------ */
-drop table cafeDetail; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
-
-/* 카페 상세정보 테이블 */
-create table cafeDetail(
-num number,
-cafeName varchar2(10) not null,
-businessNumber varchar2(10) not null,
-cafeTel varchar2(10) not null,
-ameIndex varchar2(10) not null,
-tableNum varchar2(10) not null,
-bestMenu varchar2(10) not null, 
-cafeAddress varchar2(10) not null,
-cafeHours date not null,
-locationLati varchar2(10) not null,
-locationLongi varchar2(10) not null,
-constraint cafeDetail_pk primary key(businessNumber)
-);
-
-/*정렬 시퀀스*/
-Create sequence cafeDetail_num
-increment by 1
-start with 1
-
-select * from cafeDetail;
-
-/* ----------------구분선 ------------------ */
 drop table evaluation; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 
 /* 사용자 평가 테이블 */
 create table evaluation(
 num number,
 id varchar2(10) not null,
-cafeName varchar2(10) not null,
-businessNumber varchar2(10) not null,
-clean varchar2(10) not null,
-area varchar2(10) not null,
-flavor varchar2(10) not null, 
-dessert varchar2(10) not null,
-service varchar2(10) not null,
-reVisit varchar2(10) not null,
-picture varchar2(10) not null,
-notGood varchar2(10) not null,
-constraint evaluation_fk foreign key(businessNumber) /* id를 pk로 설정해버리면 평생 사용자가 한 카페에 리뷰를 한번만 쓸수있게되서 다음에는 리뷰를 쓸 수가 없어서 지움 */  
-references cafeRequest(businessNumber) /* cafeRequest의 사업자번호 참조 */
+businessNumber varchar2(30) not null,
+cafeName varchar2(30) not null,
+clean varchar2(20) not null,
+area varchar2(20) not null,
+flavor varchar2(20) not null, 
+dessert varchar2(20) not null,
+service varchar2(20) not null,
+reVisit varchar2(20) not null,
+picture varchar2(20) not null,
+notGood varchar2(20) not null,
+constraint evaluation_pk primary key(num)
 );
 
 /*정렬 시퀀스*/
-Create sequence cafeDetail_num
+Create sequence evaluation_num
 increment by 1
 start with 1
+
+/*필요할 때 쓰는 정렬 시퀀스 삭제*/
+drop sequence evaluation_num
 
 select * from evaluation;
-
-/* ----------------구분선 ------------------ */
-drop table cafeKeyword; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
-
-/*키워드 테이블*/
-create table cafeKeyword(
-num number,
-cafeName varchar2(10) not null,
-businessNumber varchar2(10) not null,
-wifi varchar2(10) not null,
-groupSeat varchar2(10) not null,
-beanSell varchar(10) not null,
-companion varchar2(10) not null,
-smokingArea varchar2(10) not null,
-roasting varchar2(10) not null,
-constraint cafekeyword_fk foreign key(businessNumber) /* 이 테이블에서는 사업자번호를 외래키 설정 */ 
-references caferequest(businessNumber) /* caferequest에 저장된 사업자번호 참조 */
-);
-
-/*정렬 시퀀스*/
-Create sequence cafeKeyword_num
-increment by 1
-start with 1
-
-select * from cafeKeyword;
 
 /* ----------------구분선 ------------------ */
 /* drop table subscription 혹시 모를 삭제에 대비해서 생성 */ 
@@ -166,5 +117,3 @@ increment by 1
 start with 1
 
 select * from subscription;
-
-select * from cafeInfo where cafeName='인더하우스'
