@@ -31,7 +31,6 @@ public class LoginService extends HttpServlet {
 			session.setAttribute("member", vo);
 			
 			response.sendRedirect("main.jsp");
-			
 		}
 		
 	}

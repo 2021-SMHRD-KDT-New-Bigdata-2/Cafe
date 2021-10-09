@@ -1,4 +1,5 @@
 drop table joinInfo; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
+
 /* 회원가입 테이블 */
 create table joinInfo(
 num number,
