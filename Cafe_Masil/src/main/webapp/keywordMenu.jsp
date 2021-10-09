@@ -58,8 +58,13 @@
         </header>
         <!-- end box-header -->
 
+<<<<<<< HEAD
         <!-- nav -->
         <%if(vo==null) {%>
+=======
+         <!-- nav -->
+       <%if(vo==null) {%>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
     	<nav>
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
@@ -87,10 +92,10 @@
 				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
 				<li><a href="LogoutService">로그아웃</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
-                <li><a href="update.jsp">회원정보수정</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="">마이페이지</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
+                <li><a href="MyCafe.jsp">MyCafe</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
