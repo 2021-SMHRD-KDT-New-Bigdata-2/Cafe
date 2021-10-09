@@ -58,13 +58,8 @@
         </header>
         <!-- end box-header -->
 
-<<<<<<< HEAD
-        <!-- nav -->
-        <%if(vo==null) {%>
-=======
          <!-- nav -->
        <%if(vo==null) {%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
     	<nav>
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
