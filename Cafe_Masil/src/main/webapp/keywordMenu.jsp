@@ -5,7 +5,7 @@
 <html lang="en">
 
 <head>
-	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
+   <% memberVO vo = (memberVO)session.getAttribute("member"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,11 +60,11 @@
 
          <!-- nav -->
        <%if(vo==null) {%>
-    	<nav>
-     	    <ul class="box-primary-nav">
-     	        <li class="box-label"> Choose me! </li>
-     	        
-				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+       <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label"> Choose me! </li>
+
+            <li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
                 <li><a href="login.jsp">로그인</a>
                 <li><a href="join.jsp">회원가입</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
@@ -81,11 +81,11 @@
         </nav>
         <%}else{%>
         <nav>
-     	    <ul class="box-primary-nav">
-     	        <li class="box-label"> Choose me! </li>
+            <ul class="box-primary-nav">
+                <li class="box-label"> Choose me! </li>
 
-				<li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
-				<li><a href="LogoutService">로그아웃</a></li>
+            <li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+            <li><a href="LogoutService">로그아웃</a></li>
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
@@ -120,8 +120,8 @@
                     <nav class="categories text-center">
                         <ul class="portfolio_filter">
                             <li><a href="" class="active" data-filter="*">All</a></li>
-                            <li><a href="" data-filter=".clean">clean</a></li>
-                            <li><a href="" data-filter=".area">area</a></li>
+                            <li><a href="" data-filter=".photography">Photography</a></li>
+                            <li><a href="" data-filter=".logo">Logo</a></li>
                             <li><a href="" data-filter=".graphics">Graphics</a></li>
                             <li><a href="" data-filter=".ads">Advertising</a></li>
                             <li><a href="" data-filter=".fashion">Fashion</a></li>
@@ -133,14 +133,14 @@
                 <!-- portfolio_container -->
                 <div class="no-padding portfolio_container clearfix">
                     <!-- single work -->
-                    <div class="col-md-4 col-sm-6  fashion area">
+                    <div class="col-md-4 col-sm-6  fashion logo">
                         <a href="infoService?businessNumber=2" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>Mockups in seconds</span>
-                                        <em>Fashion / area</em>
+                                        <em>Fashion / Logo</em>
                                     </div>
                                 </div>
                             </div>
@@ -165,14 +165,14 @@
                     <!-- end single work -->
 
                     <!-- single work -->
-                    <div class="col-md-4 col-sm-12 clean">
+                    <div class="col-md-4 col-sm-12 photography">
                         <a href="single-project.html" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>Photorealistic smartwatch</span>
-                                        <em></em>
+                                        <em>Photography</em>
                                     </div>
                                 </div>
                             </div>
@@ -213,14 +213,14 @@
                     <!-- end single work -->
 
                     <!-- single work -->
-                    <div class="col-md-4 col-sm-12 clean">
+                    <div class="col-md-4 col-sm-12 photography">
                         <a href="single-project.html" class="portfolio_item">
                             <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>Photorealistic smartwatch</span>
-                                        <em>clean</em>
+                                        <em>Photography</em>
                                     </div>
                                 </div>
                             </div>
