@@ -71,7 +71,7 @@
             </a>
           </ul>
           <%}%>
-          <form action = "searchmap.jsp" class="navbar-form navbar-right" role="search">
+          <form action = "searchmap.jsp" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
               <input name = "searchword" type="text" class="form-control" placeholder="°Ë»ö">
             </div>

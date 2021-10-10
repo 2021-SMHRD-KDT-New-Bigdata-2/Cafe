@@ -7,6 +7,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<% String searchword = request.getParameter("searchword"); %>
 	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -155,9 +156,14 @@
             </form>
         </div>
 	<ul class="" align = "center">
-		<form action="searchmapService" method="post">
+		<form action="searchmapService">
+		<%if(searchword==null){ %>
 			<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 			<button type="submit">검색</button>
+		<%}else{ %>
+			<input name="searchword" type="text" placeholder="<%=searchword %>">
+			<button type="submit">검색</button>
+		<%} %>
 		</form>
 	</ul>
 	<br><br><br><br>
