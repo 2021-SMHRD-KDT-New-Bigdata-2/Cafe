@@ -268,7 +268,7 @@ h5 {
     content: '';
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: 0;
     background-color: #393939;
     right: 0;
     -webkit-transition: -webkit-transform .3s, top .3s, background-color 0s;
