@@ -65,12 +65,10 @@
           <!-- 네비게이션 바에 회원로그인-->
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#">로그인<span class="sr-only"></span></a></li>
-            <li><a href="#">회원가입</a></li>
-            <li class="dropdown">
+            <li><a href="#">회원가입&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></li>
               <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
-            </li>
           </ul>
           <form class="navbar-form navbar-right" role="search">
             <div class="form-group">
@@ -141,11 +139,8 @@
                         <b>&nbsp;Wherever</b>
                         <b>Cafe,Masil</b>
                     </span>
-<<<<<<< HEAD
               	</h1>
-=======
               </h1>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
                 <h4>카페 마실, 동네를 담다</h4>
             </div>
 
