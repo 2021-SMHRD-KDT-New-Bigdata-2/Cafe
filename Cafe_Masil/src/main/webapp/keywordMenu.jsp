@@ -135,7 +135,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 fashion logo">
                         <a href="infoService?businessNumber=2" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjBfMjA4%2FMDAxNjMyMDgzMTM0MTQ2.4EL3XvW2BYxDTlxHcDIBuWBBf6f5p3RLrMDFhKJFel8g.mBPK2tLTH9QYI0BcYxv7HFrARmP1lmK2JR6X244mj3kg.JPEG.ymh9704%2F20161104%25A3%25DF104559.jpg&type=ofullfill340_600" alt="image" class="img-responsive" border="0" width="200" height="200"/></center>
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjFfMjEx%2FMDAxNjMyMTU4NTc3Njkz.dlwIat_NVKqnjqgQ_8OhjoMdqbVl1qvfAReUejT_lukg.FeM_7zFkvjEYBRl8jWId4qxbxG3U7YgDuitexY98OYEg.JPEG.qkrtyatya%2F20210919%25A3%25DF143058.jpg&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -151,7 +151,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 ads graphics">
                         <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjNfMjUy%2FMDAxNjMyMzU3NTI1NTc2.i9GfydlJUg2bNjpvoERdlvWSTUN-x6x4TiERs5-CAjgg.I--CRbfrEN22MOTFvb4lhKJPWQfmhAF5TpM2SBRwI6Yg.JPEG.woneebe%2F20210609_193806.jpg&type=a340" alt="image" class="img-responsive" border="0" width="200" height="200"></center>
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjNfMjUy%2FMDAxNjMyMzU3NTI1NTc2.i9GfydlJUg2bNjpvoERdlvWSTUN-x6x4TiERs5-CAjgg.I--CRbfrEN22MOTFvb4lhKJPWQfmhAF5TpM2SBRwI6Yg.JPEG.woneebe%2F20210609_193806.jpg&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;"></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -167,7 +167,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-12 photography">
                         <a href="single-project.html" class="portfolio_item">
-                            <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                            <center></center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTNfMjU0%2FMDAxNjMxNTQyNzI0MTQ4.0K4fU7LB4u54kU-6eq7_H913P_x8tVAzcoHx1pTSL14g.ov3k6ZhBdBUDXeIaxYf5UnISdF8nB5RsK3HwG7GEiMIg.JPEG.ehdrmftlsl%2FKakaoTalk_20210913_224336807_06.jpg&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -183,7 +183,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 fashion ads">
                         <a href="single-project.html" class="portfolio_item">
-                            <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MzBfMjc1%2FMDAxNjMyOTc3NTYzMTQx.JHmICdLeuNOxvxBJaKmeub3VzMo63iFELRieytNHLzYg.MkxV43xKoY2UFDHLcS8nMkv6Ag3dTWIIY4CCAGDqCzsg.JPEG.soyammy%2FIMG_4244.jpg&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;" /></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -199,7 +199,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 graphics ads">
                         <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTVfMTE1%2FMDAxNjMxNjc4NDQ2NjI3.2G3j9YJkB5BouUbFa8RboPEhyZFW0MMOF4ZFA13bDzkg.1iRMVXxZTwXHQEokrep4kqvUsk239dk5t2_eh34B9xwg.JPEG.yonsun51%2F20210910%25A3%25DF132451.jpg&type=a340" alt="image" class="img-responsive" border="0" width="200" height="200" /></center>
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTVfMTE1%2FMDAxNjMxNjc4NDQ2NjI3.2G3j9YJkB5BouUbFa8RboPEhyZFW0MMOF4ZFA13bDzkg.1iRMVXxZTwXHQEokrep4kqvUsk239dk5t2_eh34B9xwg.JPEG.yonsun51%2F20210910%25A3%25DF132451.jpg&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;" /></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -215,7 +215,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-12 photography">
                         <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjZfMTU2%2FMDAxNjMyNjUzODQ3NTg4.um7BF-ia7aSNfjr5ubz9JPFSC_Ij5iTN7boj_eCp1FAg.MU4OdUSUO3v8x89UO3WjcnDGQ7JC3ztfRsVDF8wHXRYg.JPEG.chomhow7%2Fphoto-1627982031565-4e9799032058.jpg&type=a340" alt="image" class="img-responsive" border="0" width="1000" height="1000"/></center>
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjZfMTU2%2FMDAxNjMyNjUzODQ3NTg4.um7BF-ia7aSNfjr5ubz9JPFSC_Ij5iTN7boj_eCp1FAg.MU4OdUSUO3v8x89UO3WjcnDGQ7JC3ztfRsVDF8wHXRYg.JPEG.chomhow7%2Fphoto-1627982031565-4e9799032058.jpg&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -231,7 +231,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 graphics ads">
                         <a href="single-project.html" class="portfolio_item">
-                            <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjhfMTk4%2FMDAxNjMyODMzNDU3NDg5.OpVc_XcHID4QZ8w9BzZMrkjEJK3hgaKXh-ehHNzywSMg.yeUd332wDTwLA-lJKE-Se2UYxbOh4XbTN9qtjU_IuPog.JPEG.saaa95%2FIMG_9482.JPG&type=a340" alt="image" class="img-responsive" style="width:500px; height:500px;"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
