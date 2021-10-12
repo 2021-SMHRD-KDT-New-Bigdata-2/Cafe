@@ -19,11 +19,11 @@ public class BossLoginService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	request.setCharacterEncoding("euc-kr");
 	
-	String bossId = request.getParameter("bossId");
+	String businessNumber = request.getParameter("businessNumber");
 	String bossPw = request.getParameter("bossPw");
 	
 	memberDAO dao = new memberDAO();
-	memberVO vo = dao.bossLogin(bossId,bossPw);
+	memberVO vo = dao.bossLogin(businessNumber,bossPw);
 	
 	if (vo!=null) {
 		HttpSession session = request.getSession();

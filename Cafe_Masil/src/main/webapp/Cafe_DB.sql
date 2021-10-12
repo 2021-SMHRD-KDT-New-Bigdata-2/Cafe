@@ -99,14 +99,26 @@ drop sequence evaluation_num
 select * from evaluation;
 
 /* ----------------구분선 ------------------ */
-drop table subscribe /* 테이블 수정했으니 삭제하고 다시 만드세용 */
+/* 사장회원정보 */
+create table bossJoinInfo(
+businessNumber varchar2(10) not null,
+bossPw varchar2(10) not null,
+constraint BossJoinInfo_pk primary key(businessNumber)
+);
 
-/* 구독,스탬프 테이블 */
+drop table bossJoinInfo;
+
+select * from bossJoinInfo;
+
+insert into bossJoinInfo values(1,1);
+
+/* ----------------구분선 ------------------ */
+
+/* 구독테이블 */
 create table subscribe(
 num number,
 id varchar2(10) not null,
 businessNumber varchar2(10) not null,
-evalDate date not null
 );
 
 /*정렬 시퀀스*/
@@ -117,14 +129,27 @@ start with 1
 /*필요할 때 쓰는 정렬 시퀀스 삭제*/
 drop sequence subscribe_num
 
+drop table subscribe
+
 select * from subscribe;
 
-create table bossJoinInfo(
-bossId varchar2(10) not null,
-bossPw varchar2(10) not null,
-constraint BossJoinInfo_pk primary key(bossId)
+/* ----------------구분선 ------------------ */
+
+/* 스탬프테이블 */
+create table stamp(
+num number,
+id varchar2(10) not null,
+businessNumber varchar2(10) not null,
 );
 
-select * from bossJoinInfo;
+/*정렬 시퀀스*/
+Create sequence stamp_num
+increment by 1
+start with 1
 
-insert into bossJoinInfo values(1,1);
+/*필요할 때 쓰는 정렬 시퀀스 삭제*/
+drop sequence stamp_num
+
+drop table stamp;
+
+select * from stamp;
