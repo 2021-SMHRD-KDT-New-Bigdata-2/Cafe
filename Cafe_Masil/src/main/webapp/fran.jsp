@@ -119,37 +119,37 @@
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="bossName" type="text" name="name">
+                            <input name="bossName" type="text">
                             <span>이름를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="businessNumber" type="text" name="password">
+                            <input name="businessNumber" type="text">
                             <span>사업자번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="bossTel" type="text" name="nickname">
+                            <input name="bossTel" type="text">
                             <span>휴대폰번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="cafeName" type="text" name="tel">
+                            <input name="cafeName" type="text">
                             <span>카페명을 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="cafeAddress" type="text" name="bestmenu">
+                            <input name="cafeAddress" type="text">
                             <span>카페 주소를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="cafeTel" type="text" name="qna">
+                            <input name="cafeTel" type="text">
                             <span>카페 전화번호를 입력하세요</span>
                         </div>
                     </div>
@@ -157,7 +157,7 @@
                     </div>
                     <div class="col-md-12">
                     </div>                   
-                    <div class="col-md-12">
+                    <div class="col-md-2" style="float:none; margin:0 auto;">
                         <input type="submit" value="가맹요청" class="btn btn-box">
                     </div> 
                 </div>

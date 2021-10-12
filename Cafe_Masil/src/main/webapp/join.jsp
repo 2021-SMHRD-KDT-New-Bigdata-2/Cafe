@@ -33,7 +33,15 @@
 </head>
 
 <body>
-
+	<style>
+		select{
+			width:300px;
+			margin-left:140px;
+			margin-top:5px;
+			padding:2px;
+			border : 1px solid #cccccc;
+		}
+	</style>
     <!-- Preloader -->
     <div id="preloader">
         <div class="pre-container">
@@ -116,40 +124,40 @@
     <div class="container main-container">
         <div class="col-md-6">
             <form action="JoinService" method="post">
-                <div class="container row" style="float:none; margin:0 auto;">
-                    <div class="col-md-7">
+                <div class="container row" style="float:none; margin:100 auto;">
+                    <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="id" type="text" name="name">
+                            <input name="id" type="text">
                             <span>ID를 입력하세요</span>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="pw" type="text" name="password">
+                            <input name="pw" type="text">
                             <span>비밀번호를 입력하세요</span>
                         </div>        
                     </div>
                     <div class="col-md-12">
                     	<div class="input-contact">
-                            <input name="nickname" type="text" name="password">
+                            <input name="nickname" type="text">
                             <span>닉네임을 입력하세요</span>
                         </div>       
                     </div>
                     <div class="col-md-12">
                     	<div class="input-contact">
-                            <input name="tel" type="text" name="password">
+                            <input name="tel" type="text">
                             <span>휴대폰번호를 입력하세요</span>
                         </div>  
                     </div>
                     <div class="col-md-12">
                     	<div class="input-contact">
-                            <input name="bestMenu" type="text" name="password">
+                            <input name="bestMenu" type="text">
                             <span>선호메뉴를 입력하세요</span>
                         </div>  
                     </div>
                     <div class="col-md-12">
-                    	<div class="input-contact">
-                    		질문: 
+                    	<div class="input-contact" >
+                  		<span>비밀번호 확인 질문:</span>
                     		<select name="qna">
 								<option>가장 기억에 남는 카페는 어디입니까?</option>
 								<option>태어난 곳은 어디입니까?</option>
@@ -160,13 +168,11 @@
                     </div>
                     <div class="col-md-12">
                     	<div class="input-contact">
-                    		<input name="answer" type="text" placeholder="답을 입력하세요">
+                    		<input name="answer" type="text">
+                    		<span>비밀번호 확인 답을 입력하세요</span>
                     	</div>
-                    </div>
-                    </div>
-                    <div class="col-md-12">
-                    </div>                         
-                    <div class="col-md-12">
+                    </div>                       
+                    <div class="col-md-2" style="float:none; margin:0 auto;">
                         <input type="submit" value="회원가입" class="btn btn-box">
                     </div> 
                     

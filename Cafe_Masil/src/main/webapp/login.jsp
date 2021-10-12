@@ -114,44 +114,29 @@
 
     <!-- main-container -->
     <div class="container main-container">
-        <div class="col-md-6">
+    	<div class="col-md-6">
             <form action="LoginService" method="post">
-                <div class="container row" style="float:none; margin:0 auto;">
-                    <div class="col-md-7">
+                <div class="container row" style="float:none; margin:100 auto;">
+                    <div class="col-md-7" style="float:none; margin:0 auto;">
                         <div class="input-contact">
-                            <input name="id" type="text" name="name">
+                            <input name="id" type="text">
                             <span>ID를 입력하세요</span>
                         </div>
                     </div>
-                    <div class="col-md-7">
+                    <div class="col-md-7" style="float:none; margin:0 auto;">
                         <div class="input-contact">
-                            <input name="pw" type="text" name="password">
+                            <input name="pw" type="text">
                             <span>비밀번호를 입력하세요</span>
                         </div>        
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>                         
-                    <div class="col-md-12">
+                    </div>          
+                    <div class="col-md-2" style="float:none; margin:0 auto;">
                         <input type="submit" value="로그인" class="btn btn-box">
-                    </div> 
-                    
-                </div>
+                    </div>
+            	</div>
             </form>
-        </div>
-
-
-
+    	</div>
     </div>
+
     <!-- end main-container -->
 
     <!-- footer -->
