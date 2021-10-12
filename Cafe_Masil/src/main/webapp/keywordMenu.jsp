@@ -1,3 +1,5 @@
+<%@page import="com.model.cafeVO"%>
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.model.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -5,7 +7,12 @@
 <html lang="en">
 
 <head>
-   <% memberVO vo = (memberVO)session.getAttribute("member"); %>
+   <% 
+   memberVO vo = (memberVO)session.getAttribute("member"); 
+   ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
+   ArrayList<cafeVO> cafe_list2 = (ArrayList) session.getAttribute("cafe_list2");
+   %>
+   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +46,7 @@
     	
     	.no-padding [class^="col-"] img{
     	border-radius: 30px;
-    	width:600px; height:600px;"
+    	width:500px; height:500px;"
     	}
     	
     </style>
@@ -147,15 +154,32 @@
 
                 <!-- portfolio_container -->
                 <div class="no-padding portfolio_container clearfix">
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 fashion logo">
-                        <a href="infoService?businessNumber=2" class="portfolio_item">
+                
+                    <!-- 1. single work -->
+                    <div class="col-md-4 col-sm-12">
+                        <a href="infoService?businessNumber=<%=cafe_list.get(0).getBusinessNumber() %>" class="portfolio_item">
+                            <center><img src="<%=cafe_list.get(0).getImage1() %>" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span><%=cafe_list.get(0).getCafeName() %></span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 2. single work -->
+                    <div class="col-md-4 col-sm-6 delivery groupseat beansell roasting dessert">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
                             <center><img src="" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span>인더하우스</span>
-                                        <em>Fashion / Logo</em>
+                                        <span></span>
+                                        <em>delivery / groupseat / beansell / roasting / dessert</em>
                                     </div>
                                 </div>
                             </div>

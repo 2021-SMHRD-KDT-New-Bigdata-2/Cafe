@@ -265,6 +265,62 @@ public class memberDAO {
 		return cafe_list;
 	}
 	
+	// 
+	public ArrayList<cafeVO> searchall(String cafename) {
+		ArrayList<cafeVO> cafe_list2 = new ArrayList<cafeVO>();
+		try {
+			getConnection();
+			String sql = "select * from cafeInfo";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,cafename);
+			rs = psmt.executeQuery();
+			
+			while(rs.next()) {
+				System.out.println("¼¿·¿Æ® ½ÇÇà");
+				int num = rs.getInt("num");
+				String businessNumber = rs.getString("businessNumber");
+				String bossName = rs.getString("bossName");
+				String bossTel = rs.getString("bossTel");
+				String cafeName = rs.getString("cafeName");
+				String cafeAddress = rs.getString("cafeAddress");
+				String cafeTel = rs.getString("cafeTel");
+				String ameIndex = rs.getString("ameIndex");
+				float lat = rs.getFloat("lat");
+				float lng = rs.getFloat("lng");
+				String cafeHours = rs.getString("cafeHours");
+				String bestMenu = rs.getString("bestMenu");
+				String tableNum = rs.getString("tableNum");
+				String delivery = rs.getString("delivery");
+				String groupseat = rs.getString("groupseat");
+				String beansell = rs.getString("beansell");
+				String companion = rs.getString("companion");
+				String smokingArea = rs.getString("smokingArea");
+				String roasting = rs.getString("roasting");
+				String dessert = rs.getString("dessert");
+				String board = rs.getString("board");
+				String image1 = rs.getString("image1");
+				String image2 = rs.getString("image2");
+				String image3 = rs.getString("image3");
+				String image4 = rs.getString("image4");
+				String image5 = rs.getString("image5");
+				String image6 = rs.getString("image6");
+				System.out.println("À§" + lat);
+				System.out.println("°æ" + lng);
+				cafeVO vo = new cafeVO(num, businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, delivery, groupseat, beansell, companion, smokingArea, roasting, dessert, board, image1, image2, image3, image4, image5, image6);
+				cafe_list2.add(vo);
+				System.out.println("¼¿·¿Æ® ¿¡µå Á¾·á");
+			}
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}
+		return cafe_list2;
+	}
+	
+	
 	/* Å°¿öµå ajax ½á¼­ ÇÏ±â
 	public ArrayList<cafeVO> wifi(String wifi) {
 		ArrayList<cafeVO> wifi_list = new ArrayList<cafeVO>();
