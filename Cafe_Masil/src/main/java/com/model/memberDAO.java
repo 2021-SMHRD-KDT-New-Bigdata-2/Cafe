@@ -114,7 +114,7 @@ public class memberDAO {
 	}
 	
 	// 사장 로그인 기능
-		public memberVO bossLogin(String bossId, String bossPw) {
+	public memberVO bossLogin(String bossId, String bossPw) {
 			
 			try {
 				getConnection();
@@ -236,13 +236,13 @@ public class memberDAO {
 				String cafeHours = rs.getString("cafeHours");
 				String bestMenu = rs.getString("bestMenu");
 				String tableNum = rs.getString("tableNum");
-				String wifi = rs.getString("wifi");
+				String delivery = rs.getString("delivery");
 				String groupseat = rs.getString("groupseat");
 				String beansell = rs.getString("beansell");
 				String companion = rs.getString("companion");
 				String smokingArea = rs.getString("smokingArea");
 				String roasting = rs.getString("roasting");
-				String subsidy = rs.getString("subsidy");
+				String dessert = rs.getString("dessert");
 				String board = rs.getString("board");
 				String image1 = rs.getString("image1");
 				String image2 = rs.getString("image2");
@@ -252,7 +252,7 @@ public class memberDAO {
 				String image6 = rs.getString("image6");
 				System.out.println("위" + lat);
 				System.out.println("경" + lng);
-				cafeVO vo = new cafeVO(num, businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1, image2, image3, image4, image5, image6);
+				cafeVO vo = new cafeVO(num, businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel, ameIndex, lat, lng, cafeHours, bestMenu, tableNum, delivery, groupseat, beansell, companion, smokingArea, roasting, dessert, board, image1, image2, image3, image4, image5, image6);
 				cafe_list.add(vo);
 				System.out.println("셀렛트 에드 종료");
 			}
@@ -316,7 +316,7 @@ public class memberDAO {
 		ArrayList<cafeVO> info_list = new ArrayList<cafeVO>();
 		try {
 			getConnection();
-			String sql = "select cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestmenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1,image2,image3,image4,image5,image6 from cafeInfo where businessNumber=?";
+			String sql = "select cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, delivery, groupseat, beansell, companion, smokingArea, roasting, dessert, board, image1,image2,image3,image4,image5,image6 from cafeInfo where businessNumber=?";
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,businessNumber);
 			rs = psmt.executeQuery();
@@ -328,13 +328,13 @@ public class memberDAO {
 				String cafeHours = rs.getString("cafeHours");
 				String bestMenu = rs.getString("bestMenu");
 				String tableNum = rs.getString("tableNum");
-				String wifi = rs.getString("wifi");
+				String delivery = rs.getString("delivery");
 				String groupseat = rs.getString("groupseat");
 				String beansell = rs.getString("beansell");
 				String companion = rs.getString("companion");
 				String smokingArea = rs.getString("smokingArea");
 				String roasting = rs.getString("roasting");
-				String subsidy = rs.getString("subsidy");
+				String dessert = rs.getString("dessert");
 				String board = rs.getString("board");
 				String image1 = rs.getString("image1");
 				String image2 = rs.getString("image2");
@@ -345,7 +345,7 @@ public class memberDAO {
 				
 						
 				
-				cafeVO vo = new cafeVO(businessNumber,cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, wifi, groupseat, beansell, companion, smokingArea, roasting, subsidy, board, image1, image2, image3, image4, image5, image6);
+				cafeVO vo = new cafeVO(businessNumber,cafeName, cafeAddress, cafeTel, ameIndex, cafeHours, bestMenu, tableNum, delivery, groupseat, beansell, companion, smokingArea, roasting, dessert, board, image1, image2, image3, image4, image5, image6);
 				info_list.add(vo);	
 			}
 		}catch(Exception e){

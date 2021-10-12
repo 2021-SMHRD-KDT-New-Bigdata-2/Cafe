@@ -15,13 +15,13 @@ public class cafeVO {
 	private String cafeHours;
 	private String bestmenu;
 	private String tableNum;
-	private String wifi;
+	private String delivery;
 	private String groupseat;
 	private String beansell;
 	private String companion;
 	private String smokingArea;
 	private String roasting;
-	private String subsidy;
+	private String dessert;
 	private String board;
 	private String image1;
 	private String image2;
@@ -29,6 +29,7 @@ public class cafeVO {
 	private String image4;
 	private String image5;
 	private String image6;
+
 
 	
 
@@ -42,9 +43,10 @@ public class cafeVO {
 		this.cafeTel = cafeTel;
 	}
 	
+	// 
 	public cafeVO(String businessNumber, String cafeName, String cafeAddress, String cafeTel, String ameIndex, String cafeHours,
-			String bestmenu, String tableNum, String wifi, String groupseat, String beansell, String companion, String smokingArea, 
-			String roasting, String subsidy, String board, String image1, String image2, String image3, String image4, String image5, String image6 ) {
+			String bestmenu, String tableNum, String delivery, String groupseat, String beansell, String companion, String smokingArea, 
+			String roasting, String dessert, String board, String image1, String image2, String image3, String image4, String image5, String image6 ) {
 		this.cafeName = cafeName;
 		this.businessNumber = businessNumber;
 		this.cafeAddress = cafeAddress;
@@ -53,12 +55,13 @@ public class cafeVO {
 		this.cafeHours = cafeHours;
 		this.bestmenu = bestmenu;
 		this.tableNum = tableNum;
+		this.delivery = delivery;
 		this.groupseat = groupseat;
 		this.beansell = beansell;
 		this.companion = companion;
 		this.smokingArea = smokingArea;
 		this.roasting = roasting;
-		this.subsidy = subsidy;
+		this.dessert = dessert;
 		this.board = board;
 		this.image1 = image1;
 		this.image2 = image2;
@@ -73,8 +76,8 @@ public class cafeVO {
 	// search ±â´É
 	public cafeVO(int num, String businessNumber, String bossName, String bossTel, String cafeName, String cafeAddress,
 			String cafeTel, String ameIndex, float lat, float lng, String cafeHours, String bestmenu, String tableNum,
-			String wifi, String groupseat, String beansell, String companion, String smokingArea, String roasting,
-			String subsidy, String board, String image1, String image2, String image3, String image4, String image5,
+			String delivery, String groupseat, String beansell, String companion, String smokingArea, String roasting,
+			String dessert, String board, String image1, String image2, String image3, String image4, String image5,
 			String image6) {
 		super();
 		this.num = num;
@@ -90,13 +93,13 @@ public class cafeVO {
 		this.cafeHours = cafeHours;
 		this.bestmenu = bestmenu;
 		this.tableNum = tableNum;
-		this.wifi = wifi;
+		this.delivery = delivery;
 		this.groupseat = groupseat;
 		this.beansell = beansell;
 		this.companion = companion;
 		this.smokingArea = smokingArea;
 		this.roasting = roasting;
-		this.subsidy = subsidy;
+		this.dessert = dessert;
 		this.board = board;
 		this.image1 = image1;
 		this.image2 = image2;
@@ -106,16 +109,6 @@ public class cafeVO {
 		this.image6 = image6;
 	}
 
-	@Override
-	public String toString() {
-		return "cafeVO [num=" + num + ", bossName=" + bossName + ", businessNumber=" + businessNumber + ", bossTel="
-				+ bossTel + ", cafeName=" + cafeName + ", cafeAddress=" + cafeAddress + ", cafeTel=" + cafeTel
-				+ ", ameIndex=" + ameIndex + ", lat=" + lat + ", lng=" + lng + ", cafeHours=" + cafeHours
-				+ ", bestmenu=" + bestmenu + ", tableNum=" + tableNum + ", wifi=" + wifi + ", groupseat=" + groupseat
-				+ ", beansell=" + beansell + ", companion=" + companion + ", smokingArea=" + smokingArea + ", roasting="
-				+ roasting + ", subsidy=" + subsidy + ", board=" + board + ", image1=" + image1 + ", image2=" + image2
-				+ ", image3=" + image3 + ", image4=" + image4 + ", image5=" + image5 + ", image6=" + image6 + "]";
-	}
 
 	public String getBossName() {
 		return bossName;
@@ -169,8 +162,12 @@ public class cafeVO {
 		return tableNum;
 	}
 
-	public String getWifi() {
-		return wifi;
+	public String getDelivery() {
+		return delivery;
+	}
+
+	public String getDessert() {
+		return dessert;
 	}
 
 	public String getGroupseat() {
@@ -192,11 +189,7 @@ public class cafeVO {
 	public String getRoasting() {
 		return roasting;
 	}
-
-	public String getSubsidy() {
-		return subsidy;
-	}
-
+	
 	public String getBoard() {
 		return board;
 	}
