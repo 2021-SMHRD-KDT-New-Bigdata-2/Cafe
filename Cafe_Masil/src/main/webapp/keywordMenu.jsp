@@ -266,14 +266,14 @@
                     <!-- end single work -->
                     
                     <!-- 8. single work -->
-                    <div class="col-md-4 col-sm-6 ">
+                    <div class="col-md-4 col-sm-6 delivery beansell companion roasting dessert">
                         <a href="infoService?businessNumber=1000000008" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA3MjVfMTYg%2FMDAxNjI3MTM5ODE3NDU5.OQTCBbDeu0DhUBqow0dj2muqipw-SrYILdS1hSqUly0g.3b47PoIKM3HYDPsh40vDIPekRNklK2yaItbz3ay5QvEg.JPEG.fkqpsej1984%2FIMG_8380.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>럭키세븐커피</span>
-                                        <em></em>
+                                        <em>배달 / 원두판매 / 반려동물 / 로스팅 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -282,14 +282,14 @@
                     <!-- end single work -->
                     
                     <!-- 9. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 groupseat dessert">
+                        <a href="infoService?businessNumber=1000000009" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MTdfMzgg%2FMDAxNjI5MjA3NjY5OTgw.AoTiPSklAXec3VqXeLGPO8hgeyoGfBYzcVSKWsjqx-0g.0zPcEbIyTfxNXQfXSR5OhflI5-5jgjgxjznOnCxxGvMg.JPEG.soonchun1217%2Foutput_3926190385.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>간식</span>
-                                        <em></em>
+                                        <em>다인석 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -298,14 +298,14 @@
                     <!-- end single work -->
                     
                     <!-- 10. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 groupseat dessert">
+                        <a href="infoService?businessNumber=1000000010" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MTNfMTIx%2FMDAxNjI4NzgyMTc2NjQ2.SmaBlqxmr14m3hNEc5s8l0B9S6xyo-1gBb9OBL4e2e4g.291WTRIUTs6J4Tjk04LK52bYDgCIqKGagtvwHd0qGb8g.JPEG.tpfls019%2FIMG_0230.jpg&type=sc960_832" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>시크릿가든</span>
-                                        <em></em>
+                                        <em>다인석 / 디저트 </em>
                                     </div>
                                 </div>
                             </div>
@@ -314,14 +314,14 @@
                     <!-- end single work -->
                     
                     <!-- 11. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 delivery groupseat dessert">
+                        <a href="infoService?businessNumber=1000000011" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fmyplace-phinf.pstatic.net%2F20210906_143%2F1630901280307FHbTr_JPEG%2Fupload_ba9c3123600165db9955562c981287ab.jpeg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>라플레버</span>
-                                        <em></em>
+                                        <em>배달 / 다인석 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -330,14 +330,14 @@
                     <!-- end single work -->
                     
                     <!-- 12. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 beansell dessert">
+                        <a href="infoService?businessNumber=1000000012" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTBfMjc3%2FMDAxNjMxMjM5NzA0NDI1.oL-YTA51amkFpnJQJsr29vjitWhffOU4Z7bjja9OZxUg.vAZxH8qRysy-xwjBJl__4OaYzbiawdu6W0pM5udiYw8g.JPEG.leejang1226%2FIMG_8623.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>비티씨인무드</span>
-                                        <em></em>
+                                        <em>원두판매 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -346,14 +346,14 @@
                     <!-- end single work -->
                     
                     <!-- 13. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 delivery groupseat dessert">
+                        <a href="infoService?businessNumber=1000000013" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjRfMTM5%2FMDAxNjExNDYzODc1NzQw.WdnFlykA9ExR6-ZoFSFtfagWpGMZZ5VkNQStWLMuqBwg.-2-jhGi9IjfHM667jmF_HAeyA_7puJ1rKqwZSaYy_ksg.JPEG.lovepinkday%2F9FFBCB00-19BC-4A59-8A31-8412803A546A.jpeg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>무드로우</span>
-                                        <em></em>
+                                        <em>배달 / 다인석 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -362,14 +362,14 @@
                     <!-- end single work -->
                     
                     <!-- 14. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 delivery companion dessert">
+                        <a href="infoService?businessNumber=1000000014" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA1MTJfOTcg%2FMDAxNTg5MjU1NTgwNDU0.IF9vFw4YqLeycfSuqIkmK_b68u6KuaJKjZdp7Qx_cRog.DI_v3-44v80E0wAUtONty86n9nbwOl3RwRBJ_xsBkeEg.JPEG.he0205%2F1589255579012.jpg&type=sc960_832" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>카페 크레테</span>
-                                        <em></em>
+                                        <em>배달 / 반려동물 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -378,14 +378,14 @@
                     <!-- end single work -->
                     
                     <!-- 15. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 groupseat roasting dessert">
+                        <a href="infoService?businessNumber=1000000015" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxNjEyMTZfMjkg%2FMDAxNDgxODgxMjk4OTg0.4szbVSYJR81nm4b5_nBgukmOWCsFotU2XpWjXYmVgMcg.UUJiouxT4QKuH4VmCcO6HyM29s5Ci81s9xCYHUbnDrQg.JPEG.jiyeon5583%2Fse3_image_2749208036.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>리버플로우</span>
-                                        <em></em>
+                                        <em>다인석 / 로스팅 / 디저트</em>
                                     </div>
                                 </div>
                             </div>

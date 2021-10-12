@@ -30,6 +30,29 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <style>
+        .row {
+            overflow: hidden;
+            position: relative;
+        }
+
+        #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FFF;
+            opacity: 0.8;
+            /*background:rgba(255,255,255,0.8); or just this*/
+            z-index: 50;
+            color: #000;
+            overflow: hidden;
+        }
+    </style>
+    
+    
 </head>
 
 <body>
@@ -136,23 +159,25 @@
         <!-- end nav -->
 
         <!-- box-intro -->
-        <section class="box-intro">
-            <div class="table-cell">
-                <h1 class="box-headline letters rotate-2">
-                    <span class="box-words-wrapper">
-                        <b class="is-visible">Whenever</b>
-                        <b>&nbsp;Wherever</b>
-                        <b>Cafe,Masil</b>
-                    </span>
-              	</h1>
-              </h1>
-                <h4>카페 마실, 동네를 담다</h4>
+ 	
+ 		<div class="row">
+        <div class="col-md-12">
+            <p align="center">
+                <iframe class="embed-responsive-item" width="100%" height="900px"
+                    src="https://www.youtube.com/embed/HSooFmBgGU8?autoplay=1&mute=1" title="YouTube video player"
+                    frameborder="0" scrolling="no"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen alt="#썸네일#"></iframe></p>
+                <div class="text-wrap">
+                    <div id="overlay">
+                        <h1 style="text-align: center;"><span
+                                style="font-family: Georgia, serif, 바탕, batang; font-size: 120px;"><em><br><br>CAFE,<br>MASIL</em></span>
+                        </h1>
+                    </div>
+                </div>
             </div>
-
-            <div class="mouse">
-                <div class="scroll"></div>
-            </div>
-        </section>
+        </div>
+    </div>
         <!-- end box-intro -->
     </div>
 
