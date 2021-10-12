@@ -396,7 +396,7 @@
                     <!-- 16. single work -->
                     <div class="col-md-4 col-sm-6 dessert">
                         <a href="infoService?businessNumber=1000000016" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDA5MjBfMjg3%2FMDAxNjAwNTkyNjA4ODYw.ZoDl2a6ZTPLfoMKTvbaguJBeT_ZfI0GFBeVgQha59lkg.zqKonrPUCgXpHJazt6rJ4pSCAWgQlZixFJxJtFk2Srkg.JPEG.sonaki3333%2F1600592608261.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
@@ -410,14 +410,14 @@
                     <!-- end single work -->
                     
                     <!-- 17. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 groupseat beansell dessert">
+                        <a href="infoService?businessNumber=1000000017" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA2MTJfNzAg%2FMDAxNTI4Nzg5MDAzNjQ5.dpEA5OI-XGJCEW-z5oq6XFhNcUhFEMn7STihWe6RmWMg.5ocQ4VvwK5V7g1pw4hELkKmdMy0dMTb-uAL23-wNfh8g.JPEG.phwoo01%2FIMG_1167.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>훼이보릿커피</span>
-                                        <em></em>
+                                        <em>다인석 / 원두판매 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -426,14 +426,14 @@
                     <!-- end single work -->
                     
                     <!-- 18. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                    <div class="col-md-4 col-sm-6 dessert">
+                        <a href="infoService?businessNumber=1000000018" class="portfolio_item">
                             <center><img src="" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>해롱해롱</span>
-                                        <em></em>
+                                        <em>디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -442,14 +442,14 @@
                     <!-- end single work -->
                     
                     <!-- 19. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 delivery groupseat dessert">
+                        <a href="infoService?businessNumber=1000000019" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODA0MjJfNTgg%2FMDAxNTI0Mzk1NzA3NzEz.SMi37J6vxu6h8LYX7zWEckM0NnVH3NH7P8HQRo18eqAg.lXt0Q1FZnNueIBS22XjncyIZ6iGDT0Qkhi1NEploJeYg.JPEG.minhuimini%2Foutput_3770159224.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>베러데이즈</span>
-                                        <em></em>
+                                        <em>배달 / 다인석 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -458,14 +458,14 @@
                     <!-- end single work -->
                     
                     <!-- 20. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 dessert">
+                        <a href="infoService?businessNumber=1000000020" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190927_227%2F1569583235628wTRlX_JPEG%2Fj6Ld4Er9h4kMO6pFeRf0vvl5.jpghttps://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190927_227%2F1569583235628wTRlX_JPEG%2Fj6Ld4Er9h4kMO6pFeRf0vvl5.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>카페수</span>
-                                        <em></em>
+                                        <em>디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -473,133 +473,7 @@
                     </div>
                     <!-- end single work -->
                     
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 ads graphics">
-                        <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjNfMjUy%2FMDAxNjMyMzU3NTI1NTc2.i9GfydlJUg2bNjpvoERdlvWSTUN-x6x4TiERs5-CAjgg.I--CRbfrEN22MOTFvb4lhKJPWQfmhAF5TpM2SBRwI6Yg.JPEG.woneebe%2F20210609_193806.jpg&type=a340" alt="image" class="img-responsive" ></center>
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Floating mockups</span>
-                                        <em>Ads / Graphics</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-12 photography">
-                        <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTNfMjU0%2FMDAxNjMxNTQyNzI0MTQ4.0K4fU7LB4u54kU-6eq7_H913P_x8tVAzcoHx1pTSL14g.ov3k6ZhBdBUDXeIaxYf5UnISdF8nB5RsK3HwG7GEiMIg.JPEG.ehdrmftlsl%2FKakaoTalk_20210913_224336807_06.jpg&type=a340" alt="image" class="img-responsive" /></center>
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Photorealistic smartwatch</span>
-                                        <em>Photography</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 fashion ads">
-                        <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MzBfMjc1%2FMDAxNjMyOTc3NTYzMTQx.JHmICdLeuNOxvxBJaKmeub3VzMo63iFELRieytNHLzYg.MkxV43xKoY2UFDHLcS8nMkv6Ag3dTWIIY4CCAGDqCzsg.JPEG.soyammy%2FIMG_4244.jpg&type=a340" alt="image" class="img-responsive" /></center>
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Held by hands</span>
-                                        <em>Fashion / Ads</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 graphics ads">
-                        <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTVfMTE1%2FMDAxNjMxNjc4NDQ2NjI3.2G3j9YJkB5BouUbFa8RboPEhyZFW0MMOF4ZFA13bDzkg.1iRMVXxZTwXHQEokrep4kqvUsk239dk5t2_eh34B9xwg.JPEG.yonsun51%2F20210910%25A3%25DF132451.jpg&type=a340" alt="image" class="img-responsive" /></center>
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Mobile devices</span>
-                                        <em>Graphics / Ads</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-12 photography">
-                        <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjZfMTU2%2FMDAxNjMyNjUzODQ3NTg4.um7BF-ia7aSNfjr5ubz9JPFSC_Ij5iTN7boj_eCp1FAg.MU4OdUSUO3v8x89UO3WjcnDGQ7JC3ztfRsVDF8wHXRYg.JPEG.chomhow7%2Fphoto-1627982031565-4e9799032058.jpg&type=a340" alt="image" class="img-responsive"/></center>
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Photorealistic smartwatch</span>
-                                        <em>Photography</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 graphics ads">
-                        <a href="single-project.html" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjhfMTk4%2FMDAxNjMyODMzNDU3NDg5.OpVc_XcHID4QZ8w9BzZMrkjEJK3hgaKXh-ehHNzywSMg.yeUd332wDTwLA-lJKE-Se2UYxbOh4XbTN9qtjU_IuPog.JPEG.saaa95%2FIMG_9482.JPG&type=a340" alt="image" class="img-responsive"/></center>
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Mobile devices</span>
-                                        <em>Graphics / Ads</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 graphics ads">
-                        <a href="single-project.html" class="portfolio_item">
-                            <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Mobile devices</span>
-                                        <em>Graphics / Ads</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
-
-                    <!-- single work -->
-                    <div class="col-md-4 col-sm-6 graphics ads">
-                        <a href="single-project.html" class="portfolio_item">
-                            <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
-                            <div class="portfolio_item_hover">
-                                <div class="portfolio-border clearfix">
-                                    <div class="item_info">
-                                        <span>Mobile devices</span>
-                                        <em>Graphics / Ads</em>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <!-- end single work -->
+                    
 
                 </div>
                 <!-- end portfolio_container -->
