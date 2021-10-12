@@ -394,14 +394,14 @@
                     <!-- end single work -->
                     
                     <!-- 16. single work -->
-                    <div class="col-md-4 col-sm-6 ">
-                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                    <div class="col-md-4 col-sm-6 dessert">
+                        <a href="infoService?businessNumber=1000000016" class="portfolio_item">
                             <center><img src="" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
                                         <span>다감적</span>
-                                        <em></em>
+                                        <em>디저트</em>
                                     </div>
                                 </div>
                             </div>

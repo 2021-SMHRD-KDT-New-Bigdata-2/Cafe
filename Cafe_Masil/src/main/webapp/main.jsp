@@ -35,6 +35,7 @@
         .row {
             overflow: hidden;
             position: relative;
+            z-index:-1;
         }
 
         #overlay {
