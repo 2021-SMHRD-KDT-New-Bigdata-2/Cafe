@@ -9,8 +9,6 @@
 <head>
    <% 
    memberVO vo = (memberVO)session.getAttribute("member"); 
-   ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
-   ArrayList<cafeVO> cafe_list2 = (ArrayList) session.getAttribute("cafe_list2");
    %>
    
     <meta charset="utf-8">
@@ -157,12 +155,12 @@
                 
                     <!-- 1. single work -->
                     <div class="col-md-4 col-sm-12">
-                        <a href="infoService?businessNumber=<%=cafe_list.get(0).getBusinessNumber() %>" class="portfolio_item">
-                            <center><img src="<%=cafe_list.get(0).getImage1() %>" alt="image" class="img-responsive"/></center>
+                        <a href="infoService?businessNumber=1000000001" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210629_138%2F162493686744844uxK_JPEG%2FX4EqxguJ4FdC8nQqPaFs5QE6.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span><%=cafe_list.get(0).getCafeName() %></span>
+                                        <span>더빅커피</span>
                                         <em></em>
                                     </div>
                                 </div>
@@ -174,19 +172,307 @@
                     <!-- 2. single work -->
                     <div class="col-md-4 col-sm-6 delivery groupseat beansell roasting dessert">
                         <a href="infoService?businessNumber=1000000002" class="portfolio_item">
-                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODExMjlfMTkx%2FMDAxNTQzNDE5NDA3ODYw.DB6_a5k8FMKd4FryvhZJFbAVI37agEiF7BmiPdN-T4wg.g91V2mOkPs_OU0DhD-A9-zowVnSw4ziePCp9yqDBk8og.JPEG.cn3040%2FNaverBlog_20181129_003647_01.jpg&type=sc960_832" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span></span>
-                                        <em>delivery / groupseat / beansell / roasting / dessert</em>
+                                        <span>고마다커피</span>
+                                        <em>배달 / 다인석 / 원두판매 / 로스팅 / 디저트</em>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
                     <!-- end single work -->
-
+                    
+                    <!-- 3. single work -->
+                    <div class="col-md-4 col-sm-6 beansell companion roasting dessert">
+                        <a href="infoService?businessNumber=1000000003" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20190125_50%2F1548404949290B40bq_JPEG%2FWTTGFgMMj_bkA7fwdvuStY4d.jpg" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>일다</span>
+                                        <em>원두판매 / 반려동물 / 로스팅 / 디저트</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 4. single work -->
+                    <div class="col-md-4 col-sm-6 delivery groupseat">
+                        <a href="infoService?businessNumber=1000000004" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAyMjdfMjA1%2FMDAxNjE0NDE3NjAyODI4.Qy041FHKooTKUHKwXd_oEYqirxj7qyX8ZjCCb_bQLlwg.8dLWVbnL56mZ8JYBgg5HLsP6Mh5LLACKC1yz0pOQNegg.JPEG.freegee_%2FIMG_5184.jpg" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>카페, 다옴 279-51</span>
+                                        <em>배달 / 다인석</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 5. single work -->
+                    <div class="col-md-4 col-sm-6 delivery groupseat companion smokingArea dessert">
+                        <a href="infoService?businessNumber=1000000005" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAzMjRfMjAy%2FMDAxNjE2NTY1MDgzMjI0.0QZHOaPsGqDh0TDceyHK70up23FVaJH7Cv4fzg_kclMg.zC5YtDz4IotOIjSqAlRjqidf3zc-ujOGdKjAvOX0mNAg.JPEG.wlswls1022%2FKakaoTalk_20210322_083152607_08.jpg" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>010카페</span>
+                                        <em>배달 / 다인석 / 반려동물 / 흡연실 / 디저트</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 6. single work -->
+                    <div class="col-md-4 col-sm-6 beansell roasting dessert">
+                        <a href="infoService?businessNumber=1000000006" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTEwMDJfMTEy%2FMDAxNjMzMTIxNjU1NDI2.OJkp_hRzY6UpYg_YfSDoeLGb2VI2sfByOkH0w_oAVNMg.WorAwiVGGEngy0Imb5gFwJbL6GuJZ3GF_5i74KlxEgwg.JPEG.car01215%2F20210929%25A3%25DF135531%25A3%25AD01.jpeg" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>럭키7카페</span>
+                                        <em>원두판매 / 로스팅 / 디저트</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 7. single work -->
+                    <div class="col-md-4 col-sm-6 delivery groupseat companion dessert">
+                        <a href="infoService?businessNumber=1000000007" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDExMDJfNzIg%2FMDAxNjA0MzE0MjgzMDA5.opPQX2oIeOEFhblNPiPtAegF0DPTQSc4SdId_IvGG5sg.wVaAJMWIwsysOUArSWaTSq85S2WUUGVSdfvq-MAUXbwg.JPEG.qkrruddk782%2F%25B3%25BB%25BA%25CE3.jpg" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>온클라우드나인</span>
+                                        <em>배달 / 다인석 / 반려동물 / 디저트</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 8. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000008" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>럭키세븐커피</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 9. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>간식</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 10. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>시크릿가든</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 11. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>라플레버</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 12. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>비티씨인무드</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 13. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>무드로우</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 14. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>카페 크레테</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 15. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>리버플로우</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 16. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>다감적</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 17. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>훼이보릿커피</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 18. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>해롱해롱</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 19. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>베러데이즈</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
+                    <!-- 20. single work -->
+                    <div class="col-md-4 col-sm-6 ">
+                        <a href="infoService?businessNumber=1000000002" class="portfolio_item">
+                            <center><img src="" alt="image" class="img-responsive"/></center>
+                            <div class="portfolio_item_hover">
+                                <div class="portfolio-border clearfix">
+                                    <div class="item_info">
+                                        <span>카페수</span>
+                                        <em></em>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- end single work -->
+                    
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 ads graphics">
                         <a href="single-project.html" class="portfolio_item">
