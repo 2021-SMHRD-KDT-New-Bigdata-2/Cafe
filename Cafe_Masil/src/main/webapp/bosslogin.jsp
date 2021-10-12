@@ -60,7 +60,7 @@
     <div class="top-bar">
         <h1>카페관리</h1>
         <p>이 페이지는 카페 사장님들을 위한 페이지입니다.</p>
-        <p>사장님들은 발급받은 ID/PW를 통해 로그인해주세요.</p>
+        <p>사장님들은 사업자번호와 발급받은 PW를 통해 로그인해주세요.</p>
     </div>
     <!-- end top bar -->
 
@@ -71,8 +71,8 @@
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-7">
                         <div class="input-contact">
-                            <input name="bossId" type="text" name="name">
-                            <span>ID를 입력하세요</span>
+                            <input name="businessNumber" type="text" name="name">
+                            <span>사업자번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-7">

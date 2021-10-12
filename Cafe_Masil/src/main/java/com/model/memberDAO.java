@@ -114,24 +114,24 @@ public class memberDAO {
 	}
 	
 	// 사장 로그인 기능
-	public memberVO bossLogin(String bossId, String bossPw) {
+	public memberVO bossLogin(String businessNumber, String bossPw) {
 			
 			try {
 				getConnection();
 				
-				String sql = "select * from bossJoinInfo where bossId=? and bossPw=?";
+				String sql = "select * from bossJoinInfo where businessNumber=? and bossPw=?";
 				psmt = conn.prepareStatement(sql);
 				
-				psmt.setString(1,bossId);
+				psmt.setString(1,businessNumber);
 				psmt.setString(2,bossPw);
 				
 				rs = psmt.executeQuery();
 				if (rs.next()) {
 					System.out.println("로그인 성공!");
 					
-					String get_bossId = rs.getString("bossId");
+					String get_businessNumber = rs.getString("businessNumber");
 					
-					vo = new memberVO(get_bossId);
+					vo = new memberVO(get_businessNumber);
 				}
 				
 			}catch(Exception e) {
