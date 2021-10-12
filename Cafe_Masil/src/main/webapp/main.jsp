@@ -69,7 +69,6 @@
     </div>
     <!-- end Preloader -->
 
-    <div class="container-fluid">
         <!-- box header -->
         <!-- navbar-->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -86,7 +85,7 @@
             <li ><a href="join.jsp">회원가입</a></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
               <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
             </a>
           </ul>
           <%}else{%>
@@ -95,7 +94,7 @@
             <li ><a href="LogoutService">로그아웃</a></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
               <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
             </a>
           </ul>
           <%}%>
