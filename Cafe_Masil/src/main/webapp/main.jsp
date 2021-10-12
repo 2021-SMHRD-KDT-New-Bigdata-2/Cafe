@@ -69,13 +69,12 @@
     </div>
     <!-- end Preloader -->
 
-    <div class="container-fluid">
         <!-- box header -->
         <!-- navbar-->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" herf="#">#로고삽입#</a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=index.html><img src="http://placehold.it/80x80" width="80" lat="Logo"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -86,7 +85,7 @@
             <li ><a href="join.jsp">회원가입</a></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
               <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
             </a>
           </ul>
           <%}else{%>
@@ -95,11 +94,11 @@
             <li ><a href="LogoutService">로그아웃</a></li>
             <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
               <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
             </a>
           </ul>
           <%}%>
-          <form action = "searchmap.jsp" class="navbar-form navbar-right" role="search" method="get">
+          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
               <input name = "searchword" type="text" class="form-control" placeholder="검색">
             </div>

@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<% memberVO vo = (memberVO)session.getAttribute("boss"); %>
+	<% memberVO boss = (memberVO)session.getAttribute("boss"); %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,8 +44,76 @@
         <p><a href="#">구독관리</a> / 스탬프관리</p>
     </div>
     <!-- end Top bar -->
-
-
+    <div class="container main-container">
+        <div class="col-md-6">
+            <form action="messageService" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                            <p>To 구독자</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="message" type="text">
+                            <span>구독자에게 보낼 메세지를 입력해주세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                        <input type="submit" value="전송" class="btn btn-box">
+                        </div>
+                    </div> 
+                    <div>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-2">
+                    </div> 
+                </div>
+            </form>
+        </div>
+	</div>
+    <div class="container main-container">
+        <div class="col-md-6">
+            <form action="FranService" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                            <p>스탬프 찍기</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="businessNumber" type="text">
+                            <span>스탬프를 추가할 이용자의 전화번호를 입력해주세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="float:none; margin:0 auto;">
+                        <input type="submit" value="스탬프 찍기" class="btn btn-box">
+                    </div> 
+                    <div>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-2">
+                    </div> 
+                </div>
+            </form>
+        </div>
+	</div>
     <!-- footer -->
     <footer>
         <div class="container-fluid">
