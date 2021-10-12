@@ -411,6 +411,26 @@ public class memberDAO {
 		}
 		return info_list;
 	}
+	// 구독기능
+public int subscirbe(String businessNumber, String id) {
+		
+		try {
+			getConnection();
+			String sql = "insert into subscribe values (joinInfo_num.nextval,?,?)";
+			
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1,id);
+			psmt.setString(2,businessNumber);
+			
+			cnt = psmt.executeUpdate();
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			close();
+		}return cnt;
+		
+	}
 	
 	
 }
