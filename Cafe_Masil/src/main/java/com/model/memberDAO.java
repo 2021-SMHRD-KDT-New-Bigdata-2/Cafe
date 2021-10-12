@@ -113,6 +113,35 @@ public class memberDAO {
 		return vo;
 	}
 	
+	// 사장 로그인 기능
+		public memberVO bossLogin(String bossId, String bossPw) {
+			
+			try {
+				getConnection();
+				
+				String sql = "select * from bossJoinInfo where bossId=? and bossPw=?";
+				psmt = conn.prepareStatement(sql);
+				
+				psmt.setString(1,bossId);
+				psmt.setString(2,bossPw);
+				
+				rs = psmt.executeQuery();
+				if (rs.next()) {
+					System.out.println("로그인 성공!");
+					
+					String get_bossId = rs.getString("bossId");
+					
+					vo = new memberVO(get_bossId);
+				}
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				close();
+			}
+			return vo;
+		}
+	
 	// 가맹등록 기능
 	public int cafeInfo(String businessNumber,String bossName, String bossTel, String cafeName, String cafeAddress, String cafeTel) {
 		

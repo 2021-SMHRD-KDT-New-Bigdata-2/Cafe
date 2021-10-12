@@ -118,3 +118,13 @@ start with 1
 drop sequence subscribe_num
 
 select * from subscribe;
+
+create table bossJoinInfo(
+bossId varchar2(10) not null,
+bossPw varchar2(10) not null,
+constraint BossJoinInfo_pk primary key(bossId)
+);
+
+select * from bossJoinInfo;
+
+insert into bossJoinInfo values(1,1);
