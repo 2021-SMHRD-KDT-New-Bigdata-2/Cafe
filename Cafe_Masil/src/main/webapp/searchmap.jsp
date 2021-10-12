@@ -194,7 +194,7 @@ if (navigator.geolocation) {
             lon = <%=cafe_list.get(0).getLng() %>; // 경도
         
         var locPosition = new kakao.maps.LatLng(lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+            message = '<div style="padding:5px;"><%=cafe_list.get(0).getCafeName() %></div>'; // 인포윈도우에 표시될 내용입니다
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
@@ -211,8 +211,8 @@ if (navigator.geolocation) {
         var lat = position.coords.latitude, // 위도
             lon = position.coords.longitude; // 경도
         
-        var locPosition = new kakao.maps.LatLng(35.1764544, 126.912556), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
-            message = '<div style="padding:5px;">여기에 계신가요?!</div>'; // 인포윈도우에 표시될 내용입니다
+        var locPosition = new kakao.maps.LatLng(123,12), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
+            message = '<div style="padding:5px;"></div>'; // 인포윈도우에 표시될 내용입니다
         
         // 마커와 인포윈도우를 표시합니다
         displayMarker(locPosition, message);
@@ -254,11 +254,11 @@ function displayMarker(locPosition, message) {
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
                     	<div class="liston1">
-                    		<img src="https://www.jeongdong.or.kr/static/portal/img/HKPU_04_04_pic1.jpg" alt="logo" style="width:25%;">
+                    		<img src="<%=cafe_list.get(0).getImage1() %>" alt="logo" style="width:25%;">
         			    	 <p><%=cafe_list.get(0).getCafeName() %> </p>
         			  	  <p>주소 : <%=cafe_list.get(0).getCafeAddress() %> </p>
         			  	  <p>번호 : <%=cafe_list.get(0).getCafeTel() %> </p>
-        			  	  <p><a href = "infoService?businessNumber=2">상세보기</a> </p>
+        			  	  <p><a href = "infoService?businessNumber=<%=cafe_list.get(0).getBusinessNumber() %>">상세보기</a> </p>
         			    </div>
                     </div>
                     <div class="col-md-12">

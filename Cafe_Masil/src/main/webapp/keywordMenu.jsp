@@ -133,11 +133,13 @@
                     <nav class="categories text-center">
                         <ul class="portfolio_filter">
                             <li><a href="" class="active" data-filter="*">All</a></li>
-                            <li><a href="" data-filter=".photography">Photography</a></li>
-                            <li><a href="" data-filter=".logo">Logo</a></li>
-                            <li><a href="" data-filter=".graphics">Graphics</a></li>
-                            <li><a href="" data-filter=".ads">Advertising</a></li>
-                            <li><a href="" data-filter=".fashion">Fashion</a></li>
+                            <li><a href="" data-filter=".delivery">배달</a></li>
+                            <li><a href="" data-filter=".groupseat">다인석</a></li>
+                            <li><a href="" data-filter=".beansell">원두판매</a></li>
+                            <li><a href="" data-filter=".companion">반려동물</a></li>
+                            <li><a href="" data-filter=".smokingArea">흡연구역</a></li>
+                            <li><a href="" data-filter=".roasting">로스팅</a></li>
+                            <li><a href="" data-filter=".dessert">디저트</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -148,7 +150,7 @@
                     <!-- single work -->
                     <div class="col-md-4 col-sm-6 fashion logo">
                         <a href="infoService?businessNumber=2" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MjFfMjEx%2FMDAxNjMyMTU4NTc3Njkz.dlwIat_NVKqnjqgQ_8OhjoMdqbVl1qvfAReUejT_lukg.FeM_7zFkvjEYBRl8jWId4qxbxG3U7YgDuitexY98OYEg.JPEG.qkrtyatya%2F20210919%25A3%25DF143058.jpg&type=a340" alt="image" class="img-responsive"/></center>
+                            <center><img src="" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
