@@ -152,7 +152,36 @@
         </div>
     </div>
     <!-- end main-container -->
-
+<div class="container main-container">
+        <div class="col-md-6">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                        <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">±¸µ¶</a>
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
 
     <!-- footer -->
     <footer>

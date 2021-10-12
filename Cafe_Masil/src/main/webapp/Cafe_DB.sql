@@ -110,7 +110,7 @@ drop table bossJoinInfo;
 
 select * from bossJoinInfo;
 
-insert into bossJoinInfo values(1,1);
+insert into bossJoinInfo values(1000000001,1);
 
 /* ----------------구분선 ------------------ */
 
@@ -119,6 +119,7 @@ create table subscribe(
 num number,
 id varchar2(10) not null,
 businessNumber varchar2(10) not null,
+constraint subscribe_pk primary key(num)
 );
 
 /*정렬 시퀀스*/
