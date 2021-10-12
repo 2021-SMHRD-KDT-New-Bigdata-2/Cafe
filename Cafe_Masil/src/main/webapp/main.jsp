@@ -74,7 +74,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" herf="#">#로고삽입#</a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=index.html><img src="http://placehold.it/80x80" width="80" lat="Logo"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
