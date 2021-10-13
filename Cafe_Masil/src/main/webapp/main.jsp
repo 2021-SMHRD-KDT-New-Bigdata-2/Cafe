@@ -74,7 +74,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=index.html><img src="http://placehold.it/80x80" width="80" lat="Logo"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=index.html><img src="C:\Users\smhrd\git\Cafe\Cafe_Masil\src\main\webapp\img\09.png" width="80" alt="img09"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -354,7 +354,10 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-           Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+      	  <a href=https://youtu.be/dj8gLPbY9JE.html><img src="img/09.png" width="80px" alt="Logo"></a>
+          <i class="fa fa-love"></i><a href="img/09.png">Co.구마</a>
+          
+   
         </div>
     </footer>
     <!-- end footer -->

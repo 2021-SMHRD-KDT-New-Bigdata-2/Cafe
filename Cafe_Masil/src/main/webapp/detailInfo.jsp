@@ -145,38 +145,38 @@
   <div class="carousel-inner" role="listbox">
     <div class="item active">
       <img src=<%=info_list.get(0).getBoard() %> alt="..." class="img-rounded" >
-      <div class="carousel-caption"> 사진 1
+      <div class="carousel-caption"> 메뉴판
       </div>
     </div>
     <div class="item">
       <img src=<%=info_list.get(0).getImage1() %> alt="..."class="img-rounded">
-    	<div class="carousel-caption"> 사진 2
+    	<div class="carousel-caption"> 사진 1
       </div>
     </div>
      <div class="item">
       <img src=<%=info_list.get(0).getImage2() %> alt="..."class="img-rounded">
-    	<div class="carousel-caption"> 사진 3
+    	<div class="carousel-caption"> 사진 2
       </div>
     </div>
      <div class="item">
       <img src=<%=info_list.get(0).getImage3() %> alt="..."class="img-rounded">
-    	<div class="carousel-caption"> 사진 4
+    	<div class="carousel-caption"> 사진 3
       </div>
     </div>
      <div class="item">
       <img src=<%=info_list.get(0).getImage4() %> alt="..."class="img-rounded">
-    	<div class="carousel-caption"> 사진 5
+    	<div class="carousel-caption"> 사진 4
       </div>
     </div>
     
      <div class="item">
       <img src=<%=info_list.get(0).getImage5() %> alt="..."class="img-rounded">
-    	<div class="carousel-caption"> 사진 6
+    	<div class="carousel-caption"> 사진 5
       </div>
     </div>
      <div class="item">
       <img src=<%=info_list.get(0).getImage6() %> alt="..."class="img-rounded">
-    	<div class="carousel-caption"> 사진 7
+    	<div class="carousel-caption"> 사진 6
       </div>
     </div>
   </div>
