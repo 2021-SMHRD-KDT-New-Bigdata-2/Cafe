@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<% memberVO boss = (memberVO)session.getAttribute("boss"); %>
+	<% memberVO bossLogin = (memberVO)session.getAttribute("bossLogin"); %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,8 @@
     <!-- end Top bar -->
     <div class="container main-container">
         <div class="col-md-6">
-            <form action="messageService" method="post">
+       
+            <form action="messageService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
                             <p>To ±¸µ¶ÀÚ</p>

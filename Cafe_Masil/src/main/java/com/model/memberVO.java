@@ -10,7 +10,7 @@ public class memberVO {
 	private String bestMenu;
 	private String qna;
 	private String answer;
-	private String bossId;
+	private String businessNumber;
 	
 	
 	public memberVO(int num, String id, String pw, String nickname, String tel, String bestMenu, String qna, String answer) {
@@ -44,13 +44,13 @@ public class memberVO {
 		this.nickname = nickname;
 	}
 	
-	public memberVO(String bossId) {
+	public memberVO(String businessNumber) {
 		super();
-		this.bossId = bossId;
+		this.businessNumber = businessNumber;
 	}
 	
-	public String getBossId() {
-		return bossId;
+	public String getBusinessNumber() {
+		return businessNumber;
 	}
 
 	public int getNum() {

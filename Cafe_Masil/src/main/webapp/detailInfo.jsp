@@ -155,7 +155,7 @@
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-6">
-                       <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독</a>
+                       <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
                     </div>
                     <div class="col-md-6">
                     </div>

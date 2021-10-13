@@ -361,15 +361,17 @@ public class memberDAO {
 		return info_list;
 	}
 	// 구독기능
-public int subscirbe(String businessNumber, String id) {
+public int subscirbe(String businessNumber, String id, String cafeName) {
 		
 		try {
 			getConnection();
-			String sql = "insert into subscribe values (joinInfo_num.nextval,?,?)";
+			String sql = "insert into subscribe values (joinInfo_num.nextval,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,id);
 			psmt.setString(2,businessNumber);
+			psmt.setString(3,null);
+			psmt.setString(4,cafeName);
 			
 			cnt = psmt.executeUpdate();
 			
@@ -381,5 +383,25 @@ public int subscirbe(String businessNumber, String id) {
 		
 	}
 	
+	//구독메세지
+
+public int subscirbe(String businessNumber, String message) {
 	
+	try {
+		getConnection();
+		String sql = "update subscribe set message=? where businessNumber=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,message);
+		psmt.setString(2,businessNumber);
+		
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return cnt;
+	
+}
 }
