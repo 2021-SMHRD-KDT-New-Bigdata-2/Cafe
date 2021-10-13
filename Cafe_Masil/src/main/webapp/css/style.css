@@ -2,6 +2,7 @@
 * Box Theme
 * Created by : Ahmed Eissa
 * website : www.ahmedessa.net
+
 * behance : https://www.behance.net/3essa
 */
 
@@ -28,14 +29,19 @@
 ==================================================*/
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
-
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* General
 ==================================================*/
 
 html,
 body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'GowunDodum-Regular';
     line-height: 1.8;
     color: #999
 }
@@ -76,7 +82,7 @@ a {
 }
 
 .color {
-    color:yellow;
+    color:#F9813A;
     font-size: 11px;
 }
 
@@ -95,7 +101,7 @@ h3 {
 }
 
 h5 {
-    color:yellow;
+    color:#F9813A;
 }
 
 
@@ -181,7 +187,7 @@ h5 {
     position: absolute;
     top: 0;
     left: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgb(255, 255, 255);
     height: 50px;
     width: 100%;
     z-index:3;
@@ -287,7 +293,7 @@ h5 {
 }
 
 .box-primary-nav-trigger .box-menu-icon.is-clicked {
-    background-color: black;
+    background-color:rgb(249,129,58);
 }
 
 .box-primary-nav-trigger .box-menu-icon.is-clicked::before,
@@ -355,6 +361,7 @@ h5 {
     -webkit-transition-duration: 0.4s;
     transition-duration: 0.4s;
     list-style: none;
+    opacity:0.85;
 }
 
 .box-primary-nav li {
@@ -771,18 +778,19 @@ b i:last-child {
 .portfolio_item .portfolio_item_hover .item_info em {
     font-style: normal;
     display: inline-block;
-    background-color: #ffbf00;
+    background-color:rgb(249,129,58);
     padding: 5px 20px;
     border-radius: 25px;
-    color: #333;
+    color:#000000;
     margin-top: 10px;
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
     -webkit-transition: all .3s ease-in-out .3s;
     transition: all .3s ease-in-out .3s;
     opacity: 0;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 2px;
+    font-weight:bold;
 }
 
 .portfolio_item:hover .portfolio_item_hover {
@@ -905,7 +913,7 @@ footer img {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #999;
+    color:black;
     line-height: 50px;
 }
 
@@ -1078,7 +1086,7 @@ textarea:focus {
 }
 
 .btn-box {
-    background:black;
+    background:rgb(153,153,153);
     padding: 10px 50px;
     border-radius: 0;
     color: #fff;
@@ -1090,7 +1098,7 @@ textarea:focus {
 
 .btn-box:hover,
 .btn-box:focus {
-    background: #F5B700;
+    background:rgb(249,129,58);
     color: #fff;
 }
 
