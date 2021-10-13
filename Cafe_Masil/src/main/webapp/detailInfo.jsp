@@ -128,9 +128,7 @@
         </div>
 
         <div class="col-md-9">
-            <p> 인더스트리는 ~ </p>
-
-            <p> 블라블라~ </p>
+            <p> <%=info_list.get(0).getEtc() %> </p>
         </div>
 
         <div class="col-md-3">

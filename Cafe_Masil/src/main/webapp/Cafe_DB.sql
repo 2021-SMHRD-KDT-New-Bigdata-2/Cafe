@@ -52,6 +52,7 @@ image3 varchar2(300),
 image4 varchar2(300),
 image5 varchar2(300),
 image6 varchar2(300),
+etc varchar2(1000)
 constraint cafeInfo_pk primary key(BusinessNumber)
 );
 

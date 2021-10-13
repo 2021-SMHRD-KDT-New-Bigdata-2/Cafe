@@ -29,7 +29,7 @@ public class cafeVO {
 	private String image4;
 	private String image5;
 	private String image6;
-
+	private String etc;
 
 	
 
@@ -46,7 +46,7 @@ public class cafeVO {
 	// 
 	public cafeVO(String businessNumber, String cafeName, String cafeAddress, String cafeTel, String ameIndex, String cafeHours,
 			String bestmenu, String tableNum, String delivery, String groupseat, String beansell, String companion, String smokingArea, 
-			String roasting, String dessert, String board, String image1, String image2, String image3, String image4, String image5, String image6 ) {
+			String roasting, String dessert, String board, String image1, String image2, String image3, String image4, String image5, String image6, String etc ) {
 		this.cafeName = cafeName;
 		this.businessNumber = businessNumber;
 		this.cafeAddress = cafeAddress;
@@ -69,6 +69,7 @@ public class cafeVO {
 		this.image4 = image4;
 		this.image5 = image5;
 		this.image6 = image6;
+		this.etc = etc;
 	}
 	
 	
@@ -78,7 +79,7 @@ public class cafeVO {
 			String cafeTel, String ameIndex, float lat, float lng, String cafeHours, String bestmenu, String tableNum,
 			String delivery, String groupseat, String beansell, String companion, String smokingArea, String roasting,
 			String dessert, String board, String image1, String image2, String image3, String image4, String image5,
-			String image6) {
+			String image6,String etc) {
 		super();
 		this.num = num;
 		this.bossName = bossName;
@@ -107,8 +108,13 @@ public class cafeVO {
 		this.image4 = image4;
 		this.image5 = image5;
 		this.image6 = image6;
+		this.etc = etc;
 	}
 
+
+	public String getEtc() {
+		return etc;
+	}
 
 	public String getBossName() {
 		return bossName;

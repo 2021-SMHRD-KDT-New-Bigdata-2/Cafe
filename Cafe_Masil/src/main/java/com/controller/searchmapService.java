@@ -33,13 +33,11 @@ public class searchmapService extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		ArrayList<cafeVO> cafe_list = dao.search(cafename);
-		ArrayList<cafeVO> cafe_list2 = dao.searchall(cafename);
 		
 		if (cafe_list!=null) {
 			System.out.println("리스트 낫널 실행");
 			HttpSession session = request.getSession();
 			session.setAttribute("cafe_list", cafe_list);
-			session.setAttribute("cafe_list2", cafe_list2);
 			response.sendRedirect("searchmap.jsp");
 			
 			
