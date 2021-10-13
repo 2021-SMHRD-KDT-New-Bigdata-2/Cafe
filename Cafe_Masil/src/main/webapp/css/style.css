@@ -29,14 +29,19 @@
 ==================================================*/
 
 @import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700);
-
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunDodum-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* General
 ==================================================*/
 
 html,
 body {
     height: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'GowunDodum-Regular';
     line-height: 1.8;
     color: #999
 }
@@ -908,7 +913,7 @@ footer img {
     font-size: 60px;
     text-transform: uppercase;
     font-weight: 700;
-    color: #999;
+    color:black;
     line-height: 50px;
 }
 
@@ -1081,7 +1086,7 @@ textarea:focus {
 }
 
 .btn-box {
-    background:black;
+    background:rgb(153,153,153);
     padding: 10px 50px;
     border-radius: 0;
     color: #fff;
@@ -1093,7 +1098,7 @@ textarea:focus {
 
 .btn-box:hover,
 .btn-box:focus {
-    background: #F5B700;
+    background:rgb(249,129,58);
     color: #fff;
 }
 
