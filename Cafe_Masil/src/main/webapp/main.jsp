@@ -164,7 +164,8 @@
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
-                    src="https://www.youtube.com/embed/HSooFmBgGU8?autoplay=1&mute=1" title="YouTube video player"
+                    src=" https://www.youtube.com/embed/18niiM-1dfI?autoplay=1&mute=1"
+                     title="YouTube video player"
                     frameborder="0" scrolling="no"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen alt="#썸네일#"></iframe></p>
@@ -354,10 +355,7 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-      	  <a href=https://youtu.be/dj8gLPbY9JE.html><img src="img/09.png" width="80px" alt="Logo"></a>
-          <i class="fa fa-love"></i><a href="img/09.png">Co.구마</a>
-          
-   
+          <i class="fa fa-love"></i><a href="https://youtu.be/BjmmvBMXbSU">Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->
