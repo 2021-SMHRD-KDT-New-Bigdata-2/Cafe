@@ -49,12 +49,16 @@
             width: 49.5%;
             float: left;
             border: 1px solid black;
-
+            border-radius:10px;
         }
         div.mycafe{
             width: 49.5%;
             float: right;
             border: 1px solid black;
+            border-radius:10px;
+        }
+        h3,h5{
+        	text-align:center;
         }
         svg{
             width: 10%;
@@ -68,6 +72,12 @@
             width: 89%;
             padding:35px 0;
             font-size: 20px;
+        }
+        .message{
+        	border:1px solid black;
+        	border-radius:10px;
+        	padding: 10px 10px;
+        	margin: 15px 15px;
         }
 
     </style>
@@ -154,13 +164,12 @@
             <h3 class="uppercase">My Cafe</h3>
             <h5>구독한 카페의 새로운 소식</h5>
             <div class="h-30"></div>
-            <br><br><br><br><br><br><br>
             <% for(int i = 0;i<message_list.size();i++){ %>
-											<p>구독 카페명 : <%=message_list.get(i).getCafeName() %></p>
-											<p>메세지 : <%=message_list.get(i).getMessage() %></p>	
-											<br><br><br><br><br><br>
-										<%} %>
-			<br><br><br><br><br><br>
+				<div class="message">
+				<p>구독 카페명 : <%=message_list.get(i).getCafeName() %></p>
+				<p>메세지 : <%=message_list.get(i).getMessage() %></p>
+				</div>
+			<%} %>
         </div>
     </div>
 
