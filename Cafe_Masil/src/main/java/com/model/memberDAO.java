@@ -404,4 +404,31 @@ public int subscirbe(String businessNumber, String message) {
 	}return cnt;
 	
 }
+// 나에게 온 메세지 확인 메소드
+public ArrayList<messageVO> showMessage(String id) {
+	ArrayList<messageVO> message_list = new ArrayList<messageVO>();
+	try {
+		getConnection();
+		String sql = "select cafeName, message from subscribe where id=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,id);
+		
+		rs = psmt.executeQuery();
+		
+		while(rs.next()) {
+			String cafeName = rs.getString("cafeName");
+			String message = rs.getString("message");
+			
+			messageVO vo = new messageVO(cafeName, message);
+			message_list.add(vo);
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return message_list;
+	
+}
 }
