@@ -23,6 +23,43 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>   
+<style>
+        div.nickname{
+            width: 100%;
+            height: 100px;
+            padding: 0 150px;
+        }
+        .my{
+            width: 100%;
+            height: 300px;
+            padding: 0 150px;
+        }
+        div.mystamp{
+            width: 49.5%;
+            float: left;
+            border: 1px solid black;
+
+        }
+        div.mycafe{
+            width: 49.5%;
+            float: right;
+            border: 1px solid black;
+        }
+        svg{
+            width: 10%;
+            height: 80px;
+            padding-top: 20px;
+            float: left;
+        }
+        .nick{
+            text-align: left;
+            float: right;
+            width: 89%;
+            padding:35px 0;
+            font-size: 20px;
+        }
+
+    </style>
         <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
@@ -88,6 +125,25 @@
     </div>
     <!-- end Top bar -->
 
+	<!-- 닉네임 -->
+    <div class="nickname">
+        <i class="bi bi-person-circle"></i>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+        </svg>
+        <div class="nick">닉네임</div>
+    </div>
+    <div class="my">
+        <div class="mystamp">
+            <h3 class="uppercase">My Stamp</h3>
+        </div>
+        <div class="mycafe">
+            <h3 class="uppercase">My Cafe</h3>
+            <h5>구독한 카페의 새로운 소식</h5>
+            <div class="h-30"></div>
+        </div>
+    </div>
 
     <!-- footer -->
     <footer>
