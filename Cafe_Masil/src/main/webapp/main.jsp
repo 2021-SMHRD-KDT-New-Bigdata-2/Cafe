@@ -74,7 +74,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=index.html><img src="http://placehold.it/80x80" width="80" lat="Logo"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=index.html><img src="C:\Users\smhrd\git\Cafe\Cafe_Masil\src\main\webapp\img\09.png" width="80" alt="img09"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -164,7 +164,8 @@
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
-                    src="https://www.youtube.com/embed/HSooFmBgGU8?autoplay=1&mute=1" title="YouTube video player"
+                    src=" https://www.youtube.com/embed/18niiM-1dfI?autoplay=1&mute=1"
+                     title="YouTube video player"
                     frameborder="0" scrolling="no"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen alt="#썸네일#"></iframe></p>
@@ -354,7 +355,7 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-           Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+          <i class="fa fa-love"></i><a href="https://youtu.be/BjmmvBMXbSU">Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->
