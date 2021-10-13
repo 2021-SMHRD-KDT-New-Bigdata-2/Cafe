@@ -33,6 +33,15 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+	#carousel-example-generic{
+		width: 50%;
+		
+	}
+  
+  
+  
+    </style>
 </head>
 
 <body>
@@ -116,10 +125,74 @@
     
     <!-- main-container -->
     <div class="container main-container">
-        <div class="col-md-12">
-            <img src=<%=info_list.get(0).getImage1() %> alt="" class="img-responsive" />
-            <div class="h-30"></div>
-        </div>
+    
+    
+    <div class="center-block">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src=<%=info_list.get(0).getBoard() %> alt="..." class="img-rounded" >
+      <div class="carousel-caption"> 사진 1
+      </div>
+    </div>
+    <div class="item">
+      <img src=<%=info_list.get(0).getImage1() %> alt="..."class="img-rounded">
+    	<div class="carousel-caption"> 사진 2
+      </div>
+    </div>
+     <div class="item">
+      <img src=<%=info_list.get(0).getImage2() %> alt="..."class="img-rounded">
+    	<div class="carousel-caption"> 사진 3
+      </div>
+    </div>
+     <div class="item">
+      <img src=<%=info_list.get(0).getImage3() %> alt="..."class="img-rounded">
+    	<div class="carousel-caption"> 사진 4
+      </div>
+    </div>
+     <div class="item">
+      <img src=<%=info_list.get(0).getImage4() %> alt="..."class="img-rounded">
+    	<div class="carousel-caption"> 사진 5
+      </div>
+    </div>
+    
+     <div class="item">
+      <img src=<%=info_list.get(0).getImage5() %> alt="..."class="img-rounded">
+    	<div class="carousel-caption"> 사진 6
+      </div>
+    </div>
+     <div class="item">
+      <img src=<%=info_list.get(0).getImage6() %> alt="..."class="img-rounded">
+    	<div class="carousel-caption"> 사진 7
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+    
+
 
         <div class="col-md-12">
             <h3 class="text-uppercase"><%=info_list.get(0).getCafeName()%></h3>
