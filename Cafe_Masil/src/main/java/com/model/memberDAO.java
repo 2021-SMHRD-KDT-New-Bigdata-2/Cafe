@@ -361,15 +361,17 @@ public class memberDAO {
 		return info_list;
 	}
 	// 구독기능
-public int subscirbe(String businessNumber, String id) {
+public int subscirbe(String businessNumber, String id, String cafeName) {
 		
 		try {
 			getConnection();
-			String sql = "insert into subscribe values (joinInfo_num.nextval,?,?)";
+			String sql = "insert into subscribe values (joinInfo_num.nextval,?,?,?,?)";
 			
 			psmt = conn.prepareStatement(sql);
 			psmt.setString(1,id);
 			psmt.setString(2,businessNumber);
+			psmt.setString(3,null);
+			psmt.setString(4,cafeName);
 			
 			cnt = psmt.executeUpdate();
 			
@@ -381,5 +383,52 @@ public int subscirbe(String businessNumber, String id) {
 		
 	}
 	
+	//구독메세지
+
+public int subscirbe(String businessNumber, String message) {
 	
+	try {
+		getConnection();
+		String sql = "update subscribe set message=? where businessNumber=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,message);
+		psmt.setString(2,businessNumber);
+		
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return cnt;
+	
+}
+// 나에게 온 메세지 확인 메소드
+public ArrayList<messageVO> showMessage(String id) {
+	ArrayList<messageVO> message_list = new ArrayList<messageVO>();
+	try {
+		getConnection();
+		String sql = "select cafeName, message from subscribe where id=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,id);
+		
+		rs = psmt.executeQuery();
+		
+		while(rs.next()) {
+			String cafeName = rs.getString("cafeName");
+			String message = rs.getString("message");
+			
+			messageVO vo = new messageVO(cafeName, message);
+			message_list.add(vo);
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return message_list;
+	
+}
 }

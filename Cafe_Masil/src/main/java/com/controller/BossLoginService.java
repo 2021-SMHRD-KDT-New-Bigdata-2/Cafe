@@ -27,7 +27,7 @@ public class BossLoginService extends HttpServlet {
 	
 	if (vo!=null) {
 		HttpSession session = request.getSession();
-		session.setAttribute("boss", vo);
+		session.setAttribute("bossLogin", vo);
 		
 		response.sendRedirect("cafeManager.jsp");
 	}

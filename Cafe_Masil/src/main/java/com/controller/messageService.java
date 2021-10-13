@@ -9,23 +9,29 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.model.memberDAO;
 
-@WebServlet("/subscribeService")
-public class subscribeService extends HttpServlet {
+
+@WebServlet("/messageService")
+public class messageService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("euc-kr");
 		String businessNumber = request.getParameter("businessNumber");
-		String Id = request.getParameter("id");
-		String cafeName = request.getParameter("cafeName");
+		String message = request.getParameter("message");
+		System.out.print(businessNumber);
+		System.out.print(message);
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.subscirbe(businessNumber, Id, cafeName);
+		int cnt = dao.subscirbe(businessNumber, message);
+		
 		if(cnt>0) {
-			response.sendRedirect("detailInfo.jsp");
+			System.out.print("전송성공");
+			response.sendRedirect("cafeManager.jsp");
 		}else {
 			
 		}
+		
+		
 		
 	}
 

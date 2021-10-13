@@ -1,3 +1,6 @@
+<%@page import="com.model.messageVO"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.model.memberDAO"%>
 <%@page import="com.model.memberVO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
@@ -21,6 +24,13 @@
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
+    <%
+						memberDAO dao = new memberDAO();
+						ArrayList<messageVO> message_list = new ArrayList<messageVO>();
+						if (vo!=null){
+							message_list = dao.showMessage(vo.getId());
+						}
+					%>	
 </head>
 <body>   
 <style>
@@ -30,9 +40,10 @@
             padding: 0 150px;
         }
         .my{
+        	overflow:auto;
             width: 100%;
-            height: 300px;
             padding: 0 150px;
+            padding-bottom: 50px;
         }
         div.mystamp{
             width: 49.5%;
@@ -117,11 +128,12 @@
         <%}%>
         <!-- end nav -->
 
+					
 
      <!-- Top bar -->
      <div class="top-bar">
         <h1>MY CAFE</h1>
-        <p><a href="#">Home</a> / About me</p>
+        <p><a href="#">Stamp</a> / 구독메세지 확인</p>
     </div>
     <!-- end Top bar -->
 
@@ -132,7 +144,7 @@
             <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
             <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
         </svg>
-        <div class="nick">닉네임</div>
+        <div class="nick"><%=vo.getNickname() %></div>
     </div>
     <div class="my">
         <div class="mystamp">
@@ -142,6 +154,13 @@
             <h3 class="uppercase">My Cafe</h3>
             <h5>구독한 카페의 새로운 소식</h5>
             <div class="h-30"></div>
+            <br><br><br><br><br><br><br>
+            <% for(int i = 0;i<message_list.size();i++){ %>
+											<p>구독 카페명 : <%=message_list.get(i).getCafeName() %></p>
+											<p>메세지 : <%=message_list.get(i).getMessage() %></p>	
+											<br><br><br><br><br><br>
+										<%} %>
+			<br><br><br><br><br><br>
         </div>
     </div>
 
