@@ -27,22 +27,22 @@
     <script src="js/modernizr.js"></script>
     <style>
     .liston1> img {
-    float: left;
-}
+   		float: left;
+	}
     .liston1 {
-    border: 1px solid black;
-    margin: 0 30px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    border-radius: 20px 20px 20px 20px;
+	    border: 1px solid black;
+	    margin: 0 30px;
+	    padding-top: 30px;
+	    padding-bottom: 30px;
+	    margin-top: 30px;
+	    margin-bottom: 30px;
+	    border-radius: 20px 20px 20px 20px;
 	}
 	
 	.liston1::after {
-	content:"";
-	display:block;
-	clear:both;
+		content:"";
+		display:block;
+		clear:both;
 	}
 	
 	.liston1 img {
@@ -55,45 +55,12 @@
 	</style>
 </head>
 <body>   
-	<style>
-		form{
-			position:relative;
-			top:50%;
-			left:50%;
-			width:350px;
-			height:40px;
-			border-radius:40px;
-			transform:translate(-50%, -50%);
-			transitioin:all 0.3s ease;
-			
-		}
-		
-		#search1{
-			position:absolute;
-			top:10px;
-			left:38px;
-			font-size:14px;
-			width:195px;
-			height:20px;
-		}
-		#search2{
-			position:absolute;
-			top:10px;
-			left:15px;
-			height: 20px;
-			width: 20px;
-			padding: 0;
-			margin: 0;
-			border: none;
-		}
-	</style>
-	
         <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
             </div>
-                        <!-- box-nav -->
+            <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
                 <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
             </a>
@@ -101,7 +68,7 @@
         <!-- end box-header -->
 
         <!-- nav -->
-       <%if(vo==null) {%>
+        <%if(vo==null) {%>
     	<nav>
      	    <ul class="box-primary-nav">
      	        <li class="box-label"> Choose me! </li>
@@ -159,27 +126,23 @@
 		
 	%>
 	<div class="container main-container">
-            <ul class="searchword" align = "center">
-				<form action="searchmapService" style="float:none; margin:0 auto;">
-				<%if(searchword==null){ %>
-					<div>
-						<input class="search1" name="searchword" type="text" placeholder="카페명을 검색하세요">
-						<button class="search2" type="submit">
-						<svg class="search2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-	  					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-						</svg></button>
-					</div>
-				<%}else{ %>
-					<div>
-						<input class="search1" name="searchword" type="text" placeholder="<%=searchword %>">
-						<button class="search2" type="submit">
-						<svg class="search2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-	 					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-						</svg></button>
-					</div>
-				<%} %>
-				</form>
-			</ul>
+        <div class="col-md-5">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <ul class="" align = "center">
+					<form action="searchmapService">
+					<%if(searchword==null){ %>
+						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
+						<button type="submit">검색</button>
+					<%}else{ %>
+						<input name="searchword" type="text" placeholder="<%=searchword %>">
+						<button type="submit">검색</button>
+					<%} %>
+					</form>
+					</ul>
+                </div>
+            </form>
+        </div>
     </div>
 <center><div id="map" style="width:70%;height:350px;"></div></center>
 	
