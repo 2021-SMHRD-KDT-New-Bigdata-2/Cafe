@@ -30,9 +30,10 @@
             padding: 0 150px;
         }
         .my{
+        	overflow:auto;
             width: 100%;
-            height: 300px;
             padding: 0 150px;
+            padding-bottom: 50px;
         }
         div.mystamp{
             width: 49.5%;
@@ -142,6 +143,7 @@
             <h3 class="uppercase">My Cafe</h3>
             <h5>구독한 카페의 새로운 소식</h5>
             <div class="h-30"></div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br>
         </div>
     </div>
 
