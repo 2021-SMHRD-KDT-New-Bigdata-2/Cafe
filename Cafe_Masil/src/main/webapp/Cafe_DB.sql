@@ -142,8 +142,12 @@ select * from subscribe;
 /* 스탬프테이블 */
 create table stamp(
 num number,
-id varchar2(10) not null,
+tel varchar2(10) not null,
 businessNumber varchar2(10) not null,
+cafeName varchar2(20) not null,
+allStamp number,
+useStamp number,
+constraint subscribe_pk primary key(num)
 );
 
 /*정렬 시퀀스*/
