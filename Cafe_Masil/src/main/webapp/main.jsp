@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Box personal portfolio Template</title>
-    <link rel="icon" href="img/fav.png" type="image/x-icon">
+    <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -431,7 +431,7 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-          <i class="fa fa-love"></i><a href="https://youtu.be/BjmmvBMXbSU">Co.구마</a>
+          <i class="fa fa-love"></i><a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->
