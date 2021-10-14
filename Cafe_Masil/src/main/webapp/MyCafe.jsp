@@ -1,3 +1,4 @@
+<%@page import="com.model.stampVO"%>
 <%@page import="com.model.messageVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.memberDAO"%>
@@ -27,8 +28,10 @@
 <%
 						memberDAO dao = new memberDAO();
 						ArrayList<messageVO> message_list = new ArrayList<messageVO>();
+						ArrayList<stampVO> stamp_list = new ArrayList<stampVO>();
 						if (vo!=null){
 							message_list = dao.showMessage(vo.getId());
+							stamp_list = dao.myStamp(vo.getTel());
 						}
 					%>
 </head>
@@ -120,6 +123,7 @@
 	<!-- end box-header -->
 
 	<!-- nav -->
+	<%= stamp_list.get(0).getAllStamp() %>
 	<%if(vo==null) {%>
 	<nav>
 		<ul class="box-primary-nav">
@@ -201,16 +205,16 @@
 		<fieldset class="mystamp">
 			<legend>My Stamp</legend>
 			<h5>&nbsp;</h5>
-			<div class="test" style="float: none; margin: 0 auto;">
-				<h4 class="test2">
-					일다 stamp<br> <br>&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;4
+			<% for(int i = 0;i<stamp_list.size();i++){ %>
+			<div class="test">
+				<h4 class = "test2">
+					<%=stamp_list.get(i).getCafeName()%> stamp<br><br>
+					<% for(int j = 0;j<stamp_list.get(i).getAllStamp();j++){%>
+						&nbsp;&nbsp;&nbsp;<%=j+1%>
+					<%}%>
 				</h4>
 			</div>
-			<div class="test">
-				<h4 class="test2">다이브인커피 stamp</h4>
-			</div>
-			<div class="test"></div>
-			<div class="test"></div>
+			<%}%>
 		</fieldset>
 		<fieldset class="mycafe">
 			<legend class="uppercase">My Cafe</legend>
