@@ -47,6 +47,7 @@
 			width: 100%;
 			padding: 0 200px;
 			padding-bottom: 50px;
+			overflow:auto;
 		}
 		
 		.mystamp {
@@ -97,18 +98,18 @@
 			font-size: 20px;
 		}
 		
-		.test {
+		.stamp {
 			width: 300px;
 			height: 200px;
 			padding: 10px 10px;
-			margin: 15px 15px;
 			background-image: url('https://i.stack.imgur.com/9TQsy.png');
 		}
 		
-		.test2 {
+		.stamp2 {
 			height: 110px;
-}
-</style>
+		}
+		
+	</style>
 	<!-- box-header -->
 	<header class="box-header">
 		<div class="box-logo">
@@ -206,18 +207,18 @@
 			<legend>My Stamp</legend>
 			<h5>&nbsp;</h5>
 			<% for(int i = 0;i<stamp_list.size();i++){ %>
-			<div class="test">
-				<h4 class = "test2">
+			<div class="stamp" style="float:none; margin:15px auto;">
+				<h4 class="stamp2" style="text-align:center">
 					<%=stamp_list.get(i).getCafeName()%> stamp<br><br>
 					<% for(int j = 0;j<stamp_list.get(i).getAllStamp();j++){%>
-						&nbsp;&nbsp;&nbsp;<%=j+1%>
+						<%=j+1%>
 					<%}%>
 				</h4>
 			</div>
 			<%}%>
 		</fieldset>
 		<fieldset class="mycafe">
-			<legend class="uppercase">My Cafe</legend>
+			<legend>My Cafe</legend>
 			<h5>구독한 카페의 새로운 소식</h5>
 			<% for(int i = 0;i<message_list.size();i++){ %>
 			<div class="message">
@@ -234,11 +235,10 @@
 
 	<!-- footer -->
 	<footer>
-		<div class="container-fluid">
-			Shared by <i class="fa fa-love"></i><a
-				href="https://bootstrapthemes.co">BootstrapThemes</a>
-		</div>
-	</footer>
+        <div class="container-fluid">
+            Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+        </div>
+    </footer>
 	<!-- end footer -->
 
 	<!-- back to top -->
