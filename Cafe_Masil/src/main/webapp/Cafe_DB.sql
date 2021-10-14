@@ -78,14 +78,7 @@ num number,
 id varchar2(10) not null,
 businessNumber varchar2(30) not null,
 cafeName varchar2(30) not null,
-clean varchar2(20) not null,
-area varchar2(20) not null,
-flavor varchar2(20) not null, 
-dessert varchar2(20) not null,
-service varchar2(20) not null,
-reVisit varchar2(20) not null,
-picture varchar2(20) not null,
-notGood varchar2(20) not null,
+evaluation varchar2(100) not null,
 constraint evaluation_pk primary key(num)
 );
 
