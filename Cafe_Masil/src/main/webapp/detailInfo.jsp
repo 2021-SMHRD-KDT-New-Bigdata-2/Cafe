@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Box personal portfolio Template</title>
-    <link rel="icon" href="img/fav.png" type="image/x-icon">
+    <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -33,28 +33,66 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script>
+
+    $(function(){
+//      이미지 클릭시 해당 이미지 모달
+    $("item").click(function(){
+         let img = new Image();
+         img.src = $(this).attr("src")
+         $('.modalBox').html(img);
+         $(".modal").show();
+     });
+//   모달 클릭할때 이미지 닫음
+     $(".modal").click(function (e) {
+     $(".modal").toggle();
+   });
+ });
+</script>
+
     <style>
       #carousel-cafe-generic{
       height: 500px;
   	  width: 800px;
-      }
+}
       #carousel-cafe-generic{
       top: 50%;
   	  left: 50%;
    	  transform: translate(-50%,-10%);
       overflow: hidden;
-      }
+}
       .item{
       height: 800px;
       object-fit: cover;
-      }
+}
       .item>img{
       max-width:100%;
       height: auto;
       display: block;
       margin: 0px auto;
-      }
-
+}
+/* image modal */
+      .modal {
+	  display: none;
+	  z-index: 500;
+	  width: 100%;
+	  height: 100%;
+	  position: fixed;
+	  top: 0;
+	  left: 0;
+	  background-color: rgba(0, 0, 0, 0.8);
+}
+		.modalBox {
+		position: relative;
+		text-align: center;
+		top : 50%;
+		left : 50%;
+		position : sticky;
+}
+div img:hover{
+   		 cursor: -webkit-zoom-in;
+}
+	/* image modal end */
     </style>
 </head>
 
@@ -136,6 +174,12 @@
         <h1>상세보기</h1>
     </div>
     <!-- end top-bar -->
+    
+    <!-- start modal -->
+<div class="modal">
+    <div class="modalBox">
+    </div>
+</div> 
     
     <!-- main-container -->
     <div class="container main-container">
@@ -281,7 +325,7 @@
     <!-- back to top -->
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
-
+	
 
 
 
