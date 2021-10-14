@@ -163,7 +163,6 @@
         <div class="mycafe">
             <h3 class="uppercase">My Cafe</h3>
             <h5>구독한 카페의 새로운 소식</h5>
-            <div class="h-30"></div>
             <% for(int i = 0;i<message_list.size();i++){ %>
 				<div class="message">
 				<p>구독 카페명 : <%=message_list.get(i).getCafeName() %></p>
