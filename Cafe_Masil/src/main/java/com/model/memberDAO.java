@@ -101,8 +101,9 @@ public class memberDAO {
 				
 				String get_id = rs.getString("id");
 				String get_nickname = rs.getString("nickname");
+				String get_tel = rs.getString("tel");
 				
-				vo = new memberVO(get_id, get_nickname);
+				vo = new memberVO(get_id, get_nickname,get_tel);
 			}
 			
 		}catch(Exception e) {
@@ -385,7 +386,7 @@ public int subscribe(String businessNumber, String id, String cafeName) {
 	
 	//구독메세지
 
-public int subscirbe(String businessNumber, String message) {
+public int subscribe(String businessNumber, String message) {
 	
 	try {
 		getConnection();
@@ -430,5 +431,65 @@ public ArrayList<messageVO> showMessage(String id) {
 		close();
 	}return message_list;
 	
+}
+// 스탬프 발급
+public int stamp(String businessNumber, String tel, String cafeName) {
+	
+	try {
+		getConnection();
+		String sql = "insert into stamp values (stamp_num.nextval,?,?,?,?)";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,tel);
+		psmt.setString(2,businessNumber);
+		psmt.setString(3,cafeName);
+		psmt.setInt(4,0);
+		
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return cnt;
+	
+}
+
+// 스탬프 초기화
+public int resetStamp(String businessNumber, String tel) {
+	try {
+		getConnection();
+		String sql = "update stamp set allStamp=0 where businessNumber=? and tel=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,businessNumber);
+		psmt.setString(2,tel);
+		
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return cnt;
+}
+
+// 스탬프 추가
+public int addStamp(String businessNumber, String tel) {
+	try {
+		getConnection();
+		String sql = "update stamp set allStamp=allStamp+1 where businessNumber=? and tel=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,businessNumber);
+		psmt.setString(2,tel);
+		
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return cnt;
 }
 }
