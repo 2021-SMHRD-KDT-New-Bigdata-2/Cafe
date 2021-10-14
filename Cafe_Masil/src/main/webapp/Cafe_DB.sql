@@ -121,7 +121,7 @@ num number,
 id varchar2(10) not null,
 businessNumber varchar2(10) not null,
 message varchar2(500),
-cafeName varchar2(20) not null,
+cafeName varchar2(50) not null,
 constraint subscribe_pk primary key(num)
 );
 
