@@ -83,19 +83,53 @@
 	</div>
     <div class="container main-container">
         <div class="col-md-6">
-            <form action="FranService" method="post">
+            <form action="stampAddService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>스탬프 찍기</p>
+                            <p>스탬프</p>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="businessNumber" type="text">
-                            <span>스탬프를 추가할 이용자의 전화번호를 입력해주세요</span>
+                            <input name="tel" type="text">
+                            <span>이용자의 전화번호를 입력해주세요</span>
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
                         <input type="submit" value="스탬프 찍기" class="btn btn-box">
+                    </div> 
+                    <div>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-2">
+                    </div> 
+                </div>
+            </form>
+        </div>
+	</div>
+	<div class="container main-container">
+        <div class="col-md-6">
+            <form action="stampResetService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-12">
+                            <p>스탬프 초기화</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-contact">
+                            <input name="tel" type="text">
+                            <span>이용자의 전화번호를 입력해주세요</span>
+                        </div>
+                    </div>
+                    <div class="col-md-12" style="float:none; margin:0 auto;">
+                        <input type="submit" value="초기화" class="btn btn-box">
                     </div> 
                     <div>
                     </div>

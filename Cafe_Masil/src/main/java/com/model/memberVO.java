@@ -38,10 +38,11 @@ public class memberVO {
 
 
 
-	public memberVO(String id, String nickname) {
+	public memberVO(String id, String nickname, String tel) {
 		super();
 		this.id = id;
 		this.nickname = nickname;
+		this.tel = tel;
 	}
 	
 	public memberVO(String businessNumber) {
