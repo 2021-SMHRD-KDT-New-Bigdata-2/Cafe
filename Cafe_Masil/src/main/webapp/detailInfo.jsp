@@ -34,8 +34,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-
-  
+      .active{
+      	overflow: hidden;
+      }
   
   
     </style>
@@ -125,17 +126,17 @@
     
     
     <div class="center-block">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" >
   <!-- Indicators -->
   <ol class="carousel-indicators">
     <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2" ></li>
+    <li data-target="#carousel-example-generic" data-slide-to="3" ></li>
+    <li data-target="#carousel-example-generic" data-slide-to="4" ></li>
+    <li data-target="#carousel-example-generic" data-slide-to="5" ></li>
+    <li data-target="#carousel-example-generic" data-slide-to="6" ></li>
+    <li data-target="#carousel-example-generic" data-slide-to="7" ></li>
   </ol>
 
   <!-- Wrapper for slides -->
