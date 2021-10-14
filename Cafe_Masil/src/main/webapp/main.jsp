@@ -354,7 +354,6 @@
     
     
  <hr style="border: inset 10px gary; padding-top: 70px;">
-     <div class="center-block">
  <p style="pading: 100px; margin:50px; align:center;">
 	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center>
 	 <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
@@ -417,8 +416,12 @@
 		    </div>
 		  </div>
 		</div>	
+<<<<<<< HEAD
 	</div>
 	
+=======
+</div>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 	<hr>
 	<div class=></div>
 	<!-- end Thumbnail  -->
