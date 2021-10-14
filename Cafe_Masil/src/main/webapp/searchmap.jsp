@@ -122,26 +122,21 @@
 	<% request.setCharacterEncoding("euc-kr"); 
 		memberDAO dao = new memberDAO();
 		//ArrayList<cafeVO> cafe_list = new ArrayList<>();
-		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
+		ArrayList<cafeVO> cafe_list = (ArrayList<cafeVO>)session.getAttribute("cafe_list");
 		
 	%>
 	<div class="container main-container">
         <div class="col-md-5">
-            <form action="#" method="post">
+          
                 <div class="container row" style="float:none; margin:0 auto;">
                     <ul class="" align = "center">
 					<form action="searchmapService">
-					<%if(searchword==null){ %>
 						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 						<button type="submit">검색</button>
-					<%}else{ %>
-						<input name="searchword" type="text" placeholder="<%=searchword %>">
-						<button type="submit">검색</button>
-					<%} %>
 					</form>
 					</ul>
                 </div>
-            </form>
+           
         </div>
     </div>
 <center><div id="map" style="width:70%;height:350px;"></div></center>

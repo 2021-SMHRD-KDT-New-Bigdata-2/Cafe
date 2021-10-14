@@ -20,7 +20,7 @@ public class subscribeService extends HttpServlet {
 		String cafeName = request.getParameter("cafeName");
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.subscirbe(businessNumber, Id, cafeName);
+		int cnt = dao.subscribe(businessNumber, Id, cafeName);
 		if(cnt>0) {
 			response.sendRedirect("detailInfo.jsp");
 		}else {
