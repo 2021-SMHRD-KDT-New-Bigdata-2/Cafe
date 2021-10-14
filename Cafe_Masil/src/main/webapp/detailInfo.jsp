@@ -34,10 +34,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-	#carousel-example-generic{
-		width: 50%;
-		
-	}
+
   
   
   
@@ -191,7 +188,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-    
+</div>    
 
 
         <div class="col-md-12">
