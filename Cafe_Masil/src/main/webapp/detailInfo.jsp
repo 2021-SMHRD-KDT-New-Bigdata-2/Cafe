@@ -228,6 +228,7 @@
                        <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
                     </div>
                     <div class="col-md-6">
+                    	<a href = "stampService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&tel=<%=vo.getTel() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">스탬프 발급</a>
                     </div>
                     <div class="col-md-12">
                     </div>
