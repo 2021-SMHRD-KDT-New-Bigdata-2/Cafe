@@ -131,9 +131,9 @@ increment by 1
 start with 1
 
 /*필요할 때 쓰는 정렬 시퀀스 삭제*/
-drop sequence subscribe_num
+drop sequence subscribe_num;
 
-drop table subscribe
+drop table subscribe;
 
 select * from subscribe;
 

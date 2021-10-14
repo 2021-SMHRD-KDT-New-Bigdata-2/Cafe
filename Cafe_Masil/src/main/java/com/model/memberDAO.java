@@ -385,7 +385,7 @@ public int subscribe(String businessNumber, String id, String cafeName) {
 	
 	//구독메세지
 
-public int subscirbe(String businessNumber, String message) {
+public int subscribe(String businessNumber, String message) {
 	
 	try {
 		getConnection();

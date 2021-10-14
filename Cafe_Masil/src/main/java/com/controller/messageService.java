@@ -22,7 +22,7 @@ public class messageService extends HttpServlet {
 		System.out.print(message);
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.subscirbe(businessNumber, message);
+		int cnt = dao.subscribe(businessNumber, message);
 		
 		if(cnt>0) {
 			System.out.print("전송성공");

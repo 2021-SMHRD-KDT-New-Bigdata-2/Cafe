@@ -20,7 +20,7 @@ public class stampService extends HttpServlet {
 		String cafeName = request.getParameter("cafeName");
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.subscirbe(businessNumber, tel, cafeName);
+		int cnt = dao.subscribe(businessNumber, tel, cafeName);
 		if(cnt>0) {
 			response.sendRedirect("detailInfo.jsp");
 		}else {
