@@ -8,21 +8,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
-=======
+
 <% memberVO vo = (memberVO)session.getAttribute("member"); %>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="icon" href="img/fav.png" type="image/x-icon">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
