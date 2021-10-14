@@ -493,6 +493,7 @@ public int addStamp(String businessNumber, String tel) {
 		close();
 	}return cnt;
 }
+
 	//평가넣기 기능
 public int evaluation_insert(String result) {
 	try {
@@ -510,7 +511,35 @@ public int evaluation_insert(String result) {
 		close();
 	}
 	return cnt;
-}
+	}
+
+//내 스탬프 확인
+public ArrayList<stampVO> myStamp(String tel) {
+	ArrayList<stampVO> stamp_list = new ArrayList<stampVO>();
+	try {
+		getConnection();
+		String sql = "select cafeName, allStamp from stamp where tel=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,tel);
+		
+		rs = psmt.executeQuery();
+		
+		while(rs.next()) {
+			String cafeName = rs.getString("cafeName");
+			int allStamp = rs.getInt("allStamp");
+			
+			stampVO vo = new stampVO(cafeName, allStamp);
+			stamp_list.add(vo);
+		}
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	return stamp_list;
+
+	}
 
 // 평가 불러오기 기능
 public String evaluation_select(String cafeName) {
