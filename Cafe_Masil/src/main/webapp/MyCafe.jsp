@@ -40,22 +40,28 @@
             padding: 0 150px;
         }
         .my{
-        	overflow:auto;
+        	overflow:hidden;
             width: 100%;
             padding: 0 150px;
             padding-bottom: 50px;
         }
-        div.mystamp{
+        .mystamp{
             width: 49.5%;
+            height:500px;
             float: left;
-            border: 1px solid black;
             border-radius:10px;
         }
-        div.mycafe{
+        .mycafe{
             width: 49.5%;
             float: right;
-            border: 1px solid black;
             border-radius:10px;
+        }
+        legend{
+        	display:block;
+        	margin:0 auto;
+        	width:50%;
+        	text-align:center;
+        	font-size:30px;
         }
         h3,h5{
         	text-align:center;
@@ -78,6 +84,16 @@
         	border-radius:10px;
         	padding: 10px 10px;
         	margin: 15px 15px;
+        }
+        .test{
+        	width:300px;
+        	height:200px;
+        	padding: 10px 10px;
+        	margin: 15px 15px;
+        	background-image:url('https://i.stack.imgur.com/9TQsy.png');
+        }
+        .test2{
+        	height:110px;
         }
 
     </style>
@@ -156,23 +172,36 @@
         </svg>
         <div class="nick"><%=vo.getNickname() %></div>
     </div>
-    <div class="my">
-        <div class="mystamp">
-            <h3 class="uppercase">My Stamp</h3>
-        </div>
-        <div class="mycafe">
-            <h3 class="uppercase">My Cafe</h3>
-            <h5>구독한 카페의 새로운 소식</h5>
-            <% for(int i = 0;i<message_list.size();i++){ %>
-				<div class="message">
-				<p>구독 카페명 : <%=message_list.get(i).getCafeName() %></p>
-				<p>메세지 : <%=message_list.get(i).getMessage() %></p>
-				</div>
-			<%} %>
-        </div>
-    </div>
 
-    <!-- footer -->
+	<div class="my">
+		<fieldset class="mystamp">
+			<legend>My Stamp</legend>
+			<div class="test">
+				<h4 class="test2">
+					일다 stamp<br><br>&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;2&nbsp;&nbsp;&nbsp;3&nbsp;&nbsp;&nbsp;4
+				</h4>
+			</div>
+			<div class="test">
+				<h4 class="test2">다이브인커피 stamp</h4>
+			</div>
+			<div class="test"></div>
+			<div class="test"></div>
+		</fieldset>
+		<fieldset class="mycafe">
+			<legend class="uppercase">My Cafe</legend>
+			<h5>구독한 카페의 새로운 소식</h5>
+			<% for(int i = 0;i<message_list.size();i++){ %>
+			<div class="message">
+				<p> 구독 카페명 :
+					<%=message_list.get(i).getCafeName() %></p>
+				<p> 메세지 :
+					<%=message_list.get(i).getMessage() %></p>
+			</div>
+			<%} %>
+		</fieldset>
+	</div>
+
+	<!-- footer -->
     <footer>
         <div class="container-fluid">
             Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
