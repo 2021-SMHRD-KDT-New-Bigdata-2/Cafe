@@ -131,9 +131,9 @@ increment by 1
 start with 1
 
 /*필요할 때 쓰는 정렬 시퀀스 삭제*/
-drop sequence subscribe_num
+drop sequence subscribe_num;
 
-drop table subscribe
+drop table subscribe;
 
 select * from subscribe;
 
@@ -142,12 +142,11 @@ select * from subscribe;
 /* 스탬프테이블 */
 create table stamp(
 num number,
-tel varchar2(10) not null,
+tel varchar2(20) not null,
 businessNumber varchar2(10) not null,
-cafeName varchar2(20) not null,
+cafeName varchar2(50) not null,
 allStamp number,
-useStamp number,
-constraint subscribe_pk primary key(num)
+constraint stamp_pk primary key(num)
 );
 
 /*정렬 시퀀스*/
