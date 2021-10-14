@@ -127,7 +127,7 @@
 	%>
 	<div class="container main-container">
         <div class="col-md-5">
-            <form action="#" method="post">
+          
                 <div class="container row" style="float:none; margin:0 auto;">
                     <ul class="" align = "center">
 					<form action="searchmapService">
@@ -136,7 +136,7 @@
 					</form>
 					</ul>
                 </div>
-            </form>
+           
         </div>
     </div>
 <center><div id="map" style="width:70%;height:350px;"></div></center>
