@@ -361,7 +361,7 @@ public class memberDAO {
 		return info_list;
 	}
 	// 구독기능
-public int subscirbe(String businessNumber, String id, String cafeName) {
+public int subscribe(String businessNumber, String id, String cafeName) {
 		
 		try {
 			getConnection();
