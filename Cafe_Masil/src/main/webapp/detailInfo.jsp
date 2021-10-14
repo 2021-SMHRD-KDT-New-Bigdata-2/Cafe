@@ -34,13 +34,27 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <style>
-	#carousel-example-generic{
-		width: 50%;
-		
-	}
-  
-  
-  
+      #carousel-cafe-generic{
+      height: 500px;
+  	  width: 800px;
+      }
+      #carousel-cafe-generic{
+      top: 50%;
+  	  left: 50%;
+   	  transform: translate(-50%,-10%);
+      overflow: hidden;
+      }
+      .item{
+      height: 800px;
+      object-fit: cover;
+      }
+      .item>img{
+      max-width:100%;
+      height: auto;
+      display: block;
+      margin: 0px auto;
+      }
+
     </style>
 </head>
 
@@ -61,7 +75,7 @@
        <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.png" width="80" alt="Logo"></a>
+                <a href="main.jsp"><img src="img/fav.png" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -128,70 +142,70 @@
     
     
     <div class="center-block">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <div id="carousel-cafe-generic" class="carousel slide" data-ride="carousel" >
   <!-- Indicators -->
   <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="6"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="7"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="2"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="3"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="4"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="5"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="6"></li>
+    <li data-target="#carousel-cafe-generic" data-slide-to="7"></li>
   </ol>
 
   <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src=<%=info_list.get(0).getBoard() %> alt="..." class="img-rounded" >
+      <img src=<%=info_list.get(0).getBoard() %> alt="..." class="img-thumbnail" data-pause=""  >
       <div class="carousel-caption"> 메뉴판
       </div>
     </div>
     <div class="item">
-      <img src=<%=info_list.get(0).getImage1() %> alt="..."class="img-rounded">
+      <img src=<%=info_list.get(0).getImage1() %> alt="..."class="img-thumbnail">
     	<div class="carousel-caption"> 사진 1
       </div>
     </div>
      <div class="item">
-      <img src=<%=info_list.get(0).getImage2() %> alt="..."class="img-rounded">
+      <img src=<%=info_list.get(0).getImage2() %> alt="..."class="img-thumbnail">
     	<div class="carousel-caption"> 사진 2
       </div>
     </div>
      <div class="item">
-      <img src=<%=info_list.get(0).getImage3() %> alt="..."class="img-rounded">
+      <img src=<%=info_list.get(0).getImage3() %> alt="..."class="img-thumbnail">
     	<div class="carousel-caption"> 사진 3
       </div>
     </div>
      <div class="item">
-      <img src=<%=info_list.get(0).getImage4() %> alt="..."class="img-rounded">
+      <img src=<%=info_list.get(0).getImage4() %> alt="..."class="img-thumbnail">
     	<div class="carousel-caption"> 사진 4
       </div>
     </div>
     
      <div class="item">
-      <img src=<%=info_list.get(0).getImage5() %> alt="..."class="img-rounded">
+      <img src=<%=info_list.get(0).getImage5() %> alt="..."class="img-thumbnail">
     	<div class="carousel-caption"> 사진 5
       </div>
     </div>
      <div class="item">
-      <img src=<%=info_list.get(0).getImage6() %> alt="..."class="img-rounded">
+      <img src=<%=info_list.get(0).getImage6() %> alt="..."class="img-thumbnail">
     	<div class="carousel-caption"> 사진 6
       </div>
     </div>
   </div>
 
   <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+  <a class="left carousel-control" href="#carousel-cafe-generic" role="button" data-slide="prev">
     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+  <a class="right carousel-control" href="#carousel-cafe-generic" role="button" data-slide="next">
     <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
 </div>
-    
+</div>    
 
 
         <div class="col-md-12">
