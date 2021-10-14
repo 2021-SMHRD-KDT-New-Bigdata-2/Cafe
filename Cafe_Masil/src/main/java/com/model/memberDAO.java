@@ -431,4 +431,27 @@ public ArrayList<messageVO> showMessage(String id) {
 	}return message_list;
 	
 }
+// ½ºÅÆÇÁ ¹ß±Þ
+public int stamp(String businessNumber, String tel, String cafeName) {
+	
+	try {
+		getConnection();
+		String sql = "insert into stamp values (stamp_num.nextval,?,?,?,?,?)";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,tel);
+		psmt.setString(2,businessNumber);
+		psmt.setString(3,cafeName);
+		psmt.setLong(4,0);
+		psmt.setLong(5,0);
+		
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}return cnt;
+	
+}
 }
