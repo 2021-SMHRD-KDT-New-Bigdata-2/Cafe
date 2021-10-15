@@ -1,3 +1,5 @@
+<%@page import="com.model.evalVO"%>
+<%@page import="com.model.memberDAO"%>
 <%@page import="com.model.memberVO"%>
 <%@page import="com.model.cafeVO"%>
 <%@page import="java.util.ArrayList"%>
@@ -6,9 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
+<head>	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -83,6 +83,17 @@ div img:hover{
 }
 	/* image modal end */
     </style>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
+	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
+	<% String id = vo.getId(); %>
+	<% String businessNumber = info_list.get(0).getBusinessNumber(); %>
+	<% String cafeName = info_list.get(0).getCafeName(); %>
+	
+
 </head>
 
 <body>
@@ -313,6 +324,7 @@ div img:hover{
             </ul>
         </div>
     </div>
+  
     <!-- end main-container -->
 <div class="container main-container">
         <div class="col-md-6">
@@ -365,6 +377,64 @@ div img:hover{
    });
  });
 </script>
+	
+	<div id="eval">
+		<button class="evaluation" onclick="data('±ú²ýÇØ¿ä')">±ú²ýÇØ¿ä</button><br>
+    	<button class="evaluation" onclick="data('¸ÀÀÖ¾î¿ä')">¸ÀÀÖ¾î¿ä</button><br>
+    	<button class="evaluation" onclick="data('³Ð¾î¿ä')">³Ð¾î¿ä</button><br>
+    	<button class="evaluation" onclick="data('»çÁø ¸ÀÁýÀÌ¿¡¿ä')">»çÁø ¸ÀÁýÀÌ¿¡¿ä</button><br>
+    	<button onclick="sendAjax()">Àü¼Û</button>
+    </div>
+<% memberDAO dao = new memberDAO();
+ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName());
+
+%>
+<%if(eval_list!=null){ %>
+<div>
+<table>
+<tr>
+<%for(int i = 0;i<eval_list.size();i++){ %>
+<td><%=eval_list.get(i).getId() %></td>
+<%} %>
+</tr>
+</table>
+</div>
+<%}else{
+}%>
+    <script>
+        var a = [];
+        function data(input) {
+            a.push(input);
+            console.log(a);
+        }
+        
+        function sendAjax(){
+        	
+             $.ajax({
+                url:"evalService",
+                data : {"evaluation": a,"id":'<%=id%>',"cafeName":'<%=cafeName%>',"businessNumber":'<%=businessNumber%>'},
+                traditional : true,
+                dataType : "json",
+                type : "post",
+                success : function(data){
+                    for(var i = 0; i < data.length(); i++){
+                        console.log(data.info);
+                        
+                    }
+                    
+                    
+                    //div
+                    //document.gete~("div").append("³ÖÀ»µ¥ÀÌÅÍ");
+                    //innerhtml, append, createlment 
+                },
+                error : function(e){
+                    alert(e);
+                }
+
+            });
+            a = [];
+        }
+    </script>
 
      <!-- footer -->
     <footer>

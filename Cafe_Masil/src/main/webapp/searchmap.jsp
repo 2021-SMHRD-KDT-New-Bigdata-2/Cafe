@@ -175,7 +175,7 @@
                 <div class="container row" style="float:none; margin:0 auto;">
                     <ul class="" align = "center">
 					<form action="searchmapService">
-						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
+						<input name="searchword" type="text" placeholder="카페명을 검색하세요" >
 						<button type="submit">검색</button>
 					</form>
 					</ul>

@@ -8,9 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<%
-memberVO vo = (memberVO) session.getAttribute("member");
-%>
+<%memberVO vo = (memberVO) session.getAttribute("member");%>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,22 +102,27 @@ svg {
 .stamp {
    width: 300px;
    height: 200px;
-   padding: 10px 10px 10px 25px;
+   padding: 10px 10px 10px 10px;
    background-image: url('https://i.stack.imgur.com/9TQsy.png');
 }
 
 .stamp2 {
    height: 110px;
 }
-
-.test {
-   position: relative;
-}
-
 img {
-   position: absolute;
    text-align: center;
    width: 40px;
+}
+.test1{
+	text-align: left;
+	padding-left: 70px;
+}
+.test2 {
+padding-left: 70px;
+	text-align: left;
+	position: relative;
+	top: -79px
+	
 }
 </style>
    <!-- box-header -->
@@ -230,14 +233,24 @@ img {
             <h3 class="stamp2" style="text-align: center">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
-            <div class="test">
-            
-            </div>
-            <div class="test">
-               <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
-               <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-               <%if (j == 4 || j == 9) {%>
+            <div class="test1">
+            	<%for (int k=0; k<10; k++){%>
+            	<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+            	<%if (k == 4) {%>
                <br> <br>
+               <%}%>
+            	<%} %>
+            </div>
+            <div class="test2">
+               <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
+               <%if(j<=8){ %>
+               	<span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
+               <%if (j == 4) {%>
+               <br> <br>
+               <%}%>
+               <%} %>
+               <%if (j == 9) {%>
+               <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
                <%}%>
                <%}%>
                </div>
