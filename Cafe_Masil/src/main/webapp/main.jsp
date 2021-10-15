@@ -416,12 +416,7 @@
 		    </div>
 		  </div>
 		</div>	
-<<<<<<< HEAD
 	</div>
-	
-=======
-</div>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 	<hr>
 	<div class=></div>
 	<!-- end Thumbnail  -->
