@@ -495,14 +495,17 @@ public int addStamp(String businessNumber, String tel) {
 }
 
 	//평가넣기 기능
-public int evaluation_insert(String result) {
+public int evaluation_insert(String id, String businessNumber, String cafeName, String result) {
 	try {
 		getConnection();
-		String sql = "insert into evaluation values (evaluation_num.nextval,?)";
+		String sql = "insert into evaluation values (evaluation_num.nextval,?,?,?,?)";
 			
 		psmt = conn.prepareStatement(sql);
-		psmt.setString(1,result);
-			
+		psmt.setString(1,id);
+		psmt.setString(2,businessNumber);
+		psmt.setString(3,cafeName);
+		psmt.setString(4,result);
+		
 		cnt = psmt.executeUpdate();
 			
 	}catch(Exception e) {
@@ -563,6 +566,9 @@ public String evaluation_select(String cafeName) {
 	return evaluation;
 	
 }
+
+
+
 	
 	
 	

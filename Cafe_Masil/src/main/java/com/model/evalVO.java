@@ -2,58 +2,43 @@ package com.model;
 
 public class evalVO {
 
+	private int num;
+	private String id;
+	private String businessNumber;
+	private String cafeName;
 	private String evaluation;
-	private String clean;
-	private String area;
-	private String dessert;
-	private String service;
-	private String reVisit;
-	private String picture;
-	private String notGood;
 	
-	public evalVO(String evaluation, String clean, String area, String dessert, String service, String reVisit,
-			String picture, String notGood) {
+	public evalVO(int num,String id, String businessNumber, String cafeName, String evaluation) {
+		super();
+		this.num = num;
+		this.id = id;
+		this.businessNumber = businessNumber;
+		this.cafeName = cafeName;
 		this.evaluation = evaluation;
-		this.clean = clean;
-		this.area = area;
-		this.dessert = dessert;
-		this.service = service;
-		this.reVisit = reVisit;
-		this.picture = picture;
-		this.notGood = notGood;
+	}
+
+	public int getNum() {
+		return num;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getBusinessNumber() {
+		return businessNumber;
+	}
+
+	public String getCafeName() {
+		return cafeName;
 	}
 
 	public String getEvaluation() {
 		return evaluation;
 	}
+	
+	
 
-	public String getClean() {
-		return clean;
-	}
-
-	public String getArea() {
-		return area;
-	}
-
-	public String getDessert() {
-		return dessert;
-	}
-
-	public String getService() {
-		return service;
-	}
-
-	public String getReVisit() {
-		return reVisit;
-	}
-
-	public String getPicture() {
-		return picture;
-	}
-
-	public String getNotGood() {
-		return notGood;
-	}
 	
 	
 	

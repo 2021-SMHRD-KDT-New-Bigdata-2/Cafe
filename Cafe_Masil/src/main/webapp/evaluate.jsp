@@ -1,3 +1,6 @@
+<%@page import="com.model.cafeVO"%>
+<%@page import="com.model.memberVO"%>
+<%@page import="com.model.memberDAO"%>
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
@@ -10,6 +13,9 @@
 
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<% memberVO vo1 = (memberVO)session.getAttribute("member"); %>
+<% cafeVO vo2 = (cafeVO)session.getAttribute("cafe_list"); %>
+
 
 </head>
 <body>
@@ -19,7 +25,12 @@
     <button class="evaluation" onclick="data('넓어요')">넓어요</button><br>
     <button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button><br>
     <button onclick="sendAjax()">전송</button>
-
+	
+	<% String id = vo1.getId(); %>
+	<% String businessNumber = vo2.getBusinessNumber(); %>
+	<% String cafeName = vo2.getCafeName(); %>
+	
+	
     <script>
         var a = [];
         function data(input) {
@@ -29,7 +40,7 @@
         function sendAjax(){
              $.ajax({
                 url:"evalService",
-                data : {"evaluation": a},
+                data : {"evaluation": a,"id":id,"cafeName":cafeName,"businessNumber":businessNumber},
                 dataType : "json",
                 type : "post",
                 success : function(data){
