@@ -32,25 +32,30 @@
     <![endif]-->
     
     <style>
-        .row {
-            overflow: hidden;
-            position: relative;
-            z-index:-1;
-        }
+	.row {
+overflow: hidden;
+position: relative;
+z-index:-1;
+}
 
-        #overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: #FFF;
-            opacity: 0.8;
+	#overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #FFF;
+opacity: 0.8;
             /*background:rgba(255,255,255,0.8); or just this*/
-            z-index: 50;
-            color: #000;
-            overflow: hidden;
+z-index: 50;
+color: #000;
+overflow: hidden;
         }
+	.navbar-brand{
+position: absolute;
+top: -20%;
+left: 1%;
+}
     </style>
     
     
@@ -181,9 +186,13 @@
     </div>
         <!-- end box-intro -->
     </div>
+    
+    <p style="pading-top: 200px; margin:200px; align:center;">
+	 <center><h1> 우리 동네의 숨겨진 보물을 발견해보세요. </h1></center><br>
+	 <center><h4> 특색있는 카페들이 당신을 기다리고있어요. </h4></center></p>
 
     <!-- portfolio div -->
-    <div class="portfolio-div">
+    <div class="portfolio-div"  style= "padding-top: 200px; padding-down: 150px;">
         <div class="portfolio">
             <div class="no-padding portfolio_container">
                 <!-- single work -->
@@ -353,13 +362,13 @@
     <!-- end portfolio div -->
     
     
- <hr style="border: inset 10px gary; padding-top: 70px;">
+ <hr>
  <p style="pading: 100px; margin:50px; align:center;">
-	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center>
+	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center><br>
 	 <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
 	 <br><br><br><br></div>
       <!-- Thumbnail start -->
-    <div class="container">
+    <div class="container" style= "padding: 150px">
 		<div class="row">
 		  <div class="col-sm-6 col-md-4">
 		    <div class="thumbnail">
@@ -417,10 +426,42 @@
 		  </div>
 		</div>	
 	</div>
+	
 	<hr>
 	<div class=></div>
 	<!-- end Thumbnail  -->
+	
+	<!--  put the image -->
+	<hr>
+	
+	<div class="col-md-3 col-sm-6 ads graphics">
+        <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Floating mockups</span>
+                                    <em>Ads / Graphics</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+	<hr>
+	
+	<!-- end put the image -->
+	
+	<!-- submit to join service -->
 
+	
+	<div class="row">
+		<div class="col-md-4">asdfsadfasdfsadfsadfsadfsadfvasdfl;kjsadflk<br>
+			<button class="btn btn-danger" type="submit">동행하기</button>
+		</div>
+	</div>
+	
+	<!-- end submit to join service -->
+	
     <!-- footer -->
     <footer>
         <div class="container-fluid">
