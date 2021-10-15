@@ -18,11 +18,12 @@ public class stampResetService extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		
-		request.setCharacterEncoding("euc-kr");
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		String tel = request.getParameter("tel");
-		System.out.println(businessNumber);
-		System.out.println(tel);
+		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.resetStamp(businessNumber,tel);
 		PrintWriter out = response.getWriter();

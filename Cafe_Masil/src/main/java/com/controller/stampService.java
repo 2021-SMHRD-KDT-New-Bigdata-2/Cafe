@@ -16,7 +16,10 @@ public class stampService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("euc-kr");
+		
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		String tel = request.getParameter("tel");
 		String cafeName = request.getParameter("cafeName");

@@ -115,7 +115,7 @@
     <!-- main-container -->
     <div class="container main-container">
         <div class="col-md-6">
-            <form action="FranService" method="post">
+            <form action="updateService" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
                         <div class="input-contact">
