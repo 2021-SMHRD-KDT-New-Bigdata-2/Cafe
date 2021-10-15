@@ -1,3 +1,5 @@
+<%@page import="com.model.evalVO"%>
+<%@page import="com.model.memberDAO"%>
 <%@page import="com.model.memberVO"%>
 <%@page import="com.model.cafeVO"%>
 <%@page import="java.util.ArrayList"%>
@@ -339,6 +341,22 @@ div img:hover{
     	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button><br>
     	<button onclick="sendAjax()">전송</button>
     </div>
+<% memberDAO dao = new memberDAO();
+ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName());
+
+%>
+<%if(eval_list!=null){ %>
+<div>
+<table>
+<tr>
+<%for(int i = 0;i<eval_list.size();i++){ %>
+<td><%=eval_list.get(i).getId() %></td>
+<%} %>
+</tr>
+</table>
+</div>
+<%}else{
+}%>
     <script>
         var a = [];
         function data(input) {
@@ -359,7 +377,8 @@ div img:hover{
                         console.log(data.info);
                         
                     }
-                    document.getElementById("eval")
+                    
+                    
                     //div
                     //document.gete~("div").append("넣을데이터");
                     //innerhtml, append, createlment 
