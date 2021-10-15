@@ -36,6 +36,15 @@
 		</table>
 		<a href="main.jsp"><input type="button" value="메인페이지로"></a> </nav>
 	</div>
+	
+	 <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
+        </div>
+    </footer>
+    <!-- end footer -->
 	<!-- Scripts -->
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.scrolly.min.js"></script>
