@@ -9,7 +9,6 @@ public class evalVO {
 	private String evaluation;
 	
 	public evalVO(int num,String id, String businessNumber, String cafeName, String evaluation) {
-		super();
 		this.num = num;
 		this.id = id;
 		this.businessNumber = businessNumber;

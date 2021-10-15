@@ -15,6 +15,10 @@ public class memberDAO {
 	ResultSet rs = null;
 	memberVO vo = null;
 	String evaluation = "";
+	private String cafeName2;
+	private String businessNumber;
+	private String id;
+	private int num;
 
 	
 	// 기능이 메서드임
@@ -546,27 +550,37 @@ public ArrayList<stampVO> myStamp(String tel) {
 	}
 
 // 평가 불러오기 기능
-public String evaluation_select(String cafeName) {
+public ArrayList<evalVO> evaluation_select(String cafeName) {
+	ArrayList<evalVO> eval_list = new ArrayList<evalVO>();
 	try {
 		getConnection();
-		String sql = "select evaluation from evaluation where cafeName=?";
+		String sql = "select * from evaluation where cafeName=?";
 		
 		psmt = conn.prepareStatement(sql);
 		psmt.setString(1,cafeName);
 		rs = psmt.executeQuery();
 		
 		while(rs.next()) {
+			int num = rs.getInt("num");
+			String id = rs.getString("id");
+			String businessNumber = rs.getString("businessNumber");
+			String cafeName2 = rs.getString("cafeName");
 			String evaluation = rs.getString("evaluation");
-			System.out.println("평가 불러오기 성공");
+			System.out.println("평가 불러오기 성공:" + id);
+			System.out.println("평가 불러오기 성공:" + businessNumber);
+			System.out.println("평가 불러오기 성공:" + cafeName2);
+			System.out.println("평가 불러오기 성공:" + evaluation);
+			
+			evalVO vo = new evalVO(num, id, businessNumber, cafeName2, evaluation);
+			eval_list.add(vo);
 		}
-		
 		
 	}catch(Exception e) {
 		e.printStackTrace();
 	}finally {
 		close();
 	}
-	return evaluation;
+	return eval_list;
 	
 }
 

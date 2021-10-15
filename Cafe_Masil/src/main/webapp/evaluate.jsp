@@ -49,6 +49,11 @@
                 success : function(data){
                     for(var i = 0; i < data.length(); i++){
                         console.log(data.info);
+                        let div = document.createElement("div");
+                        div.className = "evalution";
+                        let text = document.createTextNode("evaluation");
+                        div.appendChild(text);
+                        document.body.appendChild(div)
                     }
                 },
                 error : function(e){

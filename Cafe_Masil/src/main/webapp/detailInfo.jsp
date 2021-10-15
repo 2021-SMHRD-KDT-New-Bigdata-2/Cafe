@@ -91,44 +91,6 @@ div img:hover{
 	<% String businessNumber = info_list.get(0).getBusinessNumber(); %>
 	<% String cafeName = info_list.get(0).getCafeName(); %>
 	
-	
-    <script>
-        var a = [];
-        function data(input) {
-            a.push(input);
-            console.log(a);
-        }
-        
-        function sendAjax(){
-        	
-             $.ajax({
-                url:"evalService",
-                data : {"evaluation": a,"id":'<%=id%>',"cafeName":'<%=cafeName%>',"businessNumber":'<%=businessNumber%>'},
-                traditional : true,
-                dataType : "json",
-                type : "post",
-                success : function(data){
-                    for(var i = 0; i < data.length(); i++){
-                        console.log(data.info);
-                        let div = document.createElement("div");
-                        div.className = "evalution";
-                        let text = document.createTextNode("evaluation");
-                        div.appendChild(text);
-                        document.body.appendChild(div)
-                    }
-                   
-                    //div
-                    //document.gete~("div").append("넣을데이터");
-                    //innerhtml, append, createlment 
-                },
-                error : function(e){
-                    alert(e);
-                }
-
-            });
-            a = [];
-        }
-    </script>
 
 </head>
 
@@ -369,12 +331,47 @@ div img:hover{
    });
  });
 </script>
+	
+	<div id="eval">
+		<button class="evaluation" onclick="data('깨끗해요')">깨끗해요</button><br>
+    	<button class="evaluation" onclick="data('맛있어요')">맛있어요</button><br>
+    	<button class="evaluation" onclick="data('넓어요')">넓어요</button><br>
+    	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button><br>
+    	<button onclick="sendAjax()">전송</button>
+    </div>
+    <script>
+        var a = [];
+        function data(input) {
+            a.push(input);
+            console.log(a);
+        }
+        
+        function sendAjax(){
+        	
+             $.ajax({
+                url:"evalService",
+                data : {"evaluation": a,"id":'<%=id%>',"cafeName":'<%=cafeName%>',"businessNumber":'<%=businessNumber%>'},
+                traditional : true,
+                dataType : "json",
+                type : "post",
+                success : function(data){
+                    for(var i = 0; i < data.length(); i++){
+                        console.log(data.info);
+                        
+                    }
+                    document.getElementById("eval")
+                    //div
+                    //document.gete~("div").append("넣을데이터");
+                    //innerhtml, append, createlment 
+                },
+                error : function(e){
+                    alert(e);
+                }
 
-<button class="evaluation" onclick="data('깨끗해요')">깨끗해요</button><br>
-    <button class="evaluation" onclick="data('맛있어요')">맛있어요</button><br>
-    <button class="evaluation" onclick="data('넓어요')">넓어요</button><br>
-    <button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button><br>
-    <button onclick="sendAjax()">전송</button>
+            });
+            a = [];
+        }
+    </script>
 
      <!-- footer -->
     <footer>

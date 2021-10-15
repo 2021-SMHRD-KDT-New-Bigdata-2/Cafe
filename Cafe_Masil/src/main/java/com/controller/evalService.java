@@ -48,9 +48,10 @@ public class evalService extends HttpServlet {
 		int cnt = dao.evaluation_insert(id,businessNumber,cafeName,result);
 		
 		if (cnt>0) {
-			String evaluation = dao.evaluation_select(cafeName);
-			System.out.println(evaluation.split("/"));		
+			ArrayList<evalVO> eval_list = dao.evaluation_select(cafeName);	
 			}
+		
+		
 		}
 	
 		
