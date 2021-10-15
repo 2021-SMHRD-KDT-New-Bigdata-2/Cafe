@@ -38,7 +38,7 @@ public class FranService extends HttpServlet {
 					 + "</script>");
 		}else {
 			out.print("<script>"
-					 + "alert('가맹요청 실패!');"
+					 + "alert('가맹요청 실패');"
 					 + "location.href='main.jsp';"
 					 + "</script>");
 		}

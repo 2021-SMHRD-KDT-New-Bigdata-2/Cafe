@@ -31,7 +31,7 @@ public class stampService extends HttpServlet {
 					 + "</script>");
 		}else {
 			out.print("<script>"
-					 + "alert('스탬프 발급 실패!');"
+					 + "alert('스탬프 발급 실패');"
 					 + "location.href='detailInfo.jsp';"
 					 + "</script>");
 		}

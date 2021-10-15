@@ -31,7 +31,7 @@ public class subscribeService extends HttpServlet {
 					 + "</script>");
 		}else {
 			out.print("<script>"
-					 + "alert('구독 실패!');"
+					 + "alert('구독 실패');"
 					 + "location.href='detailInfo.jsp';"
 					 + "</script>");
 		}
