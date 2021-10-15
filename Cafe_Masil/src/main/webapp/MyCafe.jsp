@@ -8,13 +8,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <% memberVO vo = (memberVO)session.getAttribute("member"); %>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="icon" href="img/fav.png" type="image/x-icon">
-
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -234,13 +234,14 @@
 		</fieldset>
 	</div>
 
-	<!-- footer -->
-	<footer>
+ <!-- footer -->
+    <footer>
         <div class="container-fluid">
-            Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
         </div>
     </footer>
-	<!-- end footer -->
+    <!-- end footer -->
 
 	<!-- back to top -->
 	<a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
