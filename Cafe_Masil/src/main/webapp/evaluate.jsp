@@ -13,7 +13,7 @@
     <title>Document</title>
 
     
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <% memberVO vo1 = (memberVO)session.getAttribute("member"); %>
 <% ArrayList<cafeVO> vo2 = (ArrayList<cafeVO>)session.getAttribute("cafe_list"); %>
 
@@ -34,10 +34,12 @@
 	
     <script>
         var a = [];
+        
         function data(input) {
             a.push(input);
             console.log(a);
         }
+        
         function sendAjax(){
              $.ajax({
                 url:"evalService",

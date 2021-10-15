@@ -26,11 +26,13 @@ public class evalService extends HttpServlet {
 		
 		
 		response.setCharacterEncoding("euc-kr");
+		
 		String[] eval = request.getParameterValues("evaluation");
 		String id = request.getParameter("id");
 		String businessNumber = request.getParameter("businessNumber");
 		String cafeName = request.getParameter("cafeName");
 		
+		System.out.println("eval" + eval);
 		System.out.println("id 불러오기: " + id);
 		System.out.println("businessNumber: " + businessNumber);
 		System.out.println("cafeName: " + cafeName);
