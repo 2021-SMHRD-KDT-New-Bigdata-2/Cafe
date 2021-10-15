@@ -48,16 +48,16 @@
     
     
     <div class="container main-container">
+   		<fieldset class="mystamp">
         <div class="col-md-6">
-       
             <form action="messageService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>To 구독자</p>
+                           <legend><p>To 구독자</p></legend>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="message" type="text">
+                            <input name="message" type="text" align="center">
                             <span>구독자에게 보낼 메세지를 입력해주세요</span>
                         </div>
                     </div>
@@ -83,13 +83,14 @@
                 </div>
             </form>
         </div>
+        </fieldset>
 	</div>
     <div class="container main-container">
         <div class="col-md-6">
             <form action="stampAddService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>스탬프</p>
+                            <legend><p>스탬프</p></legend>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
@@ -123,7 +124,7 @@
             <form action="stampResetService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>스탬프 초기화</p>
+                            <legend><p>스탬프 초기화</p></legend>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">

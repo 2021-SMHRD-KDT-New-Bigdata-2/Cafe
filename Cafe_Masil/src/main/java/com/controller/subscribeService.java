@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,10 +23,17 @@ public class subscribeService extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.subscribe(businessNumber, Id, cafeName);
+		PrintWriter out = response.getWriter();
 		if(cnt>0) {
-			response.sendRedirect("detailInfo.jsp");
+			out.print("<script>"
+					 + "alert('구독 완료!');"
+					 + "location.href='detailInfo.jsp';"
+					 + "</script>");
 		}else {
-			
+			out.print("<script>"
+					 + "alert('구독 실패!');"
+					 + "location.href='detailInfo.jsp';"
+					 + "</script>");
 		}
 		
 	}

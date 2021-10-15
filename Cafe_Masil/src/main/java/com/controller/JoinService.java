@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -40,13 +41,18 @@ public class JoinService extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.join(id, pw, nickname, tel, bestMenu, qna, answer);
+		PrintWriter out = response.getWriter();
 		
 		if (cnt>0) {
-			request.setAttribute("member", nickname);
-			RequestDispatcher rd = request.getRequestDispatcher("joinSuccess.jsp");
-			rd.forward(request, response);
+			out.print("<script>"
+					 + "alert('회원가입 성공!');"
+					 + "location.href='main.jsp';"
+					 + "</script>");
 		}else {
-			System.out.println("실행2");
+			out.print("<script>"
+					 + "alert('회원가입 실패!');"
+					 + "location.href='main.jsp';"
+					 + "</script>");
 		}
 		
 		
