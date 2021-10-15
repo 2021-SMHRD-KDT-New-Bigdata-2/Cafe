@@ -115,6 +115,17 @@ img {
    text-align: center;
    width: 40px;
 }
+.test1{
+	text-align: left;
+	padding-left: 70px;
+}
+.test2 {
+padding-left: 70px;
+	text-align: left;
+	position: relative;
+	top: -79px
+	
+}
 </style>
    <!-- box-header -->
    <header class="box-header">
@@ -224,7 +235,7 @@ img {
             <h3 class="stamp2" style="text-align: center">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
-            <div class="test1" style="position:relative">
+            <div class="test1">
             	<%for (int k=0; k<10; k++){%>
             	<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
             	<%if (k == 4) {%>
@@ -232,11 +243,16 @@ img {
                <%}%>
             	<%} %>
             </div>
-            <div class="test2" style="position:relative;">
+            <div class="test2">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
-               <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+               <%if(j<=8){ %>
+               	<span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
                <%if (j == 4) {%>
                <br> <br>
+               <%}%>
+               <%} %>
+               <%if (j == 9) {%>
+               <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
                <%}%>
                <%}%>
                </div>
