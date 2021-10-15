@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,14 +17,25 @@ public class stampAddService extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setCharacterEncoding("euc-kr");
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		String tel = request.getParameter("tel");
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.addStamp(businessNumber,tel);
-		if(cnt>0) {
-			response.sendRedirect("cafeManager.jsp");
+		PrintWriter out = response.getWriter();
+		if (cnt>0) {
+			out.print("<script>"
+					 + "alert('스탬프 1개 적립!');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
+		}else {
+			out.print("<script>"
+					 + "alert('스탬프 적립 실패');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
 		}
 	
 	

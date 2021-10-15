@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,17 +16,27 @@ public class subscribeService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("euc-kr");
+
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		String Id = request.getParameter("id");
 		String cafeName = request.getParameter("cafeName");
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.subscribe(businessNumber, Id, cafeName);
+		PrintWriter out = response.getWriter();
 		if(cnt>0) {
-			response.sendRedirect("detailInfo.jsp");
+			out.print("<script>"
+					 + "alert('구독 완료!');"
+					 + "location.href='detailInfo.jsp';"
+					 + "</script>");
 		}else {
-			
+			out.print("<script>"
+					 + "alert('구독 실패');"
+					 + "location.href='detailInfo.jsp';"
+					 + "</script>");
 		}
 		
 	}
