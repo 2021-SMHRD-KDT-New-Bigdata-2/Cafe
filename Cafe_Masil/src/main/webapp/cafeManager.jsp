@@ -5,6 +5,7 @@
 <html lang="en">
 <head>
 	<% memberVO bossLogin = (memberVO)session.getAttribute("bossLogin"); %>
+   <% memberVO vo = (memberVO)session.getAttribute("member"); %>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,11 +34,93 @@
         </header>
         <!-- end box-header -->
 
+        <!-- box header -->
+        <!-- navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href=main.jsp><img src="img\CM2.png" width="60" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-collapse-1">
+          <!-- 네비게이션 바에 회원로그인-->
+        <% if(bossLogin==null){%>
+          <ul class="nav navbar-nav navbar-right">
+          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
+            <li ><a href="login.jsp">로그인<span class="sr-only"></span></a></li>
+            <li ><a href="join.jsp">회원가입</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
+            </a>
+          </ul>
+          <%}else{%>
+          <ul class="nav navbar-nav navbar-right">
+          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
+            <li ><a href="LogoutService">로그아웃</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
+            </a>
+          </ul>
+          <%}%>
+          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
+            <div class="form-group">
+              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+            </div>
+            <button type="submit" class="btn btn-default">GO!</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+            <!-- box-primary-nav-trigger -->
+        </header>
+        <!-- end box header -->
+
         <!-- nav -->
+       <%if(vo==null) {%>
+       <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label"> Choose me! </li>
 
+            <li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+                <li><a href="login.jsp">로그인</a>
+                <li><a href="join.jsp">회원가입</a></li>
+                <li><a href="fran.jsp">가맹등록</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
+                <li><a href="searchmap.jsp">카페검색</a></li>
+                
+                <li class="box-label">Follow me!</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <%}else{%>
+        <nav>
+            <ul class="box-primary-nav">
+                <li class="box-label"> Choose me! </li>
+
+            <li><a href="main.jsp">홈</a> <i class="ion-ios-circle-filled color"></i></li>
+            <li><a href="LogoutService">로그아웃</a></li>
+                <li><a href="fran.jsp">가맹등록</a></li>
+                <li><a href="keywordMenu.jsp">전체 카페</a></li>
+                <li><a href="searchmap.jsp">카페검색</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
+                <li><a href="MyCafe.jsp">MyCafe</a></li>
+                
+                <li class="box-label">Follow me!</li>
+
+                <li class="box-social"><a href="#0"><i class="ion-social-facebook"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-instagram-outline"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-twitter"></i></a></li>
+                <li class="box-social"><a href="#0"><i class="ion-social-dribbble"></i></a></li>
+            </ul>
+        </nav>
+        <%}%>
         <!-- end nav -->
-
-
      <!-- Top bar -->
      <div class="top-bar">
         <h1>카페관리</h1>
