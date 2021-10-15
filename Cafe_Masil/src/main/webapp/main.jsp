@@ -159,8 +159,8 @@
         <!-- end nav -->
 
         <!-- box-intro -->
- 	
- 		<div class="row">
+    
+       <div class="row">
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
@@ -355,74 +355,72 @@
     
  <hr style="border: inset 10px gary; padding-top: 70px;">
  <p style="pading: 100px; margin:50px; align:center;">
-	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center>
-	 <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
-	 <br><br><br><br></div>
+    <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center>
+    <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
+    <br><br><br><br></div>
       <!-- Thumbnail start -->
     <div class="container">
-		<div class="row">
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>카페이름 1</h3>
-		        <p>카페 설명1</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>카페이름 2</h3>
-		        <p>카페 설명</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>카페이름 3</h3>
-		        <p>카페 설명</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>카페이름 4</h3>
-		        <p>카페 설명</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>카페이름 5</h3>
-		        <p>카페 설명</p>
-		      </div>
-		    </div>
-		  </div>
-		  <div class="col-sm-6 col-md-4">
-		    <div class="thumbnail">
-		      <img src="..." alt="...">
-		      <div class="caption">
-		        <h3>카페이름 6</h3>
-		        <p>카페 설명</p>
-		      </div>
-		    </div>
-		  </div>
-		</div>	
-	</div>
-	
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>카페이름 1</h3>
+              <p>카페 설명1</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>카페이름 2</h3>
+              <p>카페 설명</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>카페이름 3</h3>
+              <p>카페 설명</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>카페이름 4</h3>
+              <p>카페 설명</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>카페이름 5</h3>
+              <p>카페 설명</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="..." alt="...">
+            <div class="caption">
+              <h3>카페이름 6</h3>
+              <p>카페 설명</p>
+            </div>
+          </div>
+        </div>
+      </div>   
+   </div>
 
-
-	<hr>
-	<div class=></div>
-	<!-- end Thumbnail  -->
+   <hr>
+   <div class=></div>
+   <!-- end Thumbnail  -->
 
     <!-- footer -->
     <footer>
