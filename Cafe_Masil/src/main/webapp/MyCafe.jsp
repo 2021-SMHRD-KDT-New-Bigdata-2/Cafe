@@ -104,20 +104,14 @@ svg {
 .stamp {
    width: 300px;
    height: 200px;
-   padding: 10px 10px 10px 25px;
+   padding: 10px 10px 10px 10px;
    background-image: url('https://i.stack.imgur.com/9TQsy.png');
 }
 
 .stamp2 {
    height: 110px;
 }
-
-.test {
-   position: relative;
-}
-
 img {
-   position: absolute;
    text-align: center;
    width: 40px;
 }
@@ -230,13 +224,18 @@ img {
             <h3 class="stamp2" style="text-align: center">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
-            <div class="test">
-            
+            <div class="test1" style="position:relative">
+            	<%for (int k=0; k<10; k++){%>
+            	<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+            	<%if (k == 4) {%>
+               <br> <br>
+               <%}%>
+            	<%} %>
             </div>
-            <div class="test">
+            <div class="test2" style="position:relative;">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-               <%if (j == 4 || j == 9) {%>
+               <%if (j == 4) {%>
                <br> <br>
                <%}%>
                <%}%>
