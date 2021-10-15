@@ -7,15 +7,8 @@
    pageEncoding="EUC-KR"%>
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 <head>
-<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-=======
-<head>
-<%
-memberVO vo = (memberVO) session.getAttribute("member");
-%>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
+<%memberVO vo = (memberVO) session.getAttribute("member");%>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
