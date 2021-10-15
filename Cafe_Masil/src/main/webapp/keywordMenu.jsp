@@ -15,11 +15,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<<<<<<< HEAD
     <title>Cafe, Masil : 전체카페</title>
-=======
-    <title>Box personal portfolio Template</title>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
     <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
 
     <!-- Bootstrap -->
