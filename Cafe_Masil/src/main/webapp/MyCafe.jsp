@@ -8,9 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<%
-memberVO vo = (memberVO) session.getAttribute("member");
-%>
+<%memberVO vo = (memberVO) session.getAttribute("member");%>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -104,6 +102,27 @@ svg {
    background-image: url('https://i.stack.imgur.com/9TQsy.png');
 }
 
+<<<<<<< HEAD
+=======
+.stamp2 {
+   height: 110px;
+}
+img {
+   text-align: center;
+   width: 40px;
+}
+.test1{
+	text-align: left;
+	padding-left: 70px;
+}
+.test2 {
+padding-left: 70px;
+	text-align: left;
+	position: relative;
+	top: -79px
+	
+}
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 </style>
    <!-- box-header -->
    <header class="box-header">
@@ -213,7 +232,7 @@ svg {
             <h3 class="stamp2">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
-            <div class="test1" style="position:relative">
+            <div class="test1">
             	<%for (int k=0; k<10; k++){%>
             	<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
             	<%if (k == 4) {%>
@@ -221,11 +240,16 @@ svg {
                <%}%>
             	<%} %>
             </div>
-            <div class="test2" style="position:relative;">
+            <div class="test2">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
-               <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+               <%if(j<=8){ %>
+               	<span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
                <%if (j == 4) {%>
                <br> <br>
+               <%}%>
+               <%} %>
+               <%if (j == 9) {%>
+               <span class="glyphicon glyphicon-gift" aria-hidden="true"></span>
                <%}%>
                <%}%>
                </div>

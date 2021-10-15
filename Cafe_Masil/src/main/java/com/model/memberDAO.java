@@ -14,6 +14,11 @@ public class memberDAO {
 	PreparedStatement psmt = null;
 	ResultSet rs = null;
 	memberVO vo = null;
+	String evaluation = "";
+	private String cafeName2;
+	private String businessNumber;
+	private String id;
+	private int num;
 
 	
 	// 기능이 메서드임
@@ -493,6 +498,29 @@ public int addStamp(String businessNumber, String tel) {
 	}return cnt;
 }
 
+	//평가넣기 기능
+public int evaluation_insert(String id, String businessNumber, String cafeName, String result) {
+	try {
+		getConnection();
+		String sql = "insert into evaluation values (evaluation_num.nextval,?,?,?,?)";
+			
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,id);
+		psmt.setString(2,businessNumber);
+		psmt.setString(3,cafeName);
+		psmt.setString(4,result);
+		System.out.println("평가 넣기 성공!");
+		
+		cnt = psmt.executeUpdate();
+			
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	return cnt;
+	}
+
 //내 스탬프 확인
 public ArrayList<stampVO> myStamp(String tel) {
 	ArrayList<stampVO> stamp_list = new ArrayList<stampVO>();
@@ -516,7 +544,50 @@ public ArrayList<stampVO> myStamp(String tel) {
 		e.printStackTrace();
 	}finally {
 		close();
-	}return stamp_list;
+	}
+	return stamp_list;
+
+	}
+
+// 평가 불러오기 기능
+public ArrayList<evalVO> evaluation_select(String cafeName) {
+	ArrayList<evalVO> eval_list = new ArrayList<evalVO>();
+	try {
+		getConnection();
+		String sql = "select * from evaluation where cafeName=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,cafeName);
+		rs = psmt.executeQuery();
+		
+		while(rs.next()) {
+			int num = rs.getInt("num");
+			String id = rs.getString("id");
+			String businessNumber = rs.getString("businessNumber");
+			String cafeName2 = rs.getString("cafeName");
+			String evaluation = rs.getString("evaluation");
+			System.out.println("평가 불러오기 성공:" + id);
+			System.out.println("평가 불러오기 성공:" + businessNumber);
+			System.out.println("평가 불러오기 성공:" + cafeName2);
+			System.out.println("평가 불러오기 성공:" + evaluation);
+			
+			evalVO vo = new evalVO(num, id, businessNumber, cafeName2, evaluation);
+			eval_list.add(vo);
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	return eval_list;
+	
 }
 
+
+
+	
+	
+	
 }
+

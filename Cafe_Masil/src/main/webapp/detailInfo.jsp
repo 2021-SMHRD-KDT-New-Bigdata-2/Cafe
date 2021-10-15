@@ -1,3 +1,5 @@
+<%@page import="com.model.evalVO"%>
+<%@page import="com.model.memberDAO"%>
 <%@page import="com.model.memberVO"%>
 <%@page import="com.model.cafeVO"%>
 <%@page import="java.util.ArrayList"%>
@@ -6,18 +8,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
+<head>	
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-<<<<<<< HEAD
     <title>Cafe, Masil : 카페 상세정보</title>
-=======
-    <title>Box personal portfolio Template</title>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
     <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -87,6 +83,17 @@ div img:hover{
 }
 	/* image modal end */
     </style>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
+	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
+	<% String id = vo.getId(); %>
+	<% String businessNumber = info_list.get(0).getBusinessNumber(); %>
+	<% String cafeName = info_list.get(0).getCafeName(); %>
+	
+
 </head>
 
 <body>
@@ -317,6 +324,7 @@ div img:hover{
             </ul>
         </div>
     </div>
+  
     <!-- end main-container -->
 <div class="container main-container">
         <div class="col-md-6">
@@ -369,6 +377,64 @@ div img:hover{
    });
  });
 </script>
+	
+	<div id="eval">
+		<button class="evaluation" onclick="data('깨끗해요')">깨끗해요</button><br>
+    	<button class="evaluation" onclick="data('맛있어요')">맛있어요</button><br>
+    	<button class="evaluation" onclick="data('넓어요')">넓어요</button><br>
+    	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button><br>
+    	<button onclick="sendAjax()">전송</button>
+    </div>
+<% memberDAO dao = new memberDAO();
+ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName());
+
+%>
+<%if(eval_list!=null){ %>
+<div>
+<table>
+<tr>
+<%for(int i = 0;i<eval_list.size();i++){ %>
+<td><%=eval_list.get(i).getId() %></td>
+<%} %>
+</tr>
+</table>
+</div>
+<%}else{
+}%>
+    <script>
+        var a = [];
+        function data(input) {
+            a.push(input);
+            console.log(a);
+        }
+        
+        function sendAjax(){
+        	
+             $.ajax({
+                url:"evalService",
+                data : {"evaluation": a,"id":'<%=id%>',"cafeName":'<%=cafeName%>',"businessNumber":'<%=businessNumber%>'},
+                traditional : true,
+                dataType : "json",
+                type : "post",
+                success : function(data){
+                    for(var i = 0; i < data.length(); i++){
+                        console.log(data.info);
+                        
+                    }
+                    
+                    
+                    //div
+                    //document.gete~("div").append("넣을데이터");
+                    //innerhtml, append, createlment 
+                },
+                error : function(e){
+                    alert(e);
+                }
+
+            });
+            a = [];
+        }
+    </script>
 
      <!-- footer -->
     <footer>

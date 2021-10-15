@@ -129,9 +129,14 @@
         <div class="col-md-5">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <ul class="" align = "center">
+<<<<<<< HEAD
 					<form action="searchmapService" method="post">
 					<%if(searchword==null){ %>
 						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
+=======
+					<form action="searchmapService">
+						<input name="searchword" type="text" placeholder="카페명을 검색하세요" >
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 						<button type="submit">검색</button>
 					<%}else{ %>
 						<input name="searchword" type="text" placeholder="<%=searchword %>">
