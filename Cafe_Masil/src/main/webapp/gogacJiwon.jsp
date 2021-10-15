@@ -109,6 +109,7 @@
     <!-- top bar -->
     <div class="top-bar">
         <h1>고객지원</h1>
+        <br>
         <p><span>회원정보수정</span> / <span>1:1문의</span> / <span>공지사항</span></p>
     </div>
     <!-- end top bar -->
