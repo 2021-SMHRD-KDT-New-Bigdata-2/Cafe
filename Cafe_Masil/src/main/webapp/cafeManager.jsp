@@ -42,7 +42,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
-        <% if(vo==null){%>
+        <% if(bossLogin==null){%>
           <ul class="nav navbar-nav navbar-right">
           <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
             <li ><a href="login.jsp">로그인<span class="sr-only"></span></a></li>
