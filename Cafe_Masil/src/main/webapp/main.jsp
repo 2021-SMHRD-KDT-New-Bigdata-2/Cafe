@@ -198,7 +198,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6  fashion logo">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="C:\Users\smhrd\Desktop\ÀÌ¹ÌÁö3\img1.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">

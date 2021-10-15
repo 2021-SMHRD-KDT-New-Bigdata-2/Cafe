@@ -768,7 +768,7 @@ b i:last-child {
 .portfolio_item .portfolio_item_hover .item_info span {
     display: block;
     color: #fff;
-    font-size: 18px;
+    font-size: 25px;
     -webkit-transform: translateX(-100px);
     transform: translateX(-100px);
     -webkit-transition: all .2s ease-in-out .2s;
@@ -863,8 +863,8 @@ footer img {
     font-size: 20px;
     right: 10px;
     text-align: center;
-    color: #fff;
-    background: rgba(255, 191, 0, 0.8);
+    color: #F9813A;
+    background: F9813A;
     visibility: hidden;
     opacity: 0;
     -webkit-transition: opacity .3s 0s, visibility 0s .3s;
