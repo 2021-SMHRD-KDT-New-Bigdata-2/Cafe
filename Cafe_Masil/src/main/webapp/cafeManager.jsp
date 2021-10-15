@@ -76,20 +76,23 @@
      <!-- Top bar -->
      <div class="top-bar">
         <h1>카페관리</h1>
+        <br>
         <p><a href="#">구독관리</a> / 스탬프관리</p>
     </div>
     <!-- end Top bar -->
+    
+    
     <div class="container main-container">
+   		<fieldset class="mystamp">
         <div class="col-md-6">
-       
             <form action="messageService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>To 구독자</p>
+                           <legend><p>To 구독자</p></legend>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input name="message" type="text">
+                            <input name="message" type="text" align="center">
                             <span>구독자에게 보낼 메세지를 입력해주세요</span>
                         </div>
                     </div>
@@ -115,13 +118,14 @@
                 </div>
             </form>
         </div>
+        </fieldset>
 	</div>
     <div class="container main-container">
         <div class="col-md-6">
             <form action="stampAddService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>스탬프</p>
+                            <legend><p>스탬프</p></legend>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
@@ -155,7 +159,7 @@
             <form action="stampResetService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <p>스탬프 초기화</p>
+                            <legend><p>스탬프 초기화</p></legend>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
@@ -184,10 +188,11 @@
             </form>
         </div>
 	</div>
-    <!-- footer -->
+     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->

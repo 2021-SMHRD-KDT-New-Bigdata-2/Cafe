@@ -150,6 +150,7 @@
     <!-- top bar -->
     <div class="top-bar">
         <h1>고객지원</h1>
+        <br>
         <p><span>회원정보수정</span> / <span>1:1문의</span> / <span>공지사항</span></p>
     </div>
     <!-- end top bar -->
@@ -196,7 +197,8 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            contact <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">This Is A Tage//Plz must change me!!!</a>
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->
