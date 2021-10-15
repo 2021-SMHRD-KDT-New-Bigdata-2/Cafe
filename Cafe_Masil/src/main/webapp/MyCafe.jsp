@@ -102,8 +102,6 @@ svg {
    background-image: url('https://i.stack.imgur.com/9TQsy.png');
 }
 
-<<<<<<< HEAD
-=======
 .stamp2 {
    height: 110px;
 }
@@ -122,7 +120,6 @@ padding-left: 70px;
 	top: -79px
 	
 }
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 </style>
    <!-- box-header -->
    <header class="box-header">
