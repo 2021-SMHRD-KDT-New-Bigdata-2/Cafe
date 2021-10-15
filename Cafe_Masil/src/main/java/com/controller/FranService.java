@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,10 +30,17 @@ public class FranService extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.cafeInfo(businessNumber, bossName, bossTel, cafeName, cafeAddress, cafeTel);
-		
+		PrintWriter out = response.getWriter();
 		if (cnt>0) {
-			System.out.println("가맹 등록 신청 완료!");
-			response.sendRedirect("main.jsp");
+			out.print("<script>"
+					 + "alert('가맹요청 성공!');"
+					 + "location.href='main.jsp';"
+					 + "</script>");
+		}else {
+			out.print("<script>"
+					 + "alert('가맹요청 실패');"
+					 + "location.href='main.jsp';"
+					 + "</script>");
 		}
 		
 				

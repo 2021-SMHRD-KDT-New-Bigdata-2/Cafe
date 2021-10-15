@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,8 +23,17 @@ public class stampAddService extends HttpServlet {
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.addStamp(businessNumber,tel);
-		if(cnt>0) {
-			response.sendRedirect("cafeManager.jsp");
+		PrintWriter out = response.getWriter();
+		if (cnt>0) {
+			out.print("<script>"
+					 + "alert('스탬프 1개 적립!');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
+		}else {
+			out.print("<script>"
+					 + "alert('스탬프 적립 실패');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
 		}
 	
 	

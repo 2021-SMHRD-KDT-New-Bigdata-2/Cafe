@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -24,11 +26,17 @@ public class messageService extends HttpServlet {
 		memberDAO dao = new memberDAO();
 		int cnt = dao.subscribe(businessNumber, message);
 		
-		if(cnt>0) {
-			System.out.print("전송성공");
-			response.sendRedirect("cafeManager.jsp");
+		PrintWriter out = response.getWriter();
+		if (cnt>0) {
+			out.print("<script>"
+					 + "alert('구독자에게 메세지 전송 완료!');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
 		}else {
-			
+			out.print("<script>"
+					 + "alert('메세지 전송 실패');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
 		}
 		
 		
