@@ -8,21 +8,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<<<<<<< HEAD
-	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
-=======
+
 <% memberVO vo = (memberVO)session.getAttribute("member"); %>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <link rel="icon" href="img/fav.png" type="image/x-icon">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -241,14 +233,14 @@
 		</fieldset>
 	</div>
 
-	<!-- footer -->
-	<footer>
-		<div class="container-fluid">
-			Shared by <i class="fa fa-love"></i><a
-				href="https://bootstrapthemes.co">BootstrapThemes</a>
-		</div>
-	</footer>
-	<!-- end footer -->
+ <!-- footer -->
+    <footer>
+        <div class="container-fluid">
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
+        </div>
+    </footer>
+    <!-- end footer -->
 
 	<!-- back to top -->
 	<a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>

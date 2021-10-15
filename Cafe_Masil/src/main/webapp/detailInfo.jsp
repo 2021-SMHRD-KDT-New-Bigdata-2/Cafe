@@ -22,6 +22,8 @@
 
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
 
 
     <!-- modernizr -->
@@ -33,27 +35,12 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script>
-
-    $(function(){
-//      이미지 클릭시 해당 이미지 모달
-    $("item").click(function(){
-         let img = new Image();
-         img.src = $(this).attr("src")
-         $('.modalBox').html(img);
-         $(".modal").show();
-     });
-//   모달 클릭할때 이미지 닫음
-     $(".modal").click(function (e) {
-     $(".modal").toggle();
-   });
- });
-</script>
+    
 
     <style>
       #carousel-cafe-generic{
-      height: 500px;
-  	  width: 800px;
+      height: 600px;
+  	  width: 600px;
 }
       #carousel-cafe-generic{
       top: 50%;
@@ -62,14 +49,16 @@
       overflow: hidden;
 }
       .item{
-      height: 800px;
+      height: 600px;
       object-fit: cover;
 }
       .item>img{
-      max-width:100%;
-      height: auto;
+      max-height: 100%;
+      width: auto;
       display: block;
       margin: 0px auto;
+      top: 50%;
+   	 
 }
 /* image modal */
       .modal {
@@ -313,11 +302,31 @@ div img:hover{
             </form>
         </div>
 </div>
+<script>
 
-    <!-- footer -->
+    $(function(){
+//      이미지 클릭시 해당 이미지 모달
+    $(".item").click(function(){
+         let img = new Image();
+         img.src = $(this).attr("src")
+         $('.modalBox').html(img);
+         $(".modal").show();
+     });
+     
+     
+     
+//   모달 클릭할때 이미지 닫음
+     $(".modal").click(function (e) {
+     $(".modal").toggle();
+   });
+ });
+</script>
+
+     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->
