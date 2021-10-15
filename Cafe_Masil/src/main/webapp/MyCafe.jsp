@@ -74,10 +74,6 @@ legend {
    font-size: 30px;
 }
 
-h3, h5 {
-   text-align: center;
-}
-
 svg {
    width: 10%;
    height: 80px;
@@ -108,13 +104,6 @@ svg {
    background-image: url('https://i.stack.imgur.com/9TQsy.png');
 }
 
-.stamp2 {
-   height: 110px;
-}
-img {
-   text-align: center;
-   width: 40px;
-}
 </style>
    <!-- box-header -->
    <header class="box-header">
@@ -221,7 +210,7 @@ img {
          for (int i = 0; i < stamp_list.size(); i++) {
          %>
          <div class="stamp" style="float: none; margin: 15px auto;">
-            <h3 class="stamp2" style="text-align: center">
+            <h3 class="stamp2">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
             <div class="test1" style="position:relative">

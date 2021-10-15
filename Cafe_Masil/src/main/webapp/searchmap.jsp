@@ -12,8 +12,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafe, Masil: 카페검색</title>
-    <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
+    <title>Document</title>
+    <link rel="icon" href="img/fav.png" type="image/x-icon">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -66,50 +66,6 @@
             </a>
         </header>
         <!-- end box-header -->
-
-<!-- box header -->
-        <!-- navbar-->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM2.png" width="60" alt="img09"></a> <!-- 카페 왼쪽 상단-->
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-collapse-1">
-          <!-- 네비게이션 바에 회원로그인-->
-        <% if(vo==null){%>
-          <ul class="nav navbar-nav navbar-right">
-          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
-            <li ><a href="login.jsp">로그인<span class="sr-only"></span></a></li>
-            <li ><a href="join.jsp">회원가입</a></li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
-            </a>
-          </ul>
-          <%}else{%>
-          <ul class="nav navbar-nav navbar-right">
-          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
-            <li ><a href="LogoutService">로그아웃</a></li>
-            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-              <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
-            </a>
-          </ul>
-          <%}%>
-          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
-            <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
-            </div>
-            <button type="submit" class="btn btn-default">GO!</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-
-
-
-
-
 
         <!-- nav -->
         <%if(vo==null) {%>
@@ -166,21 +122,24 @@
 	<% request.setCharacterEncoding("euc-kr"); 
 		memberDAO dao = new memberDAO();
 		//ArrayList<cafeVO> cafe_list = new ArrayList<>();
-		ArrayList<cafeVO> cafe_list = (ArrayList<cafeVO>)session.getAttribute("cafe_list");
+		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
 		
 	%>
 	<div class="container main-container">
         <div class="col-md-5">
-          
                 <div class="container row" style="float:none; margin:0 auto;">
                     <ul class="" align = "center">
-					<form action="searchmapService">
+					<form action="searchmapService" method="post">
+					<%if(searchword==null){ %>
 						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 						<button type="submit">검색</button>
+					<%}else{ %>
+						<input name="searchword" type="text" placeholder="<%=searchword %>">
+						<button type="submit">검색</button>
+					<%} %>
 					</form>
 					</ul>
                 </div>
-           
         </div>
     </div>
 <center><div id="map" style="width:70%;height:350px;"></div></center>
@@ -332,14 +291,14 @@ function displayMarker(locPosition, message) {
         </div>
     </div>
     <%} %>
- <!-- footer -->
+    <!-- footer -->
     <footer>
         <div class="container-fluid">
-          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
-          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
+            Shared by <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">BootstrapThemes</a>
         </div>
     </footer>
     <!-- end footer -->
+
     <!-- back to top -->
     <a href="#0" class="cd-top"><i class="ion-android-arrow-up"></i></a>
     <!-- end back to top -->
