@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Cafe, Masil: 회원가입 성공</title>
+    <title>Cafe, Masil</title>
     <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -74,7 +74,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="C:\Users\smhrd\git\Cafe\Cafe_Masil\src\main\webapp\img\09.png" width="80" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM2.png" width="60" alt="img09"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -355,9 +355,9 @@
     
  <hr style="border: inset 10px gary; padding-top: 70px;">
  <p style="pading: 100px; margin:50px; align:center;">
-	 <h1> 원하는 키워드로 카페를 찾아보세요 </h1>
-	 <h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></p>
-	 <br><br><br><br>
+	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center>
+	 <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
+	 <br><br><br><br></div>
       <!-- Thumbnail start -->
     <div class="container">
 		<div class="row">
@@ -367,7 +367,6 @@
 		      <div class="caption">
 		        <h3>카페이름 1</h3>
 		        <p>카페 설명1</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -377,7 +376,6 @@
 		      <div class="caption">
 		        <h3>카페이름 2</h3>
 		        <p>카페 설명</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -387,7 +385,6 @@
 		      <div class="caption">
 		        <h3>카페이름 3</h3>
 		        <p>카페 설명</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -397,7 +394,6 @@
 		      <div class="caption">
 		        <h3>카페이름 4</h3>
 		        <p>카페 설명</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -407,7 +403,6 @@
 		      <div class="caption">
 		        <h3>카페이름 5</h3>
 		        <p>카페 설명</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
 		  </div>
@@ -417,13 +412,18 @@
 		      <div class="caption">
 		        <h3>카페이름 6</h3>
 		        <p>카페 설명</p>
-		        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
 		      </div>
 		    </div>
 		  </div>
 		</div>	
+<<<<<<< HEAD
+	</div>
+	
+=======
 </div>
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 	<hr>
+	<div class=></div>
 	<!-- end Thumbnail  -->
 
     <!-- footer -->
