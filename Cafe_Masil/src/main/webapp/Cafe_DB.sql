@@ -111,8 +111,6 @@ drop table bossJoinInfo;
 
 select * from bossJoinInfo;
 
-insert into bossJoinInfo values(1000000001,1);
-
 /* ----------------구분선 ------------------ */
 
 /* 구독테이블 */

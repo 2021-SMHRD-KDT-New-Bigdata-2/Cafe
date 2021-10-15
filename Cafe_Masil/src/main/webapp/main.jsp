@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Box personal portfolio Template</title>
+    <title>Cafe, Masil</title>
     <link rel="icon" href="img/cogumaemoji.png" type="image/x-icon">
 
     <!-- Bootstrap -->
@@ -74,7 +74,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM2.png" width="60" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50" alt="img09"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -416,12 +416,7 @@
 		    </div>
 		  </div>
 		</div>	
-<<<<<<< HEAD
 	</div>
-	
-=======
-</div>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 	<hr>
 	<div class=></div>
 	<!-- end Thumbnail  -->
@@ -429,7 +424,8 @@
     <!-- footer -->
     <footer>
         <div class="container-fluid">
-          <i class="fa fa-love"></i><a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Co.구마</a>
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->

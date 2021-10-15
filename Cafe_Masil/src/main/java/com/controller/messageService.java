@@ -1,6 +1,8 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -15,20 +17,27 @@ public class messageService extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("euc-kr");
+	
+		response.setCharacterEncoding("UTF-8"); 
+		response.setContentType("text/html; charset=UTF-8");
+		
 		String businessNumber = request.getParameter("businessNumber");
 		String message = request.getParameter("message");
-		System.out.print(businessNumber);
-		System.out.print(message);
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.subscribe(businessNumber, message);
 		
-		if(cnt>0) {
-			System.out.print("전송성공");
-			response.sendRedirect("cafeManager.jsp");
+		PrintWriter out = response.getWriter();
+		if (cnt>0) {
+			out.print("<script>"
+					 + "alert('구독자에게 메세지 전송 완료!');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
 		}else {
-			
+			out.print("<script>"
+					 + "alert('메세지 전송 실패');"
+					 + "location.href='cafeManager.jsp';"
+					 + "</script>");
 		}
 		
 		

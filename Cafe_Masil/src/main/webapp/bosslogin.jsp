@@ -63,6 +63,7 @@
     <!-- top bar -->
     <div class="top-bar">
         <h1>카페관리</h1>
+        <br>
         <p>이 페이지는 카페 사장님들을 위한 페이지입니다.<br>사장님들은 사업자번호와 발급받은 PW를 통해 로그인해주세요.</p>
     </div>
     <!-- end top bar -->
@@ -109,10 +110,11 @@
     </div>
     <!-- end main-container -->
 
-    <!-- footer -->
+     <!-- footer -->
     <footer>
         <div class="container-fluid">
-            contact <i class="fa fa-love"></i><a href="https://bootstrapthemes.co">This Is A Tage//Plz must change me!!!</a>
+          <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
+          <a href="https://www.youtube.com/watch?v=BS7tz2rAOSA">Made by, Co.구마</a>
         </div>
     </footer>
     <!-- end footer -->
