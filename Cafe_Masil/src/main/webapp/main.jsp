@@ -364,7 +364,7 @@ left: 1%;
     
  <hr>
  <p style="pading: 100px; margin:50px; align:center;">
-	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center>
+	 <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center><br>
 	 <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
 	 <br><br><br><br></div>
       <!-- Thumbnail start -->
@@ -426,13 +426,42 @@ left: 1%;
 		  </div>
 		</div>	
 	</div>
+	
 	<hr>
 	<div class=></div>
 	<!-- end Thumbnail  -->
 	
+	<!--  put the image -->
 	<hr>
 	
+	<div class="col-md-3 col-sm-6 ads graphics">
+        <a href="single-project.html" class="portfolio_item">
+                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <div class="portfolio_item_hover">
+                            <div class="portfolio-border clearfix">
+                                <div class="item_info">
+                                    <span>Floating mockups</span>
+                                    <em>Ads / Graphics</em>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+	<hr>
+	
+	<!-- end put the image -->
+	
+	<!-- submit to join service -->
 
+	
+	<div class="row">
+		<div class="col-md-4">asdfsadfasdfsadfsadfsadfsadfvasdfl;kjsadflk<br>
+			<button class="btn btn-danger" type="submit">동행하기</button>
+		</div>
+	</div>
+	
+	<!-- end submit to join service -->
+	
     <!-- footer -->
     <footer>
         <div class="container-fluid">
