@@ -1,3 +1,4 @@
+<%@page import="java.util.ArrayList"%>
 <%@page import="com.model.cafeVO"%>
 <%@page import="com.model.memberVO"%>
 <%@page import="com.model.memberDAO"%>
@@ -14,7 +15,7 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <% memberVO vo1 = (memberVO)session.getAttribute("member"); %>
-<% cafeVO vo2 = (cafeVO)session.getAttribute("cafe_list"); %>
+<% ArrayList<cafeVO> vo2 = (ArrayList<cafeVO>)session.getAttribute("cafe_list"); %>
 
 
 </head>
@@ -27,8 +28,8 @@
     <button onclick="sendAjax()">Àü¼Û</button>
 	
 	<% String id = vo1.getId(); %>
-	<% String businessNumber = vo2.getBusinessNumber(); %>
-	<% String cafeName = vo2.getCafeName(); %>
+	<% String businessNumber = vo2.get(0).getBusinessNumber(); %>
+	<% String cafeName = vo2.get(0).getCafeName(); %>
 	
 	
     <script>
@@ -40,7 +41,7 @@
         function sendAjax(){
              $.ajax({
                 url:"evalService",
-                data : {"evaluation": a,"id":id,"cafeName":cafeName,"businessNumber":businessNumber},
+                data : {"evaluation": a,"id":<%=id%>,"cafeName":<%=cafeName%>,"businessNumber":<%=businessNumber%>},
                 dataType : "json",
                 type : "post",
                 success : function(data){

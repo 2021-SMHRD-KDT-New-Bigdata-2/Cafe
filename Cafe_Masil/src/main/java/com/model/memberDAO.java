@@ -505,6 +505,7 @@ public int evaluation_insert(String id, String businessNumber, String cafeName, 
 		psmt.setString(2,businessNumber);
 		psmt.setString(3,cafeName);
 		psmt.setString(4,result);
+		System.out.println("평가 넣기 성공!");
 		
 		cnt = psmt.executeUpdate();
 			
@@ -548,15 +549,17 @@ public ArrayList<stampVO> myStamp(String tel) {
 public String evaluation_select(String cafeName) {
 	try {
 		getConnection();
-		String sql = "select evaluation from evaluation cafeName=?";
+		String sql = "select evaluation from evaluation where cafeName=?";
 		
 		psmt = conn.prepareStatement(sql);
 		psmt.setString(1,cafeName);
-		rs = psmt.executeQuery();	
+		rs = psmt.executeQuery();
 		
 		while(rs.next()) {
 			String evaluation = rs.getString("evaluation");
+			System.out.println("평가 불러오기 성공");
 		}
+		
 		
 	}catch(Exception e) {
 		e.printStackTrace();

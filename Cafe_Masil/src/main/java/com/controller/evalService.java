@@ -31,6 +31,12 @@ public class evalService extends HttpServlet {
 		String businessNumber = request.getParameter("businessNumber");
 		String cafeName = request.getParameter("cafeName");
 		
+		System.out.println("id 불러오기: " + id);
+		System.out.println("businessNumber: " + businessNumber);
+		System.out.println("cafeName: " + cafeName);
+		
+		
+		
 		String result = "";
 		for (int i = 0; i<eval.length; i++) {
 			result += eval[i] + "/";
@@ -41,11 +47,12 @@ public class evalService extends HttpServlet {
 		
 		if (cnt>0) {
 			String evaluation = dao.evaluation_select(cafeName);
-			System.out.println(evaluation.split("/"));
+			System.out.println(evaluation.split("/"));		
+			}
 		}
 	
 		
 		
 	}
 
-}
+

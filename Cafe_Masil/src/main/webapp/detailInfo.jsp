@@ -94,6 +94,8 @@ div img:hover{
 }
 	/* image modal end */
     </style>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -280,6 +282,7 @@ div img:hover{
             </ul>
         </div>
     </div>
+  
     <!-- end main-container -->
 <div class="container main-container">
         <div class="col-md-6">
