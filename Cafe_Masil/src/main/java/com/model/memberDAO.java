@@ -220,12 +220,13 @@ public class memberDAO {
 	// 가맹 카페 찾기 기능
 	public ArrayList<cafeVO> search(String cafename) {
 		ArrayList<cafeVO> cafe_list = new ArrayList<cafeVO>();
+		String keyword = "%"+cafename+"%";
 		try {
 			getConnection();
-			String sql = "select * from cafeInfo where cafeName=?";
+			String sql = "select * from cafeInfo where cafeName like ? ";
 			
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,cafename);
+			psmt.setString(1,keyword);
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
