@@ -25,18 +25,16 @@
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
+    
     <style>
     .liston1> img {
    		float: left;
 	}
     .liston1 {
 	    border: 1px solid black;
-	    margin: 0 30px;
-	    padding-top: 30px;
-	    padding-bottom: 30px;
-	    margin-top: 30px;
-	    margin-bottom: 30px;
-	    border-radius: 20px 20px 20px 20px;
+	    margin:30px 0 30px 0;
+	    padding:30px 30px 30px 30px;
+	    border-radius: 20px;
 	}
 	
 	.liston1::after {
@@ -50,6 +48,45 @@
 		box-sizing:border-box;
 		background-color:green;
 		
+	}
+	
+	#searchForm{
+		border:1px solid black;
+		width:330px;
+		height:50px;
+		border-radius:50px;
+		margin-left:37%;
+		padding:5px 50px 0 25px;
+	}
+	input{
+		width:230px;
+		font-size:18px;
+		border:none;
+		padding:2px 0 0 10px;;
+		position:relative;
+	}
+	button{
+		width:40px;
+		background-color:white;
+		padding:2px;
+		border:none;
+		position:absolute;
+		margin:5px;
+	}
+	
+	.glyphicon.glyphicon-search::before{
+		padding:0;
+		font-size:22px;
+		width:35px;
+		height:35px;
+	}
+	.cafeName{
+		fong-size:30px;
+		padding-top:35px;
+	}
+	p{
+		font-size:20px;
+		color:black;
 	}
 	
 	</style>
@@ -125,22 +162,22 @@
 		ArrayList<cafeVO> cafe_list = (ArrayList) session.getAttribute("cafe_list");
 		
 	%>
-	<div class="container main-container">
-        <div class="col-md-5">
-                <div class="container row" style="float:none; margin:0 auto;">
-                    <ul class="" align = "center">
-					<form action="searchmapService" method="post">
+	<div class="container main-container search">
+                <div class="container row search">
+					<form id="searchForm" action="searchmapService" method="post">
 					<%if(searchword==null){ %>
 						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
-						<button type="submit">검색</button>
+						<button type="submit">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
 					<%}else{ %>
 						<input name="searchword" type="text" placeholder="<%=searchword %>">
-						<button type="submit">검색</button>
+						<button type="submit">
+						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						</button>
 					<%} %>
 					</form>
-					</ul>
                 </div>
-        </div>
     </div>
 <center><div id="map" style="width:70%;height:350px;"></div></center>
 	
@@ -229,7 +266,7 @@ function displayMarker(locPosition, message) {
                     <div class="col-md-12">
                     	<div class="liston1">
                     		<img src="<%=cafe_list.get(0).getImage1() %>" alt="logo" style="width:25%;">
-        			    	 <p><%=cafe_list.get(0).getCafeName() %> </p>
+        			    	 <p class="cafeName"><%=cafe_list.get(0).getCafeName() %> </p>
         			  	  <p>주소 : <%=cafe_list.get(0).getCafeAddress() %> </p>
         			  	  <p>번호 : <%=cafe_list.get(0).getCafeTel() %> </p>
         			  	  <p><a href = "infoService?businessNumber=<%=cafe_list.get(0).getBusinessNumber() %>">상세보기</a> </p>
