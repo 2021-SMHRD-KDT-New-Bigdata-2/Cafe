@@ -88,7 +88,7 @@ left: 1%;
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CAFE,MASIL"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -121,6 +121,7 @@ left: 1%;
         </div>
       </div>
     </nav>
+    <!-- end navbar -->
             
             
             <!-- box-primary-nav-trigger -->
@@ -178,7 +179,7 @@ left: 1%;
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
-                    src="https://www.youtube.com/embed/18niiM-1dfI?autoplay=1&mute=1"
+                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1"
                      title="YouTube video player"
                     frameborder="0" scrolling="no"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -186,7 +187,7 @@ left: 1%;
                 <div class="text-wrap">
                     <div id="overlay">
                         <h1 style="text-align: center;"><span
-                                style="font-family: Georgia, serif, 바탕, batang; font-size: 120px;"><em><br><br>CAFE,<br>MASIL</em></span>
+                                style="font-family: Georgia, serif, 바탕, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E</span>,<br>MASI<span style="text-color: F9813A;">L</span></em></span>
                         </h1>
                     </div>
                 </div>
@@ -198,7 +199,7 @@ left: 1%;
     
     <p style="pading-top: 200px; margin:200px; align:center;">
     <center><h1> 우리 동네의 숨겨진 보물을 발견해보세요. </h1></center><br>
-    <center><h4> 특색있는 카페들이 당신을 기다리고있어요. </h4></center></p>
+    <center><h4> 다양한 매력의 카페들이 당신을 기다리고있어요. </h4></center></p>
 
     <!-- portfolio div -->
     <div class="portfolio-div"  style= "padding-top: 200px; padding-down: 150px;">
@@ -384,7 +385,7 @@ left: 1%;
             <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxODExMjlfMTkx%2FMDAxNTQzNDE5NDA3ODYw.DB6_a5k8FMKd4FryvhZJFbAVI37agEiF7BmiPdN-T4wg.g91V2mOkPs_OU0DhD-A9-zowVnSw4ziePCp9yqDBk8og.JPEG.cn3040%2FNaverBlog_20181129_003647_01.jpg&type=sc960_832" alt="...">
             <div class="caption">
               <h3>고마다</h3>
-              <p>#배달 #원두판매</p>
+              <p>#배달가능해요 #원두판매 #우리동네 사진맛집</p>
             </div>
           </div>
         </div>
@@ -393,7 +394,7 @@ left: 1%;
             <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA4MTNfMTIx%2FMDAxNjI4NzgyMTc2NjQ2.SmaBlqxmr14m3hNEc5s8l0B9S6xyo-1gBb9OBL4e2e4g.291WTRIUTs6J4Tjk04LK52bYDgCIqKGagtvwHd0qGb8g.JPEG.tpfls019%2FIMG_0230.jpg&type=sc960_832" alt="...">
             <div class="caption">
               <h3>시크릿가든</h3>
-              <p>#카페가 깨끗해요 #</p>
+              <p>#카페가 깨끗해요 #사진맛집 #분위기가 좋아요</p>
             </div>
           </div>
         </div>
@@ -402,7 +403,7 @@ left: 1%;
             <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMjRfMTM5%2FMDAxNjExNDYzODc1NzQw.WdnFlykA9ExR6-ZoFSFtfagWpGMZZ5VkNQStWLMuqBwg.-2-jhGi9IjfHM667jmF_HAeyA_7puJ1rKqwZSaYy_ksg.JPEG.lovepinkday%2F9FFBCB00-19BC-4A59-8A31-8412803A546A.jpeg" alt="...">
             <div class="caption">
               <h3>비티씨인무드</h3>
-              <p>카페 설명</p>
+              <p>#디저트가 다양해요 #커피맛이 진해요 # 또 올래요</p>
             </div>
           </div>
         </div>
@@ -410,8 +411,8 @@ left: 1%;
           <div class="thumbnail">
             <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMDAzMDlfMTc1%2FMDAxNTgzNzI1NjY4Mjkw.hCVpKpNE-tT44uVoVz_ZOrpH3uvZFzPwaHFQsn80eHUg.HZO0N-imWC7q2viJZ9NrhVUWHTGvZKDGNOcK80XYe64g.JPEG.saladbuono%2FC7C6CD58-8F1A-4C0A-8E87-D8B594AF3A73.jpg" alt="...">
             <div class="caption">
-              <h3>카페이름 4</h3>
-              <p>카페 설명</p>
+              <h3>카페25</h3>
+              <p>#직원분이 친절해요 # 직접로스팅 해요 # 넓어요 </p>
             </div>
           </div>
         </div>
@@ -420,7 +421,7 @@ left: 1%;
             <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20091031_135%2Fgrace_rain_1256999897381q9FAp_jpg%2F%25C7%25CF%25B9%25D9%25BA%25F1_001_grace_rain.jpg&type=sc960_832" alt="...">
             <div class="caption">
               <h3>커피공장 하나비</h3>
-              <p>카페 설명</p>
+              <p># 가게가 친절해요 # 로스팅이 잘됐어요 # 디저트가 다양해요</p>
             </div>
           </div>
         </div>
@@ -429,7 +430,7 @@ left: 1%;
             <img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTA5MTVfMTMz%2FMDAxNjMxNzA0ODUyMzk0.zXAtlCIDmt_dLwyHKPRhKfksjtBxxMh4bGb5O75Tidsg.HrpEYWUvSeiPDmbKt6HNMlOrBDcWNapKMWsAoFy9ZMYg.JPEG.jjoyuzin%2FIMG_5196.JPG" alt="...">
             <div class="caption">
               <h3>다이브인커피</h3>
-              <p>카페 설명</p>
+              <p># 분위기가 좋아요 # 커피향이 풍부해요 # 다시 올래요</p>
             </div>
           </div>
         </div>
@@ -444,9 +445,9 @@ left: 1%;
    
    <div class="row">
       <div class="col-sm-12">
-         <p class="joinUs">
+         <div class="joinUs">
           <center><h1 style="margin:100px"> 카페 사장님이라면 간단한 양식으로<br> CAFEMASIL의 식구가 될 수 있어요! </h1></center><br>
-          <center><button class="btn btn-danger" type="submit">동행하기</button></center></p>
+          <center><button class="btn btn-danger" type="submit">동행하기</button></center></div>
       </div>
    </div>
    
