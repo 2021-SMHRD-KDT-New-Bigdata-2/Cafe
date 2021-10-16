@@ -500,13 +500,13 @@ public int addStamp(String businessNumber, String tel) {
 }
 
 	//평가넣기 기능
-public int evaluation_insert(String id, String businessNumber, String cafeName, String result) {
+public int evaluation_insert(String nickname, String businessNumber, String cafeName, String result) {
 	try {
 		getConnection();
 		String sql = "insert into evaluation values (evaluation_num.nextval,?,?,?,?)";
 			
 		psmt = conn.prepareStatement(sql);
-		psmt.setString(1,id);
+		psmt.setString(1,nickname);
 		psmt.setString(2,businessNumber);
 		psmt.setString(3,cafeName);
 		psmt.setString(4,result);
@@ -563,16 +563,16 @@ public ArrayList<evalVO> evaluation_select(String cafeName) {
 		
 		while(rs.next()) {
 			int num = rs.getInt("num");
-			String id = rs.getString("id");
+			String nickname = rs.getString("nickname");
 			String businessNumber = rs.getString("businessNumber");
 			String cafeName2 = rs.getString("cafeName");
 			String evaluation = rs.getString("evaluation");
-			System.out.println("평가 불러오기 성공:" + id);
+			System.out.println("평가 불러오기 성공:" + nickname);
 			System.out.println("평가 불러오기 성공:" + businessNumber);
 			System.out.println("평가 불러오기 성공:" + cafeName2);
 			System.out.println("평가 불러오기 성공:" + evaluation);
 			
-			evalVO vo = new evalVO(num, id, businessNumber, cafeName2, evaluation);
+			evalVO vo = new evalVO(num, nickname, businessNumber, cafeName2, evaluation);
 			eval_list.add(vo);
 		}
 		

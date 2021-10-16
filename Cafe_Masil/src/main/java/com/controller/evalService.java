@@ -30,12 +30,12 @@ public class evalService extends HttpServlet {
 		response.setContentType("application/json");
 		
 		String[] eval = request.getParameterValues("evaluation");
-		String id = request.getParameter("id");
+		String nickname = request.getParameter("nickname");
 		String businessNumber = request.getParameter("businessNumber");
 		String cafeName = request.getParameter("cafeName");
 		
 		System.out.println("eval" + eval);
-		System.out.println("id 불러오기: " + id);
+		System.out.println("nickname 불러오기: " + nickname);
 		System.out.println("businessNumber: " + businessNumber);
 		System.out.println("cafeName: " + cafeName);
 		
@@ -47,7 +47,7 @@ public class evalService extends HttpServlet {
 		}
 		
 		memberDAO dao = new memberDAO();
-		int cnt = dao.evaluation_insert(id,businessNumber,cafeName,result);
+		int cnt = dao.evaluation_insert(nickname,businessNumber,cafeName,result);
 		if (cnt>0) {
 			ArrayList<evalVO> eval_list = dao.evaluation_select(cafeName);
 			Gson gson = new Gson();
