@@ -1,6 +1,7 @@
 package com.controller;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.ServletException;
@@ -26,6 +27,7 @@ public class evalService extends HttpServlet {
 		
 		
 		response.setCharacterEncoding("euc-kr");
+		response.setContentType("application/json");
 		
 		String[] eval = request.getParameterValues("evaluation");
 		String id = request.getParameter("id");
@@ -41,15 +43,16 @@ public class evalService extends HttpServlet {
 		
 		String result = "";
 		for (int i = 0; i<eval.length; i++) {
-			result += eval[i] + "/";
+			result += eval[i] + ". ";
 		}
 		
 		memberDAO dao = new memberDAO();
 		int cnt = dao.evaluation_insert(id,businessNumber,cafeName,result);
-		
 		if (cnt>0) {
 			ArrayList<evalVO> eval_list = dao.evaluation_select(cafeName);
-			
+			Gson gson = new Gson();
+			new Gson().toJson(eval_list, response.getWriter());
+
 			}
 		
 		
