@@ -3,14 +3,14 @@ package com.model;
 public class evalVO {
 
 	private int num;
-	private String id;
+	private String nickname;
 	private String businessNumber;
 	private String cafeName;
 	private String evaluation;
 	
-	public evalVO(int num,String id, String businessNumber, String cafeName, String evaluation) {
+	public evalVO(int num,String nickname, String businessNumber, String cafeName, String evaluation) {
 		this.num = num;
-		this.id = id;
+		this.nickname = nickname;
 		this.businessNumber = businessNumber;
 		this.cafeName = cafeName;
 		this.evaluation = evaluation;
@@ -20,8 +20,8 @@ public class evalVO {
 		return num;
 	}
 
-	public String getId() {
-		return id;
+	public String getNickname() {
+		return nickname;
 	}
 
 	public String getBusinessNumber() {

@@ -1,3 +1,5 @@
+<%@page import="com.model.evalVO"%>
+<%@page import="com.model.memberDAO"%>
 <%@page import="com.model.cafeVO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.model.memberVO"%>
@@ -9,6 +11,8 @@
 <head>
    <% 
    memberVO vo = (memberVO)session.getAttribute("member"); 
+   memberDAO dao = new memberDAO();
+   ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list");
    %>
    
     <meta charset="utf-8">

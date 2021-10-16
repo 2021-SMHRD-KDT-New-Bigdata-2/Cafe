@@ -89,10 +89,15 @@ div img:hover{
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<% memberVO vo = (memberVO)session.getAttribute("member"); %>
 	<% ArrayList<cafeVO> info_list =  (ArrayList<cafeVO>)session.getAttribute("info_list"); %>
-	<% String id = vo.getId(); %>
+	<% String nickname = vo.getNickname(); %>
 	<% String businessNumber = info_list.get(0).getBusinessNumber(); %>
 	<% String cafeName = info_list.get(0).getCafeName(); %>
-	
+	<% memberDAO dao = new memberDAO();
+ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName());
+boolean subsCheck = dao.subscribeCheck(vo.getId(), businessNumber);
+boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
+
+%>
 
 </head>
 
@@ -113,7 +118,7 @@ div img:hover{
        <!-- box-header -->
         <header class="box-header">
             <div class="box-logo">
-                <a href="main.jsp"><img src="img/fav.png" width="80" alt="Logo"></a>
+                <a href="main.jsp"><img src="" width="80" alt="Logo"></a>
             </div>
             <!-- box-nav -->
             <a class="box-primary-nav-trigger" href="#0">
@@ -326,12 +331,14 @@ div img:hover{
     </div>
   
     <!-- end main-container -->
+<% if (vo!=null){ %>
+<% if (subsCheck==false && stampCheck==false){%>
 <div class="container main-container">
-        <div class="col-md-6">
-            <form action="#" method="post">
-                <div class="container row" style="float:none; margin:0 auto;">
-                    <div class="col-md-6">
-                       <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
+     <div class="col-md-6">
+          <form action="#" method="post">
+              <div class="container row" style="float:none; margin:0 auto;">
+                   <div class="col-md-6">
+                    <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
                     </div>
                     <div class="col-md-6">
                     	<a href = "stampService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&tel=<%=vo.getTel() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">스탬프 발급</a>
@@ -358,25 +365,141 @@ div img:hover{
             </form>
         </div>
 </div>
-<script>
+<%}else if(subsCheck==true && stampCheck==false){%>
+<div class="container main-container">
+        <div class="col-md-6">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+                       <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
+                    </div>
+                    <div class="col-md-6">
+                    	<a href = "stampService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&tel=<%=vo.getTel() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">스탬프 발급</a>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+</div>
+<%}else if(subsCheck==false && stampCheck==true){%>
+<div class="container main-container">
+        <div class="col-md-6">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+                       <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
+                    </div>
+                    <div class="col-md-6">
+                    	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+</div>
+<%}else{%>
+<div class="container main-container">
+        <div class="col-md-6">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+                       <a href = "removeSubscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
+                    </div>
+                    <div class="col-md-6">
+                    	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+</div>
+<%}%>
+<%}else{ %>
+<div class="container main-container">
+        <div class="col-md-6">
+            <form action="#" method="post">
+                <div class="container row" style="float:none; margin:0 auto;">
+                    <div class="col-md-6">
+                       <a href = "loginService" class="btn btn-box">구독</a>
+                    </div>
+                    <div class="col-md-6">
+                    	<a href = "loginService" class="btn btn-box">스탬프 발급</a>
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>
+                    <div class="col-md-12">
+                    </div>                   
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                    <div class="col-md-4">
+                    </div> 
+                </div>
+            </form>
+        </div>
+</div>
+<%}%>
 
-    $(function(){
-//      이미지 클릭시 해당 이미지 모달
-    $(".item").click(function(){
-         let img = new Image();
-         img.src = $(this).attr("src")
-         $('.modalBox').html(img);
-         $(".modal").show();
-     });
-     
-     
-     
-//   모달 클릭할때 이미지 닫음
-     $(".modal").click(function (e) {
-     $(".modal").toggle();
-   });
- });
-</script>
 	
 	<div id="eval">
 		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
@@ -396,31 +519,46 @@ div img:hover{
     	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
     	<button onclick="sendAjax()">전송</button>
     </div>
-<% memberDAO dao = new memberDAO();
-ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName());
+    
+    
+    <script>
 
-%>
+    $(function(){
+//      이미지 클릭시 해당 이미지 모달
+    $(".item").click(function(){
+         let img = new Image();
+         img.src = $(this).attr("src")
+         $('.modalBox').html(img);
+         $(".modal").show();
+     });
+     
+     
+     
+//   모달 클릭할때 이미지 닫음
+     $(".modal").click(function (e) {
+     $(".modal").toggle();
+   });
+ });
+</script>
+	
+    
+    
+
 <%if(eval_list!=null){ %>
 <div>
-<table border="1">
-<th>아이디</th>
+<table border="1" id="tableForData" >
+<th>닉네임</th>
 <th>카페명</th>
 <th>평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
-<tr>
-<td><%=eval_list.get(i).getId() %></td>
-<td><%=eval_list.get(i).getCafeName() %></td>
-<td><%=eval_list.get(i).getEvaluation()%></td>
+<tr class="reviewTable">
+	<td id="td1"><%=eval_list.get(i).getNickname() %></td>
+	<td id="td2"><%=eval_list.get(i).getCafeName() %></td>
+	<td id="td3"><%=eval_list.get(i).getEvaluation()%></td>
 </tr>
 <%} %>
 
-</table>
-</div>
-<%}else{
-}%>
-
-
-    <script>
+<script>
         var a = [];
         function data(input) {
             a.push(input);
@@ -431,14 +569,23 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
         	
              $.ajax({
                 url:"evalService",
-                data : {"evaluation": a,"id":'<%=id%>',"cafeName":'<%=cafeName%>',"businessNumber":'<%=businessNumber%>'},
+                data : {"evaluation": a,"nickname":'<%=nickname%>',"cafeName":'<%=cafeName%>',"businessNumber":'<%=businessNumber%>'},
                 traditional : true,
                 dataType : "json",
                 type : "post",
                 success : function(data){
-                    for(var i = 0; i < data.size(); i++){
-                        console.log(data.info),
-
+                	console.log(data);
+                    for(var i = data.length-1; i < data.length; i++){
+                        console.log(data[i].nickname);
+                        console.log(data[i].cafeName);
+                        console.log(data[i].evaluation);
+                        $("#tableForData").append("<tr class='reviewTable'><td>"+data[i].nickname + "</td><td>"+data[i].cafeName + "</td><td>"+data[i].evaluation + "</td></tr>" )
+                        
+                        
+                        //tr들고와서 어펜드 차일드( "<td>"+data[i].nickname + "</td>")
+                        //tr들고와서 어펜드 차일드( "<td>"+data[i].cafeName + "</td>")
+                        //tr들고와서 어펜드 차일드( "<td>"+data[i].evaluation + "</td>")
+                        
                     }
                    
                     
@@ -456,6 +603,13 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
 
     </script>
 
+</table>
+</div>
+<%}else{
+}%>
+
+
+    
      <!-- footer -->
     <footer>
         <div class="container-fluid">

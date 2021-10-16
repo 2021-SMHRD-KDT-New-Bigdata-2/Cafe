@@ -41,14 +41,14 @@ if (vo != null) {
 div.nickname {
    width: 100%;
    height: 100px;
-   padding: 0 150px;
+   padding: 20px 150px;
 }
 
-.my {
+.container.main-container {
    width: 100%;
+   height:100%;
    padding: 0 200px;
    padding-bottom: 50px;
-   overflow: auto;
 }
 
 .mystamp {
@@ -82,7 +82,7 @@ svg {
 .nick {
    text-align: left;
    float: right;
-   width: 89%;
+   width: 50%;
    padding: 35px 0;
    font-size: 20px;
 }
@@ -104,6 +104,7 @@ svg {
 
 .stamp2 {
    height: 110px;
+   text-align:center;
 }
 img {
    text-align: center;
@@ -114,18 +115,21 @@ img {
 	padding-left: 70px;
 }
 .test2 {
-padding-left: 70px;
+	padding-left: 70px;
 	text-align: left;
 	position: relative;
 	top: -80px
 	
+}
+h5{
+	text-align:center;
+	font-size:16px;
 }
 
 .glyphicon-gift{
 	color:rgb(249,129,58);
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -236,7 +240,7 @@ padding-left: 70px;
    <!-- end Top bar -->
 
    <!-- ´Ð³×ÀÓ -->
-   <div class="nickname">
+   <div class="nickname" >
       <i class="bi bi-person-circle"></i>
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
          fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
@@ -247,7 +251,7 @@ padding-left: 70px;
       <div class="nick"><%=vo.getNickname()%></div>
    </div>
 
-   <div class="my">
+   <div class="container main-container">
       <fieldset class="mystamp">
          <legend>My Stamp</legend>
          <h5>&nbsp;</h5>
