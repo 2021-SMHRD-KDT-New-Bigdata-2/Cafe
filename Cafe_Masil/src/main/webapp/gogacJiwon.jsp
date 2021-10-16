@@ -33,7 +33,6 @@
 </head>
 
 <body>
-
     <!-- Preloader -->
     <div id="preloader">
         <div class="pre-container">
@@ -157,26 +156,8 @@
 
     <!-- main-container -->
     <div class="container main-container">
-        <div class="col-md-6">
-            <form action="#" method="post">
-                <div class="container row" style="float:none; margin:0 auto;">
-                    <div class="col-md-6">
-                    </div>
-                    <div class="col-md-6">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>
-                    <div class="col-md-12">
-                    </div>                   
-                    <div class="col-md-4">
+                <div class="container row" style="float:none; margin:100 auto;">          
+                    <div class="col-md-4" style="verticle-align:middle">
                         <a href="update.jsp" class="btn btn-box">회원정보수정</a>
                     </div> 
                     <div class="col-md-4">
@@ -185,8 +166,7 @@
                     <div class="col-md-4">
                         <a href="#" class="btn btn-box">공지사항</a>
                     </div> 
-                </div>
-            </form>
+                    </div>
         </div>
 
 
