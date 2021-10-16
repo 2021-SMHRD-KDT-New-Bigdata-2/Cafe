@@ -117,9 +117,15 @@ img {
 padding-left: 70px;
 	text-align: left;
 	position: relative;
-	top: -79px
+	top: -80px
 	
 }
+
+.glyphicon-gift{
+	color:rgb(249,129,58);
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -263,7 +269,7 @@ padding-left: 70px;
             <div class="test2">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
                <%if(j<=8){ %>
-               	<span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
+               	<span class="glyphicon glyphicon-check"  aria-hidden="true"></span>
                <%if (j == 4) {%>
                <br> <br>
                <%}%>
@@ -273,7 +279,10 @@ padding-left: 70px;
                <%}%>
                <%}%>
                </div>
+               
+               <br><br><br><br><br><br>
             </h3>
+            
          </div>
          <%
          }
@@ -301,6 +310,7 @@ padding-left: 70px;
          }
          %>
       </fieldset>
+      
    </div>
 
    <!-- footer -->
