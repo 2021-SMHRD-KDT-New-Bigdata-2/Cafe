@@ -358,25 +358,7 @@ div img:hover{
             </form>
         </div>
 </div>
-<script>
 
-    $(function(){
-//      이미지 클릭시 해당 이미지 모달
-    $(".item").click(function(){
-         let img = new Image();
-         img.src = $(this).attr("src")
-         $('.modalBox').html(img);
-         $(".modal").show();
-     });
-     
-     
-     
-//   모달 클릭할때 이미지 닫음
-     $(".modal").click(function (e) {
-     $(".modal").toggle();
-   });
- });
-</script>
 	
 	<div id="eval">
 		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
@@ -396,31 +378,49 @@ div img:hover{
     	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
     	<button onclick="sendAjax()">전송</button>
     </div>
+    
+    
+    <script>
+
+    $(function(){
+//      이미지 클릭시 해당 이미지 모달
+    $(".item").click(function(){
+         let img = new Image();
+         img.src = $(this).attr("src")
+         $('.modalBox').html(img);
+         $(".modal").show();
+     });
+     
+     
+     
+//   모달 클릭할때 이미지 닫음
+     $(".modal").click(function (e) {
+     $(".modal").toggle();
+   });
+ });
+</script>
+	
+    
+    
 <% memberDAO dao = new memberDAO();
 ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName());
 
 %>
 <%if(eval_list!=null){ %>
 <div>
-<table border="1">
+<table border="1" id="tableForData" >
 <th>아이디</th>
 <th>카페명</th>
 <th>평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
-<tr>
-<td><%=eval_list.get(i).getId() %></td>
-<td><%=eval_list.get(i).getCafeName() %></td>
-<td><%=eval_list.get(i).getEvaluation()%></td>
+<tr class="reviewTable">
+	<td id="td1"><%=eval_list.get(i).getId() %></td>
+	<td id="td2"><%=eval_list.get(i).getCafeName() %></td>
+	<td id="td3"><%=eval_list.get(i).getEvaluation()%></td>
 </tr>
 <%} %>
 
-</table>
-</div>
-<%}else{
-}%>
-
-
-    <script>
+<script>
         var a = [];
         function data(input) {
             a.push(input);
@@ -436,9 +436,18 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
                 dataType : "json",
                 type : "post",
                 success : function(data){
-                    for(var i = 0; i < data.size(); i++){
-                        console.log(data.info),
-
+                	console.log(data);
+                    for(var i = data.length-1; i < data.length; i++){
+                        console.log(data[i].id);
+                        console.log(data[i].cafeName);
+                        console.log(data[i].evaluation);
+                        $("#tableForData").append("<tr class='reviewTable'><td>"+data[i].id + "</td><td>"+data[i].cafeName + "</td><td>"+data[i].evaluation + "</td></tr>" )
+                        
+                        
+                        //tr들고와서 어펜드 차일드( "<td>"+data[i].id + "</td>")
+                        //tr들고와서 어펜드 차일드( "<td>"+data[i].cafeName + "</td>")
+                        //tr들고와서 어펜드 차일드( "<td>"+data[i].evaluation + "</td>")
+                        
                     }
                    
                     
@@ -456,6 +465,13 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
 
     </script>
 
+</table>
+</div>
+<%}else{
+}%>
+
+
+    
      <!-- footer -->
     <footer>
         <div class="container-fluid">
