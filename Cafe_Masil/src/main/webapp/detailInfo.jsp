@@ -436,8 +436,9 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
                 dataType : "json",
                 type : "post",
                 success : function(data){
-                    alert(data);
-                        
+                    for(var i = 0; i < data.size(); i++){
+                        console.log(data.info),
+
                     }
                    
                     
