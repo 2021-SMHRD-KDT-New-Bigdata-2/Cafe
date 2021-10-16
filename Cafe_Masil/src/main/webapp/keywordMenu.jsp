@@ -105,7 +105,7 @@
             </a>
           </ul>
           <%}%>
-          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
+          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get" accept-charset="euc-kr">
             <div class="form-group">
               <input name = "searchword" type="text" class="form-control" placeholder="검색">
             </div>

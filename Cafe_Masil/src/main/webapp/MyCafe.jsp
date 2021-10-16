@@ -72,10 +72,6 @@ legend {
    font-size: 30px;
 }
 
-h3, h5 {
-   text-align: center;
-}
-
 svg {
    width: 10%;
    height: 80px;
@@ -121,25 +117,54 @@ img {
 padding-left: 70px;
 	text-align: left;
 	position: relative;
-	top: -79px
+	top: -80px
 	
 }
+
+.glyphicon-gift{
+	color:rgb(249,129,58);
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 </style>
-   <!-- box-header -->
-   <header class="box-header">
-      <div class="box-logo">
-         <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80"
-            alt="Logo"></a>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-collapse-1">
+          <!-- 네비게이션 바에 회원로그인-->
+        <% if(vo==null){%>
+          <ul class="nav navbar-nav navbar-right">
+          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
+            <li ><a href="login.jsp">로그인<span class="sr-only"></span></a></li>
+            <li ><a href="join.jsp">회원가입</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
+            </a>
+          </ul>
+          <%}else{%>
+          <ul class="nav navbar-nav navbar-right">
+          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
+            <li ><a href="LogoutService">로그아웃</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
+            </a>
+          </ul>
+          <%}%>
+          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
+            <div class="form-group">
+              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+            </div>
+            <button type="submit" class="btn btn-default">GO!</button>
+          </form>
+        </div>
       </div>
-      <!-- box-nav -->
-      <a class="box-primary-nav-trigger" href="#0"> <span
-         class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-      </a>
-   </header>
-   <!-- end box-header -->
+    </nav>
 
    <!-- nav -->
-   <%=stamp_list.get(0).getAllStamp()%>
    <%
    if (vo == null) {
    %>
@@ -230,7 +255,7 @@ padding-left: 70px;
          for (int i = 0; i < stamp_list.size(); i++) {
          %>
          <div class="stamp" style="float: none; margin: 15px auto;">
-            <h3 class="stamp2" style="text-align: center">
+            <h3 class="stamp2">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
             <div class="test1">
@@ -244,7 +269,7 @@ padding-left: 70px;
             <div class="test2">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
                <%if(j<=8){ %>
-               	<span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
+               	<span class="glyphicon glyphicon-check"  aria-hidden="true"></span>
                <%if (j == 4) {%>
                <br> <br>
                <%}%>
@@ -254,7 +279,10 @@ padding-left: 70px;
                <%}%>
                <%}%>
                </div>
+               
+               <br><br><br><br><br><br>
             </h3>
+            
          </div>
          <%
          }
@@ -272,12 +300,17 @@ padding-left: 70px;
                <%=message_list.get(i).getCafeName()%></p>
             <p>
                메세지 :
-               <%=message_list.get(i).getMessage()%></p>
+<%if(message_list.get(i).getMessage()!=null){%>
+<%=message_list.get(i).getMessage()%></p>
+<%}else{ %>
+메세지가 없습니다!
+<%} %>
          </div>
          <%
          }
          %>
       </fieldset>
+      
    </div>
 
    <!-- footer -->

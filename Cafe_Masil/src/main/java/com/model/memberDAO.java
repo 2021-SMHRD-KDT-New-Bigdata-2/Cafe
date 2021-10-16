@@ -220,12 +220,13 @@ public class memberDAO {
 	// 가맹 카페 찾기 기능
 	public ArrayList<cafeVO> search(String cafename) {
 		ArrayList<cafeVO> cafe_list = new ArrayList<cafeVO>();
+		String keyword = "%"+cafename+"%";
 		try {
 			getConnection();
-			String sql = "select * from cafeInfo where cafeName=?";
+			String sql = "select * from cafeInfo where cafeName like ? ";
 			
 			psmt = conn.prepareStatement(sql);
-			psmt.setString(1,cafename);
+			psmt.setString(1,keyword);
 			rs = psmt.executeQuery();
 			
 			while(rs.next()) {
@@ -581,10 +582,75 @@ public ArrayList<evalVO> evaluation_select(String cafeName) {
 		close();
 	}
 	return eval_list;
-	
+
 }
 
 
+// 구독판별 메소드
+public boolean subscribeCheck(String id, String businessNumber) {
+	boolean subsCheck = false;
+	try {
+		getConnection();
+		String sql = "select * from subscribe where id=? and businessNumber=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,id);
+		psmt.setString(2,businessNumber);
+		rs = psmt.executeQuery();
+		
+		while(rs.next()) {
+			subsCheck = true;
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	return subsCheck;
+}
+// 스탬프판별 메소드
+public boolean stampCheck(String tel, String businessNumber) {
+	boolean stampCheck = false;
+	try {
+		getConnection();
+		String sql = "select * from stamp where tel=? and businessNumber=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,tel);
+		psmt.setString(2,businessNumber);
+		rs = psmt.executeQuery();
+		
+		while(rs.next()) {
+			stampCheck = true;
+		}
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	return stampCheck;
+}
+// 구독해제 메소드
+
+public int removeSubscribe(String id, String businessNumber) {
+	try {
+		getConnection();
+		String sql = "delete from subscribe where id=? and businessNumber=?";
+		
+		psmt = conn.prepareStatement(sql);
+		psmt.setString(1,id);
+		psmt.setString(2,businessNumber);
+		cnt = psmt.executeUpdate();
+		
+	}catch(Exception e) {
+		e.printStackTrace();
+	}finally {
+		close();
+	}
+	return cnt;
+}
 
 	
 	
