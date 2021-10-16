@@ -72,10 +72,6 @@ legend {
    font-size: 30px;
 }
 
-h3, h5 {
-   text-align: center;
-}
-
 svg {
    width: 10%;
    height: 80px;
@@ -259,7 +255,7 @@ padding-left: 70px;
          for (int i = 0; i < stamp_list.size(); i++) {
          %>
          <div class="stamp" style="float: none; margin: 15px auto;">
-            <h3 class="stamp2" style="text-align: center">
+            <h3 class="stamp2">
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
             <div class="test1">

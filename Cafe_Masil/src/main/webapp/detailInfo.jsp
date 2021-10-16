@@ -379,10 +379,21 @@ div img:hover{
 </script>
 	
 	<div id="eval">
-		<button class="evaluation" onclick="data('깨끗해요')">깨끗해요</button><br>
-    	<button class="evaluation" onclick="data('맛있어요')">맛있어요</button><br>
-    	<button class="evaluation" onclick="data('넓어요')">넓어요</button><br>
-    	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button><br>
+		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
+    	<button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button>
+    	<button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button>
+    	<button class="evaluation" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button>
+    	<button class="evaluation" onclick="data('가성비에요')">가성비에요</button><br>
+    	<button class="evaluation" onclick="data('가게가 청결해요')">가게가 청결해요</button>
+    	<button class="evaluation" onclick="data('다시올래요')">다시올래요</button>
+    	<button class="evaluation" onclick="data('디저트가 다양해요')">디저트가 다양해요</button>
+    	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button>
+    	<button class="evaluation" onclick="data('직원분이 친절해요')">직원분이 친절해요</button><br>
+    	<button class="evaluation" onclick="data('넓어요')">넓어요</button>
+    	<button class="evaluation" onclick="data('조용해서 좋아요')">조용해서 좋아요</button>
+    	<button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button>
+    	<button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button>
+    	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
     	<button onclick="sendAjax()">전송</button>
     </div>
 <% memberDAO dao = new memberDAO();
@@ -391,16 +402,24 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
 %>
 <%if(eval_list!=null){ %>
 <div>
-<table>
-<tr>
+<table border="1">
+<th>아이디</th>
+<th>카페명</th>
+<th>평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
+<tr>
 <td><%=eval_list.get(i).getId() %></td>
-<%} %>
+<td><%=eval_list.get(i).getCafeName() %></td>
+<td><%=eval_list.get(i).getEvaluation()%></td>
 </tr>
+<%} %>
+
 </table>
 </div>
 <%}else{
 }%>
+
+
     <script>
         var a = [];
         function data(input) {
@@ -408,7 +427,7 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
             console.log(a);
         }
         
-        function sendAjax(){
+        	function sendAjax(){
         	
              $.ajax({
                 url:"evalService",
@@ -417,23 +436,24 @@ ArrayList<evalVO> eval_list = dao.evaluation_select(info_list.get(0).getCafeName
                 dataType : "json",
                 type : "post",
                 success : function(data){
-                    for(var i = 0; i < data.length(); i++){
-                        console.log(data.info);
-                        
+                    for(var i = 0; i < data.size(); i++){
+                        console.log(data.info),
+
                     }
-                    
+                   
                     
                     //div
                     //document.gete~("div").append("넣을데이터");
                     //innerhtml, append, createlment 
                 },
-                error : function(e){
-                    alert(e);
+                error : function(){
+                    alert("통신 실패");
                 }
 
             });
             a = [];
         }
+
     </script>
 
      <!-- footer -->
