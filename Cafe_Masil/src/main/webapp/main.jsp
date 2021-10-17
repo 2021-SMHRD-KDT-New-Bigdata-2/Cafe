@@ -35,7 +35,7 @@
    .row {
 overflow: hidden;
 position: relative;
-z-index:-1;
+z-index:1;
 }
 
    #overlay {
@@ -44,8 +44,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: #FFF;
-opacity: 0.8;
+background: #000;
+opacity: 0.7;
             /*background:rgba(255,255,255,0.8); or just this*/
 z-index: 50;
 color: #000;
@@ -66,9 +66,9 @@ left: 1%;
   .center-block();
 }
 .joinUs button{
-	font-size: 50px;
+	font-size: 40px;
 	border-radius:5px; 
-	width: 50%;
+	width: 25%;
 	hight: 50%;
 	margin: 50px;
 }
@@ -201,14 +201,14 @@ left: 1%;
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
-                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1"
+                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1&start=10&controls=0"
                      title="YouTube video player"
                     frameborder="0" scrolling="no"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen alt="#썸네일#"></iframe></p>
                 <div class="text-wrap">
                     <div id="overlay">
-                        <h1 style="text-align: center;"><span
+                        <h1 style="text-align: center; color: #fff;"><span
                                 style="font-family: Georgia, serif, 바탕, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E</span>,<br>MASI<span style="text-color: F9813A;">L</span></em></span>
                         </h1>
                     </div>
@@ -463,7 +463,20 @@ left: 1%;
    <hr>
    <!--  insert img -->
    
-   
+   <center>
+	   <div class="row">
+	   	<div class="col-sm-12">
+	   		<br>
+	   		<div>
+	   		<center><h1> 자주가는 카페를 등록하고 <br> 쿠폰을 한번에 관리해요 </h1></center><br><br><br></div>
+	   		</div>
+	   		<div>
+	   		<img src="img/mainMenu.JPG" alt="스탬프,구독" class="img-rounded">
+	   		</div>
+	   	</div>
+	   </div>
+   </center>
+   <!-- end img -->
    <hr>
    
    <div class="row">
