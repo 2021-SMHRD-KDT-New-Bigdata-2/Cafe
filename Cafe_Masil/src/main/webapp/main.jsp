@@ -65,6 +65,13 @@ left: 1%;
 .element {
   .center-block();
 }
+.joinUs button{
+	font-size: 50px;
+	border-radius:5px; 
+	width: 50%;
+	hight: 50%;
+	margin: 50px;
+}
     </style>
     
     
@@ -440,6 +447,7 @@ left: 1%;
    
    <hr>
    <!--  insert img -->
+   
    
    <hr>
    
