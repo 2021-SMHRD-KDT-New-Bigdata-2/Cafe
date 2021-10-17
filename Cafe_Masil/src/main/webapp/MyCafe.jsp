@@ -106,10 +106,7 @@ svg {
    height: 110px;
    text-align:center;
 }
-img {
-   text-align: center;
-   width: 40px;
-}
+
 .test1{
 	text-align: left;
 	padding-left: 70px;
@@ -134,7 +131,7 @@ h5{
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50" alt="CafeMasil"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CafeMasil"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
