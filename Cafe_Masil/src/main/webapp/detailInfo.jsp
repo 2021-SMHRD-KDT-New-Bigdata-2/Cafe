@@ -499,7 +499,6 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         </div>
 </div>
 <%}%>
-
 	
 	<div id="eval">
 		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
