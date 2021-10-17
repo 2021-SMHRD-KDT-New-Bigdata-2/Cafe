@@ -35,7 +35,7 @@
    .row {
 overflow: hidden;
 position: relative;
-z-index:1;
+z-index:-1;
 }
 
    #overlay {
@@ -44,10 +44,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: #000;
-opacity: 0.7;
-}
-
+background: #FFF;
+opacity: 0.8;
             /*background:rgba(255,255,255,0.8); or just this*/
 z-index: 50;
 color: #000;
@@ -74,7 +72,20 @@ left: 1%;
 	hight: 50%;
 	margin: 50px;
 }
-    </style>
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+}
+
+</style>
     
     
 </head>
@@ -123,9 +134,11 @@ left: 1%;
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="°Ë»ö">
+              <input name = "searchword" type="text" class="form-control" placeholder="Ä«Æä °Ë»ö">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -185,7 +198,7 @@ left: 1%;
         <!-- box-intro -->
     
        <div class="row">
-        <div class="col-md-12" >
+        <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
                     src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1"
@@ -195,13 +208,13 @@ left: 1%;
                     allowfullscreen alt="#½æ³×ÀÏ#"></iframe></p>
                 <div class="text-wrap">
                     <div id="overlay">
-                        <h1 style="text-align: center; color: #fff;"><span
-                                style="font-family: Georgia, serif, ¹ÙÅÁ, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E </span>,<br>MASI<span style="color: F9813A;">L</span></em></span>
+                        <h1 style="text-align: center;"><span
+                                style="font-family: Georgia, serif, ¹ÙÅÁ, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E</span>,<br>MASI<span style="text-color: F9813A;">L</span></em></span>
                         </h1>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
         <!-- end box-intro -->
     </div>
@@ -449,14 +462,9 @@ left: 1%;
    
    <hr>
    <!--  insert img -->
-   <div class="row" >
-      <div class="col-sm-9">
-         <div class="mainpho">
-          	<img src="img\mainMenu.jpg" class="img-responsive" alt="Responsive image">
-      	</div>
-   </div>
    
-   <hr style= "margin: 150px;">
+   
+   <hr>
    
    <div class="row">
       <div class="col-sm-12">
