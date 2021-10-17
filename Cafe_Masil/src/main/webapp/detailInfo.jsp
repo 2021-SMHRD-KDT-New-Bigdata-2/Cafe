@@ -487,7 +487,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
-                    </div>                   
+                    </div>
                     <div class="col-md-4">
                     </div> 
                     <div class="col-md-4">
