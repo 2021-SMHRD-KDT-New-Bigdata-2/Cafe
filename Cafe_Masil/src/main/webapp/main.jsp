@@ -201,7 +201,7 @@ left: 1%;
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
-                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1"
+                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1&start=10&controls=0"
                      title="YouTube video player"
                     frameborder="0" scrolling="no"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
