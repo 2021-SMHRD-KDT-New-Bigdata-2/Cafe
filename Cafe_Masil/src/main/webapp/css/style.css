@@ -1103,6 +1103,12 @@ textarea:focus {
     color: #fff;
 }
 
+.navbar-brand{
+position: absolute;
+top: -30%;
+left: 1%;
+}
+
 
 /* single project page
 ==================================================*/
