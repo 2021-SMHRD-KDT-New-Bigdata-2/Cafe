@@ -44,6 +44,7 @@ body {
     font-family: 'GowunDodum-Regular';
     line-height: 1.8;
     color: #999
+   
 }
 
 .no-padding {
@@ -144,7 +145,7 @@ h5 {
     height: 100%;
     border-radius: 100%;
     background-color:rgb(249,129,58);
-    opacity: 0.6;
+    opacity: 1.0;
     position: absolute;
     top: 0;
     left: 0;

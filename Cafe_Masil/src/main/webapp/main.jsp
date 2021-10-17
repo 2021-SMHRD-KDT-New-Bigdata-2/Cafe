@@ -201,13 +201,13 @@ left: 1%;
     <center><h4> 특색있는 카페들이 당신을 기다리고있어요. </h4></center></p>
 
     <!-- portfolio div -->
-    <div class="portfolio-div"  style= "padding-top: 200px; padding-down: 150px;">
+    <div class="portfolio-div"  style= "padding-top: 100px; padding-down: 150px;margin-left:100px;opacity:1.0;padding:100px">
         <div class="portfolio">
             <div class="no-padding portfolio_container">
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6  fashion logo">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="C:\Users\smhrd\Desktop\이미지3\img1.jpg" alt="image" class="img-responsive" />
+                        <img src="img/img1.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -221,9 +221,9 @@ left: 1%;
                 <!-- end single work -->
 
                 <!-- single work -->
-                <div class="col-md-3 col-sm-6 ads graphics">
+                <div class="col-md-3 col-sm-6 ads graphics" style='padding=100px'>
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img2.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -239,7 +239,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-6 col-sm-12 photography">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img3.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -255,11 +255,11 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 fashion ads">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img4.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Held by hands</span>
+                                    <span>회원가입</span>
                                     <em>Fashion / Ads</em>
                                 </div>
                             </div>
@@ -271,7 +271,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img5.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -287,7 +287,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-6 col-sm-12 photography">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img6.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -303,7 +303,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img7.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -319,7 +319,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img8.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -335,7 +335,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img9.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
@@ -351,7 +351,7 @@ left: 1%;
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
                     <a href="single-project.html" class="portfolio_item">
-                        <img src="http://placehold.it/1000x1000" alt="image" class="img-responsive" />
+                        <img src="img/img10.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
