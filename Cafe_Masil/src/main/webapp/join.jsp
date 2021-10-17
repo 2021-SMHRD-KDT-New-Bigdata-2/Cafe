@@ -53,26 +53,12 @@
     </div>
     <!-- end Preloader -->
 
-    <div class="container-fluid">
-        <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="100" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-            <!-- box-primary-nav-trigger -->
-        </header>
-        <!-- end box-header -->
         
-        <!-- box header -->
         <!-- navbar-->
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM2.png" width="60" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CafeMasil"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->

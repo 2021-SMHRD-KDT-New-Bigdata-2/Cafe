@@ -30,14 +30,15 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
-
-<body>
-	<style>
+    <style>
 		p{
 			margin-top:20px;
 		}
 	</style>
+</head>
+
+<body>
+	
     <!-- Preloader -->
     <div id="preloader">
         <div class="pre-container">
@@ -54,7 +55,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50" alt="img09"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CafeMasil"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
