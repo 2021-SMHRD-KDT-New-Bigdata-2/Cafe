@@ -43,7 +43,7 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
-        <% if(bossLogin==null){%>
+        <% if(vo==null){%>
           <ul class="nav navbar-nav navbar-right">
           <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
             <li ><a href="login.jsp">로그인<span class="sr-only"></span></a></li>
@@ -136,7 +136,7 @@
             <form action="messageService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                           <legend><p>To 구독자</p></legend>
+                           <center><legend><p>To 구독자</p></legend></center>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
@@ -145,9 +145,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <div class="col-md-2">
-                        <input type="submit" value="전송" class="btn btn-box">
-                        </div>
+                        <center><input type="submit" value="전송" class="btn btn-box"></center>
                     </div> 
                     <div>
                     </div>
@@ -173,7 +171,7 @@
             <form action="stampAddService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <legend><p>스탬프</p></legend>
+                            <center><legend><p>스탬프</p></legend></center>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
@@ -182,7 +180,7 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <input type="submit" value="스탬프 찍기" class="btn btn-box">
+                        <center><input type="submit" value="스탬프 찍기" class="btn btn-box"></center>
                     </div> 
                     <div>
                     </div>
@@ -207,7 +205,7 @@
             <form action="stampResetService?businessNumber=<%=bossLogin.getBusinessNumber()%>" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-12">
-                            <legend><p>스탬프 초기화</p></legend>
+                            <center><legend><p>스탬프 초기화</p></legend></center>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
@@ -216,7 +214,7 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <input type="submit" value="초기화" class="btn btn-box">
+                        <center><input type="submit" value="초기화" class="btn btn-box"></center>
                     </div> 
                     <div>
                     </div>
