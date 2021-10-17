@@ -155,6 +155,7 @@
     <!-- end top bar -->
 
     <!-- main-container -->
+    <center>
     <div class="container main-container">
                 <div class="container row" style="float:none; margin:100 auto;">          
                     <div class="col-md-4" style="verticle-align:middle">
@@ -168,7 +169,7 @@
                     </div> 
                     </div>
         </div>
-
+	</center>
 
 
     </div>
