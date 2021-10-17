@@ -35,7 +35,7 @@
    .row {
 overflow: hidden;
 position: relative;
-z-index:-1;
+z-index:1;
 }
 
    #overlay {
@@ -44,8 +44,10 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: #FFF;
-opacity: 0.8;
+background: #000;
+opacity: 0.7;
+}
+
             /*background:rgba(255,255,255,0.8); or just this*/
 z-index: 50;
 color: #000;
@@ -183,7 +185,7 @@ left: 1%;
         <!-- box-intro -->
     
        <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12" >
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
                     src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1"
@@ -193,8 +195,8 @@ left: 1%;
                     allowfullscreen alt="#½æ³×ÀÏ#"></iframe></p>
                 <div class="text-wrap">
                     <div id="overlay">
-                        <h1 style="text-align: center;"><span
-                                style="font-family: Georgia, serif, ¹ÙÅÁ, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E</span>,<br>MASI<span style="text-color: F9813A;">L</span></em></span>
+                        <h1 style="text-align: center; color: #fff;"><span
+                                style="font-family: Georgia, serif, ¹ÙÅÁ, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E </span>,<br>MASI<span style="color: F9813A;">L</span></em></span>
                         </h1>
                     </div>
                 </div>
@@ -447,9 +449,14 @@ left: 1%;
    
    <hr>
    <!--  insert img -->
+   <div class="row" >
+      <div class="col-sm-9">
+         <div class="mainpho">
+          	<img src="img\mainMenu.jpg" class="img-responsive" alt="Responsive image">
+      	</div>
+   </div>
    
-   
-   <hr>
+   <hr style= "margin: 150px;">
    
    <div class="row">
       <div class="col-sm-12">
