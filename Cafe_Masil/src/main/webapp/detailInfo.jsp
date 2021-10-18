@@ -160,6 +160,9 @@ div img:hover{
 #forCenter{
 	text-align: center;
 }
+.btn btn-box{
+right: 30px;
+}
 
 
 	/* image modal end */
@@ -705,6 +708,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
     </script>
 
 </table>
+<br><br><br><br><br>
 </div>
 <%}else{
 }%>
