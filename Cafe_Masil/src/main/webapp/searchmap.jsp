@@ -88,7 +88,19 @@
 		font-size:20px;
 		color:black;
 	}
-	
+	.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
 	</style>
 </head>
 <body>   
@@ -97,7 +109,7 @@
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CafeMasil"></a> <!-- 카페 왼쪽 상단-->
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CAFE,MASIL"></a> <!-- 카페 왼쪽 상단-->
         </div>
         <div class="collapse navbar-collapse" id="bs-example-collapse-1">
           <!-- 네비게이션 바에 회원로그인-->
@@ -121,15 +133,9 @@
             </a>
           </ul>
           <%}%>
-          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
-            <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
-            </div>
-            <button type="submit" class="btn btn-default">GO!</button>
-          </form>
         </div>
       </div>
-    </nav>
+    </nav>.
   
         <!-- end navbar -->
         <%if(vo==null) {%>
@@ -162,8 +168,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -195,7 +201,7 @@
 					<%if(searchword==null){ %>
 						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 						<button type="submit">
-						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-search"aria-hidden="true"></span>
 						</button>
 					<%}else{ %>
 						<input name="searchword" type="text" placeholder="<%=searchword %>">

@@ -24,14 +24,23 @@
     <script src="js/modernizr.js"></script>
 </head>
 <body>   
+<style>
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
+</style>
         <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
-            </div>
-                        <!-- box-nav -->
-            
-        </header>
+
         <!-- end box-header -->
 
         <!-- box header -->
@@ -65,9 +74,11 @@
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -108,8 +119,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -141,11 +152,11 @@
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="message" type="text" align="center">
-                            <span>구독자에게 보낼 메세지를 입력해주세요</span>
+                            <span style="font-size: 15px">구독자에게 보낼 메세지를 입력해주세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <center><input type="submit" value="전송" class="btn btn-box"></center>
+                        <center><input type="submit" value="전송" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>
@@ -176,11 +187,11 @@
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="tel" type="text">
-                            <span>이용자의 전화번호를 입력해주세요</span>
+                            <span style="font-size: 15px">이용자의 전화번호를 입력해주세요</span>
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <center><input type="submit" value="스탬프 찍기" class="btn btn-box"></center>
+                        <center><input type="submit" value="스탬프 찍기" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>
@@ -210,11 +221,11 @@
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="tel" type="text">
-                            <span>이용자의 전화번호를 입력해주세요</span>
+                            <span style="font-size: 15px">이용자의 전화번호를 입력해주세요</span>
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <center><input type="submit" value="초기화" class="btn btn-box"></center>
+                        <center><input type="submit" value="초기화" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>

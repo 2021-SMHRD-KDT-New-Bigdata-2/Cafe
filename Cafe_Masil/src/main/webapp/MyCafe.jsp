@@ -132,6 +132,19 @@ h5{
 	font-size: 30px;
 	left: -50px;
 }
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -162,9 +175,11 @@ h5{
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -211,8 +226,8 @@ h5{
          <li><a href="fran.jsp">가맹등록</a></li>
          <li><a href="keywordMenu.jsp">전체 카페</a></li>
          <li><a href="searchmap.jsp">카페검색</a></li>
-         <li><a href="gogacJiwon.jsp">고객지원</a></li>
          <li><a href="MyCafe.jsp">MyCafe</a></li>
+         <li><a href="gogacJiwon.jsp">고객지원</a></li>
 
          <li class="box-label">Follow me!</li>
 

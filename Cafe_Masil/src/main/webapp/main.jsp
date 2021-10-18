@@ -83,6 +83,7 @@ left: 1%;
 .navbar-form.navbar-right{
 	border:1px solid #777;
 	border-radius:50px;
+	background-color: #fff;
 }
 
 </style>
@@ -181,8 +182,8 @@ left: 1%;
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -396,6 +397,7 @@ left: 1%;
     
  <hr>
  <p style="pading: 100px; margin:50px; align:center;">
+ 	<br><br><br><br><br><br>
     <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center><br>
     <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
     <br><br><br><br></div>
@@ -458,6 +460,7 @@ left: 1%;
         </div>
       </div>   
    </div>
+   <br><br><br><br><br><br>
       <!-- end Thumbnail  -->
    
    <hr>
@@ -468,25 +471,28 @@ left: 1%;
 	   	<div class="col-sm-12">
 	   		<br>
 	   		<div>
+	   		<br><br><br><br><br><br>
 	   		<center><h1> 자주가는 카페를 등록하고 <br> 쿠폰을 한번에 관리해요 </h1></center><br><br><br></div>
 	   		</div>
 	   		<div>
-	   		<img src="img/mainMenu.JPG" alt="스탬프,구독" class="img-rounded">
+	   		<img src="img/mainMenu.jpg" alt="스탬프,구독" class="img-rounded">
 	   		</div>
 	   	</div>
 	   </div>
    </center>
+   <br><br><br><br><br><br>
    <!-- end img -->
    <hr>
    
    <div class="row">
       <div class="col-sm-12">
          <div class="joinUs">
+         <br><br><br><br><br><br>
           <center><h1 style="margin:100px"> 카페 사장님이라면 간단한 양식으로<br> CAFEMASIL의 식구가 될 수 있어요! </h1></center><br>
-          <center><button class="btn btn-danger" type="submit">동행하기</button></center></div>
+          <center><button class="btn btn-danger" onclick="location.href='fran.jsp' " type="submit">동행하기</button></center></div>
       </div>
    </div>
-   
+   <br><br><br><br><br><br><br><br><br>
    <hr>
    
    <!-- end put the image -->
