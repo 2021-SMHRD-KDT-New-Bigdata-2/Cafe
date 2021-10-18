@@ -222,7 +222,7 @@ left: 1%;
                 <!-- end single work -->
 
                 <!-- single work -->
-                <div class="col-md-3 col-sm-6 ads graphics" style='padding=100px'>
+                <div class="col-md-3 col-sm-6 ads graphics">
                     <a href="single-project.html" class="portfolio_item">
                         <img src="img/img2.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">

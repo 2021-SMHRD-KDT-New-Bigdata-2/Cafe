@@ -38,6 +38,31 @@
     
 
     <style>
+ body{
+  font-size:17px;
+   font-family: 'GowunDodum-Regular';
+   }
+   
+ .btn.btn-default{
+   border:none;
+}
+.form-control{
+   border:none;
+   font-size:15px;
+   padding:6px 3px;
+}
+.navbar-form.navbar-right{
+   border:1px solid #777;
+   border-radius:50px;
+   background-color: #fff;
+}
+ 
+ }     
+      
+      
+      
+      
+      
       #carousel-cafe-generic{
       height: 600px;
   	  width: 600px;
@@ -80,7 +105,29 @@
 }
 div img:hover{
    		 cursor: -webkit-zoom-in;
+}.text-uppercase{
+	font-size:50px;	
+} #caption {
+	text-align: center;
+	font-size:25px;
+	color:#f9813a;
+	font-weight:bold;
+}#col1, .reviewTable {
+	text-align: center;
+	color:#777;
+}#td1 {
+	text-align: center;
+}#tableForData {
+	border-radius:15px;	
+	font-size:23px;
+	border:solid;
+	margin:auto;
+	margin-top:50px;
+	border-collapse:inherit;
 }
+
+
+
 	/* image modal end */
     </style>
     
@@ -114,18 +161,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
     </div>
     <!-- end Preloader -->
 
-    <div class="container-fluid">
-       <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="" width="80" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-            <!-- box-primary-nav-trigger -->
-        </header>
+ 
         <!-- end box-header -->
         
         <!-- box header -->
@@ -159,9 +195,11 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -203,8 +241,8 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -437,10 +475,10 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-6">
-                       <a href = "removeSubscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
+                       <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
                     </div>
                     <div class="col-md-6">
-                    	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
+                    	<span class="btn btn-box">스탬프가 이미 발급되었습니다.</span>
                     </div>
                     <div class="col-md-12">
                     </div>
@@ -500,8 +538,18 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
 </div>
 <%}%>
 
-	
+
+<table>
+<div>
+<caption id="caption">평가지표</caption>
+
+
+
 	<div id="eval">
+	<table>
+	<div>
+	<caption id="caption">평가지표</caption>
+	
 		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
     	<button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button>
     	<button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button>
@@ -517,8 +565,10 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
     	<button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button>
     	<button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button>
     	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
-    	<button onclick="sendAjax()">전송</button>
+    	</div>
     </div>
+ </table>
+    	<button onclick="sendAjax()">전송</button>
     
     
     <script>
@@ -540,21 +590,24 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
    });
  });
 </script>
-	
+ 
+ 
+ 	
     
     
 
 <%if(eval_list!=null){ %>
 <div>
-<table border="1" id="tableForData" >
-<th>닉네임</th>
-<th>카페명</th>
-<th>평가</th>
+<table border="10" id="tableForData" >
+<caption id="caption">고객평가</caption>
+<th id="col1" style="background-color:#bcbcbc;">닉네임</th>
+<th id="col1" style="background-color:#bcbcbc;">카페명</th>
+<th id="col1" style="background-color:#bcbcbc;">평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
 <tr class="reviewTable">
 	<td id="td1"><%=eval_list.get(i).getNickname() %></td>
-	<td id="td2"><%=eval_list.get(i).getCafeName() %></td>
-	<td id="td3"><%=eval_list.get(i).getEvaluation()%></td>
+	<td id="td1"><%=eval_list.get(i).getCafeName() %></td>	
+	<td id="td1"><%=eval_list.get(i).getEvaluation()%></td>
 </tr>
 <%} %>
 

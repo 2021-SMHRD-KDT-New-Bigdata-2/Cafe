@@ -1102,6 +1102,8 @@ textarea:focus {
 .btn-box:focus {
     background:rgb(249,129,58);
     color: #fff;
+    outline-color: #f9813a;
+    
 }
 
 .navbar-brand{
