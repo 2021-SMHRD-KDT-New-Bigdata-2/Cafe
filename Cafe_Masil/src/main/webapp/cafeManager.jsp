@@ -136,7 +136,7 @@
      <div class="top-bar">
         <h1>카페관리</h1>
         <br>
-        <p><a href="#">구독관리</a> / 스탬프관리</p>
+        <p>구독관리 / 스탬프관리</p>
     </div>
     <!-- end Top bar -->
     
@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <center><input type="submit" value="전송" class="btn btn-box"></center>
+                        <center><input type="submit" value="전송" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <center><input type="submit" value="스탬프 찍기" class="btn btn-box"></center>
+                        <center><input type="submit" value="스탬프 찍기" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <center><input type="submit" value="초기화" class="btn btn-box"></center>
+                        <center><input type="submit" value="초기화" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>

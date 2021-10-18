@@ -108,42 +108,42 @@ svg {
 }
 
 .test1{
-	text-align: left;
-	padding-left: 70px;
+   text-align: left;
+   padding-left: 70px;
 }
 .test2 {
-	padding-left: 70px;
-	text-align: left;
-	position: relative;
-	top: -80px
-	
+   padding-left: 70px;
+   text-align: left;
+   position: relative;
+   top: -80px
+   
 }
 h5{
-	text-align:center;
-	font-size:16px;
+   text-align:center;
+   font-size:16px;
 }
 
 .glyphicon-gift{
-	color:rgb(249,129,58);
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   color:rgb(249,129,58);
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .glyphicon-user{
-	color: rgb(249,129,58);
-	font-size: 30px;
-	left: -50px;
+   color: rgb(249,129,58);
+   font-size: 30px;
+   left: -50px;
 }
 .btn.btn-default{
-	border:none;
+   border:none;
 }
 .form-control{
-	border:none;
-	font-size:15px;
-	padding:6px 3px;
+   border:none;
+   font-size:15px;
+   padding:6px 3px;
 }
 .navbar-form.navbar-right{
-	border:1px solid #777;
-	border-radius:50px;
-	background-color: #fff;
+   border:1px solid #777;
+   border-radius:50px;
+   background-color: #fff;
 }
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -258,7 +258,7 @@ h5{
 
    <!-- ´Ð³×ÀÓ -->
    <div class="nickname" >
-   	  <div class="nick"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;<%=vo.getNickname()%></span></div>
+        <div class="nick"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;<%=vo.getNickname()%></span></div>
    </div>
     <br><br>
 
@@ -274,17 +274,17 @@ h5{
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
             <div class="test1">
-            	<%for (int k=0; k<10; k++){%>
-            	<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-            	<%if (k == 4) {%>
+               <%for (int k=0; k<10; k++){%>
+               <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+               <%if (k == 4) {%>
                <br> <br>
                <%}%>
-            	<%} %>
+               <%} %>
             </div>
             <div class="test2">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
                <%if(j<=8){ %>
-               	<span class="glyphicon glyphicon-check"  aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-check"  aria-hidden="true"></span>
                <%if (j == 4) {%>
                <br> <br>
                <%}%>
@@ -328,7 +328,7 @@ h5{
       
    </div>
 
-	<!-- footer -->
+   <!-- footer -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="container-fluid">
