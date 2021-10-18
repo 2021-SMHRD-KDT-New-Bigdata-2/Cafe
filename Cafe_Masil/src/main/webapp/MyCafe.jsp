@@ -108,42 +108,42 @@ svg {
 }
 
 .test1{
-	text-align: left;
-	padding-left: 70px;
+   text-align: left;
+   padding-left: 70px;
 }
 .test2 {
-	padding-left: 70px;
-	text-align: left;
-	position: relative;
-	top: -80px
-	
+   padding-left: 70px;
+   text-align: left;
+   position: relative;
+   top: -80px
+   
 }
 h5{
-	text-align:center;
-	font-size:16px;
+   text-align:center;
+   font-size:16px;
 }
 
 .glyphicon-gift{
-	color:rgb(249,129,58);
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+   color:rgb(249,129,58);
+   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .glyphicon-user{
-	color: rgb(249,129,58);
-	font-size: 30px;
-	left: -50px;
+   color: rgb(249,129,58);
+   font-size: 30px;
+   left: -50px;
 }
 .btn.btn-default{
-	border:none;
+   border:none;
 }
 .form-control{
-	border:none;
-	font-size:15px;
-	padding:6px 3px;
+   border:none;
+   font-size:15px;
+   padding:6px 3px;
 }
 .navbar-form.navbar-right{
-	border:1px solid #777;
-	border-radius:50px;
-	background-color: #fff;
+   border:1px solid #777;
+   border-radius:50px;
+   background-color: #fff;
 }
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -257,26 +257,10 @@ h5{
    <!-- end Top bar -->
 
    <!-- 닉네임 -->
-   <center>
    <div class="nickname" >
-<<<<<<< HEAD
-      <i class="bi bi-person-circle"></i>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-         fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-            <path fill-rule="evenodd"
-            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-        </svg>
-        <div class="nick"><%=vo.getNickname()%>님 환영합니다 ♥</div>
-=======
-   	  <div class="nick"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;<%=vo.getNickname()%></span></div>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
+        <div class="nick"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;<%=vo.getNickname()%></span></div>
    </div>
-<<<<<<< HEAD
-   </center>
-=======
     <br><br>
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
 
    <div class="container main-container">
       <fieldset class="mystamp">
@@ -290,17 +274,17 @@ h5{
                <%=stamp_list.get(i).getCafeName()%>
                <br><br>
             <div class="test1">
-            	<%for (int k=0; k<10; k++){%>
-            	<span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
-            	<%if (k == 4) {%>
+               <%for (int k=0; k<10; k++){%>
+               <span class="glyphicon glyphicon-unchecked" aria-hidden="true"></span>
+               <%if (k == 4) {%>
                <br> <br>
                <%}%>
-            	<%} %>
+               <%} %>
             </div>
             <div class="test2">
                <%for (int j = 0; j < stamp_list.get(i).getAllStamp(); j++) {%>
                <%if(j<=8){ %>
-               	<span class="glyphicon glyphicon-check"  aria-hidden="true"></span>
+                  <span class="glyphicon glyphicon-check"  aria-hidden="true"></span>
                <%if (j == 4) {%>
                <br> <br>
                <%}%>
@@ -344,7 +328,7 @@ h5{
       
    </div>
 
-	<!-- footer -->
+   <!-- footer -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="container-fluid">
