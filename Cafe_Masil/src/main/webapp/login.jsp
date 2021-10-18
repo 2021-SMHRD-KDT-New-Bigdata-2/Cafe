@@ -44,19 +44,22 @@
         </div>
     </div>
     <!-- end Preloader -->
+<style>
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
+</style>
 
-    <div class="container-fluid">
-        <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="100" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-            <!-- box-primary-nav-trigger -->
-        </header>
         <!-- end box-header -->
 
 <!-- box header -->
@@ -90,9 +93,11 @@
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -133,8 +138,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -163,17 +168,17 @@
                     <div class="col-md-8" style="float:none; margin:0 auto;">
                         <div class="input-contact">
                             <input name="id" type="text">
-                            <span>ID를 입력하세요</span>
+                            <span style="font-size: 15px">ID를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-8" style="float:none; margin:0 auto;">
                         <div class="input-contact">
                             <input name="pw" type="text">
-                            <span>비밀번호를 입력하세요</span>
+                            <span style="font-size: 15px">비밀번호를 입력하세요</span>
                         </div>        
                     </div>          
                     <div class="col-md-2" style="float:none; margin:0 auto;">
-                        <input type="submit" value="로그인" class="btn btn-box">
+                        <input type="submit" style="border:0;outline:0;" value="로그인" class="btn btn-box">
                     </div>
             	</div>
             </form>

@@ -88,23 +88,56 @@
 		font-size:20px;
 		color:black;
 	}
-	
+	.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
 	</style>
 </head>
 <body>   
-        <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-               <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
+	 <!-- box header -->
+        <!-- navbar-->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href=main.jsp><img src="img\CM5.png" width="50px" alt="CAFE,MASIL"></a> <!-- 카페 왼쪽 상단-->
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-collapse-1">
+          <!-- 네비게이션 바에 회원로그인-->
+        <% if(vo==null){%>
+          <ul class="nav navbar-nav navbar-right">
+          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
+            <li ><a href="login.jsp">로그인<span class="sr-only"></span></a></li>
+            <li ><a href="join.jsp">회원가입</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
             </a>
-        </header>
-        <!-- end box-header -->
-
-        <!-- nav -->
+          </ul>
+          <%}else{%>
+          <ul class="nav navbar-nav navbar-right">
+          <li ><a href="bosslogin.jsp">카페관리<span class="sr-only"></span></a></li>
+            <li ><a href="LogoutService">로그아웃</a></li>
+            <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
+              <a class="box-primary-nav-trigger" href="#0">
+                <span class="box-menu-text">Menu</span><span class="box-menu-icon">
+            </a>
+          </ul>
+          <%}%>
+        </div>
+      </div>
+    </nav>.
+  
+        <!-- end navbar -->
         <%if(vo==null) {%>
     	<nav>
      	    <ul class="box-primary-nav">
@@ -135,8 +168,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -168,7 +201,7 @@
 					<%if(searchword==null){ %>
 						<input name="searchword" type="text" placeholder="카페명을 검색하세요">
 						<button type="submit">
-						<span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+						<span class="glyphicon glyphicon-search"aria-hidden="true"></span>
 						</button>
 					<%}else{ %>
 						<input name="searchword" type="text" placeholder="<%=searchword %>">
@@ -328,6 +361,7 @@ function displayMarker(locPosition, message) {
         </div>
     </div>
     <%} %>
+    
     <!-- footer -->
     <footer>
         <div class="container-fluid">

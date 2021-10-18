@@ -35,7 +35,7 @@
    .row {
 overflow: hidden;
 position: relative;
-z-index:-1;
+z-index:1;
 }
 
    #overlay {
@@ -44,8 +44,8 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-background: #FFF;
-opacity: 0.8;
+background: #000;
+opacity: 0.7;
             /*background:rgba(255,255,255,0.8); or just this*/
 z-index: 50;
 color: #000;
@@ -65,7 +65,28 @@ left: 1%;
 .element {
   .center-block();
 }
-    </style>
+.joinUs button{
+	font-size: 40px;
+	border-radius:5px; 
+	width: 25%;
+	hight: 50%;
+	margin: 50px;
+}
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
+
+</style>
     
     
 </head>
@@ -114,9 +135,11 @@ left: 1%;
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -159,8 +182,8 @@ left: 1%;
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -179,20 +202,20 @@ left: 1%;
         <div class="col-md-12">
             <p align="center">
                 <iframe class="embed-responsive-item" width="100%" height="900px"
-                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1"
+                    src="https://www.youtube.com/embed/BaDe3MZKLF8?autoplay=1&mute=1&start=10&controls=0"
                      title="YouTube video player"
                     frameborder="0" scrolling="no"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen alt="#썸네일#"></iframe></p>
                 <div class="text-wrap">
                     <div id="overlay">
-                        <h1 style="text-align: center;"><span
+                        <h1 style="text-align: center; color: #fff;"><span
                                 style="font-family: Georgia, serif, 바탕, batang; font-size: 120px;"><em><br><br>CAF<span style="text-color: F9813A;">E</span>,<br>MASI<span style="text-color: F9813A;">L</span></em></span>
                         </h1>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
     </div>
         <!-- end box-intro -->
     </div>
@@ -374,6 +397,7 @@ left: 1%;
     
  <hr>
  <p style="pading: 100px; margin:50px; align:center;">
+ 	<br><br><br><br><br><br>
     <center><h1> 원하는 키워드로 카페를 찾아보세요 </h1></center><br>
     <center><h4> All# 와이파이# 단체석# 원두판매# 애견동반# 24시간# 루프탑# 국민지원금</h4></center></p>
     <br><br><br><br></div>
@@ -436,21 +460,39 @@ left: 1%;
         </div>
       </div>   
    </div>
+   <br><br><br><br><br><br>
       <!-- end Thumbnail  -->
    
    <hr>
    <!--  insert img -->
    
+   <center>
+	   <div class="row">
+	   	<div class="col-sm-12">
+	   		<br>
+	   		<div>
+	   		<br><br><br><br><br><br>
+	   		<center><h1> 자주가는 카페를 등록하고 <br> 쿠폰을 한번에 관리해요 </h1></center><br><br><br></div>
+	   		</div>
+	   		<div>
+	   		<img src="img/mainMenu.jpg" alt="스탬프,구독" class="img-rounded">
+	   		</div>
+	   	</div>
+	   </div>
+   </center>
+   <br><br><br><br><br><br>
+   <!-- end img -->
    <hr>
    
    <div class="row">
       <div class="col-sm-12">
          <div class="joinUs">
+         <br><br><br><br><br><br>
           <center><h1 style="margin:100px"> 카페 사장님이라면 간단한 양식으로<br> CAFEMASIL의 식구가 될 수 있어요! </h1></center><br>
-          <center><button class="btn btn-danger" type="submit">동행하기</button></center></div>
+          <center><button class="btn btn-danger" onclick="location.href='fran.jsp' " type="submit">동행하기</button></center></div>
       </div>
    </div>
-   
+   <br><br><br><br><br><br><br><br><br>
    <hr>
    
    <!-- end put the image -->

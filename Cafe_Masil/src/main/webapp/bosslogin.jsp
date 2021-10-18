@@ -34,6 +34,19 @@
 		p{
 			margin-top:20px;
 		}
+		.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
 	</style>
 </head>
 
@@ -81,9 +94,11 @@
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -125,8 +140,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -155,13 +170,13 @@
                     <div class="col-md-8" style="float:none; margin:0 auto;">
                         <div class="input-contact">
                             <input name="businessNumber" type="text">
-                            <span>사업자번호를 입력하세요</span>
+                            <span style="font-size: 15px">사업자번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-8" style="float:none; margin:0 auto;">
                         <div class="input-contact">
                             <input name="bossPw" type="text">
-                            <span>비밀번호를 입력하세요</span>
+                            <span style="font-size: 15px">비밀번호를 입력하세요</span>
                         </div>        
                     </div>
                     <div class="col-md-12">

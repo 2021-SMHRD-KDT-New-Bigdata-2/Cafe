@@ -127,6 +127,24 @@ h5{
 	color:rgb(249,129,58);
 	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.glyphicon-user{
+	color: rgb(249,129,58);
+	font-size: 30px;
+	left: -50px;
+}
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
 </style>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container-fluid">
@@ -157,9 +175,11 @@ h5{
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -206,8 +226,8 @@ h5{
          <li><a href="fran.jsp">가맹등록</a></li>
          <li><a href="keywordMenu.jsp">전체 카페</a></li>
          <li><a href="searchmap.jsp">카페검색</a></li>
-         <li><a href="gogacJiwon.jsp">고객지원</a></li>
          <li><a href="MyCafe.jsp">MyCafe</a></li>
+         <li><a href="gogacJiwon.jsp">고객지원</a></li>
 
          <li class="box-label">Follow me!</li>
 
@@ -238,15 +258,9 @@ h5{
 
    <!-- 닉네임 -->
    <div class="nickname" >
-      <i class="bi bi-person-circle"></i>
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-         fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-            <path fill-rule="evenodd"
-            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-        </svg>
-      <div class="nick"><%=vo.getNickname()%></div>
+   	  <div class="nick"><span class="glyphicon glyphicon-user" aria-hidden="true">&nbsp;&nbsp;<%=vo.getNickname()%></span></div>
    </div>
+    <br><br>
 
    <div class="container main-container">
       <fieldset class="mystamp">
@@ -315,6 +329,7 @@ h5{
    </div>
 
 	<!-- footer -->
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="container-fluid">
           <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>

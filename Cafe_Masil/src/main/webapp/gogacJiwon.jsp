@@ -43,20 +43,21 @@
         </div>
     </div>
     <!-- end Preloader -->
-
-    <div class="container-fluid">
-        <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="100" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-            <!-- box-primary-nav-trigger -->
-        </header>
-        <!-- end box-header -->
+<style>
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
+</style>
 
 <!-- box header -->
         <!-- navbar-->
@@ -89,9 +90,11 @@
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -155,6 +158,7 @@
     <!-- end top bar -->
 
     <!-- main-container -->
+    <center>
     <div class="container main-container">
                 <div class="container row" style="float:none; margin:100 auto;">          
                     <div class="col-md-4" style="verticle-align:middle">
@@ -168,7 +172,7 @@
                     </div> 
                     </div>
         </div>
-
+	</center>
 
 
     </div>

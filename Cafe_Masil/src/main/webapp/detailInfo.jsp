@@ -104,10 +104,11 @@
 		position : sticky;
 }
 div img:hover{
-   		 cursor: -webkit-zoom-in;
-}.text-uppercase{
+   		 cursor: -webkit-zoom-in; 		 
+}
+.text-uppercase{
 	font-size:50px;	
-} #caption {
+} #caption,#caption1 {
 	text-align: center;
 	font-size:25px;
 	color:#f9813a;
@@ -525,7 +526,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
-                    </div>                   
+                    </div>
                     <div class="col-md-4">
                     </div> 
                     <div class="col-md-4">
@@ -539,16 +540,12 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
 <%}%>
 
 
-<table>
 <div>
-<caption id="caption">평가지표</caption>
-
-
-
+<caption id="caption1">평가지표</caption>
 	<div id="eval">
 	<table>
 	<div>
-	<caption id="caption">평가지표</caption>
+	
 	
 		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
     	<button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button>
@@ -565,10 +562,11 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
     	<button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button>
     	<button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button>
     	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
-    	</div>
+    </div>
     </div>
  </table>
-    	<button onclick="sendAjax()">전송</button>
+ </div>
+    	<button class="btneval"onclick="sendAjax()">전송</button>
     
     
     <script>

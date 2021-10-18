@@ -33,7 +33,21 @@
 </head>
 
 <body>
-
+<style>
+.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
+</style>
     <!-- Preloader -->
     <div id="preloader">
         <div class="pre-container">
@@ -77,28 +91,15 @@
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
     </nav>
-
-    <div class="container-fluid">
-        <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="100" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-            <!-- box-primary-nav-trigger -->
-        </header>
-        <!-- end box-header -->
-
         <!-- nav -->
        <%if(vo==null) {%>
     	<nav>
@@ -130,8 +131,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -148,7 +149,7 @@
 
     <!-- top bar -->
     <div class="top-bar">
-        <h1>가맹요청</h1>
+        <h1>가맹등록</h1>
     </div>
     <!-- end top bar -->
 
@@ -160,37 +161,37 @@
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="bossName" type="text">
-                            <span>이름를 입력하세요</span>
+                            <span style="font-size: 15px">이름를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="businessNumber" type="text">
-                            <span>사업자번호를 입력하세요</span>
+                            <span style="font-size: 15px">사업자번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="bossTel" type="text">
-                            <span>휴대폰번호를 입력하세요</span>
+                            <span style="font-size: 15px">휴대폰번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="cafeName" type="text">
-                            <span>카페명을 입력하세요</span>
+                            <span style="font-size: 15px">카페명을 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="cafeAddress" type="text">
-                            <span>카페 주소를 입력하세요</span>
+                            <span style="font-size: 15px">카페 주소를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
                             <input name="cafeTel" type="text">
-                            <span>카페 전화번호를 입력하세요</span>
+                            <span style="font-size: 15px">카페 전화번호를 입력하세요</span>
                         </div>
                     </div>
                     <div class="col-md-12">
@@ -198,7 +199,7 @@
                     <div class="col-md-12">
                     </div>                   
                     <div class="col-md-2" style="float:none; margin:0 auto;">
-                        <input type="submit" value="가맹요청" class="btn btn-box">
+                        <input type="submit" style="border:0;outline:0;" value="가맹요청" class="btn btn-box">
                     </div> 
                 </div>
             </form>
