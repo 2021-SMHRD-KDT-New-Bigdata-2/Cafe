@@ -303,7 +303,7 @@ function displayMarker(locPosition, message) {
         			  	  <p>주소 : <%=cafe_list.get(0).getCafeAddress() %> </p>
         			  	  <p>번호 : <%=cafe_list.get(0).getCafeTel() %> </p>
         			  	  <p><%if(vo!=null){ %>
-                    <a href="infoService?businessNumber=1000000025" class="portfolio_item">상세보기</a>
+                    <a href="infoService?businessNumber=<%=cafe_list.get(0).getBusinessNumber() %>" class="portfolio_item">상세보기</a>
                     <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">상세보기</a>
                     <%} %> </p>
