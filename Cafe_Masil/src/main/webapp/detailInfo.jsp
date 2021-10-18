@@ -38,6 +38,17 @@
     
 
     <style>
+    
+    .befClick {
+    	background-color : #e7e7e7;
+    	color : #999;
+    }
+    
+    .aftClick {
+    	background-color : #f9813a;
+    	color : white;
+    }
+    
     #tableeval{
     	border-color : transparent;
     	border-collapse: separate;
@@ -63,7 +74,10 @@
    border-radius:50px;
    background-color: #fff;
 }
- 
+ #first{
+ 	text-align:center;
+ 	font-weight:bold;
+ }
       
       
       
@@ -120,14 +134,9 @@ div img:hover{
 .evaluation{
 	border-radius:30px;
 	margin:auto;
-
+	
 }
-#caption1 {
-	text-align: center;
-	font-size:25px;
-	color:#f9813a;
-	font-weight:bold;
-}#caption {
+.caption {
 	text-align: center;
 	font-size:25px;
 	color:#f9813a;
@@ -151,6 +160,10 @@ div img:hover{
 #forCenter{
 	text-align: center;
 }
+.btn btn-box{
+right: 30px;
+}
+
 
 	/* image modal end */
     </style>
@@ -465,12 +478,16 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         <div class="col-md-6">
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
+                    <center>
                     <div class="col-md-6">
                        <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
                     </div>
+                    </center>
+                    <center>
                     <div class="col-md-6">
                     	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
                     </div>
+                    </center>
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
@@ -501,9 +518,11 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                     <div class="col-md-6">
                        <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
                     </div>
+                    <center>
                     <div class="col-md-6">
                     	<span class="btn btn-box">스탬프가 이미 발급되었습니다.</span>
                     </div>
+                    </center>
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
@@ -532,9 +551,11 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         <div class="col-md-6">
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
+                    <center>
                     <div class="col-md-6">
                        <a href = "loginService" class="btn btn-box">구독</a>
                     </div>
+                    </center>
                     <div class="col-md-6">
                     	<a href = "loginService" class="btn btn-box">스탬프 발급</a>
                     </div>
@@ -563,41 +584,44 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
 <%}%>
 
 
- 
+ 	
 	<div id="eval">
 	<table border="1" id="tableeval">
+	<caption class="caption">원하는 키워드를 골라주세요 </caption>
 	<div id="eval1">
 		<tr>
-			<td><button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button></td>
-		    <td><button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button></td>
-		    <td><button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button></td>
-		    <td><button class="evaluation" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button></td>
-		    <td><button class="evaluation" onclick="data('가성비에요')">가성비에요</button></td>
+			<td><button class="evaluation befClick" onclick="data('맛이 진해요')">맛이 진해요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('맛이 연해요')">맛이 연해요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('가성비에요')">가성비에요</button></td>
 		</tr>
 		<tr>
-		    <td><button class="evaluation" onclick="data('가게가 청결해요')">가게가 청결해요</button></td>
-		    <td><button class="evaluation" onclick="data('다시올래요')">다시올래요</button></td>
-		    <td><button class="evaluation" onclick="data('디저트가 다양해요')">디저트가 다양해요</button></td>
-		    <td><button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button></td>
-		    <td><button class="evaluation" onclick="data('직원분이 친절해요')">직원분이 친절해요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('가게가 청결해요')">가게가 청결해요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('다시올래요')">다시올래요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('디저트가 다양해요')">디저트가 다양해요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('사진 맛집이에요')">사진 맛집이에요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('직원분이 친절해요')">직원분이 친절해요</button></td>
 		 </tr>
 		 <tr>
-		    <td><button class="evaluation" onclick="data('넓어요')">넓어요</button></td>
-		    <td><button class="evaluation" onclick="data('조용해서 좋아요')">조용해서 좋아요</button></td>
-		    <td><button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button></td>
-		    <td><button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button></td>
-		    <td><button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('넓어요')">넓어요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('조용해서 좋아요')">조용해서 좋아요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('분위기가 좋아요')">분위기가 좋아요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('배달이 빨라요')">배달이 빨라요</button></td>
+		    <td><button class="evaluation befClick" onclick="data('일회용기 안써요')">일회용기 안써요</button></td>
 		 </tr>   
     		
     </div>
     </table>
     
     </div>
-    <div id="forCenter">
-    <button class="btneval" onclick="sendAjax()">전송</button>
+    
+    <div id="forCenter" style="left: 30px">
+    <button class="btn btn-box"  onclick="sendAjax()">평가하기</button>
     </div>
+    
     <script>
-
+	
     $(function(){
 //      이미지 클릭시 해당 이미지 모달
     $(".item").click(function(){
@@ -608,6 +632,10 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
      });
      
      
+     $(".befClick").on("click",function(){
+    	 $(this).removeClass("befClick");
+    	 $(this).addClass("aftClick");
+     })
      
 //   모달 클릭할때 이미지 닫음
      $(".modal").click(function (e) {
@@ -624,7 +652,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
 <%if(eval_list!=null){ %>
 <div>
 <table border="10" id="tableForData" >
-<caption id="caption">고객평가</caption>
+<caption class="caption">고객평가</caption>
 <th id="col1" style="background-color:#bcbcbc;">닉네임</th>
 <th id="col1" style="background-color:#bcbcbc;">평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
@@ -680,6 +708,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
     </script>
 
 </table>
+<br><br><br><br><br>
 </div>
 <%}else{
 }%>

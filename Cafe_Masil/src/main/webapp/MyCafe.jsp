@@ -295,7 +295,6 @@ h5{
                <%}%>
                </div>
                
-               <br><br><br><br><br><br>
             </h3>
             
          </div>
@@ -329,7 +328,7 @@ h5{
    </div>
 
    <!-- footer -->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
         <div class="container-fluid">
           <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>

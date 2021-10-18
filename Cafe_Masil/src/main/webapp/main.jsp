@@ -6,6 +6,7 @@
 
 <head>
    <% memberVO vo = (memberVO)session.getAttribute("member"); %>
+   <% String businessNumber = request.getParameter("businessNumber"); %>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -230,7 +231,11 @@ left: 1%;
             <div class="no-padding portfolio_container">
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6  fashion logo">
+                <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000006" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img1.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -245,8 +250,12 @@ left: 1%;
                 <!-- end single work -->
 
                 <!-- single work -->
-                <div class="col-md-3 col-sm-6 ads graphics" style='padding=100px'>
+                <div class="col-md-3 col-sm-6 ads graphics">
+                    <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000010" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img2.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -262,7 +271,11 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-6 col-sm-12 photography">
+                    <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000012" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img3.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -278,7 +291,11 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 fashion ads">
+                   <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000014" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img4.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -294,7 +311,11 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
+                    <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000023" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img5.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -310,7 +331,11 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-6 col-sm-12 photography">
+                    <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000021" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img6.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -326,7 +351,11 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
+                    <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000027" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img7.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
@@ -342,7 +371,11 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
+                    <%if(vo!=null){ %>
+                    <a href="infoService?businessNumber=1000000025" class="portfolio_item">
+                    <%}else{ %>
                     <a href="login.jsp" class="portfolio_item">
+                    <%} %>
                         <img src="img/img8.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
