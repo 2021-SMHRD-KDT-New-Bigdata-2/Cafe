@@ -437,7 +437,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
                     <div class="col-md-6">
-                       <a href = "removeSubscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
+                       <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
                     </div>
                     <div class="col-md-6">
                     	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
