@@ -156,7 +156,7 @@
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <center><input type="submit" value="Àü¼Û" class="btn btn-box"></center>
+                        <center><input type="submit" value="Àü¼Û" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>
@@ -191,7 +191,7 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <center><input type="submit" value="½ºÅÆÇÁ Âï±â" class="btn btn-box"></center>
+                        <center><input type="submit" value="½ºÅÆÇÁ Âï±â" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>
@@ -225,7 +225,7 @@
                         </div>
                     </div>
                     <div class="col-md-12" style="float:none; margin:0 auto;">
-                        <center><input type="submit" value="ÃÊ±âÈ­" class="btn btn-box"></center>
+                        <center><input type="submit" value="ÃÊ±âÈ­" class="btn btn-box" style="border:0;outline:0;"></center>
                     </div> 
                     <div>
                     </div>

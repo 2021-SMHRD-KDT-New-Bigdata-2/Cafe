@@ -192,7 +192,7 @@
                     <div class="col-md-12">
                     </div>                         
                     <div class="col-md-2" style="float:none; margin:0 auto;">
-                        <input type="submit" value="로그인" class="btn btn-box">
+                        <input type="submit" value="로그인" class="btn btn-box" style="border:0;outline:0;">
                     </div> 
                     
                 </div>
