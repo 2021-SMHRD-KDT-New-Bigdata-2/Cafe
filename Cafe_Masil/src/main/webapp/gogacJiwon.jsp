@@ -133,8 +133,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -179,6 +179,7 @@
     <!-- end main-container -->
 
     <!-- footer -->
+    <br><br><br><br><br><br><br>
     <footer>
         <div class="container-fluid">
           <i class="fa fa-love">당신의 동네와 함께 하는, CafeMasil</i><br>
