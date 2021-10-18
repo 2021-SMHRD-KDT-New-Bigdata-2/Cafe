@@ -38,6 +38,13 @@
     
 
     <style>
+    #tableeval{
+    	border-color : transparent;
+    	border-collapse: separate;
+    	border-spacing: 0 1rem;
+    	text-align: center;
+    	margin : auto;
+    }
  body{
   font-size:17px;
    font-family: 'GowunDodum-Regular';
@@ -57,7 +64,7 @@
    background-color: #fff;
 }
  
- }     
+      
       
       
       
@@ -108,26 +115,42 @@ div img:hover{
 }
 .text-uppercase{
 	font-size:50px;	
-} #caption,#caption1 {
+} 
+
+.evaluation{
+	border-radius:30px;
+	margin:auto;
+
+}
+#caption1 {
 	text-align: center;
 	font-size:25px;
 	color:#f9813a;
 	font-weight:bold;
-}#col1, .reviewTable {
+}#caption {
+	text-align: center;
+	font-size:25px;
+	color:#f9813a;
+	font-weight:bold;
+}
+
+#col1, .reviewTable {
 	text-align: center;
 	color:#777;
 }#td1 {
 	text-align: center;
 }#tableForData {
 	border-radius:15px;	
-	font-size:23px;
+	font-size:15px;
 	border:solid;
 	margin:auto;
 	margin-top:50px;
 	border-collapse:inherit;
 }
 
-
+#forCenter{
+	text-align: center;
+}
 
 	/* image modal end */
     </style>
@@ -540,35 +563,39 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
 <%}%>
 
 
-<div>
-<caption id="caption1">평가지표</caption>
+ 
 	<div id="eval">
-	<table>
-	<div>
-	
-	
-		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
-    	<button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button>
-    	<button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button>
-    	<button class="evaluation" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button>
-    	<button class="evaluation" onclick="data('가성비에요')">가성비에요</button><br>
-    	<button class="evaluation" onclick="data('가게가 청결해요')">가게가 청결해요</button>
-    	<button class="evaluation" onclick="data('다시올래요')">다시올래요</button>
-    	<button class="evaluation" onclick="data('디저트가 다양해요')">디저트가 다양해요</button>
-    	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button>
-    	<button class="evaluation" onclick="data('직원분이 친절해요')">직원분이 친절해요</button><br>
-    	<button class="evaluation" onclick="data('넓어요')">넓어요</button>
-    	<button class="evaluation" onclick="data('조용해서 좋아요')">조용해서 좋아요</button>
-    	<button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button>
-    	<button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button>
-    	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
+	<table border="1" id="tableeval">
+	<div id="eval1">
+		<tr>
+			<td><button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button></td>
+		    <td><button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button></td>
+		    <td><button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button></td>
+		    <td><button class="evaluation" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button></td>
+		    <td><button class="evaluation" onclick="data('가성비에요')">가성비에요</button></td>
+		</tr>
+		<tr>
+		    <td><button class="evaluation" onclick="data('가게가 청결해요')">가게가 청결해요</button></td>
+		    <td><button class="evaluation" onclick="data('다시올래요')">다시올래요</button></td>
+		    <td><button class="evaluation" onclick="data('디저트가 다양해요')">디저트가 다양해요</button></td>
+		    <td><button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button></td>
+		    <td><button class="evaluation" onclick="data('직원분이 친절해요')">직원분이 친절해요</button></td>
+		 </tr>
+		 <tr>
+		    <td><button class="evaluation" onclick="data('넓어요')">넓어요</button></td>
+		    <td><button class="evaluation" onclick="data('조용해서 좋아요')">조용해서 좋아요</button></td>
+		    <td><button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button></td>
+		    <td><button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button></td>
+		    <td><button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button></td>
+		 </tr>   
+    		
     </div>
+    </table>
+    
     </div>
- </table>
- </div>
-    	<button class="btneval"onclick="sendAjax()">전송</button>
-    
-    
+    <div id="forCenter">
+    <button class="btneval" onclick="sendAjax()">전송</button>
+    </div>
     <script>
 
     $(function(){
@@ -599,12 +626,10 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
 <table border="10" id="tableForData" >
 <caption id="caption">고객평가</caption>
 <th id="col1" style="background-color:#bcbcbc;">닉네임</th>
-<th id="col1" style="background-color:#bcbcbc;">카페명</th>
 <th id="col1" style="background-color:#bcbcbc;">평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
 <tr class="reviewTable">
 	<td id="td1"><%=eval_list.get(i).getNickname() %></td>
-	<td id="td1"><%=eval_list.get(i).getCafeName() %></td>	
 	<td id="td1"><%=eval_list.get(i).getEvaluation()%></td>
 </tr>
 <%} %>
@@ -630,7 +655,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                         console.log(data[i].nickname);
                         console.log(data[i].cafeName);
                         console.log(data[i].evaluation);
-                        $("#tableForData").append("<tr class='reviewTable'><td>"+data[i].nickname + "</td><td>"+data[i].cafeName + "</td><td>"+data[i].evaluation + "</td></tr>" )
+                        $("#tableForData").append("<tr class='reviewTable'><td>"+data[i].nickname + "</td><td>"+data[i].evaluation + "</td></tr>" )
                         
                         
                         //tr들고와서 어펜드 차일드( "<td>"+data[i].nickname + "</td>")
