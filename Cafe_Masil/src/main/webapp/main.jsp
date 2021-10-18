@@ -245,13 +245,8 @@ left: 1%;
                 <!-- end single work -->
 
                 <!-- single work -->
-<<<<<<< HEAD
-                <div class="col-md-3 col-sm-6 ads graphics">
-                    <a href="single-project.html" class="portfolio_item">
-=======
                 <div class="col-md-3 col-sm-6 ads graphics" style='padding=100px'>
                     <a href="login.jsp" class="portfolio_item">
->>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
                         <img src="img/img2.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
