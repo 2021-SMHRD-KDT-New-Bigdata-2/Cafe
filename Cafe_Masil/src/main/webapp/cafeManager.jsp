@@ -136,7 +136,7 @@
      <div class="top-bar">
         <h1>墨其包府</h1>
         <br>
-        <p><a href="#">备刀包府</a> / 胶牌橇包府</p>
+        <p>备刀包府 / 胶牌橇包府</p>
     </div>
     <!-- end Top bar -->
     
