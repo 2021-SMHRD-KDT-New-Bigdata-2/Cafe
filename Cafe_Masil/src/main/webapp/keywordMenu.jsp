@@ -50,7 +50,19 @@
     	border-radius: 30px;
     	width:500px; height:500px;"
     	}
-    	
+    	.btn.btn-default{
+	border:none;
+}
+.form-control{
+	border:none;
+	font-size:15px;
+	padding:6px 3px;
+}
+.navbar-form.navbar-right{
+	border:1px solid #777;
+	border-radius:50px;
+	background-color: #fff;
+}
     </style>
 </head>
 	
@@ -67,17 +79,6 @@
     </div>
     <!-- end Preloader -->
 
-    <div class="container-fluid">
-        <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="img/cafemasillogo2.jpg" width="80" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-        </header>
         <!-- end box-header -->
 
 <!-- box header -->
@@ -109,11 +110,13 @@
             </a>
           </ul>
           <%}%>
-          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get" accept-charset="euc-kr">
+          <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -154,8 +157,8 @@
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -201,14 +204,14 @@
                 <div class="no-padding portfolio_container clearfix">
                 
                     <!-- 1. single work -->
-                    <div class="col-md-4 col-sm-12">
-                        <a href="infoService?businessNumber=1000000001" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210629_138%2F162493686744844uxK_JPEG%2FX4EqxguJ4FdC8nQqPaFs5QE6.jpg" alt="image" class="img-responsive"/></center>
+                    <div class="col-md-4 col-sm-6 dessert">
+                        <a href="infoService?businessNumber=1000000030" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20170813_73%2F1502593577517LO3Q9_JPEG%2FdGMeFEncEivkecJh0Zv_7P7D.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span>더빅커피</span>
-                                        <em></em>
+                                        <span>오늘도 165</span>
+                                        <em>디저트</em>
                                     </div>
                                 </div>
                             </div>
@@ -665,20 +668,19 @@
                     <!-- end single work -->
                     
                     <!-- 30. single work -->
-                    <div class="col-md-4 col-sm-6 dessert">
-                        <a href="infoService?businessNumber=1000000030" class="portfolio_item">
-                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20170813_73%2F1502593577517LO3Q9_JPEG%2FdGMeFEncEivkecJh0Zv_7P7D.jpg" alt="image" class="img-responsive"/></center>
+                     <div class="col-md-4 col-sm-12">
+                        <a href="infoService?businessNumber=1000000001" class="portfolio_item">
+                            <center><img src="https://search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210629_138%2F162493686744844uxK_JPEG%2FX4EqxguJ4FdC8nQqPaFs5QE6.jpg" alt="image" class="img-responsive"/></center>
                             <div class="portfolio_item_hover">
                                 <div class="portfolio-border clearfix">
                                     <div class="item_info">
-                                        <span>오늘도 165</span>
-                                        <em>디저트</em>
+                                        <span>더빅커피</span>
+                                        <em></em>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </div>
-                    <!-- end single work -->
                     
                     
                     
