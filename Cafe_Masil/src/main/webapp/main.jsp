@@ -230,13 +230,13 @@ left: 1%;
             <div class="no-padding portfolio_container">
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6  fashion logo">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img1.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Mockups in seconds</span>
-                                    <em>Fashion / Logo</em>
+                                    <span>010카페</span>
+                                    <em>배달 / 다인석 / 반려동물 / 흡연실 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -245,14 +245,19 @@ left: 1%;
                 <!-- end single work -->
 
                 <!-- single work -->
-                <div class="col-md-3 col-sm-6 ads graphics" style='padding=100px'>
+<<<<<<< HEAD
+                <div class="col-md-3 col-sm-6 ads graphics">
                     <a href="single-project.html" class="portfolio_item">
+=======
+                <div class="col-md-3 col-sm-6 ads graphics" style='padding=100px'>
+                    <a href="login.jsp" class="portfolio_item">
+>>>>>>> branch 'master' of https://github.com/2021-SMHRD-KDT-New-Bigdata-2/Cafe.git
                         <img src="img/img2.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Floating mockups</span>
-                                    <em>Ads / Graphics</em>
+                                    <span>시크릿가든</span>
+                                    <em>다인석 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -262,13 +267,13 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-6 col-sm-12 photography">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img3.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Photorealistic smartwatch</span>
-                                    <em>Photography</em>
+                                    <span>비티씨인무드</span>
+                                    <em>원두판매 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -278,13 +283,13 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 fashion ads">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img4.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>회원가입</span>
-                                    <em>Fashion / Ads</em>
+                                    <span>카페 크레테</span>
+                                    <em>배달 / 반려동물 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -294,13 +299,13 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img5.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                                    <span>언노크</span>
+                                    <em>배달 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -310,13 +315,13 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-6 col-sm-12 photography">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img6.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Photorealistic smartwatch</span>
-                                    <em>Photography</em>
+                                    <span>커피공장 하나비</span>
+                                    <em>배달 / 다인석 / 원두판매 / 로스팅 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -326,13 +331,13 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img7.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                                    <span>더스누즈버튼</span>
+                                    <em>배달 / 디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -342,13 +347,13 @@ left: 1%;
 
                 <!-- single work -->
                 <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
+                    <a href="login.jsp" class="portfolio_item">
                         <img src="img/img8.jpg" alt="image" class="img-responsive" />
                         <div class="portfolio_item_hover">
                             <div class="portfolio-border clearfix">
                                 <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
+                                    <span>다이브인커피</span>
+                                    <em>디저트</em>
                                 </div>
                             </div>
                         </div>
@@ -356,37 +361,6 @@ left: 1%;
                 </div>
                 <!-- end single work -->
 
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/img9.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
-
-                <!-- single work -->
-                <div class="col-md-3 col-sm-6 graphics ads">
-                    <a href="single-project.html" class="portfolio_item">
-                        <img src="img/img10.jpg" alt="image" class="img-responsive" />
-                        <div class="portfolio_item_hover">
-                            <div class="portfolio-border clearfix">
-                                <div class="item_info">
-                                    <span>Mobile devices</span>
-                                    <em>Graphics / Ads</em>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <!-- end single work -->
             </div>
             <!-- end portfolio_container -->
         </div>

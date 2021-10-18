@@ -38,6 +38,38 @@
     
 
     <style>
+    #tableeval{
+    	border-color : transparent;
+    	border-collapse: separate;
+    	border-spacing: 0 1rem;
+    	text-align: center;
+    	margin : auto;
+    }
+ body{
+  font-size:17px;
+   font-family: 'GowunDodum-Regular';
+   }
+   
+ .btn.btn-default{
+   border:none;
+}
+.form-control{
+   border:none;
+   font-size:15px;
+   padding:6px 3px;
+}
+.navbar-form.navbar-right{
+   border:1px solid #777;
+   border-radius:50px;
+   background-color: #fff;
+}
+ 
+      
+      
+      
+      
+      
+      
       #carousel-cafe-generic{
       height: 600px;
   	  width: 600px;
@@ -79,8 +111,47 @@
 		position : sticky;
 }
 div img:hover{
-   		 cursor: -webkit-zoom-in;
+   		 cursor: -webkit-zoom-in; 		 
 }
+.text-uppercase{
+	font-size:50px;	
+} 
+
+.evaluation{
+	border-radius:30px;
+	margin:auto;
+
+}
+#caption1 {
+	text-align: center;
+	font-size:25px;
+	color:#f9813a;
+	font-weight:bold;
+}#caption {
+	text-align: center;
+	font-size:25px;
+	color:#f9813a;
+	font-weight:bold;
+}
+
+#col1, .reviewTable {
+	text-align: center;
+	color:#777;
+}#td1 {
+	text-align: center;
+}#tableForData {
+	border-radius:15px;	
+	font-size:15px;
+	border:solid;
+	margin:auto;
+	margin-top:50px;
+	border-collapse:inherit;
+}
+
+#forCenter{
+	text-align: center;
+}
+
 	/* image modal end */
     </style>
     
@@ -114,18 +185,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
     </div>
     <!-- end Preloader -->
 
-    <div class="container-fluid">
-       <!-- box-header -->
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="main.jsp"><img src="" width="80" alt="Logo"></a>
-            </div>
-            <!-- box-nav -->
-            <a class="box-primary-nav-trigger" href="#0">
-                <span class="box-menu-text">Menu</span><span class="box-menu-icon"></span>
-            </a>
-            <!-- box-primary-nav-trigger -->
-        </header>
+ 
         <!-- end box-header -->
         
         <!-- box header -->
@@ -159,9 +219,11 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
           <%}%>
           <form action = "searchmapService" class="navbar-form navbar-right" role="search" method="get">
             <div class="form-group">
-              <input name = "searchword" type="text" class="form-control" placeholder="검색">
+              <input name = "searchword" type="text" class="form-control" placeholder="카페 검색">
             </div>
-            <button type="submit" class="btn btn-default">GO!</button>
+            <button type="submit" class="btn btn-default">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            </button>
           </form>
         </div>
       </div>
@@ -203,8 +265,8 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                 <li><a href="fran.jsp">가맹등록</a></li>
                 <li><a href="keywordMenu.jsp">전체 카페</a></li>
                 <li><a href="searchmap.jsp">카페검색</a></li>
-                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 <li><a href="MyCafe.jsp">MyCafe</a></li>
+                <li><a href="gogacJiwon.jsp">고객지원</a></li>
                 
                 <li class="box-label">Follow me!</li>
 
@@ -440,7 +502,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                        <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
                     </div>
                     <div class="col-md-6">
-                    	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
+                    	<span class="btn btn-box">스탬프가 이미 발급되었습니다.</span>
                     </div>
                     <div class="col-md-12">
                     </div>
@@ -499,27 +561,41 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         </div>
 </div>
 <%}%>
-	
+
+
+ 
 	<div id="eval">
-		<button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button>
-    	<button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button>
-    	<button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button>
-    	<button class="evaluation" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button>
-    	<button class="evaluation" onclick="data('가성비에요')">가성비에요</button><br>
-    	<button class="evaluation" onclick="data('가게가 청결해요')">가게가 청결해요</button>
-    	<button class="evaluation" onclick="data('다시올래요')">다시올래요</button>
-    	<button class="evaluation" onclick="data('디저트가 다양해요')">디저트가 다양해요</button>
-    	<button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button>
-    	<button class="evaluation" onclick="data('직원분이 친절해요')">직원분이 친절해요</button><br>
-    	<button class="evaluation" onclick="data('넓어요')">넓어요</button>
-    	<button class="evaluation" onclick="data('조용해서 좋아요')">조용해서 좋아요</button>
-    	<button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button>
-    	<button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button>
-    	<button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button><br>
-    	<button onclick="sendAjax()">전송</button>
+	<table border="1" id="tableeval">
+	<div id="eval1">
+		<tr>
+			<td><button class="evaluation" onclick="data('맛이 진해요')">맛이 진해요</button></td>
+		    <td><button class="evaluation" onclick="data('맛이 연해요')">맛이 연해요</button></td>
+		    <td><button class="evaluation" onclick="data('커피향이 풍부해요')">커피향이 풍부해요</button></td>
+		    <td><button class="evaluation" onclick="data('로스팅이 잘됐어요')">로스팅이 잘됐어요</button></td>
+		    <td><button class="evaluation" onclick="data('가성비에요')">가성비에요</button></td>
+		</tr>
+		<tr>
+		    <td><button class="evaluation" onclick="data('가게가 청결해요')">가게가 청결해요</button></td>
+		    <td><button class="evaluation" onclick="data('다시올래요')">다시올래요</button></td>
+		    <td><button class="evaluation" onclick="data('디저트가 다양해요')">디저트가 다양해요</button></td>
+		    <td><button class="evaluation" onclick="data('사진 맛집이에요')">사진 맛집이에요</button></td>
+		    <td><button class="evaluation" onclick="data('직원분이 친절해요')">직원분이 친절해요</button></td>
+		 </tr>
+		 <tr>
+		    <td><button class="evaluation" onclick="data('넓어요')">넓어요</button></td>
+		    <td><button class="evaluation" onclick="data('조용해서 좋아요')">조용해서 좋아요</button></td>
+		    <td><button class="evaluation" onclick="data('분위기가 좋아요')">분위기가 좋아요</button></td>
+		    <td><button class="evaluation" onclick="data('배달이 빨라요')">배달이 빨라요</button></td>
+		    <td><button class="evaluation" onclick="data('일회용기 안써요')">일회용기 안써요</button></td>
+		 </tr>   
+    		
     </div>
+    </table>
     
-    
+    </div>
+    <div id="forCenter">
+    <button class="btneval" onclick="sendAjax()">전송</button>
+    </div>
     <script>
 
     $(function(){
@@ -539,21 +615,22 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
    });
  });
 </script>
-	
+ 
+ 
+ 	
     
     
 
 <%if(eval_list!=null){ %>
 <div>
-<table border="1" id="tableForData" >
-<th>닉네임</th>
-<th>카페명</th>
-<th>평가</th>
+<table border="10" id="tableForData" >
+<caption id="caption">고객평가</caption>
+<th id="col1" style="background-color:#bcbcbc;">닉네임</th>
+<th id="col1" style="background-color:#bcbcbc;">평가</th>
 <%for(int i = 0;i<eval_list.size();i++){ %>
 <tr class="reviewTable">
 	<td id="td1"><%=eval_list.get(i).getNickname() %></td>
-	<td id="td2"><%=eval_list.get(i).getCafeName() %></td>
-	<td id="td3"><%=eval_list.get(i).getEvaluation()%></td>
+	<td id="td1"><%=eval_list.get(i).getEvaluation()%></td>
 </tr>
 <%} %>
 
@@ -578,7 +655,7 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                         console.log(data[i].nickname);
                         console.log(data[i].cafeName);
                         console.log(data[i].evaluation);
-                        $("#tableForData").append("<tr class='reviewTable'><td>"+data[i].nickname + "</td><td>"+data[i].cafeName + "</td><td>"+data[i].evaluation + "</td></tr>" )
+                        $("#tableForData").append("<tr class='reviewTable'><td>"+data[i].nickname + "</td><td>"+data[i].evaluation + "</td></tr>" )
                         
                         
                         //tr들고와서 어펜드 차일드( "<td>"+data[i].nickname + "</td>")
