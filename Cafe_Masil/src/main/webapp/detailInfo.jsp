@@ -40,8 +40,8 @@
     <style>
     
     .befClick {
-    	background-color : #e7e7e7;
-    	color : #999;
+    	background-color : #fff;
+    	color : #777;
     }
     
     .aftClick {
@@ -412,12 +412,14 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
      <div class="col-md-6">
           <form action="#" method="post">
               <div class="container row" style="float:none; margin:0 auto;">
+              <center>
                    <div class="col-md-6">
                     <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
                     </div>
                     <div class="col-md-6">
                     	<a href = "stampService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&tel=<%=vo.getTel() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">스탬프 발급</a>
                     </div>
+              </center>
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
@@ -445,12 +447,14 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         <div class="col-md-6">
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
+                <center>
                     <div class="col-md-6">
                        <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
                     </div>
                     <div class="col-md-6">
                     	<a href = "stampService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&tel=<%=vo.getTel() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">스탬프 발급</a>
                     </div>
+                </center>
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
@@ -482,8 +486,6 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
                     <div class="col-md-6">
                        <a href = "subscribeService?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>&cafeName=<%=info_list.get(0).getCafeName() %>" class="btn btn-box">구독</a>
                     </div>
-                    </center>
-                    <center>
                     <div class="col-md-6">
                     	<a href = "" class="btn btn-box">스탬프가 이미 발급되었습니다.</a>
                     </div>
@@ -515,14 +517,14 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         <div class="col-md-6">
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
+                <center>
                     <div class="col-md-6">
                        <a href = "removeSubscribe?businessNumber=<%=info_list.get(0).getBusinessNumber() %>&id=<%=vo.getId() %>" class="btn btn-box">구독해제</a>
                     </div>
-                    <center>
                     <div class="col-md-6">
                     	<span class="btn btn-box">스탬프가 이미 발급되었습니다.</span>
                     </div>
-                    </center>
+                </center>
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
@@ -551,14 +553,14 @@ boolean stampCheck = dao.stampCheck(vo.getTel(), businessNumber);
         <div class="col-md-6">
             <form action="#" method="post">
                 <div class="container row" style="float:none; margin:0 auto;">
-                    <center>
+                <center>
                     <div class="col-md-6">
                        <a href = "loginService" class="btn btn-box">구독</a>
                     </div>
-                    </center>
                     <div class="col-md-6">
                     	<a href = "loginService" class="btn btn-box">스탬프 발급</a>
                     </div>
+                </center>
                     <div class="col-md-12">
                     </div>
                     <div class="col-md-12">
