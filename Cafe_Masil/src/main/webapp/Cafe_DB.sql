@@ -5,7 +5,7 @@ create table joinInfo(
 num number,
 id varchar2(10) not null,
 pw varchar2(10) not null,
-nickname varchar2(10) not null,
+nickname varchar2(20) not null,
 tel varchar2(20) not null,
 bestMenu varchar2(20) not null,
 qna varchar2(100) not null,
