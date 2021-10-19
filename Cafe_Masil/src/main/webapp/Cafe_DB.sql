@@ -9,7 +9,7 @@ nickname varchar2(20) not null,
 tel varchar2(20) not null,
 bestMenu varchar2(20) not null,
 qna varchar2(100) not null,
-answer varchar2(10) not null,
+answer varchar2(20) not null,
 constraint joinInfo_pk primary key(id)
 );
 
