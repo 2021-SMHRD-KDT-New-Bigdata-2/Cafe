@@ -75,7 +75,7 @@ drop table evaluation; /* 테이블 수정했으니 삭제하고 다시 만드세용 */
 /* 사용자 평가 테이블 */
 create table evaluation(
 num number,
-nickname varchar2(10) not null,
+nickname varchar2(20) not null,
 businessNumber varchar2(30) not null,
 cafeName varchar2(30) not null,
 evaluation varchar2(500) not null,
